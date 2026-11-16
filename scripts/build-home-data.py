@@ -99,6 +99,12 @@ def text_item(e, ov):
     return it
 
 
+def stroke(sh):
+    st = sh["paths"][0].get("stroke") or {}
+    w = st.get("weight", 0)
+    return {"bw": w, "bc": st["color"]["color"]} if w else {}
+
+
 def section_of(y):
     for key, _, a, b in SECTIONS:
         if a <= y < b:
@@ -145,7 +151,7 @@ def main():
             items.append({"kind": "button", "x": r(sh["left"]), "y": r(sh["top"]), "w": r(sh["width"]), "h": r(sh["height"]),
                           "radius": sh["paths"][0]["cornerRounding"], "bg": sh["paths"][0]["fill"]["color"]["color"],
                           "label": tx["textRegions"][0]["characters"], "fs": r(f["fontSize"]), "fw": 700, "color": f["color"],
-                          "href": BUTTONS[e["id"]]})
+                          "href": BUTTONS[e["id"]], **stroke(sh)})
             return
         if e["id"] == HEADER_BTN[0]:
             sh = e

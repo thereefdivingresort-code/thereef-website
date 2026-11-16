@@ -50,7 +50,7 @@
       {% for it in s.items %}{% if it.kind == "text" %}
       <div class="hc-t{% if it.ul %} ul{% endif %}" style="left:{{ it.x }}px;top:{{ it.y }}px;width:{{ it.w }}px;font-size:{{ it.fs }}px;font-weight:{{ it.fw }};color:{{ it.color }};line-height:{{ it.lh }};text-align:{{ it.align }};{% if it.ls %}letter-spacing:{{ it.ls }}em;{% endif %}{% if it.op %}opacity:{{ it.op }};{% endif %}">{{ textBody(it) | safe }}</div>
       {% elif it.kind == "button" %}
-      <a class="hc-btn" href="{{ it.href }}" style="left:{{ it.x }}px;top:{{ it.y }}px;width:{{ it.w }}px;height:{{ it.h }}px;border-radius:{{ it.radius }}px;background:{{ it.bg }};color:{{ it.color }};font-size:{{ it.fs }}px">{{ it.label }}</a>
+      <a class="hc-btn" href="{{ it.href }}" style="left:{{ it.x }}px;top:{{ it.y }}px;width:{{ it.w }}px;height:{{ it.h }}px;border-radius:{{ it.radius }}px;background:{{ it.bg }};color:{{ it.color }};font-size:{{ it.fs }}px;{% if it.bw %}border:{{ it.bw }}px solid {{ it.bc }};{% endif %}">{{ it.label }}</a>
       {% elif it.kind == "faq" %}
       <div class="hc-faq" style="left:{{ it.x }}px;top:{{ it.y }}px;width:{{ it.w }}px;--row:{{ it.rowH }}px;--line:{{ it.lineH }}px;--line-op:{{ it.lineOp }};--qfs:{{ it.q.fs }}px;--qc:{{ it.q.color }};--qlh:{{ it.q.lh }};--afs:{{ it.a.fs }}px;--ac:{{ it.a.color }};--alh:{{ it.a.lh }};--aw:{{ it.a.w }}px;--sfs:{{ it.sign.fs }}px;--sc:{{ it.sign.color }}">
         {% for f in it.items %}

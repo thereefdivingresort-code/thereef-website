@@ -766,6 +766,326 @@
      "href": "/trips/"
     }
    ]
+  },
+  {
+   "key": "faq",
+   "name": "FAQ",
+   "top": 5200,
+   "height": 750,
+   "img": "home_s_faq.webp",
+   "items": [
+    {
+     "kind": "text",
+     "id": "LBkps7HGbgsb4qcl",
+     "x": 168.2,
+     "y": 35.0,
+     "w": 704,
+     "fs": 41.3,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "left",
+     "text": "第一次來，你可能會好奇的事"
+    },
+    {
+     "kind": "faq",
+     "x": 168.2,
+     "y": 144.2,
+     "w": 1120,
+     "rowH": 80,
+     "lineH": 8,
+     "lineOp": 0.25,
+     "q": {
+      "fs": 22.3,
+      "color": "#ffffff",
+      "lh": 1.4
+     },
+     "a": {
+      "fs": 18.3,
+      "color": "#8fa3b8",
+      "lh": 1.7,
+      "w": 960
+     },
+     "sign": {
+      "fs": 27.3,
+      "color": "#e5533d"
+     },
+     "items": [
+      {
+       "q": "我完全沒潛過，可以直接考潛水證照嗎？",
+       "a": "可以，PADI OW 初級開放水域課程就是為零經驗的人設計的。先上線上學科，在家就能預習；到現場先在平靜水域練習，再進到開放水域，教練全程帶領。",
+       "open": true
+      },
+      {
+       "q": "先體驗潛水再考照，還是直接考證照比較划算？",
+       "a": "答案待補",
+       "open": false
+      },
+      {
+       "q": "為什麼大家說綠島很適合第一次潛水？",
+       "a": "答案待補",
+       "open": false
+      },
+      {
+       "q": "從台北去綠島要多久？行程怎麼安排？",
+       "a": "答案待補",
+       "open": false
+      },
+      {
+       "q": "在綠島潛水看得到海龜和大香菇嗎？",
+       "a": "答案待補",
+       "open": false
+      }
+     ]
+    },
+    {
+     "kind": "text",
+     "id": "LB9C7Z9WwShYPGL5",
+     "x": 1264.6,
+     "y": 676.7,
+     "w": 112.7,
+     "fs": 20.1,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "center",
+     "ls": 0.13,
+     "text": "回到頂部",
+     "href": "#top"
+    }
+   ]
+  },
+  {
+   "key": "map",
+   "name": "我們在哪裡",
+   "top": 5950,
+   "height": 1100,
+   "img": "home_s_map.webp",
+   "items": [
+    {
+     "kind": "text",
+     "id": "LBy294n52lx4mJtd",
+     "x": 1055.4,
+     "y": 528.8,
+     "w": 370.9,
+     "fs": 24.0,
+     "fw": 700,
+     "color": "#12355b",
+     "lh": 1.4,
+     "align": "left",
+     "text": "綠芙 The Reef｜柴口"
+    },
+    {
+     "kind": "text",
+     "id": "LB50dqfFdmvrBbhl",
+     "x": 620.8,
+     "y": 722.4,
+     "w": 145.1,
+     "fs": 21.2,
+     "fw": 400,
+     "color": "#7a6a55",
+     "lh": 1.4,
+     "align": "right",
+     "text": "南寮漁港"
+    },
+    {
+     "kind": "text",
+     "id": "LB15HdH7HhwwlF8V",
+     "x": 121.7,
+     "y": 708.4,
+     "w": 504,
+     "fs": 40.0,
+     "fw": 700,
+     "color": "#12355b",
+     "lh": 1.4,
+     "align": "left",
+     "text": "我們在哪裡"
+    },
+    {
+     "kind": "text",
+     "id": "LBBlqVj6vVzPV0WG",
+     "x": 121.7,
+     "y": 783.4,
+     "w": 524,
+     "fs": 19,
+     "fw": 400,
+     "color": "#12355b",
+     "lh": 1.7,
+     "align": "left",
+     "runs": [
+      {
+       "t": "綠芙就在綠島柴口海灘旁，走幾步路就能下水。\n夏天水溫約 26–29°C，岸潛點地形平緩，很適合第一次潛水。",
+       "c": "#12355b"
+      },
+      {
+       "t": "在島上騎機車吹海風，考照就像一趟出國度假。",
+       "c": "#da5c4e"
+      }
+     ]
+    },
+    {
+     "kind": "text",
+     "id": "LB1S3NLTSKh9VSyp",
+     "x": 121.7,
+     "y": 932.8,
+     "w": 524,
+     "fs": 18,
+     "fw": 700,
+     "color": "#12355b",
+     "lh": 1.8,
+     "align": "left",
+     "text": "地址｜台東縣綠島鄉公館村柴口 172 號之 2\n交通｜台東富岡漁港搭船約 50 分鐘到綠島"
+    },
+    {
+     "kind": "text",
+     "id": "LBmV0xCTjDldmlbz",
+     "x": 121.7,
+     "y": 1026.3,
+     "w": 524,
+     "fs": 19,
+     "fw": 700,
+     "color": "#ec6c0c",
+     "lh": 1.4,
+     "align": "left",
+     "ul": true,
+     "text": "在 Google 地圖開啟 →　　　認識我們 →",
+     "links": [
+      [
+       "在 Google 地圖開啟 →",
+       "site:googleMapUrl"
+      ],
+      [
+       "　　　",
+       null
+      ],
+      [
+       "認識我們 →",
+       "/about/"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "key": "footer",
+   "name": "頁尾",
+   "top": 7050,
+   "height": 950,
+   "img": "home_s_footer.webp",
+   "items": [
+    {
+     "kind": "text",
+     "id": "LBQhQVYDKWr8dSx4",
+     "x": 121.7,
+     "y": 582.7,
+     "w": 933.9,
+     "fs": 49.2,
+     "fw": 700,
+     "color": "#efe8da",
+     "lh": 1.4,
+     "align": "left",
+     "text": "準備好下水了嗎？"
+    },
+    {
+     "kind": "button",
+     "x": 576.9,
+     "y": 579.8,
+     "w": 255.7,
+     "h": 69.7,
+     "radius": 30,
+     "bg": "#ec6b0c",
+     "label": "預訂課程",
+     "fs": 22.1,
+     "fw": 700,
+     "color": "#ffffff",
+     "href": "/booking/"
+    },
+    {
+     "kind": "button",
+     "x": 848.4,
+     "y": 579.8,
+     "w": 209.2,
+     "h": 69.7,
+     "radius": 30,
+     "bg": "#0a1c2e",
+     "label": "聯絡我們",
+     "fs": 22.1,
+     "fw": 700,
+     "color": "#efe8da",
+     "href": "/about/#contact",
+     "bw": 2,
+     "bc": "#efe8da"
+    },
+    {
+     "kind": "text",
+     "id": "LBTjNBStlnK0Vl1V",
+     "x": 128.1,
+     "y": 718.9,
+     "w": 469.0,
+     "fs": 25.6,
+     "fw": 700,
+     "color": "#efe8da",
+     "lh": 1.4,
+     "align": "left",
+     "text": "The Reef 綠芙潛水"
+    },
+    {
+     "kind": "text",
+     "id": "LBqjhw2RR6KfkFcs",
+     "x": 128.1,
+     "y": 774.0,
+     "w": 701.4,
+     "fs": 18.5,
+     "fw": 400,
+     "color": "#efe8da",
+     "lh": 1.8,
+     "align": "left",
+     "text": "公司名稱（待填）　統一編號（待填）\n台東縣綠島鄉公館村柴口 172 號之 2\n電話 0936-871-525　信箱（待填）",
+     "site": "companyLines"
+    },
+    {
+     "kind": "text",
+     "id": "LBT88PzHtvnC23Wg",
+     "x": 847.7,
+     "y": 774.0,
+     "w": 259.7,
+     "fs": 18.6,
+     "fw": 400,
+     "color": "#efe8da",
+     "lh": 1.8,
+     "align": "left",
+     "ul": true,
+     "text": "服務條款\n隱私權政策\n退款與停航政策",
+     "site": "legalLinks"
+    },
+    {
+     "kind": "text",
+     "id": "LB5W7cmFGytM2mHB",
+     "x": 1197.4,
+     "y": 806.5,
+     "w": 236.5,
+     "fs": 18.6,
+     "fw": 400,
+     "color": "#efe8da",
+     "lh": 1.8,
+     "align": "left",
+     "text": "Instagram\nLINE 官方帳號",
+     "site": "social"
+    },
+    {
+     "kind": "text",
+     "id": "LBsQF7Hmp5BJfYXF",
+     "x": 128.1,
+     "y": 894.1,
+     "w": 469.0,
+     "fs": 13.4,
+     "fw": 400,
+     "color": "#8fa3b8",
+     "lh": 1.4,
+     "align": "left",
+     "text": "© 2026 The Reef Diving"
+    }
+   ]
   }
  ]
 }
