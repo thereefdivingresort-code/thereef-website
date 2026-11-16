@@ -1,6 +1,7 @@
 # 首頁（電腦版 1440）資料產生器：讀 docs/home-canva-elements.json（Canva 首頁一次讀出的座標），
 # 產生 src/_data/home.json（每段的文字、按鈕、魚類插圖座標）並把去字底圖切成每段一張 WebP。
-# 用法：python3 scripts/build-home-data.py <去字底圖.png> [段落代號,...]
+# 用法：python3 scripts/build-home-data.py <去字底圖.png> <只有魚的透明圖.png> [段落代號,...]
+#   只有魚的透明圖＝Canva 工作檔 DAHbGYksADs 匯出（PNG、透明背景、寬 1440），魚的角度、翻轉、裁切、顏色都跟 Canva 一樣
 #   段落代號：open d12 d18 d30 faq map footer（不給＝全部）
 # 注意：home.json 是產生出來的；要長期手改文字時，改這支程式的 OVERRIDES 再重跑，或直接改 home.json 並不再重跑。
 import json, sys, os
@@ -107,7 +108,9 @@ def section_of(y):
 
 def main():
     base = sys.argv[1]
-    want = sys.argv[2].split(",") if len(sys.argv) > 2 else [s[0] for s in SECTIONS]
+    fishimg = Image.open(sys.argv[2]).convert("RGBA")
+    want = sys.argv[3].split(",") if len(sys.argv) > 3 else [s[0] for s in SECTIONS]
+    fish_polys = []  # (code, 多邊形)，照 Canva 圖層順序（後面的在上面）
     d = json.load(open(SRC))
     page = d["design_content"]["pages"][0]
     items = []
@@ -157,13 +160,15 @@ def main():
             return
         if e["id"] in FISH:
             code, fn, name, anim = FISH[e["id"]]
-            ib = e["fill"]["media"]["imageBox"]
-            it = {"kind": "fish", "code": code, "file": fn, "name": name,
-                  "x": r(e["left"]), "y": r(e["top"]), "w": r(e["width"]), "h": r(e["height"]),
-                  "rot": r(e.get("rotation", 0)), "anim": anim}
-            if abs(ib["width"] - e["width"]) > 1 or abs(ib["height"] - e["height"]) > 2:
-                it["crop"] = {"x": r(ib["left"]), "y": r(ib["top"]), "w": r(ib["width"]), "h": r(ib["height"])}
-            items.append(it)
+            import math
+            cx, cy = e["left"] + e["width"] / 2, e["top"] + e["height"] / 2
+            a = math.radians(e.get("rotation", 0))
+            pts = []
+            for dx, dy in [(-1, -1), (1, -1), (1, 1), (-1, 1)]:
+                x, y = dx * e["width"] / 2, dy * e["height"] / 2
+                pts.append((cx + x * math.cos(a) - y * math.sin(a), cy + x * math.sin(a) + y * math.cos(a)))
+            fish_polys.append((code, pts))
+            items.append({"kind": "fish", "code": code, "file": "home_fish_" + code, "name": name, "_pts": pts, "anim": anim})
             return
         if t == "text":
             f = e["textRegions"][0]["formatting"]
@@ -184,6 +189,22 @@ def main():
 
     for e in page["elements"]:
         walk(e)
+
+    # 魚：從透明圖切出每一條（重疊處給上層那條）
+    from PIL import ImageDraw
+    W, H = fishimg.size
+    taken = Image.new("L", (W, H), 0)
+    for it in reversed([i for i in items if i["kind"] == "fish"]):
+        m = Image.new("L", (W, H), 0)
+        ImageDraw.Draw(m).polygon(it.pop("_pts"), fill=255)
+        m = Image.composite(Image.new("L", (W, H), 0), m, taken)  # 已被上層拿走的不要
+        taken = Image.composite(Image.new("L", (W, H), 255), taken, m)
+        layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        layer.paste(fishimg, (0, 0), m)
+        bb = layer.getchannel("A").point(lambda v: 255 if v > 8 else 0).getbbox()
+        x0, y0, x1, y1 = max(bb[0] - 2, 0), max(bb[1] - 2, 0), min(bb[2] + 2, W), min(bb[3] + 2, H)
+        layer.crop((x0, y0, x1, y1)).save(os.path.join(IMG, it["file"] + ".webp"), "WEBP", quality=90, method=6)
+        it.update({"x": x0, "y": y0, "w": x1 - x0, "h": y1 - y0, "rot": 0})
 
     # 「回到頂部」「向下捲動」用整個群組範圍當可點區
     out = {"_說明": "首頁（電腦版 1440 寬）每段的文字、按鈕、魚類插圖座標，由 scripts/build-home-data.py 從 Canva 產生。座標單位＝px，以 1440 寬為準。",

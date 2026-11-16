@@ -200,38 +200,38 @@
     {
      "kind": "fish",
      "code": "A01",
-     "file": "A01_damselfish",
+     "file": "home_fish_A01",
      "name": "雀鯛",
-     "x": 880,
-     "y": 1220.1,
-     "w": 260,
-     "h": 257,
-     "rot": 0,
      "anim": {
       "dx": 0,
       "dy": 30,
       "dur": 0.8,
       "delay": 0,
       "float": 4.5
-     }
+     },
+     "x": 905,
+     "y": 1242,
+     "w": 222,
+     "h": 215,
+     "rot": 0
     },
     {
      "kind": "fish",
      "code": "A02",
-     "file": "A02_butterflyfish",
+     "file": "home_fish_A02",
      "name": "蝶魚",
-     "x": 371.9,
-     "y": 1468.1,
-     "w": 230,
-     "h": 231,
-     "rot": 0,
      "anim": {
       "dx": 60,
       "dy": 0,
       "dur": 0.9,
       "delay": 0.15,
       "float": 4.5
-     }
+     },
+     "x": 379,
+     "y": 1490,
+     "w": 219,
+     "h": 190,
+     "rot": 0
     },
     {
      "kind": "text",
@@ -350,6 +350,420 @@
      "lh": 1.4,
      "align": "left",
      "text": "岸潛 SHORE DIVE　·　最深 12 m"
+    }
+   ]
+  },
+  {
+   "key": "d18",
+   "name": "18 m",
+   "top": 2950,
+   "height": 730,
+   "img": "home_s_d18.webp",
+   "items": [
+    {
+     "kind": "button",
+     "x": 1140,
+     "y": 698.6,
+     "w": 160,
+     "h": 52,
+     "radius": 26,
+     "bg": "#ec6b0c",
+     "label": "預訂",
+     "fs": 18,
+     "fw": 700,
+     "color": "#ffffff",
+     "href": "/booking/?item=ow"
+    },
+    {
+     "kind": "fish",
+     "code": "B03",
+     "file": "home_fish_B03",
+     "name": "珊瑚礁",
+     "anim": {
+      "dx": 0,
+      "dy": 0,
+      "dur": 1.2,
+      "delay": 0,
+      "float": 0
+     },
+     "x": 0,
+     "y": 188,
+     "w": 389,
+     "h": 433,
+     "rot": 0
+    },
+    {
+     "kind": "fish",
+     "code": "B01",
+     "file": "home_fish_B01",
+     "name": "鸚哥魚",
+     "anim": {
+      "dx": 80,
+      "dy": 0,
+      "dur": 1.0,
+      "delay": 0,
+      "float": 4.5
+     },
+     "x": 1102,
+     "y": 144,
+     "w": 204,
+     "h": 103,
+     "rot": 0
+    },
+    {
+     "kind": "fish",
+     "code": "B02",
+     "file": "home_fish_B02",
+     "name": "隆頭魚",
+     "anim": {
+      "dx": -80,
+      "dy": 0,
+      "dur": 1.0,
+      "delay": 0.2,
+      "float": 4.5
+     },
+     "x": 351,
+     "y": 607,
+     "w": 413,
+     "h": 221,
+     "rot": 0
+    },
+    {
+     "kind": "text",
+     "id": "LB5Tgvgkc8jlZc6Z",
+     "x": 469.6,
+     "y": 12.4,
+     "w": 348.4,
+     "fs": 120,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "left",
+     "op": 0.6,
+     "text": "18 m"
+    },
+    {
+     "kind": "text",
+     "id": "LBxj61vyjH71XzkG",
+     "x": 780.3,
+     "y": 329.6,
+     "w": 544,
+     "fs": 18.7,
+     "fw": 700,
+     "color": "#81f7f7",
+     "lh": 1.4,
+     "align": "left",
+     "text": "取得可以帶往世界各地的潛水資格"
+    },
+    {
+     "kind": "text",
+     "id": "LBpPF5kHQPRPm5M6",
+     "x": 780.3,
+     "y": 366.6,
+     "w": 544,
+     "fs": 41.3,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "left",
+     "text": "PADI OW 初級證照"
+    },
+    {
+     "kind": "text",
+     "id": "LBkCjNgrJndf49BW",
+     "x": 780.3,
+     "y": 436.7,
+     "w": 544,
+     "fs": 19.3,
+     "fw": 400,
+     "color": "#ffffff",
+     "lh": 1.7,
+     "align": "left",
+     "text": "3 天 2 夜。含線上學科、5 支潛水、PADI 證照申請費、全套裝備和電腦錶、背包房 2 晚、機車和保險。考到之後就能下到 18 公尺看大香菇。"
+    },
+    {
+     "kind": "text",
+     "id": "LBhgNx4WTt4n2VpK",
+     "x": 780.3,
+     "y": 558.1,
+     "w": 544,
+     "fs": 17.3,
+     "fw": 400,
+     "color": "#81f7f7",
+     "lh": 1.4,
+     "align": "left",
+     "text": "魅力點｜\n發現自己血液中含有海洋DNA 的族群，讓探索海洋成為長期興趣吧！ "
+    },
+    {
+     "kind": "text",
+     "id": "LB8MKSMzDVhtSfqZ",
+     "x": 780.3,
+     "y": 631.4,
+     "w": 304,
+     "fs": 21.3,
+     "fw": 700,
+     "color": "#efe8da",
+     "lh": 1.4,
+     "align": "left",
+     "text": "NT$ {price}／人",
+     "priceId": "ow"
+    }
+   ]
+  },
+  {
+   "key": "d30",
+   "name": "30 m",
+   "top": 3680,
+   "height": 1520,
+   "img": "home_s_d30.webp",
+   "items": [
+    {
+     "kind": "button",
+     "x": 620.3,
+     "y": 911.8,
+     "w": 160,
+     "h": 52,
+     "radius": 26,
+     "bg": "#ec6b0c",
+     "label": "預訂",
+     "fs": 18,
+     "fw": 700,
+     "color": "#ffffff",
+     "href": "/booking/?item=aow"
+    },
+    {
+     "kind": "text",
+     "id": "LBDn3zYXvKyFXgQM",
+     "x": 228.2,
+     "y": 11.1,
+     "w": 377.7,
+     "fs": 120,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "left",
+     "op": 0.25,
+     "text": "30 m"
+    },
+    {
+     "kind": "fish",
+     "code": "C01",
+     "file": "home_fish_C01",
+     "name": "海龜",
+     "anim": {
+      "dx": -57,
+      "dy": 57,
+      "dur": 1.2,
+      "delay": 0,
+      "float": 5
+     },
+     "x": 732,
+     "y": 253,
+     "w": 522,
+     "h": 450,
+     "rot": 0
+    },
+    {
+     "kind": "fish",
+     "code": "C02",
+     "file": "home_fish_C02",
+     "name": "魟魚",
+     "anim": {
+      "dx": -100,
+      "dy": 0,
+      "dur": 1.4,
+      "delay": 0.3,
+      "float": 5
+     },
+     "x": 1067,
+     "y": 696,
+     "w": 373,
+     "h": 294,
+     "rot": 0
+    },
+    {
+     "kind": "fish",
+     "code": "C04",
+     "file": "home_fish_C04",
+     "name": "裸胸鯙",
+     "anim": {
+      "dx": 30,
+      "dy": 0,
+      "dur": 1.0,
+      "delay": 0,
+      "float": 0
+     },
+     "x": 134,
+     "y": 1115,
+     "w": 189,
+     "h": 180,
+     "rot": 0
+    },
+    {
+     "kind": "fish",
+     "code": "C07b",
+     "file": "home_fish_C07b",
+     "name": "黃帶胡椒鯛",
+     "anim": {
+      "dx": -80,
+      "dy": 0,
+      "dur": 1.0,
+      "delay": 0.25,
+      "float": 4.5
+     },
+     "x": 957,
+     "y": 1377,
+     "w": 88,
+     "h": 67,
+     "rot": 0
+    },
+    {
+     "kind": "fish",
+     "code": "C07",
+     "file": "home_fish_C07",
+     "name": "黃帶胡椒鯛",
+     "anim": {
+      "dx": -80,
+      "dy": 0,
+      "dur": 1.0,
+      "delay": 0.15,
+      "float": 4.5
+     },
+     "x": 694,
+     "y": 1289,
+     "w": 274,
+     "h": 188,
+     "rot": 0
+    },
+    {
+     "kind": "fish",
+     "code": "C06",
+     "file": "home_fish_C06",
+     "name": "海扇",
+     "anim": {
+      "dx": 0,
+      "dy": 0,
+      "dur": 1.2,
+      "delay": 0.3,
+      "float": 0
+     },
+     "x": 296,
+     "y": 1217,
+     "w": 294,
+     "h": 272,
+     "rot": 0
+    },
+    {
+     "kind": "fish",
+     "code": "C05",
+     "file": "home_fish_C05",
+     "name": "獅子魚",
+     "anim": {
+      "dx": 0,
+      "dy": 20,
+      "dur": 1.4,
+      "delay": 0.45,
+      "float": 5
+     },
+     "x": 1111,
+     "y": 1227,
+     "w": 221,
+     "h": 163,
+     "rot": 0
+    },
+    {
+     "kind": "text",
+     "id": "LBFhk7r4lXCHd7BC",
+     "x": 145.0,
+     "y": 430.7,
+     "w": 544,
+     "fs": 18.7,
+     "fw": 700,
+     "color": "#81f7f7",
+     "lh": 1.4,
+     "align": "left",
+     "text": "探索更多不同類型的潛點，看到更多精彩風景"
+    },
+    {
+     "kind": "text",
+     "id": "LBGcxXy9P84KsyXj",
+     "x": 145.0,
+     "y": 467.7,
+     "w": 544,
+     "fs": 41.3,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "left",
+     "text": "AOW 進階證照"
+    },
+    {
+     "kind": "text",
+     "id": "LBBPH7DGWwVWsZw7",
+     "x": 145.0,
+     "y": 537.8,
+     "w": 544,
+     "fs": 19.3,
+     "fw": 400,
+     "color": "#ffffff",
+     "lh": 1.7,
+     "align": "left",
+     "text": "搭船到離岸潛點，在沈船間漫步，一窺夜間海地世界的魔力。\n也可以 OW＋AOW 一次考完：內含10 支潛水、背包房 4 晚。"
+    },
+    {
+     "kind": "text",
+     "id": "LBMWb6CwHFM8R1vT",
+     "x": 145.0,
+     "y": 619.2,
+     "w": 544,
+     "fs": 17.3,
+     "fw": 700,
+     "color": "#81f7f7",
+     "lh": 1.4,
+     "align": "left",
+     "text": "魅力點｜當你發現自己頻繁想往海裡跑，岸潛已滿足不了你對海洋的探索慾望，AOW絕對是一張必拿的證書！"
+    },
+    {
+     "kind": "text",
+     "id": "LBjptnkxrdP7Ypq3",
+     "x": 145.0,
+     "y": 688.0,
+     "w": 304,
+     "fs": 21.3,
+     "fw": 700,
+     "color": "#efe8da",
+     "lh": 1.4,
+     "align": "left",
+     "text": "NT$ {price} ／人",
+     "priceId": "aow"
+    },
+    {
+     "kind": "text",
+     "id": "LBBLbGLQH84xRYwP",
+     "x": 140,
+     "y": 742.0,
+     "w": 644.3,
+     "fs": 19.3,
+     "fw": 400,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "left",
+     "text": "也有住宿房型，和含船票、機車的 3 天 2 夜套裝（浮潛、體驗潛水、Fun Dive）。"
+    },
+    {
+     "kind": "text",
+     "id": "LBKVNx8MqxDmXDhs",
+     "x": 140,
+     "y": 815.7,
+     "w": 180.1,
+     "fs": 19.3,
+     "fw": 700,
+     "color": "#efe8da",
+     "lh": 1.4,
+     "align": "left",
+     "ul": true,
+     "text": "看全部方案 →",
+     "href": "/trips/"
     }
    ]
   }
