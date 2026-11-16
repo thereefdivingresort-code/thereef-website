@@ -1,0 +1,180 @@
+{
+ "_說明": "首頁（電腦版 1440 寬）每段的文字、按鈕、魚類插圖座標，由 scripts/build-home-data.py 從 Canva 產生。座標單位＝px，以 1440 寬為準。",
+ "width": 1440,
+ "height": 8000,
+ "sections": [
+  {
+   "key": "open",
+   "name": "開場",
+   "top": 0,
+   "height": 1000,
+   "img": "home_s_open.webp",
+   "items": [
+    {
+     "kind": "button",
+     "x": 1180.3,
+     "y": 676.0,
+     "w": 200,
+     "h": 56,
+     "radius": 28,
+     "bg": "#ec6b0c",
+     "label": "預訂課程",
+     "fs": 19,
+     "fw": 700,
+     "color": "#ffffff",
+     "href": "/booking/"
+    },
+    {
+     "kind": "button",
+     "x": 1195.7,
+     "y": 57.2,
+     "w": 137.9,
+     "h": 47.3,
+     "radius": 24,
+     "bg": "#ec6b0c",
+     "label": "預訂",
+     "fs": 17.7,
+     "fw": 700,
+     "color": "#ffffff",
+     "href": "/booking/"
+    },
+    {
+     "kind": "text",
+     "id": "LBY03Lg67DNwrxbY",
+     "x": 698.3,
+     "y": 64.7,
+     "w": 496.7,
+     "fs": 21.9,
+     "fw": 400,
+     "color": "#000000",
+     "lh": 1.4,
+     "align": "left",
+     "text": "課程    住宿    行程    關於    聯絡        中｜EN",
+     "links": [
+      [
+       "課程",
+       "/courses/"
+      ],
+      [
+       "    ",
+       null
+      ],
+      [
+       "住宿",
+       "/stay/"
+      ],
+      [
+       "    ",
+       null
+      ],
+      [
+       "行程",
+       "/trips/"
+      ],
+      [
+       "    ",
+       null
+      ],
+      [
+       "關於",
+       "/about/"
+      ],
+      [
+       "    ",
+       null
+      ],
+      [
+       "聯絡",
+       "/about/#contact"
+      ],
+      [
+       "        中｜EN",
+       null
+      ]
+     ]
+    },
+    {
+     "kind": "text",
+     "id": "LBRHh5L24jPhK9dS",
+     "x": 692.6,
+     "y": 881.1,
+     "w": 111.7,
+     "fs": 20,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "center",
+     "ls": 0.13,
+     "text": "向下捲動"
+    },
+    {
+     "kind": "text",
+     "id": "LBxcQQNkdzxc7bNm",
+     "x": 800.3,
+     "y": 395.4,
+     "w": 564,
+     "fs": 20.0,
+     "fw": 700,
+     "color": "#81f7f7",
+     "lh": 1.4,
+     "align": "left",
+     "text": "GREEN ISLAND · TAIWAN　一間在綠島柴口的老字號潛店"
+    },
+    {
+     "kind": "text",
+     "id": "LBlhcdxSs8Lpp8x4",
+     "x": 790.3,
+     "y": 468.2,
+     "w": 644,
+     "fs": 80.0,
+     "fw": 700,
+     "color": "#efe8da",
+     "lh": 1.2,
+     "align": "left",
+     "text": "潛入島嶼深處"
+    },
+    {
+     "kind": "text",
+     "id": "LB8LnWGDWS7Q2MzD",
+     "x": 790.3,
+     "y": 591.4,
+     "w": 564,
+     "fs": 17.0,
+     "fw": 400,
+     "color": "#efe8da",
+     "lh": 1.7,
+     "align": "left",
+     "text": "綠島最迷人的莫過於路上、海上的風景都能一覽無遺，跟著綠芙的腳步\n給自己一個洗滌靈魂、難忘的海島假期。"
+    },
+    {
+     "kind": "text",
+     "id": "LBQhnfR94X68vL9m",
+     "x": 791.0,
+     "y": 691.4,
+     "w": 224,
+     "fs": 15.0,
+     "fw": 700,
+     "color": "#efe8da",
+     "lh": 1.4,
+     "align": "left",
+     "ul": true,
+     "text": "看全部方案 →",
+     "href": "/courses/"
+    },
+    {
+     "kind": "text",
+     "id": "LB7hm0Jq4jlkn6rZ",
+     "x": 153.8,
+     "y": 880.1,
+     "w": 164,
+     "fs": 20,
+     "fw": 400,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "left",
+     "text": "0 m　海平面"
+    }
+   ]
+  }
+ ]
+}
