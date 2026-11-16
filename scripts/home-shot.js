@@ -21,20 +21,22 @@ const server = http.createServer((req, res) => {
   await page.goto("http://localhost:8765/", { waitUntil: "networkidle" });
   await page.evaluate(() => document.fonts.ready);
   if (!motion) {
-    for (let y = 0; y < 8000; y += 800) { await page.evaluate((y) => window.scrollTo(0, y), y); await page.waitForTimeout(80); }
-    await page.evaluate(() => window.scrollTo(0, 0));
+    for (let y = 0; y < 8000; y += 800) { await page.evaluate((y) => window.scrollTo({ top: y, behavior: "instant" }), y); await page.waitForTimeout(80); }
+    await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
     await page.waitForTimeout(500);
     await page.screenshot({ path: out, fullPage: true });
   } else {
-    // 每個魚段：捲到該處，進場中（0.3 秒）與漂浮中（2.5 秒）各截一張
-    const stops = (process.argv[4] || "1800,2900,3700,4500").split(",").map(Number);
+    // 連續捲動：捲到指定位置後，每隔一段時間截一張（看魚有沒有進場、漂浮）
+    const stops = (process.argv[4] || "1500").split(",").map(Number);
+    const times = [100, 400, 800, 1600, 3000];
     let i = 0;
     for (const y of stops) {
-      await page.evaluate((y) => window.scrollTo(0, y), y);
-      await page.waitForTimeout(300);
-      await page.screenshot({ path: out.replace(/\.png$/, `_${++i}a.png`) });
-      await page.waitForTimeout(2200);
-      await page.screenshot({ path: out.replace(/\.png$/, `_${i}b.png`) });
+      await page.evaluate((y) => window.scrollTo({ top: y, behavior: "instant" }), y);
+      let t0 = 0; i++;
+      for (const t of times) {
+        await page.waitForTimeout(t - t0); t0 = t;
+        await page.screenshot({ path: out.replace(/\.png$/, `_${i}_${t}ms.png`) });
+      }
     }
   }
   await browser.close();

@@ -175,6 +175,183 @@
      "text": "0 m　海平面"
     }
    ]
+  },
+  {
+   "key": "d12",
+   "name": "12 m",
+   "top": 1000,
+   "height": 1950,
+   "img": "home_s_d12.webp",
+   "items": [
+    {
+     "kind": "button",
+     "x": 490,
+     "y": 811.6,
+     "w": 160,
+     "h": 52,
+     "radius": 26,
+     "bg": "#ec6b0c",
+     "label": "預訂",
+     "fs": 18,
+     "fw": 700,
+     "color": "#ffffff",
+     "href": "/booking/?item=dsd"
+    },
+    {
+     "kind": "fish",
+     "code": "A01",
+     "file": "A01_damselfish",
+     "name": "雀鯛",
+     "x": 880,
+     "y": 1220.1,
+     "w": 260,
+     "h": 257,
+     "rot": 0,
+     "anim": {
+      "dx": 0,
+      "dy": 30,
+      "dur": 0.8,
+      "delay": 0,
+      "float": 4.5
+     }
+    },
+    {
+     "kind": "fish",
+     "code": "A02",
+     "file": "A02_butterflyfish",
+     "name": "蝶魚",
+     "x": 371.9,
+     "y": 1468.1,
+     "w": 230,
+     "h": 231,
+     "rot": 0,
+     "anim": {
+      "dx": 60,
+      "dy": 0,
+      "dur": 0.9,
+      "delay": 0.15,
+      "float": 4.5
+     }
+    },
+    {
+     "kind": "text",
+     "id": "LBKSnzt85RzxJHcs",
+     "x": 153.8,
+     "y": 534.3,
+     "w": 528.7,
+     "fs": 41.3,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "left",
+     "text": "體驗潛水"
+    },
+    {
+     "kind": "text",
+     "id": "LBRLgwVYrwH4LK0D",
+     "x": 153.8,
+     "y": 131.6,
+     "w": 1162.4,
+     "fs": 45.3,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "left",
+     "text": "綠島水下世界｜12 米、18 米、30 米\n究竟能看見什麼？"
+    },
+    {
+     "kind": "text",
+     "id": "LBMqwSYvKlBbFCXN",
+     "x": 153.8,
+     "y": 604.3,
+     "w": 528.7,
+     "fs": 19.3,
+     "fw": 400,
+     "color": "#ffffff",
+     "lh": 1.7,
+     "align": "left",
+     "text": "即使不會游泳也能安心體驗與陸地上完全不同的海底世界！\n由專業合格的PADI 教練帶領，讓你用最安心舒適的方式，\n感受海洋的魔幻魅力。"
+    },
+    {
+     "kind": "text",
+     "id": "LBhLwmjm64Y6Qhlq",
+     "x": 153.8,
+     "y": 725.8,
+     "w": 528.7,
+     "fs": 17.3,
+     "fw": 700,
+     "color": "#81f7f7",
+     "lh": 1.4,
+     "align": "left",
+     "text": "魅力點｜這一次，你能親自參與而非旁觀！\n這個深度的海水清澈，陽光照進來時，水面波光粼粼，宛如夢境。"
+    },
+    {
+     "kind": "text",
+     "id": "LBJHtvt9c3B7mRTr",
+     "x": 153.8,
+     "y": 823.1,
+     "w": 295.5,
+     "fs": 21.3,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "left",
+     "text": "NT$ {price} ／人",
+     "priceId": "dsd"
+    },
+    {
+     "kind": "text",
+     "id": "LBZkD6D2yxJ572zw",
+     "x": 780.3,
+     "y": 1576.5,
+     "w": 604,
+     "fs": 41.3,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "left",
+     "text": "短暫成為海洋世界的一部分"
+    },
+    {
+     "kind": "text",
+     "id": "LB5TmS6b8GyXwhH7",
+     "x": 780.3,
+     "y": 1646.3,
+     "w": 544,
+     "fs": 20.3,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.7,
+     "align": "left",
+     "text": "在水下聽不見平常的喧囂，呼吸器、氣泡和海水裡的聲變得格外明顯，注意力從日常生活轉移到自己的呼吸與眼前的景色，絕對是最好的解憂特效藥。"
+    },
+    {
+     "kind": "text",
+     "id": "LB84RQPt6CJkrLtH",
+     "x": 228.2,
+     "y": 1136.1,
+     "w": 504,
+     "fs": 120,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "left",
+     "text": "12 m"
+    },
+    {
+     "kind": "text",
+     "id": "LBtkyDY5mxzc6Mjv",
+     "x": 153.8,
+     "y": 492.0,
+     "w": 544,
+     "fs": 18.7,
+     "fw": 700,
+     "color": "#81f7f7",
+     "lh": 1.4,
+     "align": "left",
+     "text": "岸潛 SHORE DIVE　·　最深 12 m"
+    }
+   ]
   }
  ]
 }
