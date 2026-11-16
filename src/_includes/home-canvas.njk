@@ -56,7 +56,7 @@
         {% for f in it.items %}
         <details{% if f.open %} open{% endif %}>
           <summary><span class="q">{{ f.q }}</span><span class="sign" aria-hidden="true"></span></summary>
-          <p class="a">{{ f.a }}</p>
+          <p class="a">{{ f.a | fillPrices(prices) }}</p>
         </details>
         {% endfor %}
       </div>
@@ -67,7 +67,7 @@
   </div>
   {# FAQ 結構化標記（給搜尋引擎） #}
   {% for s in home.sections %}{% for it in s.items %}{% if it.kind == "faq" %}
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for f in it.items %}{% if f.a != "答案待補" %}{% if not loop.first %},{% endif %}{"@type":"Question","name":{{ f.q | dump | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | dump | safe }}}}{% endif %}{% endfor %}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for f in it.items %}{% if f.a != "答案待補" %}{% if not loop.first %},{% endif %}{"@type":"Question","name":{{ f.q | dump | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | fillPrices(prices) | dump | safe }}}}{% endif %}{% endfor %}]}</script>
   {% endif %}{% endfor %}{% endfor %}
   <script src="/assets/js/home-canvas.js" defer></script>
 </body>

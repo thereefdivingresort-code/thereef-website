@@ -64,6 +64,13 @@ FISH = {
     "LB23Y4QxjT1k0plC": ("C07b", "C07_sweetlips", "黃帶胡椒鯛", dict(dx=-80, dy=0, dur=1.0, delay=0.25, float=4.5)),
     "LBPcFkQTv9PGdVmt": ("C05", "C05_lionfish", "獅子魚", dict(dx=0, dy=20, dur=1.4, delay=0.45, float=5)),
 }
+# FAQ 第 2–5 題答案：Stage1 缺件表 B01_FAQ 的 A3、C1、C2、C4（11/17 Ambre 同意）。價格用 {price:代號} 從 prices.json 讀
+FAQ_ANSWERS = {
+    1: "如果你已經確定喜歡海，直接考照比較划算。以綠芙為例：體驗潛水一次 {price:dsd} 元，只有 1 支（水下約 35–40 分鐘）；OW 考照套裝 {price:ow} 元，含 5 支潛水、PADI 證照申請費、全套裝備和電腦錶、背包房 2 晚、機車和保險。體驗 5 次就要 {price:dsd*5} 元，再多 {price:ow-dsd*5} 元就能拿到一張終身有效的證照。",
+    2: "綠島海水清澈，交通部觀光署形容能見度「動輒四、五十公尺」，被稱為「玻璃水」，第一次下水就能清楚看到珊瑚和魚群，比較不會緊張。夏季水溫約 26–29°C，岸潛點柴口地形平緩，綠芙就在柴口海灘旁。住在島上、騎機車環島，考照也像一趟出國度假。",
+    3: "從台北搭火車到台東約 3.5–4.5 小時（或搭飛機約 1 小時），再從台東富岡漁港搭船到綠島約 50 分鐘。建議前一晚住台東，隔天搭早班船（例如 9:30），中午前就到綠島開始行程。綠芙套裝行程含台東–綠島來回船票和碼頭接送。",
+    4: "綠島常有機會遇到海龜，但野生動物無法保證每次都看到。「大香菇」是綠島著名的巨型微孔珊瑚，公視報導稱為世界最大的微孔珊瑚礁，位在水深約 18 公尺處。體驗潛水最深約 12 公尺，考到 OW 證照後可以下潛到 18 公尺，就有機會親眼看到。",
+}
 LABEL_COLOR = "#edc40f"  # 黃色設計標籤：不做進網站
 K = 1.2  # Canva 文字框第一行高度 ≈ 1.2 × 字級
 
@@ -140,7 +147,7 @@ def main():
                 "a": {"fs": r(fa["fontSize"]), "color": fa["color"], "lh": fa["lineHeight"], "w": r(ans["width"])},
                 "sign": {"fs": r(sign[0]["textRegions"][0]["formatting"]["fontSize"]), "color": sign[0]["textRegions"][0]["formatting"]["color"]},
                 "items": [{"q": c["textRegions"][0]["characters"],
-                           "a": ans["textRegions"][0]["characters"] if i == 0 else "答案待補",
+                           "a": ans["textRegions"][0]["characters"] if i == 0 else FAQ_ANSWERS[i],
                            "open": i == 0} for i, c in enumerate(qrows)],
             })
             return
