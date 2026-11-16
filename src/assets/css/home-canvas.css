@@ -1,0 +1,53 @@
+/* 首頁（電腦版 1440）：照 Canva 座標排版。座標寫在 src/_data/home.json */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #010414; font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif; -webkit-font-smoothing: antialiased; }
+.hc-scale { width: 100%; overflow-x: hidden; }
+.hc { position: relative; width: 1440px; margin: 0 auto; }
+.hc-bg img { position: absolute; left: 0; display: block; width: 1440px; }
+.hc-sec { position: absolute; left: 0; width: 1440px; }
+.hc-logo { position: absolute; left: 40px; top: 15px; width: 301px; height: 111px; z-index: 2; }
+
+/* 文字：位置、字級、顏色都在 home.json */
+.hc-t { position: absolute; margin: 0; white-space: pre-wrap; z-index: 1; }
+.hc-t a { color: inherit; text-decoration: none; }
+.hc-t a:hover, .hc-t a:focus-visible { text-decoration: underline; text-underline-offset: 4px; }
+.hc-t.ul a { text-decoration: underline; text-underline-offset: 3px; }
+.hc-t.ul a:hover { opacity: .8; }
+
+/* 按鈕 */
+.hc-btn { position: absolute; z-index: 1; display: flex; align-items: center; justify-content: center; font-weight: 700; line-height: 1.4; text-decoration: none; transition: filter .2s; }
+.hc-btn:hover, .hc-btn:focus-visible { filter: brightness(1.12); }
+
+/* 魚類插圖：進場＋漂浮（規格見 Canva 第 3 頁備註） */
+.hc-fish { position: absolute; z-index: 0; }
+.hc-fish-img { display: block; width: 100%; height: 100%; }
+.hc-anim .hc-fish-img { opacity: 0; transform: translate(var(--dx), var(--dy)); }
+.hc-anim .hc-fish.is-in .hc-fish-img { animation: hc-in var(--dur) cubic-bezier(.22,.61,.36,1) var(--delay) both; }
+.hc-anim .hc-fish.is-in .hc-fish-img.has-float {
+  animation: hc-in var(--dur) cubic-bezier(.22,.61,.36,1) var(--delay) both,
+             hc-float var(--float) ease-in-out calc(var(--delay) + var(--dur)) infinite;
+}
+@keyframes hc-in { from { opacity: 0; transform: translate(var(--dx), var(--dy)); } to { opacity: 1; transform: translate(0, 0); } }
+@keyframes hc-float { 0%, 100% { opacity: 1; transform: translate(0, 0); } 50% { opacity: 1; transform: translate(0, -7px); } }
+@media (prefers-reduced-motion: reduce) {
+  .hc-anim .hc-fish-img, .hc-anim .hc-fish.is-in .hc-fish-img { opacity: 1 !important; transform: none !important; animation: none !important; }
+}
+
+/* FAQ 手風琴：位置照 Canva（題目框高 45、分隔線 8、線到下一題 27；展開那題答案下留 22、線到下一題 17） */
+.hc-faq { position: absolute; z-index: 1; color: var(--qc); }
+.hc-faq details { position: relative; display: flow-root; border-bottom: var(--line) solid rgba(255,255,255,var(--line-op)); margin-bottom: calc(var(--row) - 45px - var(--line)); }
+.hc-faq details[open] { padding-bottom: 22px; margin-bottom: calc(var(--row) - 55px - var(--line)); }
+.hc-faq summary { list-style: none; display: flow-root; position: relative; height: 45px; cursor: pointer; }
+.hc-faq summary::-webkit-details-marker { display: none; }
+.hc-faq .q { display: block; font-size: var(--qfs); line-height: var(--qlh); margin-top: calc((1.2 - var(--qlh)) * var(--qfs) / 2); }
+.hc-faq details[open] .q { font-weight: 700; }
+/* ＋／－：Canva 上是小小的紅色記號（約 13px），用線條畫，不用字 */
+.hc-faq .sign { position: absolute; left: 1087px; top: 5px; width: 13px; height: 13px; }
+.hc-faq .sign::before, .hc-faq .sign::after { content: ""; position: absolute; background: var(--sc); border-radius: 1px; }
+.hc-faq .sign::before { left: 0; top: 5.5px; width: 13px; height: 2px; }
+.hc-faq .sign::after { left: 5.5px; top: 0; width: 2px; height: 13px; }
+.hc-faq details[open] .sign::before { left: 2.5px; top: 8px; width: 8px; }
+.hc-faq details[open] .sign::after { display: none; }
+.hc-faq .a { margin: calc((1.2 - var(--alh)) * var(--afs) / 2) 0 0; width: var(--aw); font-size: var(--afs); line-height: var(--alh); color: var(--ac); }
+.hc-faq summary:focus-visible { outline: 2px solid #81f7f7; outline-offset: 4px; }

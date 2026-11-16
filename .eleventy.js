@@ -32,6 +32,24 @@ module.exports = function (eleventyConfig) {
     return null;
   });
 
+  // fillPrices：文字裡的 {price:dsd}、{price:dsd*5}、{price:ow-dsd*5} 換成 prices.json 的價格（加千分位），不手打數字
+  eleventyConfig.addFilter("fillPrices", function (text, prices) {
+    const find = (id) => {
+      for (const g of (prices && prices.groups) || []) {
+        const it = (g.items || []).find((i) => i.id === id);
+        if (it) return it.price;
+      }
+      throw new Error("fillPrices：prices.json 找不到 " + id);
+    };
+    return String(text).replace(/\{price:([a-z0-9*+\- -]+)\}/gi, (_, expr) => {
+      let total = 0;
+      for (const m of expr.replace(/\s/g, "").matchAll(/([+-]?)([a-z0-9-]+?)(?:\*(\d+))?(?=[+-]|$)/gi)) {
+        total += (m[1] === "-" ? -1 : 1) * find(m[2]) * (m[3] ? Number(m[3]) : 1);
+      }
+      return Number(total).toLocaleString("en-US");
+    });
+  });
+
   return {
     dir: { input: "src", includes: "_includes", data: "_data", output: "_site" },
     // 用 GitHub 免費網址時是 /thereef-website/；之後接自己的網域改成 "/"

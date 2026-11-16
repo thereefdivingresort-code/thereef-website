@@ -1,0 +1,1091 @@
+{
+ "_說明": "首頁（電腦版 1440 寬）每段的文字、按鈕、魚類插圖座標，由 scripts/build-home-data.py 從 Canva 產生。座標單位＝px，以 1440 寬為準。",
+ "width": 1440,
+ "height": 8000,
+ "sections": [
+  {
+   "key": "open",
+   "name": "開場",
+   "top": 0,
+   "height": 1000,
+   "img": "home_s_open.webp",
+   "items": [
+    {
+     "kind": "button",
+     "x": 1180.3,
+     "y": 676.0,
+     "w": 200,
+     "h": 56,
+     "radius": 28,
+     "bg": "#ec6b0c",
+     "label": "預訂課程",
+     "fs": 19,
+     "fw": 700,
+     "color": "#ffffff",
+     "href": "/booking/"
+    },
+    {
+     "kind": "button",
+     "x": 1195.7,
+     "y": 57.2,
+     "w": 137.9,
+     "h": 47.3,
+     "radius": 24,
+     "bg": "#ec6b0c",
+     "label": "預訂",
+     "fs": 17.7,
+     "fw": 700,
+     "color": "#ffffff",
+     "href": "/booking/"
+    },
+    {
+     "kind": "text",
+     "id": "LBY03Lg67DNwrxbY",
+     "x": 698.3,
+     "y": 64.7,
+     "w": 496.7,
+     "fs": 21.9,
+     "fw": 400,
+     "color": "#000000",
+     "lh": 1.4,
+     "align": "left",
+     "text": "課程    住宿    行程    關於    聯絡        中｜EN",
+     "links": [
+      [
+       "課程",
+       "/courses/"
+      ],
+      [
+       "    ",
+       null
+      ],
+      [
+       "住宿",
+       "/stay/"
+      ],
+      [
+       "    ",
+       null
+      ],
+      [
+       "行程",
+       "/trips/"
+      ],
+      [
+       "    ",
+       null
+      ],
+      [
+       "關於",
+       "/about/"
+      ],
+      [
+       "    ",
+       null
+      ],
+      [
+       "聯絡",
+       "/about/#contact"
+      ],
+      [
+       "        中｜EN",
+       null
+      ]
+     ]
+    },
+    {
+     "kind": "text",
+     "id": "LBRHh5L24jPhK9dS",
+     "x": 692.6,
+     "y": 881.1,
+     "w": 111.7,
+     "fs": 20,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "center",
+     "ls": 0.13,
+     "text": "向下捲動"
+    },
+    {
+     "kind": "text",
+     "id": "LBxcQQNkdzxc7bNm",
+     "x": 800.3,
+     "y": 395.4,
+     "w": 564,
+     "fs": 20.0,
+     "fw": 700,
+     "color": "#81f7f7",
+     "lh": 1.4,
+     "align": "left",
+     "text": "GREEN ISLAND · TAIWAN　一間在綠島柴口的老字號潛店"
+    },
+    {
+     "kind": "text",
+     "id": "LBlhcdxSs8Lpp8x4",
+     "x": 790.3,
+     "y": 468.2,
+     "w": 644,
+     "fs": 80.0,
+     "fw": 700,
+     "color": "#efe8da",
+     "lh": 1.2,
+     "align": "left",
+     "text": "潛入島嶼深處"
+    },
+    {
+     "kind": "text",
+     "id": "LB8LnWGDWS7Q2MzD",
+     "x": 790.3,
+     "y": 591.4,
+     "w": 564,
+     "fs": 17.0,
+     "fw": 400,
+     "color": "#efe8da",
+     "lh": 1.7,
+     "align": "left",
+     "text": "綠島最迷人的莫過於路上、海上的風景都能一覽無遺，跟著綠芙的腳步\n給自己一個洗滌靈魂、難忘的海島假期。"
+    },
+    {
+     "kind": "text",
+     "id": "LBQhnfR94X68vL9m",
+     "x": 791.0,
+     "y": 691.4,
+     "w": 224,
+     "fs": 15.0,
+     "fw": 700,
+     "color": "#efe8da",
+     "lh": 1.4,
+     "align": "left",
+     "ul": true,
+     "text": "看全部方案 →",
+     "href": "/courses/"
+    },
+    {
+     "kind": "text",
+     "id": "LB7hm0Jq4jlkn6rZ",
+     "x": 153.8,
+     "y": 880.1,
+     "w": 164,
+     "fs": 20,
+     "fw": 400,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "left",
+     "text": "0 m　海平面"
+    }
+   ]
+  },
+  {
+   "key": "d12",
+   "name": "12 m",
+   "top": 1000,
+   "height": 1950,
+   "img": "home_s_d12.webp",
+   "items": [
+    {
+     "kind": "button",
+     "x": 490,
+     "y": 811.6,
+     "w": 160,
+     "h": 52,
+     "radius": 26,
+     "bg": "#ec6b0c",
+     "label": "預訂",
+     "fs": 18,
+     "fw": 700,
+     "color": "#ffffff",
+     "href": "/booking/?item=dsd"
+    },
+    {
+     "kind": "fish",
+     "code": "A01",
+     "file": "home_fish_A01",
+     "name": "雀鯛",
+     "anim": {
+      "dx": 0,
+      "dy": 30,
+      "dur": 0.8,
+      "delay": 0,
+      "float": 4.5
+     },
+     "x": 905,
+     "y": 1242,
+     "w": 222,
+     "h": 215,
+     "rot": 0
+    },
+    {
+     "kind": "fish",
+     "code": "A02",
+     "file": "home_fish_A02",
+     "name": "蝶魚",
+     "anim": {
+      "dx": 60,
+      "dy": 0,
+      "dur": 0.9,
+      "delay": 0.15,
+      "float": 4.5
+     },
+     "x": 379,
+     "y": 1490,
+     "w": 219,
+     "h": 190,
+     "rot": 0
+    },
+    {
+     "kind": "text",
+     "id": "LBKSnzt85RzxJHcs",
+     "x": 153.8,
+     "y": 534.3,
+     "w": 528.7,
+     "fs": 41.3,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "left",
+     "text": "體驗潛水"
+    },
+    {
+     "kind": "text",
+     "id": "LBRLgwVYrwH4LK0D",
+     "x": 153.8,
+     "y": 131.6,
+     "w": 1162.4,
+     "fs": 45.3,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "left",
+     "text": "綠島水下世界｜12 米、18 米、30 米\n究竟能看見什麼？"
+    },
+    {
+     "kind": "text",
+     "id": "LBMqwSYvKlBbFCXN",
+     "x": 153.8,
+     "y": 604.3,
+     "w": 528.7,
+     "fs": 19.3,
+     "fw": 400,
+     "color": "#ffffff",
+     "lh": 1.7,
+     "align": "left",
+     "text": "即使不會游泳也能安心體驗與陸地上完全不同的海底世界！\n由專業合格的PADI 教練帶領，讓你用最安心舒適的方式，\n感受海洋的魔幻魅力。"
+    },
+    {
+     "kind": "text",
+     "id": "LBhLwmjm64Y6Qhlq",
+     "x": 153.8,
+     "y": 725.8,
+     "w": 528.7,
+     "fs": 17.3,
+     "fw": 700,
+     "color": "#81f7f7",
+     "lh": 1.4,
+     "align": "left",
+     "text": "魅力點｜這一次，你能親自參與而非旁觀！\n這個深度的海水清澈，陽光照進來時，水面波光粼粼，宛如夢境。"
+    },
+    {
+     "kind": "text",
+     "id": "LBJHtvt9c3B7mRTr",
+     "x": 153.8,
+     "y": 823.1,
+     "w": 295.5,
+     "fs": 21.3,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "left",
+     "text": "NT$ {price} ／人",
+     "priceId": "dsd"
+    },
+    {
+     "kind": "text",
+     "id": "LBZkD6D2yxJ572zw",
+     "x": 780.3,
+     "y": 1576.5,
+     "w": 604,
+     "fs": 41.3,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "left",
+     "text": "短暫成為海洋世界的一部分"
+    },
+    {
+     "kind": "text",
+     "id": "LB5TmS6b8GyXwhH7",
+     "x": 780.3,
+     "y": 1646.3,
+     "w": 544,
+     "fs": 20.3,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.7,
+     "align": "left",
+     "text": "在水下聽不見平常的喧囂，呼吸器、氣泡和海水裡的聲變得格外明顯，注意力從日常生活轉移到自己的呼吸與眼前的景色，絕對是最好的解憂特效藥。"
+    },
+    {
+     "kind": "text",
+     "id": "LB84RQPt6CJkrLtH",
+     "x": 228.2,
+     "y": 1136.1,
+     "w": 504,
+     "fs": 120,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "left",
+     "text": "12 m"
+    },
+    {
+     "kind": "text",
+     "id": "LBtkyDY5mxzc6Mjv",
+     "x": 153.8,
+     "y": 492.0,
+     "w": 544,
+     "fs": 18.7,
+     "fw": 700,
+     "color": "#81f7f7",
+     "lh": 1.4,
+     "align": "left",
+     "text": "岸潛 SHORE DIVE　·　最深 12 m"
+    }
+   ]
+  },
+  {
+   "key": "d18",
+   "name": "18 m",
+   "top": 2950,
+   "height": 730,
+   "img": "home_s_d18.webp",
+   "items": [
+    {
+     "kind": "button",
+     "x": 1140,
+     "y": 698.6,
+     "w": 160,
+     "h": 52,
+     "radius": 26,
+     "bg": "#ec6b0c",
+     "label": "預訂",
+     "fs": 18,
+     "fw": 700,
+     "color": "#ffffff",
+     "href": "/booking/?item=ow"
+    },
+    {
+     "kind": "fish",
+     "code": "B03",
+     "file": "home_fish_B03",
+     "name": "珊瑚礁",
+     "anim": {
+      "dx": 0,
+      "dy": 0,
+      "dur": 1.2,
+      "delay": 0,
+      "float": 0
+     },
+     "x": 0,
+     "y": 188,
+     "w": 389,
+     "h": 433,
+     "rot": 0
+    },
+    {
+     "kind": "fish",
+     "code": "B01",
+     "file": "home_fish_B01",
+     "name": "鸚哥魚",
+     "anim": {
+      "dx": 80,
+      "dy": 0,
+      "dur": 1.0,
+      "delay": 0,
+      "float": 4.5
+     },
+     "x": 1102,
+     "y": 144,
+     "w": 204,
+     "h": 103,
+     "rot": 0
+    },
+    {
+     "kind": "fish",
+     "code": "B02",
+     "file": "home_fish_B02",
+     "name": "隆頭魚",
+     "anim": {
+      "dx": -80,
+      "dy": 0,
+      "dur": 1.0,
+      "delay": 0.2,
+      "float": 4.5
+     },
+     "x": 351,
+     "y": 607,
+     "w": 413,
+     "h": 221,
+     "rot": 0
+    },
+    {
+     "kind": "text",
+     "id": "LB5Tgvgkc8jlZc6Z",
+     "x": 469.6,
+     "y": 12.4,
+     "w": 348.4,
+     "fs": 120,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "left",
+     "op": 0.6,
+     "text": "18 m"
+    },
+    {
+     "kind": "text",
+     "id": "LBxj61vyjH71XzkG",
+     "x": 780.3,
+     "y": 329.6,
+     "w": 544,
+     "fs": 18.7,
+     "fw": 700,
+     "color": "#81f7f7",
+     "lh": 1.4,
+     "align": "left",
+     "text": "取得可以帶往世界各地的潛水資格"
+    },
+    {
+     "kind": "text",
+     "id": "LBpPF5kHQPRPm5M6",
+     "x": 780.3,
+     "y": 366.6,
+     "w": 544,
+     "fs": 41.3,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "left",
+     "text": "PADI OW 初級證照"
+    },
+    {
+     "kind": "text",
+     "id": "LBkCjNgrJndf49BW",
+     "x": 780.3,
+     "y": 436.7,
+     "w": 544,
+     "fs": 19.3,
+     "fw": 400,
+     "color": "#ffffff",
+     "lh": 1.7,
+     "align": "left",
+     "text": "3 天 2 夜。含線上學科、5 支潛水、PADI 證照申請費、全套裝備和電腦錶、背包房 2 晚、機車和保險。考到之後就能下到 18 公尺看大香菇。"
+    },
+    {
+     "kind": "text",
+     "id": "LBhgNx4WTt4n2VpK",
+     "x": 780.3,
+     "y": 558.1,
+     "w": 544,
+     "fs": 17.3,
+     "fw": 400,
+     "color": "#81f7f7",
+     "lh": 1.4,
+     "align": "left",
+     "text": "魅力點｜\n發現自己血液中含有海洋DNA 的族群，讓探索海洋成為長期興趣吧！ "
+    },
+    {
+     "kind": "text",
+     "id": "LB8MKSMzDVhtSfqZ",
+     "x": 780.3,
+     "y": 631.4,
+     "w": 304,
+     "fs": 21.3,
+     "fw": 700,
+     "color": "#efe8da",
+     "lh": 1.4,
+     "align": "left",
+     "text": "NT$ {price}／人",
+     "priceId": "ow"
+    }
+   ]
+  },
+  {
+   "key": "d30",
+   "name": "30 m",
+   "top": 3680,
+   "height": 1520,
+   "img": "home_s_d30.webp",
+   "items": [
+    {
+     "kind": "button",
+     "x": 620.3,
+     "y": 911.8,
+     "w": 160,
+     "h": 52,
+     "radius": 26,
+     "bg": "#ec6b0c",
+     "label": "預訂",
+     "fs": 18,
+     "fw": 700,
+     "color": "#ffffff",
+     "href": "/booking/?item=aow"
+    },
+    {
+     "kind": "text",
+     "id": "LBDn3zYXvKyFXgQM",
+     "x": 228.2,
+     "y": 11.1,
+     "w": 377.7,
+     "fs": 120,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "left",
+     "op": 0.25,
+     "text": "30 m"
+    },
+    {
+     "kind": "fish",
+     "code": "C01",
+     "file": "home_fish_C01",
+     "name": "海龜",
+     "anim": {
+      "dx": -57,
+      "dy": 57,
+      "dur": 1.2,
+      "delay": 0,
+      "float": 5
+     },
+     "x": 732,
+     "y": 253,
+     "w": 522,
+     "h": 450,
+     "rot": 0
+    },
+    {
+     "kind": "fish",
+     "code": "C02",
+     "file": "home_fish_C02",
+     "name": "魟魚",
+     "anim": {
+      "dx": -100,
+      "dy": 0,
+      "dur": 1.4,
+      "delay": 0.3,
+      "float": 5
+     },
+     "x": 1067,
+     "y": 696,
+     "w": 373,
+     "h": 294,
+     "rot": 0
+    },
+    {
+     "kind": "fish",
+     "code": "C04",
+     "file": "home_fish_C04",
+     "name": "裸胸鯙",
+     "anim": {
+      "dx": 30,
+      "dy": 0,
+      "dur": 1.0,
+      "delay": 0,
+      "float": 0
+     },
+     "x": 134,
+     "y": 1115,
+     "w": 189,
+     "h": 180,
+     "rot": 0
+    },
+    {
+     "kind": "fish",
+     "code": "C07b",
+     "file": "home_fish_C07b",
+     "name": "黃帶胡椒鯛",
+     "anim": {
+      "dx": -80,
+      "dy": 0,
+      "dur": 1.0,
+      "delay": 0.25,
+      "float": 4.5
+     },
+     "x": 957,
+     "y": 1377,
+     "w": 88,
+     "h": 67,
+     "rot": 0
+    },
+    {
+     "kind": "fish",
+     "code": "C07",
+     "file": "home_fish_C07",
+     "name": "黃帶胡椒鯛",
+     "anim": {
+      "dx": -80,
+      "dy": 0,
+      "dur": 1.0,
+      "delay": 0.15,
+      "float": 4.5
+     },
+     "x": 694,
+     "y": 1289,
+     "w": 274,
+     "h": 188,
+     "rot": 0
+    },
+    {
+     "kind": "fish",
+     "code": "C06",
+     "file": "home_fish_C06",
+     "name": "海扇",
+     "anim": {
+      "dx": 0,
+      "dy": 0,
+      "dur": 1.2,
+      "delay": 0.3,
+      "float": 0
+     },
+     "x": 296,
+     "y": 1217,
+     "w": 294,
+     "h": 272,
+     "rot": 0
+    },
+    {
+     "kind": "fish",
+     "code": "C05",
+     "file": "home_fish_C05",
+     "name": "獅子魚",
+     "anim": {
+      "dx": 0,
+      "dy": 20,
+      "dur": 1.4,
+      "delay": 0.45,
+      "float": 5
+     },
+     "x": 1111,
+     "y": 1227,
+     "w": 221,
+     "h": 163,
+     "rot": 0
+    },
+    {
+     "kind": "text",
+     "id": "LBFhk7r4lXCHd7BC",
+     "x": 145.0,
+     "y": 430.7,
+     "w": 544,
+     "fs": 18.7,
+     "fw": 700,
+     "color": "#81f7f7",
+     "lh": 1.4,
+     "align": "left",
+     "text": "探索更多不同類型的潛點，看到更多精彩風景"
+    },
+    {
+     "kind": "text",
+     "id": "LBGcxXy9P84KsyXj",
+     "x": 145.0,
+     "y": 467.7,
+     "w": 544,
+     "fs": 41.3,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "left",
+     "text": "AOW 進階證照"
+    },
+    {
+     "kind": "text",
+     "id": "LBBPH7DGWwVWsZw7",
+     "x": 145.0,
+     "y": 537.8,
+     "w": 544,
+     "fs": 19.3,
+     "fw": 400,
+     "color": "#ffffff",
+     "lh": 1.7,
+     "align": "left",
+     "text": "搭船到離岸潛點，在沈船間漫步，一窺夜間海地世界的魔力。\n也可以 OW＋AOW 一次考完：內含10 支潛水、背包房 4 晚。"
+    },
+    {
+     "kind": "text",
+     "id": "LBMWb6CwHFM8R1vT",
+     "x": 145.0,
+     "y": 619.2,
+     "w": 544,
+     "fs": 17.3,
+     "fw": 700,
+     "color": "#81f7f7",
+     "lh": 1.4,
+     "align": "left",
+     "text": "魅力點｜當你發現自己頻繁想往海裡跑，岸潛已滿足不了你對海洋的探索慾望，AOW絕對是一張必拿的證書！"
+    },
+    {
+     "kind": "text",
+     "id": "LBjptnkxrdP7Ypq3",
+     "x": 145.0,
+     "y": 688.0,
+     "w": 304,
+     "fs": 21.3,
+     "fw": 700,
+     "color": "#efe8da",
+     "lh": 1.4,
+     "align": "left",
+     "text": "NT$ {price} ／人",
+     "priceId": "aow"
+    },
+    {
+     "kind": "text",
+     "id": "LBBLbGLQH84xRYwP",
+     "x": 140,
+     "y": 742.0,
+     "w": 644.3,
+     "fs": 19.3,
+     "fw": 400,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "left",
+     "text": "也有住宿房型，和含船票、機車的 3 天 2 夜套裝（浮潛、體驗潛水、Fun Dive）。"
+    },
+    {
+     "kind": "text",
+     "id": "LBKVNx8MqxDmXDhs",
+     "x": 140,
+     "y": 815.7,
+     "w": 180.1,
+     "fs": 19.3,
+     "fw": 700,
+     "color": "#efe8da",
+     "lh": 1.4,
+     "align": "left",
+     "ul": true,
+     "text": "看全部方案 →",
+     "href": "/trips/"
+    }
+   ]
+  },
+  {
+   "key": "faq",
+   "name": "FAQ",
+   "top": 5200,
+   "height": 750,
+   "img": "home_s_faq.webp",
+   "items": [
+    {
+     "kind": "text",
+     "id": "LBkps7HGbgsb4qcl",
+     "x": 168.2,
+     "y": 35.0,
+     "w": 704,
+     "fs": 41.3,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "left",
+     "text": "第一次來，你可能會好奇的事"
+    },
+    {
+     "kind": "faq",
+     "x": 168.2,
+     "y": 144.2,
+     "w": 1120,
+     "rowH": 80,
+     "lineH": 8,
+     "lineOp": 0.25,
+     "q": {
+      "fs": 22.3,
+      "color": "#ffffff",
+      "lh": 1.4
+     },
+     "a": {
+      "fs": 18.3,
+      "color": "#8fa3b8",
+      "lh": 1.7,
+      "w": 960
+     },
+     "sign": {
+      "fs": 27.3,
+      "color": "#e5533d"
+     },
+     "items": [
+      {
+       "q": "我完全沒潛過，可以直接考潛水證照嗎？",
+       "a": "可以，PADI OW 初級開放水域課程就是為零經驗的人設計的。先上線上學科，在家就能預習；到現場先在平靜水域練習，再進到開放水域，教練全程帶領。",
+       "open": true
+      },
+      {
+       "q": "先體驗潛水再考照，還是直接考證照比較划算？",
+       "a": "如果你已經確定喜歡海，直接考照比較划算。以綠芙為例：體驗潛水一次 {price:dsd} 元，只有 1 支（水下約 35–40 分鐘）；OW 考照套裝 {price:ow} 元，含 5 支潛水、PADI 證照申請費、全套裝備和電腦錶、背包房 2 晚、機車和保險。體驗 5 次就要 {price:dsd*5} 元，再多 {price:ow-dsd*5} 元就能拿到一張終身有效的證照。",
+       "open": false
+      },
+      {
+       "q": "為什麼大家說綠島很適合第一次潛水？",
+       "a": "綠島海水清澈，交通部觀光署形容能見度「動輒四、五十公尺」，被稱為「玻璃水」，第一次下水就能清楚看到珊瑚和魚群，比較不會緊張。夏季水溫約 26–29°C，岸潛點柴口地形平緩，綠芙就在柴口海灘旁。住在島上、騎機車環島，考照也像一趟出國度假。",
+       "open": false
+      },
+      {
+       "q": "從台北去綠島要多久？行程怎麼安排？",
+       "a": "從台北搭火車到台東約 3.5–4.5 小時（或搭飛機約 1 小時），再從台東富岡漁港搭船到綠島約 50 分鐘。建議前一晚住台東，隔天搭早班船（例如 9:30），中午前就到綠島開始行程。綠芙套裝行程含台東–綠島來回船票和碼頭接送。",
+       "open": false
+      },
+      {
+       "q": "在綠島潛水看得到海龜和大香菇嗎？",
+       "a": "綠島常有機會遇到海龜，但野生動物無法保證每次都看到。「大香菇」是綠島著名的巨型微孔珊瑚，公視報導稱為世界最大的微孔珊瑚礁，位在水深約 18 公尺處。體驗潛水最深約 12 公尺，考到 OW 證照後可以下潛到 18 公尺，就有機會親眼看到。",
+       "open": false
+      }
+     ]
+    },
+    {
+     "kind": "text",
+     "id": "LB9C7Z9WwShYPGL5",
+     "x": 1264.6,
+     "y": 676.7,
+     "w": 112.7,
+     "fs": 20.1,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "center",
+     "ls": 0.13,
+     "text": "回到頂部",
+     "href": "#top"
+    }
+   ]
+  },
+  {
+   "key": "map",
+   "name": "我們在哪裡",
+   "top": 5950,
+   "height": 1100,
+   "img": "home_s_map.webp",
+   "items": [
+    {
+     "kind": "text",
+     "id": "LBy294n52lx4mJtd",
+     "x": 1055.4,
+     "y": 528.8,
+     "w": 370.9,
+     "fs": 24.0,
+     "fw": 700,
+     "color": "#12355b",
+     "lh": 1.4,
+     "align": "left",
+     "text": "綠芙 The Reef｜柴口"
+    },
+    {
+     "kind": "text",
+     "id": "LB50dqfFdmvrBbhl",
+     "x": 620.8,
+     "y": 722.4,
+     "w": 145.1,
+     "fs": 21.2,
+     "fw": 400,
+     "color": "#7a6a55",
+     "lh": 1.4,
+     "align": "right",
+     "text": "南寮漁港"
+    },
+    {
+     "kind": "text",
+     "id": "LB15HdH7HhwwlF8V",
+     "x": 121.7,
+     "y": 708.4,
+     "w": 504,
+     "fs": 40.0,
+     "fw": 700,
+     "color": "#12355b",
+     "lh": 1.4,
+     "align": "left",
+     "text": "我們在哪裡"
+    },
+    {
+     "kind": "text",
+     "id": "LBBlqVj6vVzPV0WG",
+     "x": 121.7,
+     "y": 783.4,
+     "w": 524,
+     "fs": 19,
+     "fw": 400,
+     "color": "#12355b",
+     "lh": 1.7,
+     "align": "left",
+     "runs": [
+      {
+       "t": "綠芙就在綠島柴口海灘旁，走幾步路就能下水。\n夏天水溫約 26–29°C，岸潛點地形平緩，很適合第一次潛水。",
+       "c": "#12355b"
+      },
+      {
+       "t": "在島上騎機車吹海風，考照就像一趟出國度假。",
+       "c": "#da5c4e"
+      }
+     ]
+    },
+    {
+     "kind": "text",
+     "id": "LB1S3NLTSKh9VSyp",
+     "x": 121.7,
+     "y": 932.8,
+     "w": 524,
+     "fs": 18,
+     "fw": 700,
+     "color": "#12355b",
+     "lh": 1.8,
+     "align": "left",
+     "text": "地址｜台東縣綠島鄉公館村柴口 172 號之 2\n交通｜台東富岡漁港搭船約 50 分鐘到綠島"
+    },
+    {
+     "kind": "text",
+     "id": "LBmV0xCTjDldmlbz",
+     "x": 121.7,
+     "y": 1026.3,
+     "w": 524,
+     "fs": 19,
+     "fw": 700,
+     "color": "#ec6c0c",
+     "lh": 1.4,
+     "align": "left",
+     "ul": true,
+     "text": "在 Google 地圖開啟 →　　　認識我們 →",
+     "links": [
+      [
+       "在 Google 地圖開啟 →",
+       "site:googleMapUrl"
+      ],
+      [
+       "　　　",
+       null
+      ],
+      [
+       "認識我們 →",
+       "/about/"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "key": "footer",
+   "name": "頁尾",
+   "top": 7050,
+   "height": 950,
+   "img": "home_s_footer.webp",
+   "items": [
+    {
+     "kind": "text",
+     "id": "LBQhQVYDKWr8dSx4",
+     "x": 121.7,
+     "y": 582.7,
+     "w": 933.9,
+     "fs": 49.2,
+     "fw": 700,
+     "color": "#efe8da",
+     "lh": 1.4,
+     "align": "left",
+     "text": "準備好下水了嗎？"
+    },
+    {
+     "kind": "button",
+     "x": 576.9,
+     "y": 579.8,
+     "w": 255.7,
+     "h": 69.7,
+     "radius": 30,
+     "bg": "#ec6b0c",
+     "label": "預訂課程",
+     "fs": 22.1,
+     "fw": 700,
+     "color": "#ffffff",
+     "href": "/booking/"
+    },
+    {
+     "kind": "button",
+     "x": 848.4,
+     "y": 579.8,
+     "w": 209.2,
+     "h": 69.7,
+     "radius": 30,
+     "bg": "#0a1c2e",
+     "label": "聯絡我們",
+     "fs": 22.1,
+     "fw": 700,
+     "color": "#efe8da",
+     "href": "/about/#contact",
+     "bw": 2,
+     "bc": "#efe8da"
+    },
+    {
+     "kind": "text",
+     "id": "LBTjNBStlnK0Vl1V",
+     "x": 128.1,
+     "y": 718.9,
+     "w": 469.0,
+     "fs": 25.6,
+     "fw": 700,
+     "color": "#efe8da",
+     "lh": 1.4,
+     "align": "left",
+     "text": "The Reef 綠芙潛水"
+    },
+    {
+     "kind": "text",
+     "id": "LBqjhw2RR6KfkFcs",
+     "x": 128.1,
+     "y": 774.0,
+     "w": 701.4,
+     "fs": 18.5,
+     "fw": 400,
+     "color": "#efe8da",
+     "lh": 1.8,
+     "align": "left",
+     "text": "公司名稱（待填）　統一編號（待填）\n台東縣綠島鄉公館村柴口 172 號之 2\n電話 0936-871-525　信箱（待填）",
+     "site": "companyLines"
+    },
+    {
+     "kind": "text",
+     "id": "LBT88PzHtvnC23Wg",
+     "x": 847.7,
+     "y": 774.0,
+     "w": 259.7,
+     "fs": 18.6,
+     "fw": 400,
+     "color": "#efe8da",
+     "lh": 1.8,
+     "align": "left",
+     "ul": true,
+     "text": "服務條款\n隱私權政策\n退款與停航政策",
+     "site": "legalLinks"
+    },
+    {
+     "kind": "text",
+     "id": "LB5W7cmFGytM2mHB",
+     "x": 1197.4,
+     "y": 806.5,
+     "w": 236.5,
+     "fs": 18.6,
+     "fw": 400,
+     "color": "#efe8da",
+     "lh": 1.8,
+     "align": "left",
+     "text": "Instagram\nLINE 官方帳號",
+     "site": "social"
+    },
+    {
+     "kind": "text",
+     "id": "LBsQF7Hmp5BJfYXF",
+     "x": 128.1,
+     "y": 894.1,
+     "w": 469.0,
+     "fs": 13.4,
+     "fw": 400,
+     "color": "#8fa3b8",
+     "lh": 1.4,
+     "align": "left",
+     "text": "© 2026 The Reef Diving"
+    }
+   ]
+  }
+ ]
+}
