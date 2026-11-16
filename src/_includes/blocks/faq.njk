@@ -1,0 +1,14 @@
+{# 積木：FAQ 手風琴。用原生 details/summary，不用額外 JS。a 沒填時顯示「答案待補」 #}
+<section class="block faq">
+  <div class="wrap">
+    <h2>{{ b.title }}</h2>
+    <div class="faq-list">
+      {% for item in b.items %}
+      <details class="faq-item"{% if loop.first %} open{% endif %}>
+        <summary>{{ item.q }}<span class="faq-icon" aria-hidden="true"></span></summary>
+        <div class="faq-a">{% if item.a %}{{ item.a | rich | safe }}{% else %}<p class="small muted">（答案待補）</p>{% endif %}</div>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>

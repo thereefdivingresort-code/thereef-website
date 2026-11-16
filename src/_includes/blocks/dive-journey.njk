@@ -1,0 +1,43 @@
+{# 積木：潛入島嶼深處 — 開場後的三段深度（體驗潛水 12m／OW 18m／AOW 30m），隨捲動出現。
+   背景＝ home_bg2_deepsea；體驗潛水段落另有 home_photo_diver 照片；魚類插圖＝ A01–C07（捲動淡入）。
+   價格只從 prices.json 讀（priceItem 篩選器）。 #}
+<section class="block dive-journey">
+  <div class="wrap dive-intro">
+    <p class="eyebrow">{{ b.intro.subtitle }}</p>
+    <h2>{{ b.intro.title }}</h2>
+    <div class="lead">{{ b.intro.body | rich | safe }}</div>
+  </div>
+
+  {% for d in b.depths %}
+  {% set p = d.priceId | priceItem(prices) %}
+  <article class="depth-card reveal" data-depth="{{ d.depth }}">
+    <div class="depth-card-media">
+      {% if d.photo %}<img class="depth-photo" src="/assets/img/home/{{ d.photo }}" alt="{{ d.photoAlt }}" loading="lazy">{% endif %}
+      <span class="depth-num">{{ d.depth }}</span>
+      <div class="fish-cluster">
+        {% for f in d.fish %}
+        <img class="fish-ph anim-{{ f.anim }}" src="/assets/img/home/{{ f.code }}_{{ f.file }}.webp" alt="{{ f.code }}｜{{ f.name }}" loading="lazy">
+        {% endfor %}
+      </div>
+    </div>
+    <div class="depth-card-body">
+      {% if d.tag %}<p class="depth-tag">{{ d.tag }}</p>{% endif %}
+      {% if d.eyebrow %}<p class="eyebrow">{{ d.eyebrow }}</p>{% endif %}
+      <h3>{{ d.title }}</h3>
+      <div class="lead">{{ d.body | rich | safe }}</div>
+      {% if d.highlight %}<p class="highlight">魅力點｜{{ d.highlight }}</p>{% endif %}
+      {% if p %}<p class="price">{{ prices.currency }} {{ p.price | money }}／{{ p.unit }}</p>{% endif %}
+      <a class="btn btn-orange btn-sm" href="{{ d.bookHref }}">預訂</a>
+    </div>
+  </article>
+  {% endfor %}
+
+  {% if b.outro %}
+  <div class="wrap dive-outro">
+    <p>{{ b.outro.text }} <a class="link-orange" href="{{ b.outro.link.href }}">{{ b.outro.link.label }} →</a></p>
+  </div>
+  {% endif %}
+
+  <img class="dive-edge" src="/assets/img/home/home_edge_transition.webp" alt="" aria-hidden="true" loading="lazy">
+  <a class="back-to-top" href="#top" id="back-to-top">↑<span>回到頂部</span></a>
+</section>

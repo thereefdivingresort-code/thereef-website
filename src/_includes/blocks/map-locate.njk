@@ -1,0 +1,16 @@
+{# 積木：我們在哪裡。圖＝ home_bg3_coast（下緣已帶水彩消逝）＋ home_map 手繪島嶼地圖。地址／Google 地圖連結讀 site.json #}
+<section class="block map-locate">
+  <div class="map-media">
+    <img class="map-coast" src="/assets/img/home/home_bg3_coast.webp" alt="綠島空拍海岸">
+    <img class="map-illust" src="/assets/img/home/home_map.webp" alt="手繪綠島地圖">
+  </div>
+  <div class="wrap map-body">
+    <h2>{{ b.title }}</h2>
+    <p>{{ b.body }}</p>
+    <p class="map-meta">地址｜{{ site.company.address }}<br>交通｜{{ b.transport }}</p>
+    <div class="map-links">
+      <a class="link-orange" href="{{ site.company.googleMapUrl }}" target="_blank" rel="noopener">在 Google 地圖開啟 →</a>
+      <a class="link-orange" href="/about/">認識我們 →</a>
+    </div>
+  </div>
+</section>

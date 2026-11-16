@@ -22,6 +22,15 @@ module.exports = function (eleventyConfig) {
     return out.join("");
   });
   eleventyConfig.addFilter("money", (n) => Number(n).toLocaleString("en-US"));
+  // priceItem：用代號從 prices.json 找一個品項（{{ "dsd" | priceItem(prices) }}），價格只讀不手打
+  eleventyConfig.addFilter("priceItem", function (id, prices) {
+    if (!prices || !prices.groups) return null;
+    for (const g of prices.groups) {
+      const item = (g.items || []).find((i) => i.id === id);
+      if (item) return item;
+    }
+    return null;
+  });
 
   return {
     dir: { input: "src", includes: "_includes", data: "_data", output: "_site" },
