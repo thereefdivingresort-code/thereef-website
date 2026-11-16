@@ -384,7 +384,9 @@
       "dy": 0,
       "dur": 1.2,
       "delay": 0,
-      "float": 0
+      "float": 0,
+      "sway": 6,
+      "origin": "0% 75%"
      },
      "x": 0,
      "y": 188,
@@ -569,8 +571,8 @@
      "file": "home_fish_C02",
      "name": "魟魚",
      "anim": {
-      "dx": -100,
-      "dy": 0,
+      "dx": 100,
+      "dy": 20,
       "dur": 1.4,
       "delay": 0.3,
       "float": 5
@@ -587,7 +589,7 @@
      "file": "home_fish_C04",
      "name": "裸胸鯙",
      "anim": {
-      "dx": 30,
+      "dx": -30,
       "dy": 0,
       "dur": 1.0,
       "delay": 0,
@@ -605,7 +607,7 @@
      "file": "home_fish_C07b",
      "name": "黃帶胡椒鯛",
      "anim": {
-      "dx": -80,
+      "dx": 80,
       "dy": 0,
       "dur": 1.0,
       "delay": 0.25,
@@ -623,7 +625,7 @@
      "file": "home_fish_C07",
      "name": "黃帶胡椒鯛",
      "anim": {
-      "dx": -80,
+      "dx": 80,
       "dy": 0,
       "dur": 1.0,
       "delay": 0.15,
@@ -645,7 +647,9 @@
       "dy": 0,
       "dur": 1.2,
       "delay": 0.3,
-      "float": 0
+      "float": 0,
+      "sway": 7,
+      "origin": "12% 88%"
      },
      "x": 296,
      "y": 1217,

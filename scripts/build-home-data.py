@@ -49,19 +49,20 @@ BUTTONS = {
 HEADER_BTN = ("LBcX3tPyTYvqMPWK", "LBVc9PMRPxKskgrn", "/booking/")
 FAQ_GROUP = "LB6lHLng6Q1YQ4lz"
 # 魚類插圖：Canva 元素 id → 檔名、動畫（照 Canva 備註動畫表）
-# anim: dx/dy＝進場起點位移（px），dur 秒，delay 秒，float＝漂浮秒數（0＝不漂）
+# anim: dx/dy＝進場起點位移（px，正＝從右邊／下面進來），dur 秒，delay 秒，float＝上下漂浮一輪秒數（0＝不漂），
+#       sway＝珊瑚／海扇左右擺動一輪秒數、origin＝擺動支點。方向一律跟著魚頭（11/17 Ambre 指出魟魚反了，C02 C04 C07 改成跟 Canva 備註相反）
 FISH = {
     "LBB5YJdFCD8Hf6yc": ("A01", "A01_damselfish", "雀鯛", dict(dx=0, dy=30, dur=0.8, delay=0, float=4.5)),
     "LBjZtmklxStNTl4w": ("A02", "A02_butterflyfish", "蝶魚", dict(dx=60, dy=0, dur=0.9, delay=0.15, float=4.5)),
     "LBhXNPpRbVK7YgNw": ("B01", "B01_parrotfish", "鸚哥魚", dict(dx=80, dy=0, dur=1.0, delay=0, float=4.5)),
     "LBqCVhnbK72xh8fR": ("B02", "B02_wrasse", "隆頭魚", dict(dx=-80, dy=0, dur=1.0, delay=0.2, float=4.5)),
-    "LB8FFq5qtjz9CKCX": ("B03", "B03_coral", "珊瑚礁", dict(dx=0, dy=0, dur=1.2, delay=0, float=0)),
+    "LB8FFq5qtjz9CKCX": ("B03", "B03_coral", "珊瑚礁", dict(dx=0, dy=0, dur=1.2, delay=0, float=0, sway=6, origin="0% 75%")),  # 隨水流輕輕擺動
     "LBlTR3klcMJ65X1V": ("C01", "C01_turtle", "海龜", dict(dx=-57, dy=57, dur=1.2, delay=0, float=5)),
-    "LBfCXFC2gH4SwV2l": ("C02", "C02_stingray", "魟魚", dict(dx=-100, dy=0, dur=1.4, delay=0.3, float=5)),
-    "LBGcpwYgFRBXTTv5": ("C04", "C04_moray", "裸胸鯙", dict(dx=30, dy=0, dur=1.0, delay=0, float=0)),
-    "LBSv8p9jbwRWk9XC": ("C06", "C06_seafan", "海扇", dict(dx=0, dy=0, dur=1.2, delay=0.3, float=0)),
-    "LBPTFlDKNzTGKMbd": ("C07", "C07_sweetlips", "黃帶胡椒鯛", dict(dx=-80, dy=0, dur=1.0, delay=0.15, float=4.5)),
-    "LB23Y4QxjT1k0plC": ("C07b", "C07_sweetlips", "黃帶胡椒鯛", dict(dx=-80, dy=0, dur=1.0, delay=0.25, float=4.5)),
+    "LBfCXFC2gH4SwV2l": ("C02", "C02_stingray", "魟魚", dict(dx=100, dy=20, dur=1.4, delay=0.3, float=5)),  # 頭朝左上：由右往左滑入（11/17 Ambre：原本方向反了）
+    "LBGcpwYgFRBXTTv5": ("C04", "C04_moray", "裸胸鯙", dict(dx=-30, dy=0, dur=1.0, delay=0, float=0)),  # 頭朝右：往右探出
+    "LBSv8p9jbwRWk9XC": ("C06", "C06_seafan", "海扇", dict(dx=0, dy=0, dur=1.2, delay=0.3, float=0, sway=7, origin="12% 88%")),
+    "LBPTFlDKNzTGKMbd": ("C07", "C07_sweetlips", "黃帶胡椒鯛", dict(dx=80, dy=0, dur=1.0, delay=0.15, float=4.5)),  # 頭朝左：由右往左游入
+    "LB23Y4QxjT1k0plC": ("C07b", "C07_sweetlips", "黃帶胡椒鯛", dict(dx=80, dy=0, dur=1.0, delay=0.25, float=4.5)),
     "LBPcFkQTv9PGdVmt": ("C05", "C05_lionfish", "獅子魚", dict(dx=0, dy=20, dur=1.4, delay=0.45, float=5)),
 }
 # FAQ 第 2–5 題答案：Stage1 缺件表 B01_FAQ 的 A3、C1、C2、C4（11/17 Ambre 同意）。價格用 {price:代號} 從 prices.json 讀

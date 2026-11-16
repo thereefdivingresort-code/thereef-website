@@ -43,8 +43,8 @@
     <section class="hc-sec hc-sec-{{ s.key }}" data-name="{{ s.name }}" style="top:{{ s.top }}px;height:{{ s.height }}px">
       {% for it in s.items %}{% if it.kind == "fish" %}
       <div class="hc-fish" style="left:{{ it.x }}px;top:{{ it.y }}px;width:{{ it.w }}px;height:{{ it.h }}px;{% if it.rot %}transform:rotate({{ it.rot }}deg);{% endif %}{% if it.crop %}overflow:hidden;{% endif %}">
-        <img class="hc-fish-img{% if it.anim.float %} has-float{% endif %}" src="/assets/img/home/{{ it.file }}.webp" alt="{{ it.name }}插圖" loading="lazy"
-          style="--dx:{{ it.anim.dx }}px;--dy:{{ it.anim.dy }}px;--dur:{{ it.anim.dur }}s;--delay:{{ it.anim.delay }}s;--float:{{ it.anim.float or 0 }}s;{% if it.crop %}position:absolute;left:{{ it.crop.x }}px;top:{{ it.crop.y }}px;width:{{ it.crop.w }}px;height:{{ it.crop.h }}px;{% endif %}">
+        <img class="hc-fish-img{% if it.anim.float %} has-float{% endif %}{% if it.anim.sway %} has-sway{% endif %}" src="/assets/img/home/{{ it.file }}.webp" alt="{{ it.name }}插圖" loading="lazy"
+          style="--dx:{{ it.anim.dx }}px;--dy:{{ it.anim.dy }}px;--dur:{{ it.anim.dur }}s;--delay:{{ it.anim.delay }}s;--float:{{ it.anim.float or 0 }}s;{% if it.anim.sway %}--sway:{{ it.anim.sway }}s;transform-origin:{{ it.anim.origin }};{% endif %}{% if it.crop %}position:absolute;left:{{ it.crop.x }}px;top:{{ it.crop.y }}px;width:{{ it.crop.w }}px;height:{{ it.crop.h }}px;{% endif %}">
       </div>
       {% endif %}{% endfor %}
       {% for it in s.items %}{% if it.kind == "text" %}
