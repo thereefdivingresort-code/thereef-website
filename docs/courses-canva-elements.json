@@ -1,0 +1,1652 @@
+{
+ "_說明": "Canva DAHao-HiYfI 第 4 頁（課程，頁面 ID PBJhnDK4r7QhB4zS，1440×6000）的元素座標，2026-11-16 在工作檔 DAHbGmNgcBM 讀一次整理而成（圖片只記位置；文字、字級、顏色、行高照 Canva）。頁面備註沒有動畫規格。",
+ "source": {
+  "design": "DAHao-HiYfI",
+  "page_id": "PBJhnDK4r7QhB4zS",
+  "work_copy": "DAHbGmNgcBM"
+ },
+ "presenter_notes": "UI v3｜課程頁（2026-11-15）。風格依首頁 UI v3：深海漸層底圖、左側深度線、白字＋青色小標、橘色預訂鈕。\n內容來源：試算表「潛水品牌 Stage1｜文案資訊」→ 潛水課程＋套裝行程、綠芙價目與房型分頁。\n價格：全部是歷史圖文轉錄價，待業主確認（體驗 2,500／OW 15,000／AOW 15,000／OW＋AOW 30,000／Fun Dive／進修課程）。首頁目前價格是 ─,─── 佔位，兩邊要同步。\n照片：體驗潛水、AOW 沿用首頁素材；OW 用業主 Drive「潛水精選照片」的珊瑚魚群。\n待確認：AOW 15,000 是否與 OW 同價；DSD 是否含證照外的費用；常遇見生物清單。",
+ "design_content": {
+  "pages": [
+   {
+    "id": "PBpC6B3ZPp7rZGy1",
+    "dimensions": {
+     "width": 1440,
+     "height": 6000
+    },
+    "notes": "UI v3｜課程頁（2026-11-15）。風格依首頁 UI v3：深海漸層底圖、左側深度線、白字＋青色小標、橘色預訂鈕。\n內容來源：試算表「潛水品牌 Stage1｜文案資訊」→ 潛水課程＋套裝行程、綠芙價目與房型分頁。\n價格：全部是歷史圖文轉錄價，待業主確認（體驗 2,500／OW 15,000／AOW 15,000／OW＋AOW 30,000／Fun Dive／進修課程）。首頁目前價格是 ─,─── 佔位，兩邊要同步。\n照片：體驗潛水、AOW 沿用首頁素材；OW 用業主 Drive「潛水精選照片」的珊瑚魚群。\n待確認：AOW 15,000 是否與 OW 同價；DSD 是否含證照外的費用；常遇見生物清單。",
+    "elements": [
+     {
+      "id": "LB5j3kn2JDKPsx8s",
+      "type": "rect",
+      "top": 141.2733,
+      "left": -3.185,
+      "width": 1460.42,
+      "height": 1835.2267,
+      "rotation": 0,
+      "opacity": 1,
+      "mediaId": "MAEEim91YG4",
+      "alt": "開場潛水員照片",
+      "flipX": false
+     },
+     {
+      "id": "LB4lFbLnFZkyPWgM",
+      "type": "rect",
+      "top": 3916.0,
+      "left": -53.545,
+      "width": 1489.0,
+      "height": 700.0,
+      "rotation": 0,
+      "opacity": 1,
+      "mediaId": "MAF4CHaM4bQ",
+      "alt": "深海往下漸暗",
+      "flipX": false
+     },
+     {
+      "id": "LBKs4jlFwXYTWJgH",
+      "type": "shape",
+      "top": 4776.0,
+      "left": -4.545,
+      "width": 1440.0,
+      "height": 620.0,
+      "rotation": 0,
+      "opacity": 1,
+      "paths": [
+       {
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#f5f3ee"
+         }
+        },
+        "stroke": {
+         "weight": 0,
+         "color": {
+          "type": "solid",
+          "color": "#000000"
+         }
+        },
+        "cornerRounding": 0
+       }
+      ]
+     },
+     {
+      "id": "LBRGCYW0kPbsxbcR",
+      "type": "rect",
+      "top": 3629.1283,
+      "left": -7.9551,
+      "width": 1446.8202,
+      "height": 1608.5517,
+      "rotation": 0,
+      "opacity": 1,
+      "mediaId": "MAFlubAjOWs",
+      "alt": "其他方案／下水前背景照片",
+      "flipX": false
+     },
+     {
+      "id": "LBp956RBjdxq6wB9",
+      "type": "rect",
+      "top": 1972.0,
+      "left": -14.755,
+      "width": 1460.42,
+      "height": 1676.0,
+      "rotation": 0,
+      "opacity": 1,
+      "mediaId": "MAC_7xr2zEc",
+      "alt": "AOW 背景照片",
+      "flipX": false
+     },
+     {
+      "id": "LBL8HBzp1WpLQ1jd",
+      "type": "shape",
+      "top": 1210.0,
+      "left": 71.0,
+      "width": 5.0,
+      "height": 2000.0,
+      "rotation": 0,
+      "opacity": 0.6,
+      "paths": [
+       {
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         }
+        },
+        "stroke": {
+         "weight": 0,
+         "color": {
+          "type": "solid",
+          "color": "#000000"
+         }
+        },
+        "cornerRounding": 0
+       }
+      ]
+     },
+     {
+      "id": "LBFhmY4Vwl7rqdNn",
+      "type": "group",
+      "top": 0,
+      "left": 0,
+      "width": 1440,
+      "height": 142,
+      "rotation": 0,
+      "opacity": 1,
+      "children": [
+       {
+        "id": "LB6qk9BwNVg0787S",
+        "type": "shape",
+        "top": 0,
+        "left": 0,
+        "width": 1440.0,
+        "height": 138.0,
+        "rotation": 0,
+        "opacity": 1,
+        "paths": [
+         {
+          "fill": {
+           "color": {
+            "type": "solid",
+            "color": "#ffffff"
+           }
+          },
+          "stroke": {
+           "weight": 0,
+           "color": {
+            "type": "solid",
+            "color": "#000000"
+           }
+          },
+          "cornerRounding": 0
+         }
+        ]
+       },
+       {
+        "id": "LBDtxPbw3DCBsdPk",
+        "type": "rect",
+        "top": 5.0,
+        "left": 1288.0,
+        "width": 112.0,
+        "height": 137.0,
+        "rotation": 0,
+        "opacity": 1,
+        "mediaId": "MAFILAMUFb0",
+        "alt": "裝飾光暈",
+        "flipX": false
+       },
+       {
+        "id": "LBRjmgMlQXS9cbKV",
+        "type": "rect",
+        "top": 15.0,
+        "left": 40.0,
+        "width": 301.0,
+        "height": 111.0,
+        "rotation": 0,
+        "opacity": 1,
+        "mediaId": "MAHayYnaANk",
+        "alt": "The Reef 綠芙潛水 logo",
+        "flipX": false
+       },
+       {
+        "id": "LBrHwHFFgrHrtZzH",
+        "type": "text",
+        "top": 67.0,
+        "left": 698.0,
+        "width": 493.0,
+        "height": 25.6,
+        "rotation": 0,
+        "opacity": 1,
+        "textRegions": [
+         {
+          "characters": "課程",
+          "formatting": {
+           "fontSize": 22,
+           "fontWeight": "bold",
+           "color": "#2a8a9a",
+           "textAlign": "start",
+           "lineHeight": 1.4,
+           "letterSpacing": 0,
+           "decoration": "none"
+          }
+         },
+         {
+          "characters": " ",
+          "formatting": {
+           "fontSize": 22,
+           "fontWeight": "normal",
+           "color": "#2a8a9a",
+           "textAlign": "start",
+           "lineHeight": 1.4,
+           "letterSpacing": 0,
+           "decoration": "none"
+          }
+         },
+         {
+          "characters": "   住宿    行程    關於    聯絡        中｜EN",
+          "formatting": {
+           "fontSize": 22,
+           "fontWeight": "normal",
+           "color": "#000000",
+           "textAlign": "start",
+           "lineHeight": 1.4,
+           "letterSpacing": 0,
+           "decoration": "none"
+          }
+         }
+        ]
+       },
+       {
+        "id": "LBNcz1hBWcx1YCC7",
+        "type": "shape",
+        "top": 57.0,
+        "left": 1196.0,
+        "width": 138.0,
+        "height": 47.0,
+        "rotation": 0,
+        "opacity": 1,
+        "paths": [
+         {
+          "fill": {
+           "color": {
+            "type": "solid",
+            "color": "#ec6b0c"
+           }
+          },
+          "stroke": {
+           "weight": 0,
+           "color": {
+            "type": "solid",
+            "color": "#000000"
+           }
+          },
+          "cornerRounding": 24
+         }
+        ]
+       },
+       {
+        "id": "LBsvWwhFTGzmXFxt",
+        "type": "text",
+        "top": 69.0,
+        "left": 1196.0,
+        "width": 138.0,
+        "height": 21.4,
+        "rotation": 0,
+        "opacity": 1,
+        "textRegions": [
+         {
+          "characters": "預訂",
+          "formatting": {
+           "fontSize": 18,
+           "fontWeight": "bold",
+           "color": "#ffffff",
+           "textAlign": "center",
+           "lineHeight": 1.4,
+           "letterSpacing": 0,
+           "decoration": "none"
+          }
+         }
+        ]
+       },
+       {
+        "id": "LBdfR4qDhtgT29wp",
+        "type": "rect",
+        "top": 60.09,
+        "left": 473.79,
+        "width": 72.43,
+        "height": 42.37,
+        "rotation": 0,
+        "opacity": 1,
+        "mediaId": "MAF5nqUkEcE",
+        "alt": "潛水員剪影",
+        "flipX": true
+       },
+       {
+        "id": "LBPTlSDWqmq6TDNx",
+        "type": "rect",
+        "top": 34.11,
+        "left": 1358.2,
+        "width": 53.63,
+        "height": 45.32,
+        "rotation": 31.68,
+        "opacity": 1,
+        "mediaId": "MAGjHANA38U",
+        "alt": "海鳥剪影",
+        "flipX": false
+       }
+      ]
+     },
+     {
+      "id": "LBWnktvxGh85NDdB",
+      "type": "rect",
+      "top": 5141.93,
+      "left": 119.685,
+      "width": 670.26,
+      "height": 116.19,
+      "rotation": 0,
+      "opacity": 1,
+      "mediaId": "MAHazaSW-9g",
+      "alt": "頁尾島嶼",
+      "flipX": false
+     },
+     {
+      "id": "LBrbBjxzbl4LTG5C",
+      "type": "rect",
+      "top": 5046.18,
+      "left": 789.935,
+      "width": 670.26,
+      "height": 211.94,
+      "rotation": 0,
+      "opacity": 1,
+      "mediaId": "MAHazZV-wEc",
+      "alt": "頁尾島嶼",
+      "flipX": false
+     },
+     {
+      "id": "LBh04FQZy77CB6K3",
+      "type": "rect",
+      "top": 5218.5,
+      "left": -41.695,
+      "width": 1485.07,
+      "height": 193.47,
+      "rotation": 0,
+      "opacity": 1,
+      "mediaId": "MAHazcQRu2I",
+      "alt": "頁尾浪花",
+      "flipX": false
+     },
+     {
+      "id": "LB3h32V7Xj70Hnyl",
+      "type": "rect",
+      "top": 5373.24,
+      "left": -41.695,
+      "width": 1478.22,
+      "height": 462.62,
+      "rotation": 0,
+      "opacity": 1,
+      "mediaId": "MAHazRvnb1Y",
+      "alt": "頁尾浪花",
+      "flipX": false
+     },
+     {
+      "id": "LBt3g6ffHQ60QfZK",
+      "type": "rect",
+      "top": 5315.15,
+      "left": -41.695,
+      "width": 185.05,
+      "height": 328.14,
+      "rotation": 0,
+      "opacity": 1,
+      "mediaId": "MAHazb1LEe8",
+      "alt": "頁尾礁岩",
+      "flipX": false
+     },
+     {
+      "id": "LBwTwChzhYqtyQDH",
+      "type": "rect",
+      "top": 5237.68,
+      "left": 49.745,
+      "width": 693.93,
+      "height": 156.0,
+      "rotation": 0,
+      "opacity": 1,
+      "mediaId": "MAHazZrVAck",
+      "alt": "頁尾島嶼",
+      "flipX": false
+     },
+     {
+      "id": "LBvlwTSS2cFQsb34",
+      "type": "rect",
+      "top": 5180.66,
+      "left": 720.005,
+      "width": 347.5,
+      "height": 231.31,
+      "rotation": 0,
+      "opacity": 1,
+      "mediaId": "MAHazXcA4zA",
+      "alt": "頁尾礁岩",
+      "flipX": false
+     },
+     {
+      "id": "LBdBSFSbmCZKw9Mr",
+      "type": "rect",
+      "top": 5258.13,
+      "left": 1064.545,
+      "width": 392.69,
+      "height": 251.75,
+      "rotation": 0,
+      "opacity": 1,
+      "mediaId": "MAHazcBqnkQ",
+      "alt": "頁尾礁岩",
+      "flipX": false
+     },
+     {
+      "id": "LBgQLZxWDsWVPzpj",
+      "type": "rect",
+      "top": 5290.56,
+      "left": -361.775,
+      "width": 2163.55,
+      "height": 705.44,
+      "rotation": 0,
+      "opacity": 1,
+      "mediaId": "MAHazb-GIEU",
+      "alt": "頁尾深藍浪緣",
+      "flipX": false
+     },
+     {
+      "id": "LBW3Gntx8mbq1y5f",
+      "type": "shape",
+      "top": 5723.0,
+      "left": 72.455,
+      "width": 1302.0,
+      "height": 9.0,
+      "rotation": 0,
+      "opacity": 0.2,
+      "paths": [
+       {
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         }
+        },
+        "stroke": {
+         "weight": 0,
+         "color": {
+          "type": "solid",
+          "color": "#000000"
+         }
+        },
+        "cornerRounding": 0
+       }
+      ]
+     },
+     {
+      "id": "LBm5jZsg8BPTjsTl",
+      "type": "shape",
+      "top": 5626.0,
+      "left": 572.455,
+      "width": 256.0,
+      "height": 70.0,
+      "rotation": 0,
+      "opacity": 1,
+      "paths": [
+       {
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ec6b0c"
+         }
+        },
+        "stroke": {
+         "weight": 0,
+         "color": {
+          "type": "solid",
+          "color": "#000000"
+         }
+        },
+        "cornerRounding": 30
+       }
+      ]
+     },
+     {
+      "id": "LBLh8dycYGQwQlhk",
+      "type": "shape",
+      "top": 5626.0,
+      "left": 843.455,
+      "width": 209.0,
+      "height": 70.0,
+      "rotation": 0,
+      "opacity": 1,
+      "paths": [
+       {
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#0a1c2e"
+         }
+        },
+        "stroke": {
+         "weight": 2,
+         "color": {
+          "type": "solid",
+          "color": "#efe8da"
+         }
+        },
+        "cornerRounding": 30
+       }
+      ]
+     },
+     {
+      "id": "LBWpm9fPWlGSvhHh",
+      "type": "group",
+      "top": 3782.0039,
+      "left": 156.455,
+      "width": 1152,
+      "height": 612.4,
+      "rotation": 0,
+      "opacity": 1,
+      "children": [
+       {
+        "id": "LBVwNjkw93tmpy9z",
+        "type": "shape",
+        "top": 3922.0039,
+        "left": 156.455,
+        "width": 370.0,
+        "height": 472.4,
+        "rotation": 0,
+        "opacity": 0.6,
+        "paths": [
+         {
+          "fill": {
+           "color": {
+            "type": "solid",
+            "color": "#0a1c2e"
+           }
+          },
+          "stroke": {
+           "weight": 0,
+           "color": {
+            "type": "solid",
+            "color": "#000000"
+           }
+          },
+          "cornerRounding": 20
+         }
+        ]
+       },
+       {
+        "id": "LBYrtDdrgmt38ZBW",
+        "type": "shape",
+        "top": 3922.0039,
+        "left": 547.455,
+        "width": 370.0,
+        "height": 472.4,
+        "rotation": 0,
+        "opacity": 0.6,
+        "paths": [
+         {
+          "fill": {
+           "color": {
+            "type": "solid",
+            "color": "#0a1c2e"
+           }
+          },
+          "stroke": {
+           "weight": 0,
+           "color": {
+            "type": "solid",
+            "color": "#000000"
+           }
+          },
+          "cornerRounding": 20
+         }
+        ]
+       },
+       {
+        "id": "LBbSrhxM0ZHslDF6",
+        "type": "shape",
+        "top": 3922.0039,
+        "left": 938.455,
+        "width": 370.0,
+        "height": 472.4,
+        "rotation": 0,
+        "opacity": 0.6,
+        "paths": [
+         {
+          "fill": {
+           "color": {
+            "type": "solid",
+            "color": "#0a1c2e"
+           }
+          },
+          "stroke": {
+           "weight": 0,
+           "color": {
+            "type": "solid",
+            "color": "#000000"
+           }
+          },
+          "cornerRounding": 20
+         }
+        ]
+       },
+       {
+        "id": "LB3GdLk0P62sQtyt",
+        "type": "shape",
+        "top": 4292.0039,
+        "left": 188.455,
+        "width": 160.0,
+        "height": 52.0,
+        "rotation": 0,
+        "opacity": 1,
+        "paths": [
+         {
+          "fill": {
+           "color": {
+            "type": "solid",
+            "color": "#ec6b0c"
+           }
+          },
+          "stroke": {
+           "weight": 0,
+           "color": {
+            "type": "solid",
+            "color": "#000000"
+           }
+          },
+          "cornerRounding": 26
+         }
+        ]
+       },
+       {
+        "id": "LBgXMjB96Fnvsjgz",
+        "type": "text",
+        "top": 3782.0039,
+        "left": 156.455,
+        "width": 700.0,
+        "height": 53.0,
+        "rotation": 0,
+        "opacity": 1,
+        "textRegions": [
+         {
+          "characters": "其他方案",
+          "formatting": {
+           "fontSize": 45,
+           "fontWeight": "bold",
+           "color": "#ffffff",
+           "textAlign": "start",
+           "lineHeight": 1.4,
+           "letterSpacing": 0,
+           "decoration": "none"
+          }
+         }
+        ]
+       },
+       {
+        "id": "LBzQVzdDfjgY4YSC",
+        "type": "text",
+        "top": 3958.0039,
+        "left": 188.455,
+        "width": 310.0,
+        "height": 33.4,
+        "rotation": 0,
+        "opacity": 1,
+        "textRegions": [
+         {
+          "characters": "OW＋AOW 一次考完",
+          "formatting": {
+           "fontSize": 28,
+           "fontWeight": "bold",
+           "color": "#ffffff",
+           "textAlign": "start",
+           "lineHeight": 1.4,
+           "letterSpacing": 0,
+           "decoration": "none"
+          }
+         }
+        ]
+       },
+       {
+        "id": "LBThsYBdMByRBzyx",
+        "type": "text",
+        "top": 4012.0039,
+        "left": 188.455,
+        "width": 310.0,
+        "height": 82.4,
+        "rotation": 0,
+        "opacity": 1,
+        "textRegions": [
+         {
+          "characters": "10 支潛水、背包房 4 晚、全套裝備和電腦錶、機車 2 人 1 台。\n適合想出國挑戰不同潛點的你。",
+          "formatting": {
+           "fontSize": 19,
+           "fontWeight": "normal",
+           "color": "#bfe3ee",
+           "textAlign": "start",
+           "lineHeight": 1.6,
+           "letterSpacing": 0,
+           "decoration": "none"
+          }
+         }
+        ]
+       },
+       {
+        "id": "LBrDZT1G6gSqkWdg",
+        "type": "text",
+        "top": 4232.0039,
+        "left": 188.455,
+        "width": 310.0,
+        "height": 30.0,
+        "rotation": 0,
+        "opacity": 1,
+        "textRegions": [
+         {
+          "characters": "NT$ 30,000 ／人",
+          "formatting": {
+           "fontSize": 25,
+           "fontWeight": "bold",
+           "color": "#efe8da",
+           "textAlign": "start",
+           "lineHeight": 1.4,
+           "letterSpacing": 0,
+           "decoration": "none"
+          }
+         }
+        ]
+       },
+       {
+        "id": "LBBRYJJBtZ0XWkXh",
+        "type": "text",
+        "top": 3958.0039,
+        "left": 579.455,
+        "width": 310.0,
+        "height": 33.4,
+        "rotation": 0,
+        "opacity": 1,
+        "textRegions": [
+         {
+          "characters": "Fun Dive 歡樂潛水",
+          "formatting": {
+           "fontSize": 28,
+           "fontWeight": "bold",
+           "color": "#ffffff",
+           "textAlign": "start",
+           "lineHeight": 1.4,
+           "letterSpacing": 0,
+           "decoration": "none"
+          }
+         }
+        ]
+       },
+       {
+        "id": "LBVPTq767chDn6td",
+        "type": "text",
+        "top": 4012.0039,
+        "left": 579.455,
+        "width": 320.0,
+        "height": 382.4,
+        "rotation": 0,
+        "opacity": 1,
+        "textRegions": [
+         {
+          "characters": "已有證照，岸潛和船潛都能約。\n岸潛 1 支\n1 對 1 NT$1,950／人\n1 對 2 NT$1,450／人\n1 對 3 NT$1,250／人\n1 對 4（含以上）NT$1,150／人\n\n船潛 1 支\n1 對 1 NT$4,900／人\n1 對 2 NT$3,900／人\n1 對 3 NT$3,500／人\n1 對 4（含以上）NT$3,300／人\n",
+          "formatting": {
+           "fontSize": 19,
+           "fontWeight": "normal",
+           "color": "#bfe3ee",
+           "textAlign": "start",
+           "lineHeight": 1.6,
+           "letterSpacing": 0,
+           "decoration": "none"
+          }
+         }
+        ]
+       },
+       {
+        "id": "LBK62VhtpzlPkcgG",
+        "type": "text",
+        "top": 3958.0039,
+        "left": 970.455,
+        "width": 310.0,
+        "height": 33.4,
+        "rotation": 0,
+        "opacity": 1,
+        "textRegions": [
+         {
+          "characters": "進修課程",
+          "formatting": {
+           "fontSize": 28,
+           "fontWeight": "bold",
+           "color": "#ffffff",
+           "textAlign": "start",
+           "lineHeight": 1.4,
+           "letterSpacing": 0,
+           "decoration": "none"
+          }
+         }
+        ]
+       },
+       {
+        "id": "LB8p0P2RKSVGfw4g",
+        "type": "text",
+        "top": 4012.0039,
+        "left": 970.455,
+        "width": 310.0,
+        "height": 232.4,
+        "rotation": 0,
+        "opacity": 1,
+        "textRegions": [
+         {
+          "characters": "複習 Re-active　NT$5,000／人\n高氧 EAN　NT$5,000／人\n緊急反應 EFR　NT$4,500／人\n救援 Rescue　NT$8,000／人\n潛水長 DM　NT$38,000／人\n\n\n進階課程請私訊我們獲取近一步資訊",
+          "formatting": {
+           "fontSize": 19,
+           "fontWeight": "normal",
+           "color": "#bfe3ee",
+           "textAlign": "start",
+           "lineHeight": 1.6,
+           "letterSpacing": 0,
+           "decoration": "none"
+          }
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "id": "LBk6lZZC7pWDzhSS",
+      "type": "text",
+      "top": 4306.0039,
+      "left": 188.455,
+      "width": 160.0,
+      "height": 21.4,
+      "rotation": 0,
+      "opacity": 1,
+      "textRegions": [
+       {
+        "characters": "預訂",
+        "formatting": {
+         "fontSize": 18,
+         "fontWeight": "bold",
+         "color": "#ffffff",
+         "textAlign": "center",
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "decoration": "none"
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBssrqgJ2xXjJl3G",
+      "type": "group",
+      "top": 418.3168,
+      "left": 76,
+      "width": 1100,
+      "height": 299,
+      "rotation": 0,
+      "opacity": 1,
+      "children": [
+       {
+        "id": "LBZjyZl4PQ14S7Vg",
+        "type": "text",
+        "top": 458.3168,
+        "left": 76.0,
+        "width": 1100.0,
+        "height": 172.0,
+        "rotation": 0,
+        "opacity": 1,
+        "textRegions": [
+         {
+          "characters": "在海裡待了短短幾十分鐘，\n卻經歷了完全不同的世界。",
+          "formatting": {
+           "fontSize": 72,
+           "fontWeight": "bold",
+           "color": "#efe8da",
+           "textAlign": "start",
+           "lineHeight": 1.2,
+           "letterSpacing": 0,
+           "decoration": "none"
+          }
+         }
+        ]
+       },
+       {
+        "id": "LBPKJzP4xyCf35gT",
+        "type": "text",
+        "top": 654.3168,
+        "left": 76.0,
+        "width": 760.0,
+        "height": 63.0,
+        "rotation": 0,
+        "opacity": 1,
+        "textRegions": [
+         {
+          "characters": "綠芙是一家老字號 PADI 認證的潛水中心。沒潛過的人從體驗潛水開始；\n想考照的人，3 天 2 夜就能拿到 OW 初級證照，安心又方便。",
+          "formatting": {
+           "fontSize": 22,
+           "fontWeight": "normal",
+           "color": "#efe8da",
+           "textAlign": "start",
+           "lineHeight": 1.7,
+           "letterSpacing": 0,
+           "decoration": "none"
+          }
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "id": "LBqMLJjtT9xrSGbL",
+      "type": "text",
+      "top": 1890.0,
+      "left": 88.0,
+      "width": 60.0,
+      "height": 24.0,
+      "rotation": 0,
+      "opacity": 1,
+      "textRegions": [
+       {
+        "characters": "18 m",
+        "formatting": {
+         "fontSize": 20,
+         "fontWeight": "bold",
+         "color": "#ffffff",
+         "textAlign": "start",
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "decoration": "none"
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBlZznXkkhRFwZwq",
+      "type": "text",
+      "top": 2560.0,
+      "left": 88.0,
+      "width": 60.0,
+      "height": 24.0,
+      "rotation": 0,
+      "opacity": 1,
+      "textRegions": [
+       {
+        "characters": "30 m",
+        "formatting": {
+         "fontSize": 20,
+         "fontWeight": "bold",
+         "color": "#ffffff",
+         "textAlign": "start",
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "decoration": "none"
+        }
+       }
+      ]
+     },
+     {
+      "id": "LB2tB6sLbqQbC45c",
+      "type": "text",
+      "top": 1640.0,
+      "left": 233.0773,
+      "width": 937.6346,
+      "height": 24.0,
+      "rotation": 0,
+      "opacity": 1,
+      "textRegions": [
+       {
+        "characters": "岸潛（較深）SHORE DIVE　·　最深 18 m",
+        "formatting": {
+         "fontSize": 20,
+         "fontWeight": "bold",
+         "color": "#81f7f7",
+         "textAlign": "start",
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "decoration": "none"
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBzV9DgV1JDjrfN4",
+      "type": "text",
+      "top": 1680.0,
+      "left": 233.0773,
+      "width": 937.6346,
+      "height": 53.0,
+      "rotation": 0,
+      "opacity": 1,
+      "textRegions": [
+       {
+        "characters": "PADI OW 初級證照",
+        "formatting": {
+         "fontSize": 45,
+         "fontWeight": "bold",
+         "color": "#ffffff",
+         "textAlign": "start",
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "decoration": "none"
+        }
+       }
+      ]
+     },
+     {
+      "id": "LByjSBHGQnvRDkNy",
+      "type": "text",
+      "top": 1760.0,
+      "left": 233.0773,
+      "width": 904.1476,
+      "height": 27.5,
+      "rotation": 0,
+      "opacity": 1,
+      "textRegions": [
+       {
+        "characters": "3 天 2 夜，給自己一個認識新世界的機會。",
+        "formatting": {
+         "fontSize": 23,
+         "fontWeight": "normal",
+         "color": "#ffffff",
+         "textAlign": "start",
+         "lineHeight": 1.7,
+         "letterSpacing": 0,
+         "decoration": "none"
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBFvdLGKf7gHwBnv",
+      "type": "text",
+      "top": 1826.0,
+      "left": 233.0773,
+      "width": 971.1215,
+      "height": 61.4,
+      "rotation": 0,
+      "opacity": 1,
+      "textRegions": [
+       {
+        "characters": "第 1 天 8:00–17:00｜平靜水域 2 支＋開放水域 1 支\n第 2 天 8:00–17:00｜開放水域 3 支，結業",
+        "formatting": {
+         "fontSize": 21,
+         "fontWeight": "bold",
+         "color": "#ffffff",
+         "textAlign": "start",
+         "lineHeight": 1.8,
+         "letterSpacing": 0,
+         "decoration": "none"
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBN9YVvqBxNhtfDy",
+      "type": "text",
+      "top": 1926.0,
+      "left": 233.0773,
+      "width": 904.1476,
+      "height": 57.6,
+      "rotation": 0,
+      "opacity": 1,
+      "textRegions": [
+       {
+        "characters": "含｜線上學科、PADI 證照申請費、5 支術科、全套裝備和電腦錶、背包房 2 晚、碼頭接送、機車 2 人 1 台、保險",
+        "formatting": {
+         "fontSize": 21,
+         "fontWeight": "normal",
+         "color": "#81f7f7",
+         "textAlign": "start",
+         "lineHeight": 1.6,
+         "letterSpacing": 0,
+         "decoration": "none"
+        }
+       }
+      ]
+     },
+     {
+      "id": "LB7wpznLPFr6yGkv",
+      "type": "text",
+      "top": 2085.0,
+      "left": 743.675,
+      "width": 340.503,
+      "height": 30.0,
+      "rotation": 0,
+      "opacity": 1,
+      "textRegions": [
+       {
+        "characters": "NT$ 15,000 ／人",
+        "formatting": {
+         "fontSize": 25,
+         "fontWeight": "bold",
+         "color": "#efe8da",
+         "textAlign": "start",
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "decoration": "none"
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBhhjwRx9fZF22NR",
+      "type": "group",
+      "top": 2075.0,
+      "left": 977.2249,
+      "width": 160,
+      "height": 52,
+      "rotation": 0,
+      "opacity": 1,
+      "children": [
+       {
+        "id": "LBFKWHKf45D8g7Q4",
+        "type": "shape",
+        "top": 2075.0,
+        "left": 977.2249,
+        "width": 160.0,
+        "height": 52.0,
+        "rotation": 0,
+        "opacity": 1,
+        "paths": [
+         {
+          "fill": {
+           "color": {
+            "type": "solid",
+            "color": "#ec6b0c"
+           }
+          },
+          "stroke": {
+           "weight": 0,
+           "color": {
+            "type": "solid",
+            "color": "#000000"
+           }
+          },
+          "cornerRounding": 26
+         }
+        ]
+       },
+       {
+        "id": "LBXNmq3HMcKft9p3",
+        "type": "text",
+        "top": 2089.0,
+        "left": 977.2249,
+        "width": 160.0,
+        "height": 21.4,
+        "rotation": 0,
+        "opacity": 1,
+        "textRegions": [
+         {
+          "characters": "預訂",
+          "formatting": {
+           "fontSize": 18,
+           "fontWeight": "bold",
+           "color": "#ffffff",
+           "textAlign": "center",
+           "lineHeight": 1.4,
+           "letterSpacing": 0,
+           "decoration": "none"
+          }
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "id": "LBTdZW10hJfmLY8V",
+      "type": "text",
+      "top": 2626.0,
+      "left": 233.0773,
+      "width": 937.6346,
+      "height": 24.0,
+      "rotation": 0,
+      "opacity": 1,
+      "textRegions": [
+       {
+        "characters": "船潛 BOAT DIVE　·　最深 30 m",
+        "formatting": {
+         "fontSize": 20,
+         "fontWeight": "bold",
+         "color": "#81f7f7",
+         "textAlign": "start",
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "decoration": "none"
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBYZ3KqrDHls72KV",
+      "type": "text",
+      "top": 2666.0,
+      "left": 233.0773,
+      "width": 937.6346,
+      "height": 53.0,
+      "rotation": 0,
+      "opacity": 1,
+      "textRegions": [
+       {
+        "characters": "AOW 進階證照",
+        "formatting": {
+         "fontSize": 45,
+         "fontWeight": "bold",
+         "color": "#ffffff",
+         "textAlign": "start",
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "decoration": "none"
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBdVRhkfppf511qs",
+      "type": "text",
+      "top": 2746.0,
+      "left": 233.0773,
+      "width": 904.1476,
+      "height": 66.5,
+      "rotation": 0,
+      "opacity": 1,
+      "textRegions": [
+       {
+        "characters": "給已有初級證照的海洋『初癮』者（不限協會）。\n讓自己成為頂尖中性浮力、水中導航、夜潛和電腦錶使用、方位辨別的好手。",
+        "formatting": {
+         "fontSize": 23,
+         "fontWeight": "normal",
+         "color": "#ffffff",
+         "textAlign": "start",
+         "lineHeight": 1.7,
+         "letterSpacing": 0,
+         "decoration": "none"
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBWGZjnCnG4pBy8Z",
+      "type": "text",
+      "top": 2871.05,
+      "left": 233.0773,
+      "width": 971.1215,
+      "height": 61.4,
+      "rotation": 0,
+      "opacity": 1,
+      "textRegions": [
+       {
+        "characters": "第 1 天 8:00–20:00｜2 支日潛＋1 支夜潛\n第 2 天 8:00–11:30｜2 支日潛，結業",
+        "formatting": {
+         "fontSize": 21,
+         "fontWeight": "bold",
+         "color": "#ffffff",
+         "textAlign": "start",
+         "lineHeight": 1.8,
+         "letterSpacing": 0,
+         "decoration": "none"
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBljR0j6Hvqt5Ltv",
+      "type": "text",
+      "top": 2991.0,
+      "left": 233.0773,
+      "width": 904.1476,
+      "height": 57.6,
+      "rotation": 0,
+      "opacity": 1,
+      "textRegions": [
+       {
+        "characters": "含｜線上學科、PADI 證照申請費、5 支術科、全套裝備和電腦錶、背包房 2 晚、碼頭接送、機車 2 人 1 台、保險。深潛改成 2 支船潛加收 NT$ 1,400。",
+        "formatting": {
+         "fontSize": 21,
+         "fontWeight": "normal",
+         "color": "#81f7f7",
+         "textAlign": "start",
+         "lineHeight": 1.6,
+         "letterSpacing": 0,
+         "decoration": "none"
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBsJdgwf1NsKMFsl",
+      "type": "text",
+      "top": 3169.0,
+      "left": 743.675,
+      "width": 227.78,
+      "height": 30.0,
+      "rotation": 0,
+      "opacity": 1,
+      "textRegions": [
+       {
+        "characters": "NT$ 15,000 ／人",
+        "formatting": {
+         "fontSize": 25,
+         "fontWeight": "bold",
+         "color": "#efe8da",
+         "textAlign": "start",
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "decoration": "none"
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBWdzQjJBHGJgnDK",
+      "type": "text",
+      "top": 4692.0,
+      "left": 188.455,
+      "width": 700.0,
+      "height": 53.0,
+      "rotation": 0,
+      "opacity": 1,
+      "textRegions": [
+       {
+        "characters": "下水前請先看",
+        "formatting": {
+         "fontSize": 45,
+         "fontWeight": "bold",
+         "color": "#ffffff",
+         "textAlign": "start",
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "decoration": "none"
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBFBq2R4zJq6nNBb",
+      "type": "text",
+      "top": 4842.1063,
+      "left": 156.455,
+      "width": 791.5,
+      "height": 246.4,
+      "rotation": 0,
+      "opacity": 1,
+      "textRegions": [
+       {
+        "characters": "・有心臟病、高血壓、糖尿病、癲癇、氣喘、肺部疾病、耳鼻喉問題、\n    近期動過手術或懷孕，不建議潛水，或需先經醫師評估。\n ",
+        "formatting": {
+         "fontSize": 21,
+         "fontWeight": "normal",
+         "color": "#ffffff",
+         "textAlign": "start",
+         "lineHeight": 1.8,
+         "letterSpacing": 0,
+         "decoration": "none"
+        }
+       },
+       {
+        "characters": "   報名時會請你填 PADI 健康問卷。",
+        "formatting": {
+         "fontSize": 21,
+         "fontWeight": "normal",
+         "color": "#edc40f",
+         "textAlign": "start",
+         "lineHeight": 1.8,
+         "letterSpacing": 0,
+         "decoration": "none"
+        }
+       },
+       {
+        "characters": "\n・潛水後至少間隔 12–18 小時再搭飛機。\n・潛水前 8–12 小時不喝酒；前一晚睡飽，感冒鼻塞請改期。\n・天候或海況不佳時，教練會以安全為優先調整或取消，\n    退款方式請見〈退款與停航政策〉。",
+        "formatting": {
+         "fontSize": 21,
+         "fontWeight": "normal",
+         "color": "#ffffff",
+         "textAlign": "start",
+         "lineHeight": 1.8,
+         "letterSpacing": 0,
+         "decoration": "none"
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBl39HMnKJ99dw8s",
+      "type": "text",
+      "top": 5634.0,
+      "left": 117.455,
+      "width": 440.0,
+      "height": 58.2,
+      "rotation": 0,
+      "opacity": 1,
+      "textRegions": [
+       {
+        "characters": "準備好下水了嗎？",
+        "formatting": {
+         "fontSize": 49,
+         "fontWeight": "bold",
+         "color": "#efe8da",
+         "textAlign": "start",
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "decoration": "none"
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBrJvD372LB0D8Rn",
+      "type": "text",
+      "top": 5646.0,
+      "left": 572.455,
+      "width": 256.0,
+      "height": 25.6,
+      "rotation": 0,
+      "opacity": 1,
+      "textRegions": [
+       {
+        "characters": "預訂課程",
+        "formatting": {
+         "fontSize": 22,
+         "fontWeight": "bold",
+         "color": "#ffffff",
+         "textAlign": "center",
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "decoration": "none"
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBrx3qJpXYCm2QlN",
+      "type": "text",
+      "top": 5646.0,
+      "left": 843.455,
+      "width": 209.0,
+      "height": 25.6,
+      "rotation": 0,
+      "opacity": 1,
+      "textRegions": [
+       {
+        "characters": "聯絡我們",
+        "formatting": {
+         "fontSize": 22,
+         "fontWeight": "bold",
+         "color": "#efe8da",
+         "textAlign": "center",
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "decoration": "none"
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBJ0CmbT1MB7mZ0j",
+      "type": "text",
+      "top": 5767.0,
+      "left": 123.455,
+      "width": 465.0,
+      "height": 30.8,
+      "rotation": 0,
+      "opacity": 1,
+      "textRegions": [
+       {
+        "characters": "The Reef 綠芙潛水",
+        "formatting": {
+         "fontSize": 26,
+         "fontWeight": "bold",
+         "color": "#efe8da",
+         "textAlign": "start",
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "decoration": "none"
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBz8jbCY8Vv7d61N",
+      "type": "text",
+      "top": 5825.0,
+      "left": 123.455,
+      "width": 700.0,
+      "height": 85.2,
+      "rotation": 0,
+      "opacity": 1,
+      "textRegions": [
+       {
+        "characters": "潛伴有限公司　統一編號 83201186\n台東縣綠島鄉公館村柴口 172 號之 2\n電話 0936-871-525　信箱（待填）",
+        "formatting": {
+         "fontSize": 18,
+         "fontWeight": "normal",
+         "color": "#efe8da",
+         "textAlign": "start",
+         "lineHeight": 1.8,
+         "letterSpacing": 0,
+         "decoration": "none"
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBGc0Mrtv1klhwjd",
+      "type": "text",
+      "top": 5825.0,
+      "left": 843.455,
+      "width": 256.0,
+      "height": 85.2,
+      "rotation": 0,
+      "opacity": 1,
+      "textRegions": [
+       {
+        "characters": "服務條款\n隱私權政策\n退款與停航政策",
+        "formatting": {
+         "fontSize": 18,
+         "fontWeight": "normal",
+         "color": "#efe8da",
+         "textAlign": "start",
+         "lineHeight": 1.8,
+         "letterSpacing": 0,
+         "decoration": "underline"
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBXFbqQyj3mX36tC",
+      "type": "text",
+      "top": 5858.0,
+      "left": 1192.455,
+      "width": 232.0,
+      "height": 53.2,
+      "rotation": 0,
+      "opacity": 1,
+      "textRegions": [
+       {
+        "characters": "Instagram\nLINE 官方帳號",
+        "formatting": {
+         "fontSize": 18,
+         "fontWeight": "normal",
+         "color": "#efe8da",
+         "textAlign": "start",
+         "lineHeight": 1.8,
+         "letterSpacing": 0,
+         "decoration": "none"
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBD06N15Z1M6MMB5",
+      "type": "text",
+      "top": 5941.0,
+      "left": 123.455,
+      "width": 465.0,
+      "height": 15.4,
+      "rotation": 0,
+      "opacity": 1,
+      "textRegions": [
+       {
+        "characters": "© 2026 The Reef Diving",
+        "formatting": {
+         "fontSize": 13,
+         "fontWeight": "normal",
+         "color": "#8fa3b8",
+         "textAlign": "start",
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "decoration": "none"
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBsFwHTtt6NbRR06",
+      "type": "group",
+      "top": 3158.0,
+      "left": 977.2249,
+      "width": 160,
+      "height": 52,
+      "rotation": 0,
+      "opacity": 1,
+      "children": [
+       {
+        "id": "LBj0yqPGf8Bmzqcd",
+        "type": "shape",
+        "top": 3158.0,
+        "left": 977.2249,
+        "width": 160.0,
+        "height": 52.0,
+        "rotation": 0,
+        "opacity": 1,
+        "paths": [
+         {
+          "fill": {
+           "color": {
+            "type": "solid",
+            "color": "#ec6b0c"
+           }
+          },
+          "stroke": {
+           "weight": 0,
+           "color": {
+            "type": "solid",
+            "color": "#000000"
+           }
+          },
+          "cornerRounding": 26
+         }
+        ]
+       },
+       {
+        "id": "LB2nCh5WvZ1VpkXF",
+        "type": "text",
+        "top": 3172.0,
+        "left": 977.2249,
+        "width": 160.0,
+        "height": 21.4,
+        "rotation": 0,
+        "opacity": 1,
+        "textRegions": [
+         {
+          "characters": "預訂",
+          "formatting": {
+           "fontSize": 18,
+           "fontWeight": "bold",
+           "color": "#ffffff",
+           "textAlign": "center",
+           "lineHeight": 1.4,
+           "letterSpacing": 0,
+           "decoration": "none"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}
