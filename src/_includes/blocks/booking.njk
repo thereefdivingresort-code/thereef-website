@@ -1,17 +1,13 @@
-{# 積木：預訂購物車。價格全部來自 _data/prices.json，計算在 assets/js/booking.js #}
+{# 積木：預訂購物車（七區塊，依 Canva「UI v4 預訂第 1 步」）。價格全部來自 _data/prices.json；算法在 assets/js/pricing.js（和 npm test 共用）；畫面在 assets/js/booking.js #}
+<link rel="stylesheet" href="/assets/css/booking.css">
 <section class="block booking">
   <div class="wrap booking-grid">
     <form class="card booking-form" id="booking-form" novalidate>
-      <h2><span class="num">1</span>選項目、日期和人數</h2>
-      <p class="small muted">項目和價格跟價目表同步，潛水、考照、活動、住宿、租借都可以選。每一列選一個項目、填人數，可以加好幾列，系統自動算出小計和總價。</p>
-      <label class="field"><span>出發日期</span><input type="date" name="date" id="bk-date" required></label>
-      <div class="cart-head"><span>項目（下拉選單）</span><span>單價</span><span>人數／數量</span><span>小計</span></div>
-      <div id="cart-rows"></div>
-      <div class="cart-foot">
-        <button type="button" class="link-orange plain" id="add-row">＋ 新增項目</button>
-        <p class="cart-total">合計　<strong id="cart-total">NT$ 0</strong></p>
-      </div>
-      <p class="small muted">Fun Dive、套裝等有 1 人價或多人價，系統依人數自動套用。</p>
+      <h2><span class="num">1</span>選購：潛水、課程、套裝、活動、住宿、交通、裝備</h2>
+      <p class="small muted">每一區都可以選，不用的區塊留空就好。人數、間數、天數用 − ＋ 調整，價格自動算。</p>
+      <label class="field bk-date"><span>出發日期</span><input type="date" name="date" id="bk-date" required></label>
+      <div id="bk-blocks"><p class="small muted">預訂表載入中……如果一直沒出現，請打 <a href="{{ site.company.phoneHref }}">{{ site.company.phone }}</a> 預訂。</p></div>
+      <p class="cart-total bk-total">合計　<strong id="cart-total">NT$ 0</strong></p>
 
       <h2><span class="num">2</span>填資料</h2>
       <div class="fields-2">
@@ -44,7 +40,7 @@
       <div class="card summary" aria-live="polite">
         <h3>訂單摘要</h3>
         <p id="sum-date" class="muted">尚未選日期</p>
-        <p id="sum-count" class="muted">共 0 個項目</p>
+        <p id="sum-count" class="muted">還沒選項目</p>
         <hr>
         <ul id="sum-lines" class="sum-lines"></ul>
         <hr>
@@ -53,15 +49,7 @@
         <p class="small muted">付款完成並收到確認信，訂單才算成立。</p>
       </div>
       <p class="small muted side-note">付款在 PAYUNi 統一金流的加密付款頁完成，綠芙不會看到你的卡號。</p>
-      <div class="card pricelist">
-        <h3>下拉選單裡有什麼</h3>
-        <p class="small muted">全部來自價目表，價格改表就會跟著改。</p>
-        {% for g in prices.groups %}
-        <p class="pl-group">【{{ g.name }}】</p>
-        <p class="small">{% for i in g.items %}{{ i.name }} {{ i.price | money }}{% if i.tierNote %}（{{ i.tierNote }}）{% endif %}{% if not loop.last %}<br>{% endif %}{% endfor %}</p>
-        {% endfor %}
-      </div>
-    </aside>
+      </aside>
   </div>
 
   <div class="wrap after-pay">

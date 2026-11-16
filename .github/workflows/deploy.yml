@@ -19,6 +19,8 @@ jobs:
         with:
           node-version: 22
       - run: npm ci
+      - name: 價格自動驗算（有一題不對就停止發布）
+        run: npm test
       - run: npx eleventy
         env:
           PATH_PREFIX: /thereef-website/

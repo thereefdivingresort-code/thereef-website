@@ -1,0 +1,266 @@
+{
+ "_說明": "＝Sheet 03_驗算表。a＝人數（級距項目）或雙人組數（套裝）；b＝次數或數量，或單人數（套裝）。",
+ "cases": [
+  {
+   "no": "1",
+   "name": "岸潛 1 人 1 支",
+   "id": "fun-shore",
+   "a": 1,
+   "b": 1,
+   "expect": 1950
+  },
+  {
+   "no": "2",
+   "name": "岸潛 2 人 1 支",
+   "id": "fun-shore",
+   "a": 2,
+   "b": 1,
+   "expect": 2900
+  },
+  {
+   "no": "3",
+   "name": "岸潛 3 人 1 支",
+   "id": "fun-shore",
+   "a": 3,
+   "b": 1,
+   "expect": 3750
+  },
+  {
+   "no": "4",
+   "name": "岸潛 4 人 1 支",
+   "id": "fun-shore",
+   "a": 4,
+   "b": 1,
+   "expect": 4600
+  },
+  {
+   "no": "5",
+   "name": "岸潛 6 人 1 支",
+   "id": "fun-shore",
+   "a": 6,
+   "b": 1,
+   "expect": 6900
+  },
+  {
+   "no": "6",
+   "name": "岸潛 2 人 3 支",
+   "id": "fun-shore",
+   "a": 2,
+   "b": 3,
+   "expect": 8700
+  },
+  {
+   "no": "7",
+   "name": "船潛 1 人 1 趟",
+   "id": "fun-boat",
+   "a": 1,
+   "b": 1,
+   "expect": 4900
+  },
+  {
+   "no": "8",
+   "name": "船潛 3 人 1 趟",
+   "id": "fun-boat",
+   "a": 3,
+   "b": 1,
+   "expect": 10500
+  },
+  {
+   "no": "9",
+   "name": "船潛 5 人 1 趟",
+   "id": "fun-boat",
+   "a": 5,
+   "b": 1,
+   "expect": 16500
+  },
+  {
+   "no": "10",
+   "name": "體驗潛水 2 人",
+   "id": "dsd",
+   "a": null,
+   "b": 2,
+   "expect": 5000
+  },
+  {
+   "no": "11",
+   "name": "OW 考照 1 人",
+   "id": "ow",
+   "a": null,
+   "b": 1,
+   "expect": 15000
+  },
+  {
+   "no": "12",
+   "name": "Fun Dive 套裝單人 1 位",
+   "id": "pkg-fun",
+   "a": 0,
+   "b": 1,
+   "expect": 9700
+  },
+  {
+   "no": "13",
+   "name": "Fun Dive 套裝雙人 1 組",
+   "id": "pkg-fun",
+   "a": 1,
+   "b": 0,
+   "expect": 17400
+  },
+  {
+   "no": "14",
+   "name": "浮潛套裝單人 1 位",
+   "id": "pkg-snorkel",
+   "a": 0,
+   "b": 1,
+   "expect": 4100
+  },
+  {
+   "no": "15",
+   "name": "豪華雙人房 1 間 2 晚",
+   "id": "room-double",
+   "a": null,
+   "b": 2,
+   "expect": 4800
+  },
+  {
+   "no": "16",
+   "name": "摩托車 1 台 3 天",
+   "id": "scooter",
+   "a": null,
+   "b": 3,
+   "expect": 1500
+  },
+  {
+   "no": "17-1",
+   "name": "組合 A：岸潛 2 人 1 支",
+   "id": "fun-shore",
+   "a": 2,
+   "b": 1,
+   "expect": 2900
+  },
+  {
+   "no": "17-2",
+   "name": "組合 A：OW 1 人",
+   "id": "ow",
+   "a": null,
+   "b": 1,
+   "expect": 15000
+  },
+  {
+   "no": "18-1",
+   "name": "組合 B：船潛 3 人",
+   "id": "fun-boat",
+   "a": 3,
+   "b": 1,
+   "expect": 10500
+  },
+  {
+   "no": "18-2",
+   "name": "組合 B：豪華四人房 1 間 2 晚",
+   "id": "room-quad",
+   "a": null,
+   "b": 2,
+   "expect": 7200
+  },
+  {
+   "no": "18-3",
+   "name": "組合 B：摩托車 2 台 2 天",
+   "id": "scooter",
+   "a": null,
+   "b": 4,
+   "expect": 2000
+  },
+  {
+   "no": "19",
+   "name": "重裝半日 1 套",
+   "id": "gear-heavy-half",
+   "a": null,
+   "b": 1,
+   "expect": 500
+  },
+  {
+   "no": "20",
+   "name": "全套輕重裝全日 2 套",
+   "id": "gear-full-full",
+   "a": null,
+   "b": 2,
+   "expect": 2000
+  },
+  {
+   "no": "21",
+   "name": "潛水電腦錶全日 1 支 2 天",
+   "id": "gear-computer-full",
+   "a": null,
+   "b": 2,
+   "expect": 1000
+  },
+  {
+   "no": "22",
+   "name": "輕裝 3 套 1 天",
+   "id": "gear-light",
+   "a": null,
+   "b": 3,
+   "expect": 600
+  },
+  {
+   "no": "23",
+   "name": "Fun Dive 套裝 3 人（1 組雙人＋1 單人）",
+   "id": "pkg-fun",
+   "a": 1,
+   "b": 1,
+   "expect": 27100
+  },
+  {
+   "no": "24",
+   "name": "Fun Dive 套裝 3 人全部升等",
+   "id": "up-fun",
+   "a": null,
+   "b": 3,
+   "expect": 2400
+  },
+  {
+   "no": "25",
+   "name": "船票來回 2 人",
+   "id": "ferry-rt",
+   "a": null,
+   "b": 2,
+   "expect": 2640
+  },
+  {
+   "no": "26",
+   "name": "船票單程 1 人",
+   "id": "ferry-ow",
+   "a": null,
+   "b": 1,
+   "expect": 670
+  },
+  {
+   "no": "27",
+   "name": "船潛 3 人 2 趟",
+   "id": "fun-boat",
+   "a": 3,
+   "b": 2,
+   "expect": 21000
+  }
+ ],
+ "combos": [
+  {
+   "no": "17",
+   "name": "組合 A 合計",
+   "parts": [
+    "17-1",
+    "17-2"
+   ],
+   "expect": 17900
+  },
+  {
+   "no": "18",
+   "name": "組合 B 合計",
+   "parts": [
+    "18-1",
+    "18-2",
+    "18-3"
+   ],
+   "expect": 19700
+  }
+ ]
+}

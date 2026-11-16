@@ -4,7 +4,8 @@
   "description": "綠芙 The Reef 潛水網站",
   "scripts": {
     "build": "eleventy",
-    "start": "eleventy --serve"
+    "start": "eleventy --serve",
+    "test": "node scripts/verify-prices.js"
   },
   "repository": {
     "type": "git",
