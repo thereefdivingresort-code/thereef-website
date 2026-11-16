@@ -1,0 +1,6 @@
+---
+layout: base.njk
+---
+{# 積木頁：依 front matter 的 blocks 清單，一塊一塊組出頁面。新增積木＝在 _includes/blocks/ 加一個檔 #}
+{% for b in blocks %}{% include "blocks/" + b.type + ".njk" %}{% endfor %}
+{{ content | safe }}

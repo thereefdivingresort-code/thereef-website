@@ -1,0 +1,42 @@
+{# 積木：條文頁（服務條款／隱私權／退款）。每個 section 可選：body 文字、table 表格、style: card 白卡片、note／footnote 小字 #}
+<section class="block legal{% if b.toc %} has-toc{% endif %}">
+  <div class="wrap legal-grid">
+    <div class="legal-body">
+      {% for s in b.sections %}
+      <article class="legal-sec{% if s.style == 'card' %} card{% endif %}" id="s{{ loop.index }}">
+        <h2><span class="num">{{ loop.index }}</span>{{ s.title }}</h2>
+        {% if s.note %}<p class="small muted">{{ s.note }}</p>{% endif %}
+        {% if s.body %}{{ s.body | rich | safe }}{% endif %}
+        {% if s.table %}
+        <div class="card table-card">
+          <table>
+            <thead><tr><th>{{ s.table.head[0] }}</th><th>{{ s.table.head[1] }}</th></tr></thead>
+            <tbody>{% for r in s.table.rows %}<tr><td>{{ r[0] }}</td><td>{{ r[1] }}</td></tr>{% endfor %}</tbody>
+          </table>
+        </div>
+        {% endif %}
+        {% if s.footnote %}<p class="small muted">{{ s.footnote }}</p>{% endif %}
+      </article>
+      {% endfor %}
+      {% if b.closing %}
+      <div class="card closing">
+        <div>
+          <h3>{{ b.closing.title }}</h3>
+          <p>{{ b.closing.text | replace("{phone}", site.company.phone) | replace("{email}", site.company.email or "（待填）") }}</p>
+        </div>
+        <div class="closing-links">{% for l in b.closing.links %}<a class="link-orange" href="{{ l.href }}">{{ l.label }} →</a>{% endfor %}</div>
+      </div>
+      {% endif %}
+    </div>
+    {% if b.toc %}
+    <aside class="toc card">
+      {% if b.tocDeco %}<img class="toc-deco" src="{{ b.tocDeco }}" alt="" aria-hidden="true">{% endif %}
+      <p class="toc-title">本頁目錄</p>
+      <ol>{% for s in b.sections %}<li><a href="#s{{ loop.index }}">{{ loop.index }} {{ s.short or s.title }}</a></li>{% endfor %}</ol>
+      <hr>
+      <p class="small">有疑問？<br><a href="{{ site.company.phoneHref }}"><strong>{{ site.company.phone }}</strong></a></p>
+    </aside>
+    {% endif %}
+    {% if b.deco %}<img class="legal-deco {{ b.decoClass }}" src="{{ b.deco }}" alt="" aria-hidden="true" loading="lazy">{% endif %}
+  </div>
+</section>

@@ -1,0 +1,26 @@
+---
+layout: page.njk
+title: 線上預訂
+permalink: /booking/
+scripts: ["/assets/js/booking.js"]
+blocks:
+  - type: page-intro
+    eyebrow: BOOKING
+    eyebrowLabel: 線上預訂
+    title: 四步完成預訂
+    lead: |
+      選好項目、人數和日期，填資料、確認條款，再到 PAYUNi 統一金流的付款頁完成付款。
+      付款完成並收到確認信，訂單才算成立。
+  - type: steps
+    steps:
+      - { title: 選項目和人數, text: 從價目表選潛水、考照、活動、住宿，填人數，總價自動加總。 }
+      - { title: 填資料, text: 聯絡人、參加者資料和緊急聯絡人。 }
+      - { title: 確認條款, text: 勾選同意服務條款、隱私權政策、退款與停航政策。 }
+      - { title: 付款完成, text: 跳轉 PAYUNi 付款頁，付款後收到確認信。 }
+  - type: booking
+  - type: info-cols
+    columns:
+      - { title: 付款方式, text: 信用卡、ATM 轉帳（PAYUNi 統一金流）。實際可用的方式以付款頁為準。 }
+      - { title: 改期或取消, text: 天候或停航造成的取消，可以改期或退款。其他情況請看〈退款與停航政策〉。, link: { label: 看退款與停航政策, href: /refund/ } }
+      - { title: 查詢訂單, text: 用確認信上的訂單編號，打電話或傳 LINE 給我們。, link: { label: 聯絡我們, href: /about/#contact } }
+---

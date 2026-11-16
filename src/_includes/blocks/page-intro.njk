@@ -1,0 +1,9 @@
+{# 積木：頁面開頭（小標、大標題、更新日、引言） #}
+<section class="block intro">
+  <div class="wrap">
+    <p class="eyebrow"><span>{{ b.eyebrow }}</span> · {{ b.eyebrowLabel }}</p>
+    <h1>{{ b.title }}</h1>
+    {% if b.updated %}<p class="updated">最後更新：{{ b.updated }}</p>{% endif %}
+    {% if b.lead %}<div class="lead">{{ b.lead | rich | safe }}</div>{% endif %}
+  </div>
+</section>

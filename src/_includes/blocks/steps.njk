@@ -1,0 +1,10 @@
+{# 積木：步驟條（真的有先後順序才用） #}
+<section class="block steps-block">
+  <div class="wrap">
+    <ol class="steps">
+      {% for s in b.steps %}
+      <li class="{% if loop.first %}is-current{% endif %}"><span class="dot">{{ loop.index }}</span><strong>{{ s.title }}</strong><small>{{ s.text }}</small></li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>

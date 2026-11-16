@@ -1,0 +1,12 @@
+{# 積木：三欄說明（上方藍綠色線） #}
+<section class="block info-cols">
+  <div class="wrap cols-3">
+    {% for c in b.columns %}
+    <div class="info-col">
+      <h3>{{ c.title }}</h3>
+      <p>{{ c.text }}</p>
+      {% if c.link %}<a class="link-orange" href="{{ c.link.href }}">{{ c.link.label }} →</a>{% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>

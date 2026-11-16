@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }}｜{{ site.brand }}</title>
+  {% if description %}<meta name="description" content="{{ description }}">{% endif %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body class="theme-{{ theme or 'paper' }}">
+  {# ===== 積木：共用頁首（內容在 _data/site.json） ===== #}
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="/"><img src="/assets/img/logo.png" alt="The Reef 綠芙潛水 Stay | Scuba | Tour" width="258" height="95"></a>
+      <img class="header-diver" src="/assets/img/diver-icon.png" alt="" aria-hidden="true">
+      <nav class="main-nav" aria-label="主選單">
+        {% for item in site.nav %}<a href="{{ item.href }}"{% if navKey == item.key %} aria-current="page"{% endif %}>{{ item.label }}</a>{% endfor %}
+      </nav>
+      <span class="lang">中｜<span title="英文版準備中">EN</span></span>
+      <a class="btn btn-orange btn-sm" href="{{ site.bookHref }}">預訂</a>
+      <img class="header-sun" src="/assets/img/sun.png" alt="" aria-hidden="true">
+    </div>
+  </header>
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  {# ===== 積木：共用頁尾 ===== #}
+  <footer class="site-footer">
+    <img class="footer-art" src="/assets/img/footer-mountains.jpg" alt="綠島海岸礁岩插畫" loading="lazy">
+    <div class="footer-body">
+      <div class="wrap">
+        <div class="footer-cta">
+          <h2>{{ site.cta.title }}</h2>
+          <a class="btn btn-orange" href="{{ site.cta.primary.href }}">{{ site.cta.primary.label }}</a>
+          <a class="btn btn-outline" href="{{ site.cta.secondary.href }}">{{ site.cta.secondary.label }}</a>
+        </div>
+        <div class="footer-grid">
+          <div>
+            <p class="footer-brand">{{ site.brand }}</p>
+            <p>{{ site.company.name or "公司名稱（待填）" }}　統一編號 {{ site.company.taxId or "（待填）" }}<br>
+              {{ site.company.address }}<br>
+              電話 <a href="{{ site.company.phoneHref }}">{{ site.company.phone }}</a>　信箱 {% if site.company.email %}<a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>{% else %}（待填）{% endif %}</p>
+          </div>
+          <div class="footer-links">
+            {% for l in site.legalLinks %}<a href="{{ l.href }}">{{ l.label }}</a>{% endfor %}
+          </div>
+          <div class="footer-social">
+            {% if site.company.instagramUrl %}<a href="{{ site.company.instagramUrl }}">Instagram</a>{% else %}<span>Instagram</span>{% endif %}
+            {% if site.company.lineUrl %}<a href="{{ site.company.lineUrl }}">LINE 官方帳號</a>{% else %}<span>LINE 官方帳號</span>{% endif %}
+          </div>
+        </div>
+        <p class="copyright">© 2026 The Reef Diving</p>
+      </div>
+    </div>
+  </footer>
+  {% if scripts %}{% for s in scripts %}<script src="{{ s }}" defer></script>{% endfor %}{% endif %}
+</body>
+</html>
