@@ -1,20 +1,23 @@
-# 並排比對圖：python3 scripts/home-compare.py <Canva原頁.png> <網站截圖.png> <段落代號> <輸出.png>
+# 並排比對圖：python3 scripts/canvas-compare.py <頁面> <Canva原頁.png> <網站截圖.png> <段落代號> <輸出.png> [y起,y迄]
+#   頁面＝home、courses…（段落範圍讀 src/_data/<頁面>.json 的 sections；給 y起,y迄 就用自訂範圍）
 # 左＝Canva、右＝網站，同一段 y 範圍；縮成一半寬方便看
 import sys, json, os
 from PIL import Image, ImageDraw, ImageFont
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-canva, web, key, out = sys.argv[1:5]
-spec = {s[0]: s for s in [("open", "開場", 0, 1000), ("d12", "12 m", 1000, 2950), ("d18", "18 m", 2950, 3680), ("d30", "30 m", 3680, 5200),
-                          ("faq", "FAQ", 5200, 5950), ("map", "我們在哪裡", 5950, 7050), ("footer", "頁尾", 7050, 8000)]}[key]
-_, name, a, b = spec
+page, canva, web, key, out = sys.argv[1:6]
+data = json.load(open(os.path.join(ROOT, "src", "_data", page + ".json")))
+sec = [s for s in data["sections"] if s["key"] == key][0]
+name, a, b = sec["name"], sec["top"], sec["top"] + sec["height"]
+if len(sys.argv) > 6:
+    a, b = map(int, sys.argv[6].split(","))
 A = Image.open(canva).convert("RGB").crop((0, a, 1440, b))
 B = Image.open(web).convert("RGB").crop((0, a, 1440, b))
 s = 0.5
 W, H = int(1440 * s), int((b - a) * s)
 head = 44
 img = Image.new("RGB", (W * 2 + 12, H + head), "#ffffff")
-img.paste(A.resize((W, H)), (0, head))
-img.paste(B.resize((W, H)), (W + 12, head))
+img.paste(A.resize((W, H), Image.LANCZOS), (0, head))
+img.paste(B.resize((W, H), Image.LANCZOS), (W + 12, head))
 d = ImageDraw.Draw(img)
 fp = "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc"
 f = ImageFont.truetype(fp, 22) if os.path.exists(fp) else ImageFont.load_default()

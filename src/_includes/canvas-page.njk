@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+{#
+  照 Canva 座標排版的頁面（電腦版 1440 寬）：首頁、課程…共用這一份版型。
+  - 頁面在 front matter 用 canvasKey 指定讀哪一份資料：home → _data/home.json、courses → _data/courses.json
+  - 底圖：每段一張 WebP（Canva 去掉文字、按鈕之後匯出），疊在最下層；圖檔在 /assets/img/<imgDir>/
+  - 文字、按鈕、魚：照資料檔座標放回（以 1440 寬為準，窄螢幕整頁等比縮小）
+  - 頁首、頁尾：其他頁用 section.shared 直接拿首頁（home.json）的那幾個元素，所以全站只有一份
+  - 價格：一律從 _data/prices.json 讀
+#}
+{%- set cvMap = { "home": home, "courses": courses } -%}
+{%- set cv = cvMap[canvasKey or "home"] -%}
+{%- set imgDir = cv.imgDir or "home" -%}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }}｜{{ site.brand }}</title>
+  {% if description %}<meta name="description" content="{{ description }}">{% endif %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/canvas-page.css">
+  <script>if (!(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) && "IntersectionObserver" in window) document.documentElement.classList.add("hc-anim");</script>
+</head>
+{%- macro textBody(it, active) -%}
+  {%- if it.priceId -%}{% set p = it.priceId | priceItem(prices) %}{{ it.text | replace("{price}", p.price | money) }}
+  {%- elif it.site == "companyLines" -%}{{ site.company.name or "公司名稱（待填）" }}　統一編號 {{ site.company.taxId or "（待填）" }}
+{{ site.company.address }}
+電話 <a href="{{ site.company.phoneHref }}">{{ site.company.phone }}</a>　信箱 {% if site.company.email %}<a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>{% else %}（待填）{% endif %}
+  {%- elif it.site == "legalLinks" -%}{% for l in site.legalLinks %}<a href="{{ l.href }}">{{ l.label }}</a>{% if not loop.last %}
+{% endif %}{% endfor %}
+  {%- elif it.site == "social" -%}{% if site.company.instagramUrl %}<a href="{{ site.company.instagramUrl }}">Instagram</a>{% else %}Instagram{% endif %}
+{% if site.company.lineUrl %}<a href="{{ site.company.lineUrl }}">LINE 官方帳號</a>{% else %}LINE 官方帳號{% endif %}
+  {%- elif it.links -%}{% for l in it.links %}{% if l[1] %}<a href="{{ site.company.googleMapUrl if l[1] == 'site:googleMapUrl' else l[1] }}"{% if l[1] == 'site:googleMapUrl' %} target="_blank" rel="noopener"{% endif %}{% if active and l[1] == active %} class="is-active" aria-current="page"{% endif %}>{{ l[0] }}</a>{% else %}{{ l[0] }}{% endif %}{% endfor %}
+  {%- elif it.runs -%}{% for run in it.runs %}<span style="color:{{ run.c }}">{{ run.t }}</span>{% if not loop.last %}
+{% endif %}{% endfor %}
+  {%- elif it.spans -%}{% for sp in it.spans %}{% if sp.href %}<a href="{{ sp.href }}" style="color:{{ sp.c }}">{{ sp.t | fillPrices(prices) }}</a>{% else %}<span style="color:{{ sp.c }}">{{ sp.t | fillPrices(prices) }}</span>{% endif %}{% endfor %}
+  {%- elif it.fill -%}{{ it.text | fillPrices(prices) }}
+  {%- elif it.href -%}<a href="{{ it.href }}">{{ it.text }}</a>
+  {%- else -%}{{ it.text }}{%- endif -%}
+{%- endmacro -%}
+{%- macro fishItem(it, dir) -%}
+      <div class="hc-fish" style="left:{{ it.x }}px;top:{{ it.y }}px;width:{{ it.w }}px;height:{{ it.h }}px;{% if it.rot %}transform:rotate({{ it.rot }}deg);{% endif %}{% if it.crop %}overflow:hidden;{% endif %}">
+        <img class="hc-fish-img{% if it.anim.float %} has-float{% endif %}" src="/assets/img/{{ dir }}/{{ it.file }}.webp" alt="{{ it.name }}插圖" loading="lazy"
+          style="--dx:{{ it.anim.dx }}px;--dy:{{ it.anim.dy }}px;--dur:{{ it.anim.dur }}s;--delay:{{ it.anim.delay }}s;--float:{{ it.anim.float or 0 }}s;{% if it.crop %}position:absolute;left:{{ it.crop.x }}px;top:{{ it.crop.y }}px;width:{{ it.crop.w }}px;height:{{ it.crop.h }}px;{% endif %}">
+      </div>
+{%- endmacro -%}
+{%- macro item(it, dx, dy, active) -%}
+      {% if it.kind == "text" %}
+      <div class="hc-t{% if it.ul %} ul{% endif %}" style="left:{{ it.x + dx }}px;top:{{ it.y + dy }}px;width:{{ it.w }}px;font-size:{{ it.fs }}px;font-weight:{{ it.fw }};color:{{ it.color }};line-height:{{ it.lh }};text-align:{{ it.align }};{% if it.ls %}letter-spacing:{{ it.ls }}em;{% endif %}{% if it.op %}opacity:{{ it.op }};{% endif %}">{{ textBody(it, active) | safe }}</div>
+      {% elif it.kind == "button" %}
+      <a class="hc-btn" href="{{ it.href }}" style="left:{{ it.x + dx }}px;top:{{ it.y + dy }}px;width:{{ it.w }}px;height:{{ it.h }}px;border-radius:{{ it.radius }}px;background:{{ it.bg }};color:{{ it.color }};font-size:{{ it.fs }}px;{% if it.bw %}border:{{ it.bw }}px solid {{ it.bc }};{% endif %}">{{ it.label }}</a>
+      {% elif it.kind == "faq" %}
+      <div class="hc-faq" style="left:{{ it.x + dx }}px;top:{{ it.y + dy }}px;width:{{ it.w }}px;--row:{{ it.rowH }}px;--line:{{ it.lineH }}px;--line-op:{{ it.lineOp }};--qfs:{{ it.q.fs }}px;--qc:{{ it.q.color }};--qlh:{{ it.q.lh }};--afs:{{ it.a.fs }}px;--ac:{{ it.a.color }};--alh:{{ it.a.lh }};--aw:{{ it.a.w }}px;--sfs:{{ it.sign.fs }}px;--sc:{{ it.sign.color }}">
+        {% for f in it.items %}
+        <details{% if f.open %} open{% endif %}>
+          <summary><span class="q">{{ f.q }}</span><span class="sign" aria-hidden="true"></span></summary>
+          <p class="a">{{ f.a | fillPrices(prices) }}</p>
+        </details>
+        {% endfor %}
+      </div>
+      {% endif %}
+{%- endmacro -%}
+<body id="top">
+  <div class="hc-scale">
+  <div class="hc hc-page-{{ canvasKey or 'home' }}" style="height:{{ cv.height }}px">
+    <div class="hc-bg" aria-hidden="true">
+      {% for s in cv.sections %}<img src="/assets/img/{{ imgDir }}/{{ s.img }}" alt="" width="1440" height="{{ s.height }}" style="top:{{ s.top }}px"{% if not loop.first %} loading="lazy"{% endif %}>{% endfor %}
+    </div>
+    <a class="hc-logo" href="/" aria-label="{{ site.brand }} 首頁"></a>
+    {% for s in cv.sections %}
+    <section class="hc-sec hc-sec-{{ s.key }}" data-name="{{ s.name }}" style="top:{{ s.top }}px;height:{{ s.height }}px">
+      {% for it in s.items %}{% if it.kind == "fish" %}
+{{ fishItem(it, imgDir) }}
+      {% endif %}{% endfor %}
+      {% for it in s.items %}{{ item(it, 0, 0, cv.active) }}{% endfor %}
+      {#- 共用的頁首／頁尾：從首頁那一段拿元素，照 dx、dy 位移 #}
+      {% for sh in s.shared or [] %}{% for hs in home.sections %}{% if hs.key == sh.from %}{% for it in hs.items %}{% if (not sh.maxY or it.y < sh.maxY) and it.kind != "fish" %}{{ item(it, sh.dx or 0, sh.dy or 0, cv.active) }}{% endif %}{% endfor %}{% endif %}{% endfor %}{% endfor %}
+    </section>
+    {% endfor %}
+  </div>
+  </div>
+  {# FAQ 結構化標記（給搜尋引擎） #}
+  {% for s in cv.sections %}{% for it in s.items %}{% if it.kind == "faq" %}
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for f in it.items %}{% if f.a != "答案待補" %}{% if not loop.first %},{% endif %}{"@type":"Question","name":{{ f.q | dump | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | fillPrices(prices) | dump | safe }}}}{% endif %}{% endfor %}]}</script>
+  {% endif %}{% endfor %}{% endfor %}
+  <script src="/assets/js/canvas-page.js" defer></script>
+</body>
+</html>
