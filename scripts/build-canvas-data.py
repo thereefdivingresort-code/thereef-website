@@ -1,6 +1,6 @@
 # 照 Canva 排版頁面（電腦版 1440）的資料產生器：讀 docs/<頁>-canva-elements.json（Canva 一次讀出的座標），
 # 產生 src/_data/<頁>.json（每段的文字、按鈕座標）並把去字底圖切成每段一張 WebP（src/assets/img/<頁>/）。
-# 用法：python3 scripts/build-canvas-data.py <頁面> <去字底圖.png>     例：python3 scripts/build-canvas-data.py courses base.png
+# 用法：python3 scripts/build-canvas-data.py <頁面> <去字底圖.png> [只留插圖的透明.png]     例：python3 scripts/build-canvas-data.py courses base.png
 #   頁面設定（段落、按鈕連結、價格對應、共用頁首頁尾）在 scripts/canvas_pages.py
 #   首頁（有魚類動畫）用 scripts/build-home-data.py
 # 注意：<頁>.json 是產生出來的；要改文字，改 canvas_pages.py 的 overrides 再重跑。
@@ -69,6 +69,51 @@ def button(sh, tx, href, scale=1):
     return b
 
 
+def cut_illustrations(cfg, allel, illus, src, key):
+    """插圖：src＝Canva 工作檔只留插圖、透明背景匯出的整頁 PNG（寬 1440）。
+    illusMatte：匯出圖裡如果有刪不掉的鎖定底紋（半透明、顏色幾乎一致），把它從插圖底下「扣掉」，只留插圖本身。
+    illusClip：Canva 上疊在插圖上面的東西（例如照片）的範圍，插圖在這些範圍內挖空，網頁才不會蓋到它們。"""
+    import math
+    import numpy as np
+    from PIL import ImageDraw
+    img = np.array(Image.open(src).convert("RGBA")).astype(float)
+    Hh, Ww = img.shape[:2]
+    mt = cfg.get("illusMatte")
+    if mt:
+        at = mt["alpha"] / 255.0
+        tc = np.array(mt["color"], float)
+        ac = img[..., 3] / 255.0
+        ah = np.clip(1 - (1 - ac) / (1 - at), 0, 1)
+        safe = np.where(ah > 0.004, ah, 1)
+        col = (img[..., :3] * ac[..., None] - tc * at * (1 - ah[..., None])) / safe[..., None]
+        img = np.dstack([np.clip(col, 0, 255), ah * 255])
+    full = Image.fromarray(img.round().astype("uint8"), "RGBA")
+    out = []
+    imgdir = os.path.join(ROOT, "src", "assets", "img", key)
+    os.makedirs(imgdir, exist_ok=True)
+    for eid, spec in illus.items():
+        e = allel[eid]
+        cx, cy = e["left"] + e["width"] / 2, e["top"] + e["height"] / 2
+        a = math.radians(e.get("rotation", 0))
+        pts = []
+        for dx, dy in [(-1, -1), (1, -1), (1, 1), (-1, 1)]:
+            x, y = dx * e["width"] / 2, dy * e["height"] / 2
+            pts.append((cx + x * math.cos(a) - y * math.sin(a), cy + x * math.sin(a) + y * math.cos(a)))
+        m = Image.new("L", (Ww, Hh), 0)
+        d = ImageDraw.Draw(m)
+        d.polygon(pts, fill=255)
+        for x0, y0, x1, y1 in cfg.get("illusClip", {}).get(eid, []):
+            d.rectangle((x0, y0, x1, y1), fill=0)
+        layer = Image.new("RGBA", (Ww, Hh), (0, 0, 0, 0))
+        layer.paste(full, (0, 0), m)
+        bb = layer.getchannel("A").point(lambda v: 255 if v > 3 else 0).getbbox()
+        x0, y0, x1, y1 = max(bb[0] - 2, 0), max(bb[1] - 2, 0), min(bb[2] + 2, Ww), min(bb[3] + 2, Hh)
+        layer.crop((x0, y0, x1, y1)).save(os.path.join(imgdir, spec["file"] + ".webp"), "WEBP", quality=90, method=6)
+        out.append({"kind": "fish", "code": spec["code"], "file": spec["file"], "name": spec["name"], "anim": spec["anim"],
+                    "x": x0, "y": y0, "w": x1 - x0, "h": y1 - y0, "rot": 0})
+    return out
+
+
 def main():
     key, base = sys.argv[1], sys.argv[2]
     cfg = PAGES[key]
@@ -117,6 +162,11 @@ def main():
     for e in page["elements"]:
         walk(e)
 
+    # 插圖（進場動畫，用版型的 fish 元素）：從「只留插圖」的透明 PNG 依 Canva 範圍切出（角度、翻轉、裁切都已在匯出圖裡）
+    illus = cfg.get("illustrations", {})
+    if illus:
+        items.extend(cut_illustrations(cfg, allel, illus, sys.argv[3], key))
+
     # 欄寬：參考段落的文字實際最右邊 → 其他段落縮到同寬（收在框內）
     texts = {i.get("id"): i for i in items if i["kind"] == "text"}
     col_right = {}
@@ -141,6 +191,9 @@ def main():
                 return k
         return cfg["sections"][-1][0]
 
+    def item_y(it):  # 插圖用中心點決定屬於哪一段
+        return it["y"] + (it["h"] / 2 if it["kind"] == "fish" else 0)
+
     imgdir = os.path.join(ROOT, "src", "assets", "img", key)
     os.makedirs(imgdir, exist_ok=True)
     out = {"_說明": f"{cfg['title']}頁（電腦版 1440 寬）每段的文字、按鈕座標，由 scripts/build-canvas-data.py 從 Canva 產生（設定在 scripts/canvas_pages.py）。座標單位＝px，以 1440 寬為準。頁首、頁尾用首頁（home.json）的元素。",
@@ -152,7 +205,7 @@ def main():
         if k in cfg.get("shared", {}):
             sec["shared"] = cfg["shared"][k]
         for it in items:
-            if section_of(it["y"]) == k:
+            if section_of(item_y(it)) == k:
                 it2 = dict(it)
                 it2["y"] = r(it["y"] - a)
                 sec["items"].append(it2)
