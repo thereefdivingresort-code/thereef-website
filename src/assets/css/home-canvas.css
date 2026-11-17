@@ -1,7 +1,7 @@
 /* 首頁（電腦版 1440）：照 Canva 座標排版。座標寫在 src/_data/home.json */
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; background: #010414; font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0; background: #010414; font-family: "Noto Sans TC", "Noto Sans CJK TC", "PingFang TC", "Microsoft JhengHei", sans-serif; -webkit-font-smoothing: antialiased; }
 .hc-scale { width: 100%; overflow-x: hidden; }
 .hc { position: relative; width: 1440px; margin: 0 auto; }
 .hc-bg img { position: absolute; left: 0; display: block; width: 1440px; }

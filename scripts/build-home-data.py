@@ -25,7 +25,8 @@ SECTIONS = [  # 代號, 中文, Canva y 範圍（底圖依這個切）
 # 文字 → 連結／價格／網站資料（用 Canva 元素 id 對應）
 OVERRIDES = {
     "LBQhnfR94X68vL9m": {"href": "/courses/"},                      # 開場 看全部方案 →
-    "LBKVNx8MqxDmXDhs": {"href": "/trips/"},                        # 30m 看全部方案 →（住宿＋套裝）
+    "LBKVNx8MqxDmXDhs": {"href": "/trips/", "x": 145.0},           # 30m 看全部方案 →（住宿＋套裝）；左緣跟上面對齊
+    "LBBLbGLQH84xRYwP": {"x": 145.0, "w": 544},                      # 30m「也有住宿房型…」：寬度跟上面同一欄（11/17 Ambre：這段凌亂）
     "LBJHtvt9c3B7mRTr": {"priceId": "dsd", "text": "NT$ {price} ／人"},
     "LB8MKSMzDVhtSfqZ": {"priceId": "ow", "text": "NT$ {price}／人"},
     "LBjptnkxrdP7Ypq3": {"priceId": "aow", "text": "NT$ {price} ／人"},
@@ -74,6 +75,27 @@ FAQ_ANSWERS = {
 }
 LABEL_COLOR = "#edc40f"  # 黃色設計標籤：不做進網站
 K = 1.2  # Canva 文字框第一行高度 ≈ 1.2 × 字級
+TEXT_SCALE = 0.9  # 11/17 Ambre：整體字級太大，縮小一點多留白（文字框位置、寬度不變）
+# 11/17 Ambre：課程段落的「預訂」按鈕右緣要跟上面那一欄文字「實際最右邊」對齊（按鈕 id → 同一欄的文字 id）
+BUTTON_ALIGN_RIGHT = {
+    "LBQ9h3flkS5BBFbV": ["LBxcQQNkdzxc7bNm", "LBlhcdxSs8Lpp8x4", "LB8LnWGDWS7Q2MzD"],                      # 開場 預訂課程
+    "LB54Z0kPnnSm9bHz": ["LBtkyDY5mxzc6Mjv", "LBKSnzt85RzxJHcs", "LBMqwSYvKlBbFCXN", "LBhLwmjm64Y6Qhlq"],  # 12 m 體驗潛水
+    "LBVxvJrpZ0jh21r6": ["LBxj61vyjH71XzkG", "LBpPF5kHQPRPm5M6", "LBkCjNgrJndf49BW", "LBhgNx4WTt4n2VpK"],  # 18 m OW
+    "LBt9px4tqXJNpTT0": ["LBFhk7r4lXCHd7BC", "LBGcxXy9P84KsyXj", "LBBPH7DGWwVWsZw7", "LBMWb6CwHFM8R1vT", "LBBLbGLQH84xRYwP"],  # 30 m AOW
+}
+FONT_DIR = "/usr/share/fonts/opentype/noto/"  # 量字寬用（Noto Sans CJK TC＝網站的 Noto Sans TC）
+
+
+def text_right(t):
+    """文字實際最右邊（px）：每一行量字寬；自動換行的段落（左右對齊）會排到框的右緣。"""
+    from PIL import ImageFont
+    font = ImageFont.truetype(FONT_DIR + ("NotoSansCJK-Bold.ttc" if t["fw"] >= 700 else "NotoSansCJK-Regular.ttc"), round(t["fs"] * 4), index=3)
+    body = "\n".join(x["t"] for x in t["runs"]) if t.get("runs") else t["text"]
+    right = 0
+    for line in body.split("\n"):
+        wpx = font.getlength(line) / 4 + t.get("ls", 0) * t["fs"] * len(line)
+        right = max(right, min(wpx, t["w"]))
+    return t["x"] + right
 
 
 def r(v, n=1):
@@ -83,7 +105,7 @@ def r(v, n=1):
 def text_item(e, ov):
     regs = e["textRegions"]
     f = regs[0]["formatting"]
-    fs, lh = f["fontSize"], f["lineHeight"]
+    fs, lh = f["fontSize"] * TEXT_SCALE, f["lineHeight"]
     it = {
         "kind": "text", "id": e["id"],
         "x": r(e["left"]), "y": r(e["top"] - (lh - K) * fs / 2), "w": r(e["width"] + 4),
@@ -144,8 +166,8 @@ def main():
             items.append({
                 "kind": "faq", "x": r(qrows[0]["left"]), "y": r(qrows[0]["top"]), "w": 1120,
                 "rowH": 80, "lineH": 8, "lineOp": 0.25,
-                "q": {"fs": r(f0["fontSize"]), "color": f0["color"], "lh": f0["lineHeight"]},
-                "a": {"fs": r(fa["fontSize"]), "color": fa["color"], "lh": fa["lineHeight"], "w": r(ans["width"])},
+                "q": {"fs": r(f0["fontSize"] * TEXT_SCALE), "color": f0["color"], "lh": f0["lineHeight"]},
+                "a": {"fs": r(fa["fontSize"] * TEXT_SCALE), "color": fa["color"], "lh": fa["lineHeight"], "w": r(ans["width"])},
                 "sign": {"fs": r(sign[0]["textRegions"][0]["formatting"]["fontSize"]), "color": sign[0]["textRegions"][0]["formatting"]["color"]},
                 "items": [{"q": c["textRegions"][0]["characters"],
                            "a": ans["textRegions"][0]["characters"] if i == 0 else FAQ_ANSWERS[i],
@@ -158,8 +180,8 @@ def main():
             f = tx["textRegions"][0]["formatting"]
             items.append({"kind": "button", "x": r(sh["left"]), "y": r(sh["top"]), "w": r(sh["width"]), "h": r(sh["height"]),
                           "radius": sh["paths"][0]["cornerRounding"], "bg": sh["paths"][0]["fill"]["color"]["color"],
-                          "label": tx["textRegions"][0]["characters"], "fs": r(f["fontSize"]), "fw": 700, "color": f["color"],
-                          "href": BUTTONS[e["id"]], **stroke(sh)})
+                          "label": tx["textRegions"][0]["characters"], "fs": r(f["fontSize"] * TEXT_SCALE), "fw": 700, "color": f["color"],
+                          "href": BUTTONS[e["id"]], "_gid": e["id"], **stroke(sh)})
             return
         if e["id"] == HEADER_BTN[0]:
             sh = e
@@ -167,7 +189,7 @@ def main():
             f = tx["textRegions"][0]["formatting"]
             items.append({"kind": "button", "x": r(sh["left"]), "y": r(sh["top"]), "w": r(sh["width"]), "h": r(sh["height"]),
                           "radius": sh["paths"][0]["cornerRounding"], "bg": sh["paths"][0]["fill"]["color"]["color"],
-                          "label": tx["textRegions"][0]["characters"], "fs": r(f["fontSize"]), "fw": 700, "color": f["color"],
+                          "label": tx["textRegions"][0]["characters"], "fs": r(f["fontSize"] * TEXT_SCALE), "fw": 700, "color": f["color"],
                           "href": HEADER_BTN[2]})
             return
         if e["id"] == HEADER_BTN[1]:
@@ -203,6 +225,13 @@ def main():
 
     for e in page["elements"]:
         walk(e)
+
+    # 按鈕右緣對齊同一欄文字的實際最右邊
+    texts = {i.get("id"): i for i in items if i["kind"] == "text"}
+    for it in items:
+        gid = it.pop("_gid", None) if it["kind"] == "button" else None
+        if gid in BUTTON_ALIGN_RIGHT:
+            it["x"] = r(max(text_right(texts[t]) for t in BUTTON_ALIGN_RIGHT[gid]) - it["w"])
 
     # 魚：從透明圖切出每一條（重疊處給上層那條）
     from PIL import ImageDraw
