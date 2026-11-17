@@ -13,11 +13,9 @@ PAGES = {
         "title": "課程",
         "active": "/courses/",
         "textScale": 0.9,  # 11/17 Ambre：比照首頁，字級 ×0.9（位置、框寬不變）
-        # 11/17 Ambre 圈選：說明文字收在框內＝「含｜…」那段縮到上面幾行的實際寬度；預訂按鈕右緣對齊這一欄（比照首頁）
-        "columns": {
-            "ow": (["LB2tB6sLbqQbC45c", "LBzV9DgV1JDjrfN4", "LByjSBHGQnvRDkNy", "LBFvdLGKf7gHwBnv"], ["LBN9YVvqBxNhtfDy"]),
-            "aow": (["LBTdZW10hJfmLY8V", "LBYZ3KqrDHls72KV", "LBdVRhkfppf511qs", "LBWGZjnCnG4pBy8Z"], ["LBljR0j6Hvqt5Ltv"]),
-        },
+        # 11/17 Ambre：OW、AOW「含｜…」那段不要縮在左邊（畫面不平均），維持 Canva 的寬度、扁平兩行，
+        #   換行跟 Canva 一樣（第一行到「機車」）；預訂按鈕右緣對齊這段的右緣、價格跟著移（全站規則：按鈕和字的最右邊對齊）
+        "columns": {"ow": (["LBN9YVvqBxNhtfDy"], []), "aow": (["LBljR0j6Hvqt5Ltv"], [])},
         "buttonAlign": {  # 按鈕群組 id → (欄, 一起移動的價格文字 id)
             "LBhhjwRx9fZF22NR": ("ow", "LB7wpznLPFr6yGkv"),
             "LBsFwHTtt6NbRR06": ("aow", "LBsJdgwf1NsKMFsl"),
@@ -45,7 +43,8 @@ PAGES = {
         "overrides": {
             # 行距微調：用像素量測對齊 Canva（Canva 的行距比網頁略緊）
             # AOW 包含內容：拿掉「深潛改成 2 支船潛加收 NT$ 1,400」（11/17 Ambre：1,400 不在價目表，這句拿掉）
-            "LBljR0j6Hvqt5Ltv": {"text": "含｜線上學科、PADI 證照申請費、5 支術科、全套裝備和電腦錶、背包房 2 晚、碼頭接送、機車 2 人 1 台、保險"},
+            "LBN9YVvqBxNhtfDy": {"w": 800},
+            "LBljR0j6Hvqt5Ltv": {"w": 800, "text": "含｜線上學科、PADI 證照申請費、5 支術科、全套裝備和電腦錶、背包房 2 晚、碼頭接送、機車 2 人 1 台、保險"},
             "LB7wpznLPFr6yGkv": {"priceId": "ow", "text": "NT$ {price} ／人"},
             "LBsJdgwf1NsKMFsl": {"priceId": "aow", "text": "NT$ {price} ／人"},
             "LBrDZT1G6gSqkWdg": {"priceId": "ow-aow", "text": "NT$ {price} ／人"},
