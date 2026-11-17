@@ -11,7 +11,26 @@
    "top": 0,
    "height": 1000,
    "img": "stay_s_open.webp",
-   "items": [],
+   "items": [
+    {
+     "kind": "fish",
+     "code": "L1",
+     "file": "stay_logo_white",
+     "name": "綠芙潛水白色 logo",
+     "anim": {
+      "dx": 0,
+      "dy": 12,
+      "dur": 1.8,
+      "delay": 0.3,
+      "float": 0
+     },
+     "x": 516,
+     "y": 482,
+     "w": 402,
+     "h": 140,
+     "rot": 0
+    }
+   ],
    "shared": [
     {
      "from": "open",

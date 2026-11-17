@@ -107,13 +107,15 @@ PAGES = {
             ("LB5vKycJl33TRj8b", "LBDlwt1dnRXZ7Tvs", "/booking/?item=room-quad"),
             ("LB4XmhvXWgTfjnSQ", "LBhbQsLL1VdCSVt4", "/booking/?item=bed-backpacker"),
         ],
-        # 房子藍曬插圖：滑到時緩慢浮現（11/17 Ambre；Canva 頁面備註沒有動畫規格）
+        # 房子藍曬插圖、開場白色 logo：滑到時緩慢浮現（11/17 Ambre；Canva 頁面備註沒有動畫規格）
         "illustrations": {
+            # 開場照片中央的白色 logo：漸漸浮現（11/17 Ambre）。插圖工作檔裡是重新放回的同一張圖（新 id LBrG1LDP5qbvkJw8），座標照原頁
+            "LBS99CLLmb0JcsM8": {"code": "L1", "file": "stay_logo_white", "name": "綠芙潛水白色 logo", "anim": {"dx": 0, "dy": 12, "dur": 1.8, "delay": 0.3, "float": 0}},
             "LBbHL189lzp1pmMd": {"code": "H1", "file": "stay_house_double", "name": "雙人房房子", "anim": {"dx": 0, "dy": 12, "dur": 1.8, "delay": 0, "float": 0}},
             "LBSFndCVbhV2crhF": {"code": "H2", "file": "stay_house_quad", "name": "四人房前院", "anim": {"dx": 0, "dy": 12, "dur": 1.8, "delay": 0, "float": 0}},
             "LBXLvH6x2ylXknJl": {"code": "H3", "file": "stay_house_backpacker", "name": "背包客房床位", "anim": {"dx": 0, "dy": 12, "dur": 1.8, "delay": 0, "float": 0}},
         },
-        "illusMatte": {"alpha": 171, "color": [249, 249, 243]},  # 鎖定的紙紋底（透明度 0.67）刪不掉
+        "illusMatte": {"alpha": 171, "color": [249, 249, 243], "y": [962, 4219]},  # 鎖定的紙紋底（透明度 0.67，y 962–4219）刪不掉
         "illusClip": {"LBbHL189lzp1pmMd": [[844.6, 1091.5, 1288.5, 1627.1]]},  # 雙人房照片疊在房子上面
         "overrides": {
             # 價格一律從 prices.json 讀（＝Sheet 01_價目表）

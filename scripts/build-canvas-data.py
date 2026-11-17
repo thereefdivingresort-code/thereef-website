@@ -86,7 +86,9 @@ def cut_illustrations(cfg, allel, illus, src, key):
         ah = np.clip(1 - (1 - ac) / (1 - at), 0, 1)
         safe = np.where(ah > 0.004, ah, 1)
         col = (img[..., :3] * ac[..., None] - tc * at * (1 - ah[..., None])) / safe[..., None]
-        img = np.dstack([np.clip(col, 0, 255), ah * 255])
+        out_ = np.dstack([np.clip(col, 0, 255), ah * 255])
+        y0m, y1m = mt.get("y", [0, Hh])  # 底紋只在這個高度範圍（範圍外的插圖不扣）
+        img[y0m:y1m] = out_[y0m:y1m]
     full = Image.fromarray(img.round().astype("uint8"), "RGBA")
     out = []
     imgdir = os.path.join(ROOT, "src", "assets", "img", key)
