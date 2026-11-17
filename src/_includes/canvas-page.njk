@@ -8,7 +8,7 @@
   - 頁首、頁尾：其他頁用 section.shared 直接拿首頁（home.json）的那幾個元素，所以全站只有一份
   - 價格：一律從 _data/prices.json 讀
 #}
-{%- set cvMap = { "home": home, "courses": courses, "stay": stay } -%}
+{%- set cvMap = { "home": home, "courses": courses, "stay": stay, "trips": trips } -%}
 {%- set cv = cvMap[canvasKey or "home"] -%}
 {%- set imgDir = cv.imgDir or "home" -%}
 <head>

@@ -49,9 +49,15 @@ module.exports = function (eleventyConfig) {
       throw new Error("fillPrices：prices.json 找不到 " + id);
     };
     const fmt = (n) => Number(n).toLocaleString("en-US");
-    // {item:ow-aow}＝代號有連字號的單一品項價格；{tier:fun-shore:2}＝級距價第 2 格（1 對 2）
+    // {item:ow-aow}＝代號有連字號的單一品項價格；{extra:pkg-fun}＝單人報名加價；{tier:fun-shore:2}＝級距價第 2 格（1 對 2）
     text = String(text)
       .replace(/\{item:([a-z0-9-]+)\}/gi, (_, id) => fmt(findItem(id).price))
+      // {extra:pkg-fun}＝套裝「單人報名」比雙人每人價多的金額（single − price）
+      .replace(/\{extra:([a-z0-9-]+)\}/gi, (_, id) => {
+        const it = findItem(id);
+        if (it.single == null) throw new Error("fillPrices：" + id + " 沒有單人價（single）");
+        return fmt(it.single - it.price);
+      })
       .replace(/\{tier:([a-z0-9-]+):(\d)\}/gi, (_, id, n) => {
         const t = findItem(id).tiers;
         if (!t || t[n - 1] == null) throw new Error("fillPrices：" + id + " 沒有第 " + n + " 格級距價");

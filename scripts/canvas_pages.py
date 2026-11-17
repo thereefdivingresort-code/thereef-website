@@ -131,4 +131,59 @@ PAGES = {
                 {"t": "。\n・考照套裝和 3 天 2 夜套裝已經含背包客房，不用另外訂。", "c": "#12355b"}]},
         },
     },
+    "trips": {
+        "canva": "trips-canva-elements.json",
+        "title": "行程",
+        "active": "/trips/",
+        "textScale": 0.9,  # 全站規則（11/17 Ambre）：字級 ×0.9，位置、框寬不變
+        # 預訂按鈕右緣對齊同一張卡片說明文字的實際最右邊（全站規則）。Canva 是靠左（待 Ambre 決定）
+        "columns": {
+            "snorkel": (["LBzSVlpmsyKY969S"], []),
+            "dsd": (["LBC99NYrzPNRb5V3"], []),
+            "fun": (["LBWlG8kv6BRD4VTt"], []),
+        },
+        "buttonAlign": {
+            "LB8ZB478rkxNBW2W": ("snorkel", None),
+            "LB6ZkxmTckCCLlBy": ("dsd", None),
+            "LBZ9wlyDbmv99gFr": ("fun", None),
+        },
+        "sections": [
+            ("open", "開場", 0, 1330),
+            ("includes", "每個套裝皆含", 1330, 1560),
+            ("packages", "三張套裝卡", 1560, 2480),
+            ("days", "3 天怎麼過", 2480, 3020),
+            ("addons", "島上加購", 3020, 3700),
+            ("footer", "頁尾", 3700, 4500),
+        ],
+        "shared": {
+            "open": [{"from": "open", "maxY": 140}],                  # 頁首：行程頁 Canva 的頁首跟首頁同位置
+            "footer": [{"from": "footer", "dx": 0, "dy": -150}],      # 頁尾：Canva 行程頁頁尾＝首頁頁尾往上 3500px（段落起點差 150）
+        },
+        "skip": ["LB78BVbQGW0x9XFd", "LBQ6xlXCM3TJSkkZ",
+                 "LBLrX4221rNXYHdV", "LBlFKNkhXTTK1jgs", "LB1kly2sPrlhWHwT", "LBytDVwcT9xnmLWr", "LBCR0YpRslFW3hM4",
+                 "LBqj21fVbl0DBL3Q", "LBDnGGMCtyHbYRdh", "LBhK872CHTstVTwf"],
+        "pairs": [
+            ("LB8ZB478rkxNBW2W", "LBdffbJZsL5g35Tt", "/booking/?item=pkg-snorkel"),
+            ("LB6ZkxmTckCCLlBy", "LByPGnkHgHbswcVC", "/booking/?item=pkg-dsd"),
+            ("LBZ9wlyDbmv99gFr", "LB5xp8Sh33YwsxQ3", "/booking/?item=pkg-fun"),
+        ],
+        "overrides": {
+            # 錯字：「Fun Dive都可以」補空格
+            "LBZwHWRgxX45RNy5": {"text": "從台東搭船到綠島，碼頭有人接，機車和背包客房都準備好。\n你只要選想怎麼玩：浮潛、體驗潛水，或已經有證照的 Fun Dive 都可以！"},
+            # 套裝價格（雙人每人價＝price）、升等（up-*）、單人報名加價（single − price）一律從 prices.json 讀
+            "LBw7xdQDG4rmzMrz": {"priceId": "pkg-snorkel", "text": "NT$ {price} ／人"},
+            "LBZTblQpt7HphBhC": {"priceId": "pkg-dsd", "text": "NT$ {price} ／人"},
+            "LBGrLP8yBGVmXXnm": {"priceId": "pkg-fun", "text": "NT$ {price} ／人"},
+            "LBmLjYGqVlSNZXFh": {"fill": True, "text": "升等雙人套房每人＋NT$ {item:up-snorkel}\n單人報名＋NT$ {extra:pkg-snorkel}"},
+            # Canva 備註：體驗套裝升等中文＋500、英文＋800 → 照 Sheet（up-dsd）
+            "LBvvnr4lVHHvtqYy": {"fill": True, "text": "升等雙人套房每人＋NT$ {item:up-dsd}\n單人報名＋NT$ {extra:pkg-dsd}"},
+            "LBt6pcV4Zs1ZdM5H": {"fill": True, "text": "升等雙人套房每人＋NT$ {item:up-fun}\n單人報名＋NT$ {extra:pkg-fun}（機車和導潛費）"},
+            # 島上加購：價格從 prices.json 讀
+            "LBs4ySQ7DzrGbxvL": {"fill": True, "text": "潮間帶導覽　{item:tidal}\n夜釣　{item:fishing}\n藍洞秘境探險　{item:bluecave}"},
+            "LBQjBtrl9LjzlkRT": {"fill": True, "text": "SUP 立槳（單人板）　{item:sup1}\nSUP 立槳（雙人板）　{item:sup2}\n玻璃船　{item:glassboat}"},
+            # 烤肉吃到飽、招牌桶仔雞：Sheet 沒有（11/16 Ambre 拿掉餐食）→ 先不放；電動自行車 Sheet 只有單人 600（ebike），
+            #   Canva「600／天起」的「起」是指雙人 800，Sheet 沒有 → 拿掉「起」（都列在待 Ambre 決定）
+            "LBRvm9XldnhzNjsQ": {"fill": True, "text": "電動自行車　{item:ebike}／天"},
+        },
+    },
 }
