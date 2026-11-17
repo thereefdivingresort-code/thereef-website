@@ -17,8 +17,7 @@
     { "key": "courses", "label": "課程", "href": "/courses/" },
     { "key": "stay", "label": "住宿", "href": "/stay/" },
     { "key": "trips", "label": "行程", "href": "/trips/" },
-    { "key": "about", "label": "關於", "href": "/about/" },
-    { "key": "contact", "label": "聯絡", "href": "/about/#contact" }
+    { "key": "about", "label": "關於", "href": "/about/" }
   ],
   "bookHref": "/booking/",
   "legalLinks": [
