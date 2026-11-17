@@ -1,0 +1,616 @@
+{
+ "_說明": "關於與聯絡頁（電腦版 1440 寬）每段的文字、按鈕座標，由 scripts/build-canvas-data.py 從 Canva 產生（設定在 scripts/canvas_pages.py）。座標單位＝px，以 1440 寬為準。頁首、頁尾用首頁（home.json）的元素。",
+ "width": 1440,
+ "height": 3900,
+ "imgDir": "about",
+ "active": "/about/",
+ "sections": [
+  {
+   "key": "open",
+   "name": "開場",
+   "top": 0,
+   "height": 960,
+   "img": "about_s_open.webp",
+   "items": [
+    {
+     "kind": "text",
+     "id": "LBqFn2bkB71tR5pJ",
+     "x": 154,
+     "y": 220.2,
+     "w": 704,
+     "fs": 18.0,
+     "fw": 700,
+     "color": "#2a8a9a",
+     "lh": 1.4,
+     "align": "left",
+     "text": "ABOUT　·　關於綠芙"
+    },
+    {
+     "kind": "text",
+     "id": "LBRLhcmrkBNFdxB6",
+     "x": 136.0,
+     "y": 277.9,
+     "w": 826.9,
+     "fs": 64.8,
+     "fw": 400,
+     "color": "#12355b",
+     "lh": 1.2,
+     "align": "left",
+     "text": "台灣第一批潛水店"
+    },
+    {
+     "kind": "text",
+     "id": "LBHYTVnZQPcWzF46",
+     "x": 150.0,
+     "y": 384.2,
+     "w": 733.3,
+     "fs": 19.8,
+     "fw": 400,
+     "color": "#ec6c0c",
+     "lh": 1.7,
+     "align": "left",
+     "spans": [
+      {
+       "t": "綠芙The Reef 是由一位叫做KEN的元老級潛水教練所創立 \n",
+       "c": "#ec6c0c",
+       "fs": 23.4,
+       "fw": 700
+      },
+      {
+       "t": "他是一個60+老屁孩，關於大海的故事，絕對是你能遇過最豐富最多的人，畢竟有點年紀了，還想趁潛不動以前，再去一次世界各地探望以前那些厲害的潛點，所以他不一定會在島上（想他要預約）但一定在某個地方吐泡泡。",
+       "c": "#12355b"
+      }
+     ]
+    },
+    {
+     "kind": "text",
+     "id": "LBRs96Rzy11tlyxz",
+     "x": 562.4,
+     "y": 608.0,
+     "w": 246.7,
+     "fs": 16.0,
+     "fw": 400,
+     "color": "#12355b",
+     "lh": 1.7,
+     "align": "left",
+     "text": "從小在關島長大\n在菲律賓及澳洲長期教學\n\n中英台語多聲道\n30年以上的潛水教學資歷\n水下兇巴巴只是怕你會危險\n水上不正經基本是他的常態\n想去世界各地的潛點問他沒錯\n他是活字典。"
+    }
+   ],
+   "shared": [
+    {
+     "from": "open",
+     "maxY": 140
+    }
+   ]
+  },
+  {
+   "key": "links",
+   "name": "Stay／Scuba／Tour",
+   "top": 960,
+   "height": 300,
+   "img": "about_s_links.webp",
+   "items": [
+    {
+     "kind": "text",
+     "id": "LBphhdnRMDkZ3xSY",
+     "x": 154,
+     "y": 62.5,
+     "w": 354,
+     "fs": 25.2,
+     "fw": 700,
+     "color": "#12355b",
+     "lh": 1.4,
+     "align": "left",
+     "text": "Stay　住宿"
+    },
+    {
+     "kind": "text",
+     "id": "LBpwm4JPKK2m7KhV",
+     "x": 545,
+     "y": 62.5,
+     "w": 354,
+     "fs": 25.2,
+     "fw": 700,
+     "color": "#12355b",
+     "lh": 1.4,
+     "align": "left",
+     "text": "Scuba　潛水"
+    },
+    {
+     "kind": "text",
+     "id": "LBgzjV537XcWVxwj",
+     "x": 936,
+     "y": 62.5,
+     "w": 354,
+     "fs": 25.2,
+     "fw": 700,
+     "color": "#12355b",
+     "lh": 1.4,
+     "align": "left",
+     "text": "Tour　島上行程"
+    },
+    {
+     "kind": "text",
+     "id": "LB3WkT5TJ0GZcNpC",
+     "x": 154,
+     "y": 115.5,
+     "w": 344,
+     "fs": 18.0,
+     "fw": 400,
+     "color": "#12355b",
+     "lh": 1.7,
+     "align": "left",
+     "text": "豪華雙人房、四人房和背包客房，就在潛水中心旁。"
+    },
+    {
+     "kind": "text",
+     "id": "LB9ZvPPqd0DmJd5t",
+     "x": 545,
+     "y": 115.5,
+     "w": 344,
+     "fs": 18.0,
+     "fw": 400,
+     "color": "#12355b",
+     "lh": 1.7,
+     "align": "left",
+     "text": "PADI 體驗潛水、OW、AOW 到進修課程，岸潛和船潛都有。"
+    },
+    {
+     "kind": "text",
+     "id": "LBCJ51y8Gq0YCqKH",
+     "x": 936,
+     "y": 115.5,
+     "w": 344,
+     "fs": 18.0,
+     "fw": 400,
+     "color": "#12355b",
+     "lh": 1.7,
+     "align": "left",
+     "text": "3 天 2 夜套裝含船票和機車，也能加購浮潛、潮間帶和夜釣。"
+    },
+    {
+     "kind": "text",
+     "id": "LBb1s8wgGsFvPNT3",
+     "x": 154,
+     "y": 228.2,
+     "w": 304,
+     "fs": 18.0,
+     "fw": 700,
+     "color": "#ec6c0c",
+     "lh": 1.4,
+     "align": "left",
+     "ul": true,
+     "text": "看住宿 →",
+     "href": "/stay/"
+    },
+    {
+     "kind": "text",
+     "id": "LBbKySyHdPCbGWcd",
+     "x": 545,
+     "y": 228.2,
+     "w": 304,
+     "fs": 18.0,
+     "fw": 700,
+     "color": "#ec6c0c",
+     "lh": 1.4,
+     "align": "left",
+     "ul": true,
+     "text": "看課程 →",
+     "href": "/courses/"
+    },
+    {
+     "kind": "text",
+     "id": "LB94FGCLpjcMLcVc",
+     "x": 936,
+     "y": 228.2,
+     "w": 304,
+     "fs": 18.0,
+     "fw": 700,
+     "color": "#ec6c0c",
+     "lh": 1.4,
+     "align": "left",
+     "ul": true,
+     "text": "看行程 →",
+     "href": "/trips/"
+    }
+   ]
+  },
+  {
+   "key": "contact",
+   "name": "聯絡我們",
+   "top": 1260,
+   "height": 680,
+   "img": "about_s_contact.webp",
+   "items": [
+    {
+     "kind": "text",
+     "id": "LBHBXl39dz7j7ybG",
+     "x": 154,
+     "y": 46.0,
+     "w": 564,
+     "fs": 40.5,
+     "fw": 700,
+     "color": "#12355b",
+     "lh": 1.4,
+     "align": "left",
+     "text": "聯絡我們"
+    },
+    {
+     "kind": "text",
+     "id": "LB6r9cQ56ntDPXSm",
+     "x": 154,
+     "y": 128.4,
+     "w": 584,
+     "fs": 18.9,
+     "fw": 400,
+     "color": "#12355b",
+     "lh": 1.9,
+     "align": "left",
+     "text": "電話｜0936-871-525\n信箱｜（待填）\nLINE 官方帳號｜（待填）\n客服時間｜（待填）\n地址｜台東縣綠島鄉公館村柴口 172 號之 2",
+     "site": "contactLines"
+    },
+    {
+     "kind": "text",
+     "id": "LBXjh9yXXsn4Fdx6",
+     "x": 154,
+     "y": 345.7,
+     "w": 564,
+     "fs": 17.1,
+     "fw": 400,
+     "color": "#12355b",
+     "lh": 1.7,
+     "align": "left",
+     "text": "交通｜台東富岡漁港搭船約 50 分鐘到綠島南寮漁港。課程和套裝有碼頭接送。"
+    },
+    {
+     "kind": "text",
+     "id": "LBDK8z1bkGh8wgjf",
+     "x": 154,
+     "y": 445.6,
+     "w": 564,
+     "fs": 15.3,
+     "fw": 400,
+     "color": "#7a6a55",
+     "lh": 1.8,
+     "align": "left",
+     "text": "公司名稱｜潛伴有限公司\n統一編號｜83201186",
+     "site": "companyInfo"
+    },
+    {
+     "kind": "text",
+     "id": "LB4xcClTbYPkMk0Y",
+     "x": 154,
+     "y": 538.1,
+     "w": 404,
+     "fs": 18.9,
+     "fw": 700,
+     "color": "#ec6c0c",
+     "lh": 1.4,
+     "align": "left",
+     "ul": true,
+     "text": "在 Google 地圖開啟 →",
+     "links": [
+      [
+       "在 Google 地圖開啟 →",
+       "site:googleMapUrl"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "key": "form",
+   "name": "留言表單",
+   "top": 1940,
+   "height": 1010,
+   "img": "about_s_form.webp",
+   "items": [
+    {
+     "kind": "text",
+     "id": "LB9Qh3WqWh0dc2Xh",
+     "x": 154,
+     "y": 39.4,
+     "w": 704,
+     "fs": 25.2,
+     "fw": 700,
+     "color": "#12355b",
+     "lh": 1.4,
+     "align": "left",
+     "text": "留言給我們 or KEN"
+    },
+    {
+     "kind": "text",
+     "id": "LByLwlx1W8CZPSfr",
+     "x": 154,
+     "y": 95.2,
+     "w": 1004,
+     "fs": 17.1,
+     "fw": 400,
+     "color": "#7a6a55",
+     "lh": 1.4,
+     "align": "left",
+     "text": "我們會在客服時間內盡快回覆。急事請直接撥打服務電話。"
+    },
+    {
+     "kind": "text",
+     "id": "LBCz2WF6cRRFVfH4",
+     "x": 179.4,
+     "y": 242.6,
+     "w": 504,
+     "fs": 16.2,
+     "fw": 700,
+     "color": "#12355b",
+     "lh": 1.4,
+     "align": "left",
+     "text": "姓名",
+     "labelFor": "contact-form-name"
+    },
+    {
+     "kind": "text",
+     "id": "LBRBYVfk5R1XDhZ4",
+     "x": 731.4,
+     "y": 242.6,
+     "w": 504,
+     "fs": 16.2,
+     "fw": 700,
+     "color": "#12355b",
+     "lh": 1.4,
+     "align": "left",
+     "text": "手機",
+     "labelFor": "contact-form-phone"
+    },
+    {
+     "kind": "text",
+     "id": "LBM69tzyTwyxtfyT",
+     "x": 179.4,
+     "y": 362.6,
+     "w": 504,
+     "fs": 16.2,
+     "fw": 700,
+     "color": "#12355b",
+     "lh": 1.4,
+     "align": "left",
+     "text": "Email",
+     "labelFor": "contact-form-email"
+    },
+    {
+     "kind": "text",
+     "id": "LBCVxK5vywktxSgM",
+     "x": 731.4,
+     "y": 362.6,
+     "w": 504,
+     "fs": 16.2,
+     "fw": 700,
+     "color": "#12355b",
+     "lh": 1.4,
+     "align": "left",
+     "text": "想問的方案",
+     "labelFor": "contact-form-plan"
+    },
+    {
+     "kind": "text",
+     "id": "LBvDHf4PSJjpnMCJ",
+     "x": 179.4,
+     "y": 482.6,
+     "w": 504,
+     "fs": 16.2,
+     "fw": 700,
+     "color": "#12355b",
+     "lh": 1.4,
+     "align": "left",
+     "text": "想問的事",
+     "labelFor": "contact-form-message"
+    },
+    {
+     "kind": "text",
+     "id": "LBDgBsMVTL9JYQ6V",
+     "x": 217.4,
+     "y": 746.6,
+     "w": 1004,
+     "fs": 16.2,
+     "fw": 400,
+     "color": "#12355b",
+     "lh": 1.4,
+     "align": "left",
+     "spans": [
+      {
+       "t": "我已閱讀並同意",
+       "c": "#12355b"
+      },
+      {
+       "t": "〈隱私權政策〉",
+       "c": "#12355b",
+       "href": "/privacy/",
+       "newTab": true
+      },
+      {
+       "t": "，同意綠芙用這些資料回覆我。",
+       "c": "#12355b"
+      }
+     ],
+     "labelFor": "contact-form-agree"
+    },
+    {
+     "kind": "form",
+     "id": "contact-form",
+     "x": 0,
+     "y": 276.2,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "kind": "field",
+     "form": "contact-form",
+     "fid": "contact-form-name",
+     "x": 179.4,
+     "y": 276.2,
+     "w": 500,
+     "h": 56,
+     "radius": 10,
+     "padL": 20.0,
+     "padT": 14.4,
+     "fs": 16.2,
+     "lh": 1.4,
+     "phColor": "#a39b8b",
+     "ph": "你的名字",
+     "padB": 18.9,
+     "tag": "input",
+     "type": "text",
+     "name": "name",
+     "required": true,
+     "autocomplete": "name"
+    },
+    {
+     "kind": "field",
+     "form": "contact-form",
+     "fid": "contact-form-phone",
+     "x": 731.4,
+     "y": 276.2,
+     "w": 500,
+     "h": 56,
+     "radius": 10,
+     "padL": 20.0,
+     "padT": 14.4,
+     "fs": 16.2,
+     "lh": 1.4,
+     "phColor": "#a39b8b",
+     "ph": "09xx-xxx-xxx",
+     "padB": 18.9,
+     "tag": "input",
+     "type": "tel",
+     "name": "phone",
+     "required": true,
+     "autocomplete": "tel"
+    },
+    {
+     "kind": "field",
+     "form": "contact-form",
+     "fid": "contact-form-email",
+     "x": 179.4,
+     "y": 396.2,
+     "w": 500,
+     "h": 56,
+     "radius": 10,
+     "padL": 20.0,
+     "padT": 14.4,
+     "fs": 16.2,
+     "lh": 1.4,
+     "phColor": "#a39b8b",
+     "ph": "name@example.com",
+     "padB": 18.9,
+     "tag": "input",
+     "type": "email",
+     "name": "email",
+     "autocomplete": "email"
+    },
+    {
+     "kind": "field",
+     "form": "contact-form",
+     "fid": "contact-form-plan",
+     "x": 731.4,
+     "y": 396.2,
+     "w": 500,
+     "h": 56,
+     "radius": 10,
+     "padL": 20.0,
+     "padT": 14.4,
+     "fs": 16.2,
+     "lh": 1.4,
+     "phColor": "#a39b8b",
+     "ph": "請選擇（課程／住宿／套裝／其他）",
+     "padB": 18.9,
+     "tag": "select",
+     "name": "plan",
+     "options": [
+      "體驗潛水",
+      "OW",
+      "AOW",
+      "OW＋AOW",
+      "Fun Dive",
+      "3 天 2 夜套裝",
+      "住宿",
+      "其他"
+     ],
+     "arrowX": 296.2
+    },
+    {
+     "kind": "field",
+     "form": "contact-form",
+     "fid": "contact-form-message",
+     "x": 179.4,
+     "y": 516.2,
+     "w": 1052,
+     "h": 200,
+     "radius": 10,
+     "padL": 20.0,
+     "padT": 18.4,
+     "fs": 16.2,
+     "lh": 1.4,
+     "phColor": "#a39b8b",
+     "ph": "例如：想預約 12 月的 OW 考照，兩個人，想問哪幾天還有位子。",
+     "tag": "textarea",
+     "name": "message",
+     "required": true
+    },
+    {
+     "kind": "check",
+     "form": "contact-form",
+     "fid": "contact-form-agree",
+     "name": "agree",
+     "required": true,
+     "x": 179.4,
+     "y": 750.2,
+     "w": 24,
+     "h": 24,
+     "radius": 4,
+     "bc": "#12355b"
+    },
+    {
+     "kind": "submit",
+     "x": 179.4,
+     "y": 814.2,
+     "w": 200,
+     "h": 56,
+     "radius": 28,
+     "bg": "#ec6b0c",
+     "label": "送出",
+     "fs": 18.0,
+     "fw": 700,
+     "color": "#ffffff",
+     "form": "contact-form"
+    },
+    {
+     "kind": "formmsg",
+     "form": "contact-form",
+     "x": 403.4,
+     "y": 830.9,
+     "w": 830,
+     "fs": 16.2,
+     "color": "#12355b"
+    }
+   ]
+  },
+  {
+   "key": "footer",
+   "name": "頁尾",
+   "top": 2950,
+   "height": 950,
+   "img": "about_s_footer.webp",
+   "items": [],
+   "shared": [
+    {
+     "from": "footer",
+     "dx": 0,
+     "dy": 0
+    }
+   ]
+  }
+ ],
+ "anchors": [
+  {
+   "id": "contact",
+   "y": 1250
+  }
+ ],
+ "form": "contact-form"
+}

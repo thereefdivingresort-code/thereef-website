@@ -116,6 +116,46 @@ def cut_illustrations(cfg, allel, illus, src, key):
     return out
 
 
+def form_items(fm, allel, items, sc):
+    """留言表單：每個欄位＝Canva 輸入框（形狀）的位置大小；字級、提示字、左邊留白照 Canva 提示字；標題文字改成 <label>。"""
+    from PIL import ImageFont
+    texts = {i.get("id"): i for i in items if i["kind"] == "text"}
+    out = [{"kind": "form", "id": fm["id"], "x": 0, "y": r(allel[fm["fields"][0][0]]["top"]), "w": 0, "h": 0}]
+    for box, ph, label, spec in fm["fields"]:
+        b, p = allel[box], allel[ph]
+        f = p["textRegions"][0]["formatting"]
+        fs, lh = f["fontSize"] * sc, f["lineHeight"]
+        fid = fm["id"] + "-" + spec["name"]
+        it = {"kind": "field", "form": fm["id"], "fid": fid, "x": r(b["left"]), "y": r(b["top"]), "w": r(b["width"]), "h": r(b["height"]),
+              "radius": b["paths"][0]["cornerRounding"], "padL": r(p["left"] - b["left"]), "padT": r(p["top"] - (lh - K) * fs / 2 - b["top"]),
+              "fs": r(fs), "lh": lh, "phColor": f["color"], "ph": p["textRegions"][0]["characters"].rstrip("\n")}
+        if spec["tag"] != "textarea":  # 單行欄位：瀏覽器會把字放在內容區正中間 → 上下留白算好，讓字落在 Canva 提示字的高度
+            it["padB"] = r(it["h"] - it["padT"] - fs * lh)
+        it.update(spec)
+        if spec["tag"] == "select":  # 「▾」：照 Canva 位置（提示字後面），網頁另外畫，選了方案也留著
+            pre, arrow = it["ph"].rsplit("▾", 1)[0], "▾"
+            font = ImageFont.truetype(FONT_DIR + "NotoSansCJK-Regular.ttc", round(fs * 4), index=3)
+            it["ph"] = pre.rstrip("　 ")
+            it["arrowX"] = r(p["left"] - b["left"] + font.getlength(pre) / 4)
+        texts[label]["labelFor"] = fid
+        out.append(it)
+    box, label, name = fm["check"]
+    b = allel[box]
+    fid = fm["id"] + "-" + name
+    out.append({"kind": "check", "form": fm["id"], "fid": fid, "name": name, "required": True, "x": r(b["left"]), "y": r(b["top"]),
+                "w": r(b["width"]), "h": r(b["height"]), "radius": b["paths"][0]["cornerRounding"], "bc": b["paths"][0]["stroke"]["color"]["color"]})
+    texts[label]["labelFor"] = fid
+    sh, tx = fm["submit"]
+    bt = button(allel[sh], allel[tx], None, sc)
+    bt.update({"kind": "submit", "form": fm["id"]})
+    bt.pop("href")
+    out.append(bt)
+    fsm = r(18 * sc)
+    out.append({"kind": "formmsg", "form": fm["id"], "x": fm["msg"]["x"], "y": r(bt["y"] + bt["h"] / 2 - fsm * 1.4 / 2), "w": fm["msg"]["w"],
+                "fs": fsm, "color": "#12355b"})
+    return out
+
+
 def main():
     key, base = sys.argv[1], sys.argv[2]
     cfg = PAGES[key]
@@ -132,6 +172,9 @@ def main():
     pair_shape = {s: (t, h) for s, t, h in cfg.get("pairs", [])}
     pair_text = {t for _, t, _ in cfg.get("pairs", [])}
     skip = set(cfg.get("skip", []))
+    fm = cfg.get("form")
+    if fm:  # 表單：提示字、送出鈕文字改由網頁欄位／按鈕本身顯示
+        skip |= {ph for _, ph, _, _ in fm["fields"]} | {fm["submit"][1]}
     sc = cfg.get("textScale", 1)
     items = []
 
@@ -169,6 +212,10 @@ def main():
     if illus:
         items.extend(cut_illustrations(cfg, allel, illus, sys.argv[3], key))
 
+    # 留言表單（真的網頁欄位，照 Canva 輸入框座標放；輸入框外觀在底圖）
+    if fm:
+        items.extend(form_items(fm, allel, items, sc))
+
     # 欄寬：參考段落的文字實際最右邊 → 其他段落縮到同寬（收在框內）
     texts = {i.get("id"): i for i in items if i["kind"] == "text"}
     col_right = {}
@@ -200,6 +247,10 @@ def main():
     os.makedirs(imgdir, exist_ok=True)
     out = {"_說明": f"{cfg['title']}頁（電腦版 1440 寬）每段的文字、按鈕座標，由 scripts/build-canvas-data.py 從 Canva 產生（設定在 scripts/canvas_pages.py）。座標單位＝px，以 1440 寬為準。頁首、頁尾用首頁（home.json）的元素。",
            "width": 1440, "height": H, "imgDir": key, "active": cfg.get("active"), "sections": []}
+    if cfg.get("anchors"):
+        out["anchors"] = [{"id": k, "y": v} for k, v in cfg["anchors"].items()]
+    if fm:
+        out["form"] = fm["id"]
     im = Image.open(base).convert("RGB")
     assert im.size == (1440, H), im.size
     for k, name, a, b in cfg["sections"]:

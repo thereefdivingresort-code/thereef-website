@@ -12,6 +12,9 @@
 #   illustrations ＝ 插圖 id → 檔名、動畫（做成版型的 fish 元素，進入畫面時播一次進場）
 #   illusMatte ＝ 插圖匯出圖裡刪不掉的鎖定底紋（透明度、顏色），切圖時扣掉
 #   illusClip  ＝ 插圖 id → Canva 上疊在它上面的東西範圍（挖空，網頁才不會蓋住）
+#   anchors    ＝ 錨點名稱 → y（例如 "contact": 1250 → 網址 /about/#contact 直接跳到這個高度）
+#   form       ＝ 留言表單：真的網頁欄位照 Canva 輸入框座標放（輸入框外觀留在底圖、欄位本身透明）
+#                fields＝(box 輸入框形狀 id, ph 提示字 id, label 標題文字 id, 欄位設定)；check＝同意勾選框；submit＝送出鈕；msg＝送出後訊息的位置
 PAGES = {
     "courses": {
         "canva": "courses-canva-elements.json",
@@ -184,6 +187,66 @@ PAGES = {
             # 烤肉吃到飽、招牌桶仔雞：Sheet 沒有（11/16 Ambre 拿掉餐食）→ 先不放；電動自行車 Sheet 只有單人 600（ebike），
             #   Canva「600／天起」的「起」是指雙人 800，Sheet 沒有 → 拿掉「起」（都列在待 Ambre 決定）
             "LBRvm9XldnhzNjsQ": {"fill": True, "text": "電動自行車　{item:ebike}／天"},
+        },
+    },
+    "about": {
+        "canva": "about-canva-elements.json",
+        "title": "關於與聯絡",
+        "active": "/about/",
+        "textScale": 0.9,  # 全站規則（11/17 Ambre）：字級 ×0.9，位置、框寬不變
+        "sections": [
+            ("open", "開場", 0, 960),
+            ("links", "Stay／Scuba／Tour", 960, 1260),
+            ("contact", "聯絡我們", 1260, 1940),
+            ("form", "留言表單", 1940, 2950),
+            ("footer", "頁尾", 2950, 3900),
+        ],
+        # /about/#contact：頁尾「聯絡我們」按鈕連這裡。「聯絡我們」標題（y 1310）上面留 60px，捲過來不會貼齊螢幕頂端
+        "anchors": {"contact": 1250},
+        "shared": {
+            "open": [{"from": "open", "maxY": 140}],               # 頁首：關於頁 Canva 的頁首跟首頁同位置（選單沒有「聯絡」，11/17 Ambre）
+            "footer": [{"from": "footer", "dx": 0, "dy": 0}],      # 頁尾：Canva 關於頁頁尾＝首頁頁尾往上 4100px（段落起點差同樣 4100）
+        },
+        "skip": ["LBVgvFxw6lY1DSTj", "LB03RgQTfgCyg1JD",
+                 "LBkgGKbL8FnpWQRC", "LBQ8kpyHBmnLbPJZ", "LBMHQ0zlL8C4SNT9", "LBf9d6bFprMBxBrK", "LB0NHbLXsNTZVjzy",
+                 "LBFBq5RnZJg3mkXF", "LBfWQ2kxmrb7JvwZ", "LBK7K6Lcrnd7jtRL"],
+        "form": {
+            "id": "contact-form",
+            "fields": [
+                ("LBDZH9trsd15r4rD", "LBBYrgmDdwSkL5dt", "LBCz2WF6cRRFVfH4", {"tag": "input", "type": "text", "name": "name", "required": True, "autocomplete": "name"}),
+                ("LB7jhWNphkTcsmhn", "LB2Kp8jWMwN1XhHr", "LBRBYVfk5R1XDhZ4", {"tag": "input", "type": "tel", "name": "phone", "required": True, "autocomplete": "tel"}),
+                ("LBnmZmrdsyQ1qnvK", "LBKnSRNlb5F5Hkkk", "LBM69tzyTwyxtfyT", {"tag": "input", "type": "email", "name": "email", "autocomplete": "email"}),
+                # 想問的方案：Canva 只寫「課程／住宿／套裝／其他」沒列選項 → 用排程說明給的清單（待 Ambre 決定）
+                ("LBDJqVXwyb92RgQg", "LBy9y3phwwPh0T8Q", "LBCVxK5vywktxSgM", {"tag": "select", "name": "plan", "options":
+                    ["體驗潛水", "OW", "AOW", "OW＋AOW", "Fun Dive", "3 天 2 夜套裝", "住宿", "其他"]}),
+                ("LB2sfSdvwKVBRF3V", "LBNRpGRdTTzNWjJv", "LBvDHf4PSJjpnMCJ", {"tag": "textarea", "name": "message", "required": True}),
+            ],
+            "check": ("LBtK8yZZjywRFDj2", "LBDgBsMVTL9JYQ6V", "agree"),
+            "submit": ("LBk81ls7yY7ZwJf4", "LBgp81XgB2Whc7v9"),
+            "msg": {"x": 403.4, "w": 830},  # 送出鈕右邊，垂直置中對齊送出鈕
+        },
+        "overrides": {
+            # 開場：橘色標題那一行 26px 粗體、下面說明 22px（Canva 同一個文字框兩種字級）
+            "LBHYTVnZQPcWzF46": {"fs": 19.8, "fw": 400, "spans": [
+                {"t": "綠芙The Reef 是由一位叫做KEN的元老級潛水教練所創立 \n", "c": "#ec6c0c", "fs": 23.4, "fw": 700},
+                {"t": "他是一個60+老屁孩，關於大海的故事，絕對是你能遇過最豐富最多的人，畢竟有點年紀了，還想趁潛不動以前，再去一次世界各地探望以前那些厲害的潛點，所以他不一定會在島上（想他要預約）但一定在某個地方吐泡泡。", "c": "#12355b"}]},
+            # KEN 條列：最後一行照 Canva 換行（字縮小後會擠成一行）
+            "LBRs96Rzy11tlyxz": {"text": "從小在關島長大\n在菲律賓及澳洲長期教學\n\n中英台語多聲道\n30年以上的潛水教學資歷\n水下兇巴巴只是怕你會危險\n水上不正經基本是他的常態\n想去世界各地的潛點問他沒錯\n他是活字典。"},
+            # Stay／Scuba／Tour 三欄連結
+            "LBb1s8wgGsFvPNT3": {"href": "/stay/"},
+            "LBbKySyHdPCbGWcd": {"href": "/courses/"},
+            "LB94FGCLpjcMLcVc": {"href": "/trips/"},
+            # 聯絡資訊一律讀 site.json（電話可點撥號；信箱、客服時間 null＝（待填））
+            "LB6r9cQ56ntDPXSm": {"site": "contactLines"},
+            "LBDK8z1bkGh8wgjf": {"site": "companyInfo"},
+            "LB4xcClTbYPkMk0Y": {"links": [["在 Google 地圖開啟 →", "site:googleMapUrl"]]},
+            # 「留言給我們or KEN」補空格
+            "LB9Qh3WqWh0dc2Xh": {"text": "留言給我們 or KEN"},
+            # 同意勾選：〈隱私權政策〉做成連結（另開分頁，表單填的字不會不見）
+            "LBDgBsMVTL9JYQ6V": {"spans": [
+                {"t": "我已閱讀並同意", "c": "#12355b"},
+                {"t": "〈隱私權政策〉", "c": "#12355b", "href": "/privacy/", "newTab": True},
+                {"t": "，同意綠芙用這些資料回覆我。", "c": "#12355b"}]},
         },
     },
 }

@@ -61,3 +61,24 @@ body { margin: 0; background: #010414; font-family: "Noto Sans TC", "Noto Sans C
 
 /* 頁首選單：目前所在頁（Canva 上是粗體青色） */
 .hc-t a.is-active { font-weight: 700; color: #2a8a9a; }
+
+/* 錨點（例如 /about/#contact）：放在要跳到的高度 */
+.hc-anchor { position: absolute; left: 0; width: 1px; height: 1px; }
+
+/* 留言表單（關於與聯絡頁）：輸入框的底色、框線在底圖上，網頁欄位本身透明、照 Canva 座標疊上去 */
+.hc-form { display: none; }
+.hc-field { position: absolute; z-index: 1; margin: 0; border: 0; background: transparent; color: #12355b; font-family: inherit; font-weight: 400; outline: none; box-sizing: border-box; -webkit-appearance: none; appearance: none; }
+.hc-field::placeholder { color: var(--ph); opacity: 1; }
+.hc-field:focus-visible, .hc-field:focus { box-shadow: 0 0 0 2px #2a8a9a; }
+textarea.hc-field { resize: none; overflow: auto; padding-right: 20px !important; }
+.hc-select { cursor: pointer; padding-right: 40px !important; text-overflow: ellipsis; }
+.hc-select:has(option[value=""]:checked) { color: var(--ph); }
+.hc-select option { color: #12355b; }
+.hc-select-arrow { position: absolute; z-index: 1; pointer-events: none; }
+.hc-check { position: absolute; z-index: 1; margin: 0; -webkit-appearance: none; appearance: none; background: transparent; border: 0; cursor: pointer; }
+.hc-check:checked { background: var(--bc) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 100% no-repeat; }
+.hc-check:focus-visible { outline: 2px solid #2a8a9a; outline-offset: 3px; }
+label.hc-t { cursor: pointer; }
+.hc-submit { border: 0; cursor: pointer; font-family: inherit; }
+.hc-formmsg { margin: 0; }
+.hc-formmsg a { text-decoration: underline; text-underline-offset: 3px; }
