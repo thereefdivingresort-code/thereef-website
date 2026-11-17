@@ -25,7 +25,8 @@ SECTIONS = [  # 代號, 中文, Canva y 範圍（底圖依這個切）
 # 文字 → 連結／價格／網站資料（用 Canva 元素 id 對應）
 OVERRIDES = {
     "LBQhnfR94X68vL9m": {"href": "/courses/"},                      # 開場 看全部方案 →
-    "LBKVNx8MqxDmXDhs": {"href": "/trips/"},                        # 30m 看全部方案 →（住宿＋套裝）
+    "LBKVNx8MqxDmXDhs": {"href": "/trips/", "x": 145.0},           # 30m 看全部方案 →（住宿＋套裝）；左緣跟上面對齊
+    "LBBLbGLQH84xRYwP": {"x": 145.0, "w": 544},                      # 30m「也有住宿房型…」：寬度跟上面同一欄（11/17 Ambre：這段凌亂）
     "LBJHtvt9c3B7mRTr": {"priceId": "dsd", "text": "NT$ {price} ／人"},
     "LB8MKSMzDVhtSfqZ": {"priceId": "ow", "text": "NT$ {price}／人"},
     "LBjptnkxrdP7Ypq3": {"priceId": "aow", "text": "NT$ {price} ／人"},
@@ -49,19 +50,20 @@ BUTTONS = {
 HEADER_BTN = ("LBcX3tPyTYvqMPWK", "LBVc9PMRPxKskgrn", "/booking/")
 FAQ_GROUP = "LB6lHLng6Q1YQ4lz"
 # 魚類插圖：Canva 元素 id → 檔名、動畫（照 Canva 備註動畫表）
-# anim: dx/dy＝進場起點位移（px），dur 秒，delay 秒，float＝漂浮秒數（0＝不漂）
+# anim: dx/dy＝進場起點位移（px，正＝從右邊／下面進來），dur 秒，delay 秒，float＝上下漂浮一輪秒數（0＝不漂），
+#       sway＝珊瑚／海扇左右擺動一輪秒數、origin＝擺動支點。方向一律跟著魚頭（11/17 Ambre 指出魟魚反了，C02 C04 C07 改成跟 Canva 備註相反）
 FISH = {
     "LBB5YJdFCD8Hf6yc": ("A01", "A01_damselfish", "雀鯛", dict(dx=0, dy=30, dur=0.8, delay=0, float=4.5)),
     "LBjZtmklxStNTl4w": ("A02", "A02_butterflyfish", "蝶魚", dict(dx=60, dy=0, dur=0.9, delay=0.15, float=4.5)),
     "LBhXNPpRbVK7YgNw": ("B01", "B01_parrotfish", "鸚哥魚", dict(dx=80, dy=0, dur=1.0, delay=0, float=4.5)),
     "LBqCVhnbK72xh8fR": ("B02", "B02_wrasse", "隆頭魚", dict(dx=-80, dy=0, dur=1.0, delay=0.2, float=4.5)),
-    "LB8FFq5qtjz9CKCX": ("B03", "B03_coral", "珊瑚礁", dict(dx=0, dy=0, dur=1.2, delay=0, float=0)),
+    "LB8FFq5qtjz9CKCX": ("B03", "B03_coral", "珊瑚礁", dict(dx=0, dy=0, dur=1.2, delay=0, float=0, sway=6, origin="0% 75%")),  # 隨水流輕輕擺動
     "LBlTR3klcMJ65X1V": ("C01", "C01_turtle", "海龜", dict(dx=-57, dy=57, dur=1.2, delay=0, float=5)),
-    "LBfCXFC2gH4SwV2l": ("C02", "C02_stingray", "魟魚", dict(dx=-100, dy=0, dur=1.4, delay=0.3, float=5)),
-    "LBGcpwYgFRBXTTv5": ("C04", "C04_moray", "裸胸鯙", dict(dx=30, dy=0, dur=1.0, delay=0, float=0)),
-    "LBSv8p9jbwRWk9XC": ("C06", "C06_seafan", "海扇", dict(dx=0, dy=0, dur=1.2, delay=0.3, float=0)),
-    "LBPTFlDKNzTGKMbd": ("C07", "C07_sweetlips", "黃帶胡椒鯛", dict(dx=-80, dy=0, dur=1.0, delay=0.15, float=4.5)),
-    "LB23Y4QxjT1k0plC": ("C07b", "C07_sweetlips", "黃帶胡椒鯛", dict(dx=-80, dy=0, dur=1.0, delay=0.25, float=4.5)),
+    "LBfCXFC2gH4SwV2l": ("C02", "C02_stingray", "魟魚", dict(dx=100, dy=20, dur=1.4, delay=0.3, float=5)),  # 頭朝左上：由右往左滑入（11/17 Ambre：原本方向反了）
+    "LBGcpwYgFRBXTTv5": ("C04", "C04_moray", "裸胸鯙", dict(dx=-30, dy=0, dur=1.0, delay=0, float=0)),  # 頭朝右：往右探出
+    "LBSv8p9jbwRWk9XC": ("C06", "C06_seafan", "海扇", dict(dx=0, dy=0, dur=1.2, delay=0.3, float=0, sway=7, origin="12% 88%")),
+    "LBPTFlDKNzTGKMbd": ("C07", "C07_sweetlips", "黃帶胡椒鯛", dict(dx=80, dy=0, dur=1.0, delay=0.15, float=4.5)),  # 頭朝左：由右往左游入
+    "LB23Y4QxjT1k0plC": ("C07b", "C07_sweetlips", "黃帶胡椒鯛", dict(dx=80, dy=0, dur=1.0, delay=0.25, float=4.5)),
     "LBPcFkQTv9PGdVmt": ("C05", "C05_lionfish", "獅子魚", dict(dx=0, dy=20, dur=1.4, delay=0.45, float=5)),
 }
 # FAQ 第 2–5 題答案：Stage1 缺件表 B01_FAQ 的 A3、C1、C2、C4（11/17 Ambre 同意）。價格用 {price:代號} 從 prices.json 讀
@@ -73,6 +75,32 @@ FAQ_ANSWERS = {
 }
 LABEL_COLOR = "#edc40f"  # 黃色設計標籤：不做進網站
 K = 1.2  # Canva 文字框第一行高度 ≈ 1.2 × 字級
+TEXT_SCALE = 0.9  # 11/17 Ambre：整體字級太大，縮小一點多留白（文字框位置、寬度不變）
+# 11/17 Ambre：課程段落的「預訂」按鈕右緣要跟上面那一欄文字「實際最右邊」對齊（按鈕 id → 同一欄的文字 id）
+BUTTON_ALIGN_RIGHT = {
+    "LBQ9h3flkS5BBFbV": ["LBxcQQNkdzxc7bNm", "LBlhcdxSs8Lpp8x4", "LB8LnWGDWS7Q2MzD"],                      # 開場 預訂課程
+    "LB54Z0kPnnSm9bHz": ["LBtkyDY5mxzc6Mjv", "LBKSnzt85RzxJHcs", "LBMqwSYvKlBbFCXN", "LBhLwmjm64Y6Qhlq"],  # 12 m 體驗潛水
+    "LBVxvJrpZ0jh21r6": ["LBxj61vyjH71XzkG", "LBpPF5kHQPRPm5M6", "LBkCjNgrJndf49BW", "LBhgNx4WTt4n2VpK"],  # 18 m OW
+    "LBt9px4tqXJNpTT0": ["LBFhk7r4lXCHd7BC", "LBGcxXy9P84KsyXj", "LBBPH7DGWwVWsZw7", "LBMWb6CwHFM8R1vT", "LBBLbGLQH84xRYwP"],  # 30 m AOW
+}
+# 11/17 Ambre：30 m 那一欄（文字和按鈕）都要收在第一段說明的寬度內（圈出來的框）
+# 段落 id → 要縮到同寬的其他段落 id；欄寬＝這段文字實際最長那一行
+COLUMN_FIT = {
+    "LBBPH7DGWwVWsZw7": ["LBMWb6CwHFM8R1vT", "LBBLbGLQH84xRYwP"],
+}
+FONT_DIR = "/usr/share/fonts/opentype/noto/"  # 量字寬用（Noto Sans CJK TC＝網站的 Noto Sans TC）
+
+
+def text_right(t):
+    """文字實際最右邊（px）：每一行量字寬；自動換行的段落（左右對齊）會排到框的右緣。"""
+    from PIL import ImageFont
+    font = ImageFont.truetype(FONT_DIR + ("NotoSansCJK-Bold.ttc" if t["fw"] >= 700 else "NotoSansCJK-Regular.ttc"), round(t["fs"] * 4), index=3)
+    body = "\n".join(x["t"] for x in t["runs"]) if t.get("runs") else t["text"]
+    right = 0
+    for line in body.split("\n"):
+        wpx = font.getlength(line) / 4 + t.get("ls", 0) * t["fs"] * len(line)
+        right = max(right, min(wpx, t["w"]))
+    return t["x"] + right
 
 
 def r(v, n=1):
@@ -82,7 +110,7 @@ def r(v, n=1):
 def text_item(e, ov):
     regs = e["textRegions"]
     f = regs[0]["formatting"]
-    fs, lh = f["fontSize"], f["lineHeight"]
+    fs, lh = f["fontSize"] * TEXT_SCALE, f["lineHeight"]
     it = {
         "kind": "text", "id": e["id"],
         "x": r(e["left"]), "y": r(e["top"] - (lh - K) * fs / 2), "w": r(e["width"] + 4),
@@ -143,8 +171,8 @@ def main():
             items.append({
                 "kind": "faq", "x": r(qrows[0]["left"]), "y": r(qrows[0]["top"]), "w": 1120,
                 "rowH": 80, "lineH": 8, "lineOp": 0.25,
-                "q": {"fs": r(f0["fontSize"]), "color": f0["color"], "lh": f0["lineHeight"]},
-                "a": {"fs": r(fa["fontSize"]), "color": fa["color"], "lh": fa["lineHeight"], "w": r(ans["width"])},
+                "q": {"fs": r(f0["fontSize"] * TEXT_SCALE), "color": f0["color"], "lh": f0["lineHeight"]},
+                "a": {"fs": r(fa["fontSize"] * TEXT_SCALE), "color": fa["color"], "lh": fa["lineHeight"], "w": r(ans["width"])},
                 "sign": {"fs": r(sign[0]["textRegions"][0]["formatting"]["fontSize"]), "color": sign[0]["textRegions"][0]["formatting"]["color"]},
                 "items": [{"q": c["textRegions"][0]["characters"],
                            "a": ans["textRegions"][0]["characters"] if i == 0 else FAQ_ANSWERS[i],
@@ -157,8 +185,8 @@ def main():
             f = tx["textRegions"][0]["formatting"]
             items.append({"kind": "button", "x": r(sh["left"]), "y": r(sh["top"]), "w": r(sh["width"]), "h": r(sh["height"]),
                           "radius": sh["paths"][0]["cornerRounding"], "bg": sh["paths"][0]["fill"]["color"]["color"],
-                          "label": tx["textRegions"][0]["characters"], "fs": r(f["fontSize"]), "fw": 700, "color": f["color"],
-                          "href": BUTTONS[e["id"]], **stroke(sh)})
+                          "label": tx["textRegions"][0]["characters"], "fs": r(f["fontSize"] * TEXT_SCALE), "fw": 700, "color": f["color"],
+                          "href": BUTTONS[e["id"]], "_gid": e["id"], **stroke(sh)})
             return
         if e["id"] == HEADER_BTN[0]:
             sh = e
@@ -166,7 +194,7 @@ def main():
             f = tx["textRegions"][0]["formatting"]
             items.append({"kind": "button", "x": r(sh["left"]), "y": r(sh["top"]), "w": r(sh["width"]), "h": r(sh["height"]),
                           "radius": sh["paths"][0]["cornerRounding"], "bg": sh["paths"][0]["fill"]["color"]["color"],
-                          "label": tx["textRegions"][0]["characters"], "fs": r(f["fontSize"]), "fw": 700, "color": f["color"],
+                          "label": tx["textRegions"][0]["characters"], "fs": r(f["fontSize"] * TEXT_SCALE), "fw": 700, "color": f["color"],
                           "href": HEADER_BTN[2]})
             return
         if e["id"] == HEADER_BTN[1]:
@@ -202,6 +230,18 @@ def main():
 
     for e in page["elements"]:
         walk(e)
+
+    # 按鈕右緣對齊同一欄文字的實際最右邊
+    texts = {i.get("id"): i for i in items if i["kind"] == "text"}
+    for ref, others in COLUMN_FIT.items():
+        right = text_right(texts[ref])
+        texts[ref]["w"] = r(right - texts[ref]["x"] + 1)
+        for o in others:
+            texts[o]["w"] = r(right - texts[o]["x"])
+    for it in items:
+        gid = it.pop("_gid", None) if it["kind"] == "button" else None
+        if gid in BUTTON_ALIGN_RIGHT:
+            it["x"] = r(max(text_right(texts[t]) for t in BUTTON_ALIGN_RIGHT[gid]) - it["w"])
 
     # 魚：從透明圖切出每一條（重疊處給上層那條）
     from PIL import ImageDraw
