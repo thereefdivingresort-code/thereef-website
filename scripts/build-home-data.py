@@ -83,6 +83,11 @@ BUTTON_ALIGN_RIGHT = {
     "LBVxvJrpZ0jh21r6": ["LBxj61vyjH71XzkG", "LBpPF5kHQPRPm5M6", "LBkCjNgrJndf49BW", "LBhgNx4WTt4n2VpK"],  # 18 m OW
     "LBt9px4tqXJNpTT0": ["LBFhk7r4lXCHd7BC", "LBGcxXy9P84KsyXj", "LBBPH7DGWwVWsZw7", "LBMWb6CwHFM8R1vT", "LBBLbGLQH84xRYwP"],  # 30 m AOW
 }
+# 11/17 Ambre：30 m 那一欄（文字和按鈕）都要收在第一段說明的寬度內（圈出來的框）
+# 段落 id → 要縮到同寬的其他段落 id；欄寬＝這段文字實際最長那一行
+COLUMN_FIT = {
+    "LBBPH7DGWwVWsZw7": ["LBMWb6CwHFM8R1vT", "LBBLbGLQH84xRYwP"],
+}
 FONT_DIR = "/usr/share/fonts/opentype/noto/"  # 量字寬用（Noto Sans CJK TC＝網站的 Noto Sans TC）
 
 
@@ -228,6 +233,11 @@ def main():
 
     # 按鈕右緣對齊同一欄文字的實際最右邊
     texts = {i.get("id"): i for i in items if i["kind"] == "text"}
+    for ref, others in COLUMN_FIT.items():
+        right = text_right(texts[ref])
+        texts[ref]["w"] = r(right - texts[ref]["x"] + 1)
+        for o in others:
+            texts[o]["w"] = r(right - texts[o]["x"])
     for it in items:
         gid = it.pop("_gid", None) if it["kind"] == "button" else None
         if gid in BUTTON_ALIGN_RIGHT:
