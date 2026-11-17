@@ -1,0 +1,482 @@
+{
+ "_說明": "課程頁（電腦版 1440 寬）每段的文字、按鈕座標，由 scripts/build-canvas-data.py 從 Canva 產生（設定在 scripts/canvas_pages.py）。座標單位＝px，以 1440 寬為準。頁首、頁尾用首頁（home.json）的元素。",
+ "width": 1440,
+ "height": 6000,
+ "imgDir": "courses",
+ "active": "/courses/",
+ "sections": [
+  {
+   "key": "open",
+   "name": "開場",
+   "top": 0,
+   "height": 1560,
+   "img": "courses_s_open.webp",
+   "items": [
+    {
+     "kind": "text",
+     "id": "LBZjyZl4PQ14S7Vg",
+     "x": 76.0,
+     "y": 458.3,
+     "w": 1104.0,
+     "fs": 64.8,
+     "fw": 700,
+     "color": "#efe8da",
+     "lh": 1.2,
+     "align": "left",
+     "text": "在海裡待了短短幾十分鐘，\n卻經歷了完全不同的世界。"
+    },
+    {
+     "kind": "text",
+     "id": "LBPKJzP4xyCf35gT",
+     "x": 76.0,
+     "y": 649.4,
+     "w": 764.0,
+     "fs": 19.8,
+     "fw": 400,
+     "color": "#efe8da",
+     "lh": 1.7,
+     "align": "left",
+     "text": "綠芙是一家老字號 PADI 認證的潛水中心。沒潛過的人從體驗潛水開始；\n想考照的人，3 天 2 夜就能拿到 OW 初級證照，安心又方便。"
+    }
+   ],
+   "shared": [
+    {
+     "from": "open",
+     "maxY": 140
+    }
+   ]
+  },
+  {
+   "key": "ow",
+   "name": "PADI OW",
+   "top": 1560,
+   "height": 840,
+   "img": "courses_s_ow.webp",
+   "items": [
+    {
+     "kind": "text",
+     "id": "LBqMLJjtT9xrSGbL",
+     "x": 88.0,
+     "y": 328.2,
+     "w": 64.0,
+     "fs": 18.0,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "left",
+     "text": "18 m"
+    },
+    {
+     "kind": "text",
+     "id": "LB2tB6sLbqQbC45c",
+     "x": 233.1,
+     "y": 78.2,
+     "w": 941.6,
+     "fs": 18.0,
+     "fw": 700,
+     "color": "#81f7f7",
+     "lh": 1.4,
+     "align": "left",
+     "text": "岸潛（較深）SHORE DIVE　·　最深 18 m"
+    },
+    {
+     "kind": "text",
+     "id": "LBzV9DgV1JDjrfN4",
+     "x": 233.1,
+     "y": 116.0,
+     "w": 941.6,
+     "fs": 40.5,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "left",
+     "text": "PADI OW 初級證照"
+    },
+    {
+     "kind": "text",
+     "id": "LByjSBHGQnvRDkNy",
+     "x": 233.1,
+     "y": 194.8,
+     "w": 908.1,
+     "fs": 20.7,
+     "fw": 400,
+     "color": "#ffffff",
+     "lh": 1.7,
+     "align": "left",
+     "text": "3 天 2 夜，給自己一個認識新世界的機會。"
+    },
+    {
+     "kind": "text",
+     "id": "LBFvdLGKf7gHwBnv",
+     "x": 233.1,
+     "y": 260.3,
+     "w": 975.1,
+     "fs": 18.9,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.8,
+     "align": "left",
+     "text": "第 1 天 8:00–17:00｜平靜水域 2 支＋開放水域 1 支\n第 2 天 8:00–17:00｜開放水域 3 支，結業"
+    },
+    {
+     "kind": "text",
+     "id": "LBN9YVvqBxNhtfDy",
+     "x": 233.1,
+     "y": 362.2,
+     "w": 800,
+     "fs": 18.9,
+     "fw": 400,
+     "color": "#81f7f7",
+     "lh": 1.6,
+     "align": "left",
+     "text": "含｜線上學科、PADI 證照申請費、5 支術科、全套裝備和電腦錶、背包房 2 晚、碼頭接送、機車 2 人 1 台、保險"
+    },
+    {
+     "kind": "text",
+     "id": "LB7wpznLPFr6yGkv",
+     "x": 639.6,
+     "y": 522.8,
+     "w": 344.5,
+     "fs": 22.5,
+     "fw": 700,
+     "color": "#efe8da",
+     "lh": 1.4,
+     "align": "left",
+     "priceId": "ow",
+     "text": "NT$ {price} ／人"
+    },
+    {
+     "kind": "button",
+     "x": 873.1,
+     "y": 515.0,
+     "w": 160.0,
+     "h": 52.0,
+     "radius": 26,
+     "bg": "#ec6b0c",
+     "label": "預訂",
+     "fs": 16.2,
+     "fw": 700,
+     "color": "#ffffff",
+     "href": "/booking/?item=ow"
+    }
+   ]
+  },
+  {
+   "key": "aow",
+   "name": "AOW",
+   "top": 2400,
+   "height": 1200,
+   "img": "courses_s_aow.webp",
+   "items": [
+    {
+     "kind": "text",
+     "id": "LBlZznXkkhRFwZwq",
+     "x": 88.0,
+     "y": 158.2,
+     "w": 64.0,
+     "fs": 18.0,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "left",
+     "text": "30 m"
+    },
+    {
+     "kind": "text",
+     "id": "LBTdZW10hJfmLY8V",
+     "x": 233.1,
+     "y": 224.2,
+     "w": 941.6,
+     "fs": 18.0,
+     "fw": 700,
+     "color": "#81f7f7",
+     "lh": 1.4,
+     "align": "left",
+     "text": "船潛 BOAT DIVE　·　最深 30 m"
+    },
+    {
+     "kind": "text",
+     "id": "LBYZ3KqrDHls72KV",
+     "x": 233.1,
+     "y": 261.9,
+     "w": 941.6,
+     "fs": 40.5,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "left",
+     "text": "AOW 進階證照"
+    },
+    {
+     "kind": "text",
+     "id": "LBdVRhkfppf511qs",
+     "x": 233.1,
+     "y": 340.8,
+     "w": 908.1,
+     "fs": 20.7,
+     "fw": 400,
+     "color": "#ffffff",
+     "lh": 1.7,
+     "align": "left",
+     "text": "給已有初級證照的海洋『初癮』者（不限協會）。\n讓自己成為頂尖中性浮力、水中導航、夜潛和電腦錶使用、方位辨別的好手。"
+    },
+    {
+     "kind": "text",
+     "id": "LBWGZjnCnG4pBy8Z",
+     "x": 233.1,
+     "y": 465.4,
+     "w": 975.1,
+     "fs": 18.9,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.8,
+     "align": "left",
+     "text": "第 1 天 8:00–20:00｜2 支日潛＋1 支夜潛\n第 2 天 8:00–11:30｜2 支日潛，結業"
+    },
+    {
+     "kind": "text",
+     "id": "LBljR0j6Hvqt5Ltv",
+     "x": 233.1,
+     "y": 587.2,
+     "w": 800,
+     "fs": 18.9,
+     "fw": 400,
+     "color": "#81f7f7",
+     "lh": 1.6,
+     "align": "left",
+     "text": "含｜線上學科、PADI 證照申請費、5 支術科、全套裝備和電腦錶、背包房 2 晚、碼頭接送、機車 2 人 1 台、保險"
+    },
+    {
+     "kind": "text",
+     "id": "LBsJdgwf1NsKMFsl",
+     "x": 639.6,
+     "y": 766.8,
+     "w": 231.8,
+     "fs": 22.5,
+     "fw": 700,
+     "color": "#efe8da",
+     "lh": 1.4,
+     "align": "left",
+     "priceId": "aow",
+     "text": "NT$ {price} ／人"
+    },
+    {
+     "kind": "button",
+     "x": 873.1,
+     "y": 758.0,
+     "w": 160.0,
+     "h": 52.0,
+     "radius": 26,
+     "bg": "#ec6b0c",
+     "label": "預訂",
+     "fs": 16.2,
+     "fw": 700,
+     "color": "#ffffff",
+     "href": "/booking/?item=aow"
+    }
+   ]
+  },
+  {
+   "key": "plans",
+   "name": "其他方案",
+   "top": 3600,
+   "height": 960,
+   "img": "courses_s_plans.webp",
+   "items": [
+    {
+     "kind": "button",
+     "x": 188.5,
+     "y": 692.0,
+     "w": 160.0,
+     "h": 52.0,
+     "radius": 26,
+     "bg": "#ec6b0c",
+     "label": "預訂",
+     "fs": 16.2,
+     "fw": 700,
+     "color": "#ffffff",
+     "href": "/booking/?item=ow-aow"
+    },
+    {
+     "kind": "text",
+     "id": "LBgXMjB96Fnvsjgz",
+     "x": 156.5,
+     "y": 178.0,
+     "w": 704.0,
+     "fs": 40.5,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "left",
+     "text": "其他方案"
+    },
+    {
+     "kind": "text",
+     "id": "LBzQVzdDfjgY4YSC",
+     "x": 188.5,
+     "y": 355.5,
+     "w": 314.0,
+     "fs": 25.2,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "left",
+     "text": "OW＋AOW 一次考完"
+    },
+    {
+     "kind": "text",
+     "id": "LBThsYBdMByRBzyx",
+     "x": 188.5,
+     "y": 408.6,
+     "w": 314.0,
+     "fs": 17.1,
+     "fw": 400,
+     "color": "#bfe3ee",
+     "lh": 1.6,
+     "align": "left",
+     "text": "10 支潛水、背包房 4 晚、全套裝備和電腦錶、機車 2 人 1 台。\n適合想出國挑戰不同潛點的你。"
+    },
+    {
+     "kind": "text",
+     "id": "LBrDZT1G6gSqkWdg",
+     "x": 188.5,
+     "y": 629.8,
+     "w": 314.0,
+     "fs": 22.5,
+     "fw": 700,
+     "color": "#efe8da",
+     "lh": 1.4,
+     "align": "left",
+     "priceId": "ow-aow",
+     "text": "NT$ {price} ／人"
+    },
+    {
+     "kind": "text",
+     "id": "LBBRYJJBtZ0XWkXh",
+     "x": 579.5,
+     "y": 355.5,
+     "w": 314.0,
+     "fs": 25.2,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "left",
+     "text": "Fun Dive 歡樂潛水"
+    },
+    {
+     "kind": "text",
+     "id": "LBVPTq767chDn6td",
+     "x": 579.5,
+     "y": 408.6,
+     "w": 324.0,
+     "fs": 17.1,
+     "fw": 400,
+     "color": "#bfe3ee",
+     "lh": 1.582,
+     "align": "left",
+     "fill": true,
+     "text": "已有證照，岸潛和船潛都能約。\n岸潛 1 支\n1 對 1 NT${tier:fun-shore:1}／人\n1 對 2 NT${tier:fun-shore:2}／人\n1 對 3 NT${tier:fun-shore:3}／人\n1 對 4（含以上）NT${tier:fun-shore:4}／人\n\n船潛 1 支\n1 對 1 NT${tier:fun-boat:1}／人\n1 對 2 NT${tier:fun-boat:2}／人\n1 對 3 NT${tier:fun-boat:3}／人\n1 對 4（含以上）NT${tier:fun-boat:4}／人"
+    },
+    {
+     "kind": "text",
+     "id": "LBK62VhtpzlPkcgG",
+     "x": 970.5,
+     "y": 355.5,
+     "w": 314.0,
+     "fs": 25.2,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "left",
+     "text": "進修課程"
+    },
+    {
+     "kind": "text",
+     "id": "LB8p0P2RKSVGfw4g",
+     "x": 970.5,
+     "y": 408.6,
+     "w": 314.0,
+     "fs": 17.1,
+     "fw": 400,
+     "color": "#bfe3ee",
+     "lh": 1.582,
+     "align": "left",
+     "fill": true,
+     "text": "複習 Re-active　NT${item:reactive}／人\n高氧 EAN　NT${item:ean}／人\n緊急反應 EFR　NT${item:efr}／人\n救援 Rescue　NT${item:rescue}／人\n潛水長 DM　NT${item:dm}／人\n\n\n進階課程請私訊我們獲取進一步資訊"
+    }
+   ]
+  },
+  {
+   "key": "notice",
+   "name": "下水前請先看",
+   "top": 4560,
+   "height": 560,
+   "img": "courses_s_notice.webp",
+   "items": [
+    {
+     "kind": "text",
+     "id": "LBWdzQjJBHGJgnDK",
+     "x": 188.5,
+     "y": 127.9,
+     "w": 704.0,
+     "fs": 40.5,
+     "fw": 700,
+     "color": "#ffffff",
+     "lh": 1.4,
+     "align": "left",
+     "text": "下水前請先看"
+    },
+    {
+     "kind": "text",
+     "id": "LBFBq2R4zJq6nNBb",
+     "x": 156.5,
+     "y": 276.4,
+     "w": 795.5,
+     "fs": 18.9,
+     "fw": 400,
+     "color": "#ffffff",
+     "lh": 1.765,
+     "align": "left",
+     "spans": [
+      {
+       "t": "・有心臟病、高血壓、糖尿病、癲癇、氣喘、肺部疾病、耳鼻喉問題、\n    近期動過手術或懷孕，不建議潛水，或需先經醫師評估。\n ",
+       "c": "#ffffff"
+      },
+      {
+       "t": "   報名時會請你填 PADI 健康問卷。",
+       "c": "#edc40f"
+      },
+      {
+       "t": "\n・潛水後至少間隔 12–18 小時再搭飛機。\n・潛水前 8–12 小時不喝酒；前一晚睡飽，感冒鼻塞請改期。\n・天候或海況不佳時，教練會以安全為優先調整或取消，\n    退款方式請見",
+       "c": "#ffffff"
+      },
+      {
+       "t": "〈退款與停航政策〉",
+       "c": "#ffffff",
+       "href": "/refund/"
+      },
+      {
+       "t": "。",
+       "c": "#ffffff"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "footer",
+   "name": "頁尾",
+   "top": 5120,
+   "height": 880,
+   "img": "courses_s_footer.webp",
+   "items": [],
+   "shared": [
+    {
+     "from": "footer",
+     "dx": -4.5,
+     "dy": -74
+    }
+   ]
+  }
+ ]
+}

@@ -1,4 +1,4 @@
-// 首頁（電腦版）：窄於 1440 的螢幕整頁等比縮小；魚類插圖進入畫面約 20% 時播一次進場動畫
+// 照 Canva 排版的頁面（電腦版）：窄於 1440 的螢幕整頁等比縮小；魚類插圖進入畫面約 20% 時播一次進場動畫
 (function () {
   var root = document.documentElement;
   var page = document.querySelector(".hc");

@@ -41,6 +41,22 @@ module.exports = function (eleventyConfig) {
       }
       throw new Error("fillPrices：prices.json 找不到 " + id);
     };
+    const findItem = (id) => {
+      for (const g of (prices && prices.groups) || []) {
+        const it = (g.items || []).find((i) => i.id === id);
+        if (it) return it;
+      }
+      throw new Error("fillPrices：prices.json 找不到 " + id);
+    };
+    const fmt = (n) => Number(n).toLocaleString("en-US");
+    // {item:ow-aow}＝代號有連字號的單一品項價格；{tier:fun-shore:2}＝級距價第 2 格（1 對 2）
+    text = String(text)
+      .replace(/\{item:([a-z0-9-]+)\}/gi, (_, id) => fmt(findItem(id).price))
+      .replace(/\{tier:([a-z0-9-]+):(\d)\}/gi, (_, id, n) => {
+        const t = findItem(id).tiers;
+        if (!t || t[n - 1] == null) throw new Error("fillPrices：" + id + " 沒有第 " + n + " 格級距價");
+        return fmt(t[n - 1]);
+      });
     return String(text).replace(/\{price:([a-z0-9*+\- -]+)\}/gi, (_, expr) => {
       let total = 0;
       for (const m of expr.replace(/\s/g, "").matchAll(/([+-]?)([a-z0-9-]+?)(?:\*(\d+))?(?=[+-]|$)/gi)) {
