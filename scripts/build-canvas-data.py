@@ -12,16 +12,29 @@ from canvas_pages import PAGES
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LABEL_COLOR = "#edc40f"  # 黃色「● …」設計標籤：整段是這個顏色的文字不做進網站
 K = 1.2  # Canva 文字框第一行高度 ≈ 1.2 × 字級
+FONT_DIR = "/usr/share/fonts/opentype/noto/"  # 量字寬用（Noto Sans CJK TC＝網站的 Noto Sans TC）
+
+
+def text_right(t):
+    """文字實際最右邊（px）：每一行量字寬；自動換行的段落（左右對齊）會排到框的右緣。（同 build-home-data.py）"""
+    from PIL import ImageFont
+    font = ImageFont.truetype(FONT_DIR + ("NotoSansCJK-Bold.ttc" if t["fw"] >= 700 else "NotoSansCJK-Regular.ttc"), round(t["fs"] * 4), index=3)
+    body = "".join(x["t"] for x in t["spans"]) if t.get("spans") else t["text"]
+    right = 0
+    for line in body.split("\n"):
+        wpx = font.getlength(line) / 4 + t.get("ls", 0) * t["fs"] * len(line)
+        right = max(right, min(wpx, t["w"]))
+    return t["x"] + right
 
 
 def r(v, n=1):
     return round(v, n)
 
 
-def text_item(e, ov):
+def text_item(e, ov, scale=1):
     regs = e["textRegions"]
     f = regs[0]["formatting"]
-    fs, lh = f["fontSize"], f["lineHeight"]
+    fs, lh = f["fontSize"] * scale, f["lineHeight"]
     it = {"kind": "text", "id": e["id"],
           "x": r(e["left"]), "y": r(e["top"] - (lh - K) * fs / 2), "w": r(e["width"] + 4),
           "fs": r(fs), "fw": 700 if f["fontWeight"] == "bold" else 400, "color": f["color"],
@@ -44,12 +57,12 @@ def text_item(e, ov):
     return it
 
 
-def button(sh, tx, href):
+def button(sh, tx, href, scale=1):
     f = tx["textRegions"][0]["formatting"]
     p = sh["paths"][0]
     b = {"kind": "button", "x": r(sh["left"]), "y": r(sh["top"]), "w": r(sh["width"]), "h": r(sh["height"]),
          "radius": p["cornerRounding"], "bg": p["fill"]["color"]["color"],
-         "label": tx["textRegions"][0]["characters"], "fs": r(f["fontSize"]), "fw": 700, "color": f["color"], "href": href}
+         "label": tx["textRegions"][0]["characters"], "fs": r(f["fontSize"] * scale), "fw": 700, "color": f["color"], "href": href}
     st = p.get("stroke") or {}
     if st.get("weight"):
         b.update({"bw": st["weight"], "bc": st["color"]["color"]})
@@ -72,6 +85,7 @@ def main():
     pair_shape = {s: (t, h) for s, t, h in cfg.get("pairs", [])}
     pair_text = {t for _, t, _ in cfg.get("pairs", [])}
     skip = set(cfg.get("skip", []))
+    sc = cfg.get("textScale", 1)
     items = []
 
     def walk(e):
@@ -80,24 +94,46 @@ def main():
         if e["id"] in cfg.get("buttons", {}):
             sh = [c for c in e["children"] if c["type"] == "shape"][0]
             tx = [c for c in e["children"] if c["type"] == "text"][0]
-            items.append(button(sh, tx, cfg["buttons"][e["id"]]))
+            b = button(sh, tx, cfg["buttons"][e["id"]], sc)
+            b["_gid"] = e["id"]
+            items.append(b)
             return
         if e["id"] in pair_shape:
             t, h = pair_shape[e["id"]]
-            items.append(button(e, allel[t], h))
+            b = button(e, allel[t], h, sc)
+            b["_gid"] = e["id"]
+            items.append(b)
             return
         if e["type"] == "text":
             if not e.get("textRegions"):
                 return
             if all(g["formatting"]["color"].lower() == LABEL_COLOR for g in e["textRegions"]):
                 return
-            items.append(text_item(e, cfg.get("overrides", {}).get(e["id"], {})))
+            items.append(text_item(e, cfg.get("overrides", {}).get(e["id"], {}), sc))
             return
         for c in e.get("children") or []:
             walk(c)
 
     for e in page["elements"]:
         walk(e)
+
+    # 欄寬：參考段落的文字實際最右邊 → 其他段落縮到同寬（收在框內）
+    texts = {i.get("id"): i for i in items if i["kind"] == "text"}
+    col_right = {}
+    for name, (refs, fits) in cfg.get("columns", {}).items():
+        right = max(text_right(texts[t]) for t in refs)
+        col_right[name] = right
+        for o in fits:
+            texts[o]["w"] = r(right - texts[o]["x"])
+    # 按鈕右緣對齊那一欄的右緣；價格跟著按鈕移動（保持原本的間距）
+    for it in items:
+        gid = it.pop("_gid", None) if it["kind"] == "button" else None
+        if gid in cfg.get("buttonAlign", {}):
+            col, price = cfg["buttonAlign"][gid]
+            nx = r(col_right[col] - it["w"])
+            if price:
+                texts[price]["x"] = r(texts[price]["x"] + nx - it["x"])
+            it["x"] = nx
 
     def section_of(y):
         for k, _, a, b in cfg["sections"]:
