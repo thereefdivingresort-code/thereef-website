@@ -20,6 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/canvas-page.css">
+  <link rel="stylesheet" href="/assets/css/back-to-top.css">
   <script>if (!(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) && "IntersectionObserver" in window) document.documentElement.classList.add("hc-anim");</script>
 </head>
 {%- macro textBody(it, active) -%}
@@ -84,6 +85,8 @@
   {% for s in cv.sections %}{% for it in s.items %}{% if it.kind == "faq" %}
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for f in it.items %}{% if f.a != "答案待補" %}{% if not loop.first %},{% endif %}{"@type":"Question","name":{{ f.q | dump | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | fillPrices(prices) | dump | safe }}}}{% endif %}{% endfor %}]}</script>
   {% endif %}{% endfor %}{% endfor %}
+  {% include "back-to-top.njk" %}
   <script src="/assets/js/canvas-page.js" defer></script>
+  <script src="/assets/js/back-to-top.js" defer></script>
 </body>
 </html>

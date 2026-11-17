@@ -36,7 +36,8 @@ hr { border: 0; height: 4px; background: var(--rule); margin: 18px 0; }
 .btn-sm { padding: 8px 32px; font-size: 15px; }
 .btn-orange { background: var(--orange); color: #fff; }
 .btn-orange:hover { filter: brightness(1.08); }
-.btn-outline { border-color: #fff; color: #fff; background: #0b1f33; }
+.btn-outline { border-color: var(--orange); color: var(--orange); background: transparent; }
+.btn-outline:hover { background: rgba(236, 107, 12, .12); }
 .link-orange { color: var(--orange); font-weight: 700; text-underline-offset: 3px; }
 .plain { background: none; border: 0; padding: 0; cursor: pointer; font: inherit; font-weight: 700; }
 
@@ -163,6 +164,8 @@ hr { border: 0; height: 4px; background: var(--rule); margin: 18px 0; }
 .footer-body { background: var(--navy-deep); color: #fff; padding: 24px 0 32px; margin-top: -2px; }
 .footer-cta { display: flex; align-items: center; gap: 20px; padding-bottom: 32px; border-bottom: 6px solid #3b5878; }
 .footer-cta h2 { font-size: 36px; margin: 0 24px 0 0; letter-spacing: .04em; }
+/* 11/17 Ambre：頁尾按鈕縮小至少 20%、左右一致 */
+.footer-cta .btn { padding: 10px 32px; font-size: 13px; }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr .6fr; gap: 24px; padding: 28px 0 8px; font-size: 14px; }
 .footer-brand { font-weight: 700; font-size: 18px; margin: 0 0 12px; }
 .footer-links, .footer-social { display: flex; flex-direction: column; justify-content: flex-end; }
@@ -228,10 +231,7 @@ hr { border: 0; height: 4px; background: var(--rule); margin: 18px 0; }
 .dive-outro { text-align: center; color: #eaf6f7; margin-top: 8px; padding: 0 24px 48px; }
 .dive-outro .link-orange { color: #ffd27a; }
 .dive-edge { display: block; width: 100%; height: auto; transform: scaleY(-1); margin-bottom: -2px; }
-.back-to-top { position: fixed; right: 24px; bottom: 28px; z-index: 30; width: 52px; height: 52px; border-radius: 50%; background: var(--navy-deep); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 20px; text-decoration: none; opacity: 0; pointer-events: none; transform: translateY(10px); transition: opacity .3s ease, transform .3s ease; }
-.back-to-top.is-visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
-.back-to-top span { position: absolute; right: 60px; font-size: 12px; background: var(--navy-deep); padding: 4px 10px; border-radius: 6px; white-space: nowrap; opacity: 0; transition: opacity .2s; }
-.back-to-top:hover span { opacity: 1; }
+/* 回到頂部：全站共用，樣式移到 /assets/css/back-to-top.css（base.njk、canvas-page.njk 共用） */
 
 /* FAQ 手風琴 */
 .faq { padding: 64px 0 80px; }
@@ -289,5 +289,4 @@ hr { border: 0; height: 4px; background: var(--rule); margin: 18px 0; }
   .fish-ph { width: 50px; }
   .map-media { grid-template-columns: 1fr; }
   .map-coast, .map-illust { height: 240px; }
-  .back-to-top span { display: none; }
 }
