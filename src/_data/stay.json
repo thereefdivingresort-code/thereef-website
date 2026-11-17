@@ -1,0 +1,429 @@
+{
+ "_說明": "住宿頁（電腦版 1440 寬）每段的文字、按鈕座標，由 scripts/build-canvas-data.py 從 Canva 產生（設定在 scripts/canvas_pages.py）。座標單位＝px，以 1440 寬為準。頁首、頁尾用首頁（home.json）的元素。",
+ "width": 1440,
+ "height": 5000,
+ "imgDir": "stay",
+ "active": "/stay/",
+ "sections": [
+  {
+   "key": "open",
+   "name": "開場",
+   "top": 0,
+   "height": 1000,
+   "img": "stay_s_open.webp",
+   "items": [
+    {
+     "kind": "fish",
+     "code": "L1",
+     "file": "stay_logo_white",
+     "name": "綠芙潛水白色 logo",
+     "anim": {
+      "dx": 0,
+      "dy": 12,
+      "dur": 1.8,
+      "delay": 0.3,
+      "float": 0
+     },
+     "x": 516,
+     "y": 482,
+     "w": 402,
+     "h": 140,
+     "rot": 0
+    }
+   ],
+   "shared": [
+    {
+     "from": "open",
+     "maxY": 140,
+     "dy": 9.7
+    }
+   ]
+  },
+  {
+   "key": "double",
+   "name": "豪華雙人房",
+   "top": 1000,
+   "height": 1100,
+   "img": "stay_s_double.webp",
+   "items": [
+    {
+     "kind": "button",
+     "x": 1083.6,
+     "y": 1020.2,
+     "w": 160.0,
+     "h": 52.0,
+     "radius": 26,
+     "bg": "#ec6b0c",
+     "label": "預訂",
+     "fs": 16.2,
+     "fw": 700,
+     "color": "#ffffff",
+     "href": "/booking/?item=room-double"
+    },
+    {
+     "kind": "text",
+     "id": "LBLTK0qVl43kvNlw",
+     "x": 844.6,
+     "y": 693.4,
+     "w": 504.0,
+     "fs": 18.0,
+     "fw": 700,
+     "color": "#2a8a9a",
+     "lh": 1.4,
+     "align": "left",
+     "text": "DELUXE DOUBLE　·　4.5 坪"
+    },
+    {
+     "kind": "text",
+     "id": "LBF0tFJyd2lLhB47",
+     "x": 844.6,
+     "y": 731.1,
+     "w": 504.0,
+     "fs": 40.5,
+     "fw": 700,
+     "color": "#12355b",
+     "lh": 1.4,
+     "align": "left",
+     "text": "豪華雙人房"
+    },
+    {
+     "kind": "text",
+     "id": "LBLv7pw1gzvXfYsn",
+     "x": 844.6,
+     "y": 805.4,
+     "w": 504.0,
+     "fs": 18.9,
+     "fw": 400,
+     "color": "#12355b",
+     "lh": 1.7,
+     "align": "left",
+     "text": "私人衛浴、落地窗，還有可以看海的私人陽台。\n兩人世界剛剛好。"
+    },
+    {
+     "kind": "text",
+     "id": "LBRlCXK0D5gQdCLT",
+     "x": 844.6,
+     "y": 925.9,
+     "w": 504.0,
+     "fs": 17.1,
+     "fw": 400,
+     "color": "#7a6a55",
+     "lh": 1.7,
+     "align": "left",
+     "text": "可住 2 人｜私人衛浴｜海景陽台\n房內有冷氣、小冰箱、熱水壺、茶包和咖啡"
+    },
+    {
+     "kind": "text",
+     "id": "LB8MwmV4jhh8FlN8",
+     "x": 844.6,
+     "y": 1024.9,
+     "w": 324.0,
+     "fs": 22.5,
+     "fw": 700,
+     "color": "#12355b",
+     "lh": 1.4,
+     "align": "left",
+     "priceId": "room-double",
+     "text": "NT$ {price} ／房／晚"
+    },
+    {
+     "kind": "fish",
+     "code": "H1",
+     "file": "stay_house_double",
+     "name": "雙人房房子",
+     "anim": {
+      "dx": 0,
+      "dy": 12,
+      "dur": 1.8,
+      "delay": 0,
+      "float": 0
+     },
+     "x": 0,
+     "y": 79,
+     "w": 799,
+     "h": 917,
+     "rot": 0
+    }
+   ]
+  },
+  {
+   "key": "quad",
+   "name": "豪華四人房",
+   "top": 2100,
+   "height": 900,
+   "img": "stay_s_quad.webp",
+   "items": [
+    {
+     "kind": "text",
+     "id": "LBRqrVhXGVSx541R",
+     "x": 147.2,
+     "y": 448.2,
+     "w": 524,
+     "fs": 18.0,
+     "fw": 700,
+     "color": "#2a8a9a",
+     "lh": 1.4,
+     "align": "left",
+     "text": "DELUXE FOR 4　·　8 坪"
+    },
+    {
+     "kind": "text",
+     "id": "LBpzGHHpqh61Z7Qg",
+     "x": 147.2,
+     "y": 486.0,
+     "w": 524,
+     "fs": 40.5,
+     "fw": 700,
+     "color": "#12355b",
+     "lh": 1.4,
+     "align": "left",
+     "text": "豪華四人房"
+    },
+    {
+     "kind": "text",
+     "id": "LBQ1BPgDZK8BnqGT",
+     "x": 147.2,
+     "y": 560.3,
+     "w": 524,
+     "fs": 18.9,
+     "fw": 400,
+     "color": "#12355b",
+     "lh": 1.7,
+     "align": "left",
+     "text": "有獨立前院。一張雙人床加一組上下舖，加沙發床最多可住 6 人。乾濕分離的私人衛浴，一家四口或朋友同行都方便。"
+    },
+    {
+     "kind": "text",
+     "id": "LBW3SnNFJRdt4wtH",
+     "x": 147.2,
+     "y": 695.7,
+     "w": 524,
+     "fs": 17.1,
+     "fw": 400,
+     "color": "#7a6a55",
+     "lh": 1.7,
+     "align": "left",
+     "fill": true,
+     "text": "可住 4 人（最多 6 人）｜獨立前院｜私人衛浴\n第 5、6 位房客每人加 NT$ {item:room-quad-extra}"
+    },
+    {
+     "kind": "text",
+     "id": "LBYtZvF3TchTmCJj",
+     "x": 147.2,
+     "y": 779.8,
+     "w": 324,
+     "fs": 22.5,
+     "fw": 700,
+     "color": "#12355b",
+     "lh": 1.4,
+     "align": "left",
+     "priceId": "room-quad",
+     "text": "NT$ {price} ／房／晚"
+    },
+    {
+     "kind": "button",
+     "x": 511.2,
+     "y": 775.0,
+     "w": 160,
+     "h": 52,
+     "radius": 26,
+     "bg": "#ec6b0c",
+     "label": "預訂",
+     "fs": 16.2,
+     "fw": 700,
+     "color": "#ffffff",
+     "href": "/booking/?item=room-quad"
+    },
+    {
+     "kind": "fish",
+     "code": "H2",
+     "file": "stay_house_quad",
+     "name": "四人房前院",
+     "anim": {
+      "dx": 0,
+      "dy": 12,
+      "dur": 1.8,
+      "delay": 0,
+      "float": 0
+     },
+     "x": 823,
+     "y": 52,
+     "w": 507,
+     "h": 581,
+     "rot": 0
+    }
+   ]
+  },
+  {
+   "key": "backpacker",
+   "name": "背包客房",
+   "top": 3000,
+   "height": 660,
+   "img": "stay_s_backpacker.webp",
+   "items": [
+    {
+     "kind": "button",
+     "x": 1165.4,
+     "y": 543.6,
+     "w": 160,
+     "h": 52,
+     "radius": 26,
+     "bg": "#ec6b0c",
+     "label": "預訂",
+     "fs": 16.2,
+     "fw": 700,
+     "color": "#ffffff",
+     "href": "/booking/?item=bed-backpacker"
+    },
+    {
+     "kind": "text",
+     "id": "LBPD8qF529k5FLhF",
+     "x": 821.4,
+     "y": 216.8,
+     "w": 504,
+     "fs": 18.0,
+     "fw": 700,
+     "color": "#2a8a9a",
+     "lh": 1.4,
+     "align": "left",
+     "text": "BACKPACKER　·　8 床位"
+    },
+    {
+     "kind": "text",
+     "id": "LBtSZbM9rjQMlmnm",
+     "x": 821.4,
+     "y": 254.5,
+     "w": 504,
+     "fs": 40.5,
+     "fw": 700,
+     "color": "#12355b",
+     "lh": 1.4,
+     "align": "left",
+     "text": "背包客房"
+    },
+    {
+     "kind": "text",
+     "id": "LBVyQMFdSpRXcQxG",
+     "x": 821.4,
+     "y": 328.9,
+     "w": 504,
+     "fs": 18.9,
+     "fw": 400,
+     "color": "#12355b",
+     "lh": 1.7,
+     "align": "left",
+     "text": "每張床都備有遮光拉簾、密碼保險箱和床頭燈。\n共用空間衛浴、大冰箱、飲水機，還有戶外露台座位區。考照套裝和 3 天 2 夜套裝都住這，自在又舒適。"
+    },
+    {
+     "kind": "text",
+     "id": "LBd7zl8tfhM3HTqy",
+     "x": 821.4,
+     "y": 479.3,
+     "w": 504,
+     "fs": 17.1,
+     "fw": 400,
+     "color": "#7a6a55",
+     "lh": 1.7,
+     "align": "left",
+     "text": "1 床 1 人｜共用衛浴｜戶外座位區"
+    },
+    {
+     "kind": "text",
+     "id": "LBDdnnNRPRPqnXr0",
+     "x": 821.4,
+     "y": 548.3,
+     "w": 324,
+     "fs": 22.5,
+     "fw": 700,
+     "color": "#12355b",
+     "lh": 1.4,
+     "align": "left",
+     "priceId": "bed-backpacker",
+     "text": "NT$ {price} ／床／晚"
+    },
+    {
+     "kind": "fish",
+     "code": "H3",
+     "file": "stay_house_backpacker",
+     "name": "背包客房床位",
+     "anim": {
+      "dx": 0,
+      "dy": 12,
+      "dur": 1.8,
+      "delay": 0,
+      "float": 0
+     },
+     "x": 74,
+     "y": 23,
+     "w": 675,
+     "h": 522,
+     "rot": 0
+    }
+   ]
+  },
+  {
+   "key": "notice",
+   "name": "入住前請先看",
+   "top": 3660,
+   "height": 390,
+   "img": "stay_s_notice.webp",
+   "items": [
+    {
+     "kind": "text",
+     "id": "LB1T0y6psMNX0bqV",
+     "x": 95.7,
+     "y": 72.4,
+     "w": 704,
+     "fs": 44.1,
+     "fw": 700,
+     "color": "#12355b",
+     "lh": 1.4,
+     "align": "left",
+     "text": "入住前請先看"
+    },
+    {
+     "kind": "text",
+     "id": "LBkjkHYNjWMlR0jg",
+     "x": 95.7,
+     "y": 184.2,
+     "w": 1104,
+     "fs": 22.5,
+     "fw": 400,
+     "color": "#12355b",
+     "lh": 1.8,
+     "align": "left",
+     "spans": [
+      {
+       "t": "・入住時間下午3點以後，退房時間中午12點以前。\n・房價是每晚價格。\n・訂房可以取消或改期，退款比例請見",
+       "c": "#12355b"
+      },
+      {
+       "t": "〈退款與停航政策〉",
+       "c": "#12355b",
+       "href": "/refund/"
+      },
+      {
+       "t": "。\n・考照套裝和 3 天 2 夜套裝已經含背包客房，不用另外訂。",
+       "c": "#12355b"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "footer",
+   "name": "頁尾",
+   "top": 4050,
+   "height": 950,
+   "img": "stay_s_footer.webp",
+   "items": [],
+   "shared": [
+    {
+     "from": "footer",
+     "dx": -0.6,
+     "dy": 0
+    }
+   ]
+  }
+ ]
+}

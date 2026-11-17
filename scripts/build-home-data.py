@@ -36,7 +36,7 @@ OVERRIDES = {
     "LB5W7cmFGytM2mHB": {"site": "social"},
     "LBmV0xCTjDldmlbz": {"links": [["在 Google 地圖開啟 →", "site:googleMapUrl"], ["　　　", None], ["認識我們 →", "/about/"]]},
     "LBY03Lg67DNwrxbY": {"links": [["課程", "/courses/"], ["    ", None], ["住宿", "/stay/"], ["    ", None], ["行程", "/trips/"], ["    ", None],
-                                    ["關於", "/about/"], ["    ", None], ["聯絡", "/about/#contact"], ["        中｜EN", None]]},
+                                    ["關於", "/about/"], ["        中｜EN", None]]},  # 11/17 Ambre：關於與聯絡同一頁，選單拿掉「聯絡」
 }
 # 按鈕（Canva 群組 id → 連結）
 BUTTONS = {
