@@ -1,0 +1,1798 @@
+{
+ "at": "2026-11-18T13:42:37.970Z",
+ "c": [
+  {
+   "no": "1",
+   "id": "fun-shore",
+   "expect": 1950,
+   "got": 1950,
+   "total": 1950,
+   "side": 1950,
+   "ok": true
+  },
+  {
+   "no": "2",
+   "id": "fun-shore",
+   "expect": 2900,
+   "got": 2900,
+   "total": 2900,
+   "side": 2900,
+   "ok": true
+  },
+  {
+   "no": "3",
+   "id": "fun-shore",
+   "expect": 3750,
+   "got": 3750,
+   "total": 3750,
+   "side": 3750,
+   "ok": true
+  },
+  {
+   "no": "4",
+   "id": "fun-shore",
+   "expect": 4600,
+   "got": 4600,
+   "total": 4600,
+   "side": 4600,
+   "ok": true
+  },
+  {
+   "no": "5",
+   "id": "fun-shore",
+   "expect": 6900,
+   "got": 6900,
+   "total": 6900,
+   "side": 6900,
+   "ok": true
+  },
+  {
+   "no": "6",
+   "id": "fun-shore",
+   "expect": 8700,
+   "got": 8700,
+   "total": 8700,
+   "side": 8700,
+   "ok": true
+  },
+  {
+   "no": "7",
+   "id": "fun-boat",
+   "expect": 4900,
+   "got": 4900,
+   "total": 4900,
+   "side": 4900,
+   "ok": true
+  },
+  {
+   "no": "8",
+   "id": "fun-boat",
+   "expect": 10500,
+   "got": 10500,
+   "total": 10500,
+   "side": 10500,
+   "ok": true
+  },
+  {
+   "no": "9",
+   "id": "fun-boat",
+   "expect": 16500,
+   "got": 16500,
+   "total": 16500,
+   "side": 16500,
+   "ok": true
+  },
+  {
+   "no": "10",
+   "id": "dsd",
+   "expect": 5000,
+   "got": 5000,
+   "total": 5000,
+   "side": 5000,
+   "ok": true
+  },
+  {
+   "no": "11",
+   "id": "ow",
+   "expect": 15000,
+   "got": 15000,
+   "total": 15000,
+   "side": 15000,
+   "ok": true
+  },
+  {
+   "no": "12",
+   "id": "pkg-fun",
+   "expect": 9700,
+   "got": 9700,
+   "total": 9700,
+   "side": 9700,
+   "ok": true
+  },
+  {
+   "no": "13",
+   "id": "pkg-fun",
+   "expect": 17400,
+   "got": 17400,
+   "total": 17400,
+   "side": 17400,
+   "ok": true
+  },
+  {
+   "no": "14",
+   "id": "pkg-snorkel",
+   "expect": 4100,
+   "got": 4100,
+   "total": 4100,
+   "side": 4100,
+   "ok": true
+  },
+  {
+   "no": "15",
+   "id": "room-double",
+   "expect": 4800,
+   "got": 4800,
+   "total": 4800,
+   "side": 4800,
+   "ok": true
+  },
+  {
+   "no": "16",
+   "id": "scooter",
+   "expect": 1500,
+   "got": 1500,
+   "total": 1500,
+   "side": 1500,
+   "ok": true
+  },
+  {
+   "no": "17-1",
+   "id": "fun-shore",
+   "expect": 2900,
+   "got": 2900,
+   "total": 2900,
+   "side": 2900,
+   "ok": true
+  },
+  {
+   "no": "17-2",
+   "id": "ow",
+   "expect": 15000,
+   "got": 15000,
+   "total": 15000,
+   "side": 15000,
+   "ok": true
+  },
+  {
+   "no": "18-1",
+   "id": "fun-boat",
+   "expect": 10500,
+   "got": 10500,
+   "total": 10500,
+   "side": 10500,
+   "ok": true
+  },
+  {
+   "no": "18-2",
+   "id": "room-quad",
+   "expect": 7200,
+   "got": 7200,
+   "total": 7200,
+   "side": 7200,
+   "ok": true
+  },
+  {
+   "no": "18-3",
+   "id": "scooter",
+   "expect": 2000,
+   "got": 2000,
+   "total": 2000,
+   "side": 2000,
+   "ok": true
+  },
+  {
+   "no": "19",
+   "id": "gear-heavy-half",
+   "expect": 500,
+   "got": 500,
+   "total": 500,
+   "side": 500,
+   "ok": true
+  },
+  {
+   "no": "20",
+   "id": "gear-full-full",
+   "expect": 2000,
+   "got": 2000,
+   "total": 2000,
+   "side": 2000,
+   "ok": true
+  },
+  {
+   "no": "21",
+   "id": "gear-computer-full",
+   "expect": 1000,
+   "got": 1000,
+   "total": 1000,
+   "side": 1000,
+   "ok": true
+  },
+  {
+   "no": "22",
+   "id": "gear-light",
+   "expect": 600,
+   "got": 600,
+   "total": 600,
+   "side": 600,
+   "ok": true
+  },
+  {
+   "no": "23",
+   "id": "pkg-fun",
+   "expect": 27100,
+   "got": 27100,
+   "total": 27100,
+   "side": 27100,
+   "ok": true
+  },
+  {
+   "no": "24",
+   "id": "up-fun",
+   "expect": 2400,
+   "got": 2400,
+   "total": 29500,
+   "side": 29500,
+   "ok": true
+  },
+  {
+   "no": "25",
+   "id": "ferry-rt",
+   "expect": 2640,
+   "got": 2640,
+   "total": 2640,
+   "side": 2640,
+   "ok": true
+  },
+  {
+   "no": "26",
+   "id": "ferry-ow",
+   "expect": 670,
+   "got": 670,
+   "total": 670,
+   "side": 670,
+   "ok": true
+  },
+  {
+   "no": "27",
+   "id": "fun-boat",
+   "expect": 21000,
+   "got": 21000,
+   "total": 21000,
+   "side": 21000,
+   "ok": true
+  },
+  {
+   "no": "17",
+   "id": "組合",
+   "expect": 17900,
+   "got": 17900,
+   "total": 17900,
+   "side": 17900,
+   "ok": true
+  },
+  {
+   "no": "18",
+   "id": "組合",
+   "expect": 19700,
+   "got": 19700,
+   "total": 19700,
+   "side": 19700,
+   "ok": true
+  }
+ ],
+ "d": [
+  {
+   "name": "dsd 1 份",
+   "expect": 2500,
+   "expectTotal": 2500,
+   "got": 2500,
+   "total": 2500,
+   "side": 2500,
+   "ok": true
+  },
+  {
+   "name": "dsd 2 份",
+   "expect": 5000,
+   "expectTotal": 5000,
+   "got": 5000,
+   "total": 5000,
+   "side": 5000,
+   "ok": true
+  },
+  {
+   "name": "fun-shore 1 人 1 支",
+   "expect": 1950,
+   "expectTotal": 1950,
+   "got": 1950,
+   "total": 1950,
+   "side": 1950,
+   "ok": true
+  },
+  {
+   "name": "fun-shore 2 人 1 支",
+   "expect": 2900,
+   "expectTotal": 2900,
+   "got": 2900,
+   "total": 2900,
+   "side": 2900,
+   "ok": true
+  },
+  {
+   "name": "fun-shore 3 人 1 支",
+   "expect": 3750,
+   "expectTotal": 3750,
+   "got": 3750,
+   "total": 3750,
+   "side": 3750,
+   "ok": true
+  },
+  {
+   "name": "fun-shore 4 人 1 支",
+   "expect": 4600,
+   "expectTotal": 4600,
+   "got": 4600,
+   "total": 4600,
+   "side": 4600,
+   "ok": true
+  },
+  {
+   "name": "fun-shore 5 人 1 支",
+   "expect": 5750,
+   "expectTotal": 5750,
+   "got": 5750,
+   "total": 5750,
+   "side": 5750,
+   "ok": true
+  },
+  {
+   "name": "fun-shore 2 人 2 支",
+   "expect": 5800,
+   "expectTotal": 5800,
+   "got": 5800,
+   "total": 5800,
+   "side": 5800,
+   "ok": true
+  },
+  {
+   "name": "fun-boat 1 人 1 趟",
+   "expect": 4900,
+   "expectTotal": 4900,
+   "got": 4900,
+   "total": 4900,
+   "side": 4900,
+   "ok": true
+  },
+  {
+   "name": "fun-boat 2 人 1 趟",
+   "expect": 7800,
+   "expectTotal": 7800,
+   "got": 7800,
+   "total": 7800,
+   "side": 7800,
+   "ok": true
+  },
+  {
+   "name": "fun-boat 3 人 1 趟",
+   "expect": 10500,
+   "expectTotal": 10500,
+   "got": 10500,
+   "total": 10500,
+   "side": 10500,
+   "ok": true
+  },
+  {
+   "name": "fun-boat 4 人 1 趟",
+   "expect": 13200,
+   "expectTotal": 13200,
+   "got": 13200,
+   "total": 13200,
+   "side": 13200,
+   "ok": true
+  },
+  {
+   "name": "fun-boat 5 人 1 趟",
+   "expect": 16500,
+   "expectTotal": 16500,
+   "got": 16500,
+   "total": 16500,
+   "side": 16500,
+   "ok": true
+  },
+  {
+   "name": "fun-boat 2 人 2 趟",
+   "expect": 15600,
+   "expectTotal": 15600,
+   "got": 15600,
+   "total": 15600,
+   "side": 15600,
+   "ok": true
+  },
+  {
+   "name": "ow 1 份",
+   "expect": 15000,
+   "expectTotal": 15000,
+   "got": 15000,
+   "total": 15000,
+   "side": 15000,
+   "ok": true
+  },
+  {
+   "name": "ow 2 份",
+   "expect": 30000,
+   "expectTotal": 30000,
+   "got": 30000,
+   "total": 30000,
+   "side": 30000,
+   "ok": true
+  },
+  {
+   "name": "aow 1 份",
+   "expect": 15000,
+   "expectTotal": 15000,
+   "got": 15000,
+   "total": 15000,
+   "side": 15000,
+   "ok": true
+  },
+  {
+   "name": "aow 2 份",
+   "expect": 30000,
+   "expectTotal": 30000,
+   "got": 30000,
+   "total": 30000,
+   "side": 30000,
+   "ok": true
+  },
+  {
+   "name": "ow-aow 1 份",
+   "expect": 30000,
+   "expectTotal": 30000,
+   "got": 30000,
+   "total": 30000,
+   "side": 30000,
+   "ok": true
+  },
+  {
+   "name": "ow-aow 2 份",
+   "expect": 60000,
+   "expectTotal": 60000,
+   "got": 60000,
+   "total": 60000,
+   "side": 60000,
+   "ok": true
+  },
+  {
+   "name": "reactive 1 份",
+   "expect": 5000,
+   "expectTotal": 5000,
+   "got": 5000,
+   "total": 5000,
+   "side": 5000,
+   "ok": true
+  },
+  {
+   "name": "reactive 2 份",
+   "expect": 10000,
+   "expectTotal": 10000,
+   "got": 10000,
+   "total": 10000,
+   "side": 10000,
+   "ok": true
+  },
+  {
+   "name": "ean 1 份",
+   "expect": 5000,
+   "expectTotal": 5000,
+   "got": 5000,
+   "total": 5000,
+   "side": 5000,
+   "ok": true
+  },
+  {
+   "name": "ean 2 份",
+   "expect": 10000,
+   "expectTotal": 10000,
+   "got": 10000,
+   "total": 10000,
+   "side": 10000,
+   "ok": true
+  },
+  {
+   "name": "efr 1 份",
+   "expect": 4500,
+   "expectTotal": 4500,
+   "got": 4500,
+   "total": 4500,
+   "side": 4500,
+   "ok": true
+  },
+  {
+   "name": "efr 2 份",
+   "expect": 9000,
+   "expectTotal": 9000,
+   "got": 9000,
+   "total": 9000,
+   "side": 9000,
+   "ok": true
+  },
+  {
+   "name": "rescue 1 份",
+   "expect": 8000,
+   "expectTotal": 8000,
+   "got": 8000,
+   "total": 8000,
+   "side": 8000,
+   "ok": true
+  },
+  {
+   "name": "rescue 2 份",
+   "expect": 16000,
+   "expectTotal": 16000,
+   "got": 16000,
+   "total": 16000,
+   "side": 16000,
+   "ok": true
+  },
+  {
+   "name": "dm 1 份",
+   "expect": 38000,
+   "expectTotal": 38000,
+   "got": 38000,
+   "total": 38000,
+   "side": 38000,
+   "ok": true
+  },
+  {
+   "name": "dm 2 份",
+   "expect": 76000,
+   "expectTotal": 76000,
+   "got": 76000,
+   "total": 76000,
+   "side": 76000,
+   "ok": true
+  },
+  {
+   "name": "pkg-snorkel 1 人（雙人 0 組＋單人 1 位）",
+   "expect": 4100,
+   "expectTotal": 4100,
+   "got": 4100,
+   "total": 4100,
+   "side": 4100,
+   "ok": true
+  },
+  {
+   "name": "pkg-snorkel 2 人（雙人 1 組＋單人 0 位）",
+   "expect": 7200,
+   "expectTotal": 7200,
+   "got": 7200,
+   "total": 7200,
+   "side": 7200,
+   "ok": true
+  },
+  {
+   "name": "pkg-snorkel 3 人（雙人 1 組＋單人 1 位）",
+   "expect": 11300,
+   "expectTotal": 11300,
+   "got": 11300,
+   "total": 11300,
+   "side": 11300,
+   "ok": true
+  },
+  {
+   "name": "pkg-snorkel 4 人（雙人 2 組＋單人 0 位）",
+   "expect": 14400,
+   "expectTotal": 14400,
+   "got": 14400,
+   "total": 14400,
+   "side": 14400,
+   "ok": true
+  },
+  {
+   "name": "pkg-dsd 1 人（雙人 0 組＋單人 1 位）",
+   "expect": 6200,
+   "expectTotal": 6200,
+   "got": 6200,
+   "total": 6200,
+   "side": 6200,
+   "ok": true
+  },
+  {
+   "name": "pkg-dsd 2 人（雙人 1 組＋單人 0 位）",
+   "expect": 11400,
+   "expectTotal": 11400,
+   "got": 11400,
+   "total": 11400,
+   "side": 11400,
+   "ok": true
+  },
+  {
+   "name": "pkg-dsd 3 人（雙人 1 組＋單人 1 位）",
+   "expect": 17600,
+   "expectTotal": 17600,
+   "got": 17600,
+   "total": 17600,
+   "side": 17600,
+   "ok": true
+  },
+  {
+   "name": "pkg-dsd 4 人（雙人 2 組＋單人 0 位）",
+   "expect": 22800,
+   "expectTotal": 22800,
+   "got": 22800,
+   "total": 22800,
+   "side": 22800,
+   "ok": true
+  },
+  {
+   "name": "pkg-fun 1 人（雙人 0 組＋單人 1 位）",
+   "expect": 9700,
+   "expectTotal": 9700,
+   "got": 9700,
+   "total": 9700,
+   "side": 9700,
+   "ok": true
+  },
+  {
+   "name": "pkg-fun 2 人（雙人 1 組＋單人 0 位）",
+   "expect": 17400,
+   "expectTotal": 17400,
+   "got": 17400,
+   "total": 17400,
+   "side": 17400,
+   "ok": true
+  },
+  {
+   "name": "pkg-fun 3 人（雙人 1 組＋單人 1 位）",
+   "expect": 27100,
+   "expectTotal": 27100,
+   "got": 27100,
+   "total": 27100,
+   "side": 27100,
+   "ok": true
+  },
+  {
+   "name": "pkg-fun 4 人（雙人 2 組＋單人 0 位）",
+   "expect": 34800,
+   "expectTotal": 34800,
+   "got": 34800,
+   "total": 34800,
+   "side": 34800,
+   "ok": true
+  },
+  {
+   "name": "up-snorkel 1 人（套裝 1 人＋升等）",
+   "expect": 800,
+   "expectTotal": 4900,
+   "got": 800,
+   "total": 4900,
+   "side": 4900,
+   "ok": true
+  },
+  {
+   "name": "up-snorkel 2 人（套裝 2 人＋升等）",
+   "expect": 1600,
+   "expectTotal": 8800,
+   "got": 1600,
+   "total": 8800,
+   "side": 8800,
+   "ok": true
+  },
+  {
+   "name": "up-dsd 1 人（套裝 1 人＋升等）",
+   "expect": 500,
+   "expectTotal": 6700,
+   "got": 500,
+   "total": 6700,
+   "side": 6700,
+   "ok": true
+  },
+  {
+   "name": "up-dsd 2 人（套裝 2 人＋升等）",
+   "expect": 1000,
+   "expectTotal": 12400,
+   "got": 1000,
+   "total": 12400,
+   "side": 12400,
+   "ok": true
+  },
+  {
+   "name": "up-fun 1 人（套裝 1 人＋升等）",
+   "expect": 800,
+   "expectTotal": 10500,
+   "got": 800,
+   "total": 10500,
+   "side": 10500,
+   "ok": true
+  },
+  {
+   "name": "up-fun 2 人（套裝 2 人＋升等）",
+   "expect": 1600,
+   "expectTotal": 19000,
+   "got": 1600,
+   "total": 19000,
+   "side": 19000,
+   "ok": true
+  },
+  {
+   "name": "tidal 1 份",
+   "expect": 350,
+   "expectTotal": 350,
+   "got": 350,
+   "total": 350,
+   "side": 350,
+   "ok": true
+  },
+  {
+   "name": "tidal 2 份",
+   "expect": 700,
+   "expectTotal": 700,
+   "got": 700,
+   "total": 700,
+   "side": 700,
+   "ok": true
+  },
+  {
+   "name": "snorkel 1 份",
+   "expect": 400,
+   "expectTotal": 400,
+   "got": 400,
+   "total": 400,
+   "side": 400,
+   "ok": true
+  },
+  {
+   "name": "snorkel 2 份",
+   "expect": 800,
+   "expectTotal": 800,
+   "got": 800,
+   "total": 800,
+   "side": 800,
+   "ok": true
+  },
+  {
+   "name": "glassboat 1 份",
+   "expect": 400,
+   "expectTotal": 400,
+   "got": 400,
+   "total": 400,
+   "side": 400,
+   "ok": true
+  },
+  {
+   "name": "glassboat 2 份",
+   "expect": 800,
+   "expectTotal": 800,
+   "got": 800,
+   "total": 800,
+   "side": 800,
+   "ok": true
+  },
+  {
+   "name": "fishing 1 份",
+   "expect": 800,
+   "expectTotal": 800,
+   "got": 800,
+   "total": 800,
+   "side": 800,
+   "ok": true
+  },
+  {
+   "name": "fishing 2 份",
+   "expect": 1600,
+   "expectTotal": 1600,
+   "got": 1600,
+   "total": 1600,
+   "side": 1600,
+   "ok": true
+  },
+  {
+   "name": "bluecave 1 份",
+   "expect": 500,
+   "expectTotal": 500,
+   "got": 500,
+   "total": 500,
+   "side": 500,
+   "ok": true
+  },
+  {
+   "name": "bluecave 2 份",
+   "expect": 1000,
+   "expectTotal": 1000,
+   "got": 1000,
+   "total": 1000,
+   "side": 1000,
+   "ok": true
+  },
+  {
+   "name": "sup1 1 份",
+   "expect": 1800,
+   "expectTotal": 1800,
+   "got": 1800,
+   "total": 1800,
+   "side": 1800,
+   "ok": true
+  },
+  {
+   "name": "sup1 2 份",
+   "expect": 3600,
+   "expectTotal": 3600,
+   "got": 3600,
+   "total": 3600,
+   "side": 3600,
+   "ok": true
+  },
+  {
+   "name": "sup2 1 份",
+   "expect": 1300,
+   "expectTotal": 1300,
+   "got": 1300,
+   "total": 1300,
+   "side": 1300,
+   "ok": true
+  },
+  {
+   "name": "sup2 2 份",
+   "expect": 2600,
+   "expectTotal": 2600,
+   "got": 2600,
+   "total": 2600,
+   "side": 2600,
+   "ok": true
+  },
+  {
+   "name": "room-double 1 份",
+   "expect": 2400,
+   "expectTotal": 2400,
+   "got": 2400,
+   "total": 2400,
+   "side": 2400,
+   "ok": true
+  },
+  {
+   "name": "room-double 2 份",
+   "expect": 4800,
+   "expectTotal": 4800,
+   "got": 4800,
+   "total": 4800,
+   "side": 4800,
+   "ok": true
+  },
+  {
+   "name": "room-quad 1 份",
+   "expect": 3600,
+   "expectTotal": 3600,
+   "got": 3600,
+   "total": 3600,
+   "side": 3600,
+   "ok": true
+  },
+  {
+   "name": "room-quad 2 份",
+   "expect": 7200,
+   "expectTotal": 7200,
+   "got": 7200,
+   "total": 7200,
+   "side": 7200,
+   "ok": true
+  },
+  {
+   "name": "room-quad-extra 加 1 位 × 1 晚（四人房 1 間）",
+   "expect": 400,
+   "expectTotal": 4000,
+   "got": 400,
+   "total": 4000,
+   "side": 4000,
+   "ok": true
+  },
+  {
+   "name": "room-quad-extra 加 2 位 × 1 晚（四人房 1 間）",
+   "expect": 800,
+   "expectTotal": 4400,
+   "got": 800,
+   "total": 4400,
+   "side": 4400,
+   "ok": true
+  },
+  {
+   "name": "room-quad-extra 加 2 位 × 2 晚（四人房 1 間）",
+   "expect": 1600,
+   "expectTotal": 8800,
+   "got": 1600,
+   "total": 8800,
+   "side": 8800,
+   "ok": true
+  },
+  {
+   "name": "room-quad-extra 1 間最多加 2 位（填 3 會變 2）",
+   "expect": 800,
+   "expectTotal": 4400,
+   "got": 800,
+   "total": 4400,
+   "side": 4400,
+   "ok": true
+  },
+  {
+   "name": "bed-backpacker 1 份",
+   "expect": 800,
+   "expectTotal": 800,
+   "got": 800,
+   "total": 800,
+   "side": 800,
+   "ok": true
+  },
+  {
+   "name": "bed-backpacker 2 份",
+   "expect": 1600,
+   "expectTotal": 1600,
+   "got": 1600,
+   "total": 1600,
+   "side": 1600,
+   "ok": true
+  },
+  {
+   "name": "scooter 1 份",
+   "expect": 500,
+   "expectTotal": 500,
+   "got": 500,
+   "total": 500,
+   "side": 500,
+   "ok": true
+  },
+  {
+   "name": "scooter 2 份",
+   "expect": 1000,
+   "expectTotal": 1000,
+   "got": 1000,
+   "total": 1000,
+   "side": 1000,
+   "ok": true
+  },
+  {
+   "name": "ebike 1 份",
+   "expect": 600,
+   "expectTotal": 600,
+   "got": 600,
+   "total": 600,
+   "side": 600,
+   "ok": true
+  },
+  {
+   "name": "ebike 2 份",
+   "expect": 1200,
+   "expectTotal": 1200,
+   "got": 1200,
+   "total": 1200,
+   "side": 1200,
+   "ok": true
+  },
+  {
+   "name": "car5 1 份",
+   "expect": 2300,
+   "expectTotal": 2300,
+   "got": 2300,
+   "total": 2300,
+   "side": 2300,
+   "ok": true
+  },
+  {
+   "name": "car5 2 份",
+   "expect": 4600,
+   "expectTotal": 4600,
+   "got": 4600,
+   "total": 4600,
+   "side": 4600,
+   "ok": true
+  },
+  {
+   "name": "car8 1 份",
+   "expect": 3500,
+   "expectTotal": 3500,
+   "got": 3500,
+   "total": 3500,
+   "side": 3500,
+   "ok": true
+  },
+  {
+   "name": "car8 2 份",
+   "expect": 7000,
+   "expectTotal": 7000,
+   "got": 7000,
+   "total": 7000,
+   "side": 7000,
+   "ok": true
+  },
+  {
+   "name": "ferry-rt 1 份",
+   "expect": 1320,
+   "expectTotal": 1320,
+   "got": 1320,
+   "total": 1320,
+   "side": 1320,
+   "ok": true
+  },
+  {
+   "name": "ferry-rt 2 份",
+   "expect": 2640,
+   "expectTotal": 2640,
+   "got": 2640,
+   "total": 2640,
+   "side": 2640,
+   "ok": true
+  },
+  {
+   "name": "ferry-ow 1 份",
+   "expect": 670,
+   "expectTotal": 670,
+   "got": 670,
+   "total": 670,
+   "side": 670,
+   "ok": true
+  },
+  {
+   "name": "ferry-ow 2 份",
+   "expect": 1340,
+   "expectTotal": 1340,
+   "got": 1340,
+   "total": 1340,
+   "side": 1340,
+   "ok": true
+  },
+  {
+   "name": "gear-light 1 份",
+   "expect": 200,
+   "expectTotal": 200,
+   "got": 200,
+   "total": 200,
+   "side": 200,
+   "ok": true
+  },
+  {
+   "name": "gear-light 2 份",
+   "expect": 400,
+   "expectTotal": 400,
+   "got": 400,
+   "total": 400,
+   "side": 400,
+   "ok": true
+  },
+  {
+   "name": "gear-heavy-half 1 份",
+   "expect": 500,
+   "expectTotal": 500,
+   "got": 500,
+   "total": 500,
+   "side": 500,
+   "ok": true
+  },
+  {
+   "name": "gear-heavy-half 2 份",
+   "expect": 1000,
+   "expectTotal": 1000,
+   "got": 1000,
+   "total": 1000,
+   "side": 1000,
+   "ok": true
+  },
+  {
+   "name": "gear-heavy-full 1 份",
+   "expect": 900,
+   "expectTotal": 900,
+   "got": 900,
+   "total": 900,
+   "side": 900,
+   "ok": true
+  },
+  {
+   "name": "gear-heavy-full 2 份",
+   "expect": 1800,
+   "expectTotal": 1800,
+   "got": 1800,
+   "total": 1800,
+   "side": 1800,
+   "ok": true
+  },
+  {
+   "name": "gear-full-half 1 份",
+   "expect": 600,
+   "expectTotal": 600,
+   "got": 600,
+   "total": 600,
+   "side": 600,
+   "ok": true
+  },
+  {
+   "name": "gear-full-half 2 份",
+   "expect": 1200,
+   "expectTotal": 1200,
+   "got": 1200,
+   "total": 1200,
+   "side": 1200,
+   "ok": true
+  },
+  {
+   "name": "gear-full-full 1 份",
+   "expect": 1000,
+   "expectTotal": 1000,
+   "got": 1000,
+   "total": 1000,
+   "side": 1000,
+   "ok": true
+  },
+  {
+   "name": "gear-full-full 2 份",
+   "expect": 2000,
+   "expectTotal": 2000,
+   "got": 2000,
+   "total": 2000,
+   "side": 2000,
+   "ok": true
+  },
+  {
+   "name": "gear-computer-half 1 份",
+   "expect": 300,
+   "expectTotal": 300,
+   "got": 300,
+   "total": 300,
+   "side": 300,
+   "ok": true
+  },
+  {
+   "name": "gear-computer-half 2 份",
+   "expect": 600,
+   "expectTotal": 600,
+   "got": 600,
+   "total": 600,
+   "side": 600,
+   "ok": true
+  },
+  {
+   "name": "gear-computer-full 1 份",
+   "expect": 500,
+   "expectTotal": 500,
+   "got": 500,
+   "total": 500,
+   "side": 500,
+   "ok": true
+  },
+  {
+   "name": "gear-computer-full 2 份",
+   "expect": 1000,
+   "expectTotal": 1000,
+   "got": 1000,
+   "total": 1000,
+   "side": 1000,
+   "ok": true
+  }
+ ],
+ "e": {
+  "rows": [
+   {
+    "name": "體驗潛水 2 人",
+    "canva": 5000,
+    "expect": 5000,
+    "got": 5000,
+    "ok": true
+   },
+   {
+    "name": "Fun Dive 岸潛 2 支 2 人",
+    "canva": 5800,
+    "expect": 5800,
+    "got": 5800,
+    "ok": true
+   },
+   {
+    "name": "OW 初級考照 1 人",
+    "canva": 15000,
+    "expect": 15000,
+    "got": 15000,
+    "ok": true
+   },
+   {
+    "name": "夏日 Fun Dive 套裝 雙人 1 組＋單人 1 位",
+    "canva": 27100,
+    "expect": 27100,
+    "got": 27100,
+    "ok": true
+   },
+   {
+    "name": "升等雙人套房 每人 +800 × 3 人",
+    "canva": 2400,
+    "expect": 2400,
+    "got": 2400,
+    "ok": true
+   },
+   {
+    "name": "浮潛行程 2 人",
+    "canva": 800,
+    "expect": 800,
+    "got": 800,
+    "ok": true
+   },
+   {
+    "name": "夜釣 2 人",
+    "canva": 1600,
+    "expect": 1600,
+    "got": 1600,
+    "ok": true
+   },
+   {
+    "name": "豪華四人房 1 間 2 晚",
+    "canva": 7200,
+    "expect": 7200,
+    "got": 7200,
+    "ok": true
+   },
+   {
+    "name": "船票（來回）2 人",
+    "canva": 2640,
+    "expect": 2640,
+    "got": 2640,
+    "ok": true
+   },
+   {
+    "name": "摩托車 1 台 2 天",
+    "canva": 1000,
+    "expect": 1000,
+    "got": 1000,
+    "ok": true
+   },
+   {
+    "name": "潛水電腦錶（全天）1 支 2 天",
+    "canva": 1000,
+    "expect": 1000,
+    "got": 1000,
+    "ok": true
+   }
+  ],
+  "total": 69540,
+  "side": 69540,
+  "expectTotal": 69540,
+  "canvaTotal": 69540,
+  "blocks": {
+   "dive": 10800,
+   "course": 15000,
+   "pkg": 29500,
+   "act": 2400,
+   "stay": 7200,
+   "trans": 3640,
+   "gear": 1000
+  },
+  "canvaSummary": {
+   "dive": 10800,
+   "course": 15000,
+   "pkg": 29500,
+   "act": 2400,
+   "stay": 7200,
+   "trans": 3640,
+   "gear": 1000
+  },
+  "date": "2026 / 12 / 05（六）出發",
+  "ok": true
+ },
+ "f": [
+  {
+   "id": "dsd",
+   "expect": 2500,
+   "got": 2500,
+   "lines": [
+    "dsd"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "fun-shore",
+   "expect": 1950,
+   "got": 1950,
+   "lines": [
+    "fun-shore"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "fun-boat",
+   "expect": 4900,
+   "got": 4900,
+   "lines": [
+    "fun-boat"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "ow",
+   "expect": 15000,
+   "got": 15000,
+   "lines": [
+    "ow"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "aow",
+   "expect": 15000,
+   "got": 15000,
+   "lines": [
+    "aow"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "ow-aow",
+   "expect": 30000,
+   "got": 30000,
+   "lines": [
+    "ow-aow"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "reactive",
+   "expect": 5000,
+   "got": 5000,
+   "lines": [
+    "reactive"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "ean",
+   "expect": 5000,
+   "got": 5000,
+   "lines": [
+    "ean"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "efr",
+   "expect": 4500,
+   "got": 4500,
+   "lines": [
+    "efr"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "rescue",
+   "expect": 8000,
+   "got": 8000,
+   "lines": [
+    "rescue"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "dm",
+   "expect": 38000,
+   "got": 38000,
+   "lines": [
+    "dm"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "pkg-snorkel",
+   "expect": 7200,
+   "got": 7200,
+   "lines": [
+    "pkg-snorkel"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "pkg-dsd",
+   "expect": 11400,
+   "got": 11400,
+   "lines": [
+    "pkg-dsd"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "pkg-fun",
+   "expect": 17400,
+   "got": 17400,
+   "lines": [
+    "pkg-fun"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "up-snorkel",
+   "expect": 1600,
+   "got": 1600,
+   "lines": [
+    "pkg-snorkel",
+    "up-snorkel"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "up-dsd",
+   "expect": 1000,
+   "got": 1000,
+   "lines": [
+    "pkg-dsd",
+    "up-dsd"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "up-fun",
+   "expect": 1600,
+   "got": 1600,
+   "lines": [
+    "pkg-fun",
+    "up-fun"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "tidal",
+   "expect": 350,
+   "got": 350,
+   "lines": [
+    "tidal"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "snorkel",
+   "expect": 400,
+   "got": 400,
+   "lines": [
+    "snorkel"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "glassboat",
+   "expect": 400,
+   "got": 400,
+   "lines": [
+    "glassboat"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "fishing",
+   "expect": 800,
+   "got": 800,
+   "lines": [
+    "fishing"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "bluecave",
+   "expect": 500,
+   "got": 500,
+   "lines": [
+    "bluecave"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "sup1",
+   "expect": 1800,
+   "got": 1800,
+   "lines": [
+    "sup1"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "sup2",
+   "expect": 1300,
+   "got": 1300,
+   "lines": [
+    "sup2"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "room-double",
+   "expect": 2400,
+   "got": 2400,
+   "lines": [
+    "room-double"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "room-quad",
+   "expect": 3600,
+   "got": 3600,
+   "lines": [
+    "room-quad"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "room-quad-extra",
+   "expect": 400,
+   "got": 400,
+   "lines": [
+    "room-quad",
+    "room-quad-extra"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "bed-backpacker",
+   "expect": 800,
+   "got": 800,
+   "lines": [
+    "bed-backpacker"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "scooter",
+   "expect": 500,
+   "got": 500,
+   "lines": [
+    "scooter"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "ebike",
+   "expect": 600,
+   "got": 600,
+   "lines": [
+    "ebike"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "car5",
+   "expect": 2300,
+   "got": 2300,
+   "lines": [
+    "car5"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "car8",
+   "expect": 3500,
+   "got": 3500,
+   "lines": [
+    "car8"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "ferry-rt",
+   "expect": 1320,
+   "got": 1320,
+   "lines": [
+    "ferry-rt"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "ferry-ow",
+   "expect": 670,
+   "got": 670,
+   "lines": [
+    "ferry-ow"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "gear-light",
+   "expect": 200,
+   "got": 200,
+   "lines": [
+    "gear-light"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "gear-heavy-half",
+   "expect": 500,
+   "got": 500,
+   "lines": [
+    "gear-heavy-half"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "gear-heavy-full",
+   "expect": 900,
+   "got": 900,
+   "lines": [
+    "gear-heavy-full"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "gear-full-half",
+   "expect": 600,
+   "got": 600,
+   "lines": [
+    "gear-full-half"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "gear-full-full",
+   "expect": 1000,
+   "got": 1000,
+   "lines": [
+    "gear-full-full"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "gear-computer-half",
+   "expect": 300,
+   "got": 300,
+   "lines": [
+    "gear-computer-half"
+   ],
+   "scrolled": true,
+   "ok": true
+  },
+  {
+   "id": "gear-computer-full",
+   "expect": 500,
+   "got": 500,
+   "lines": [
+    "gear-computer-full"
+   ],
+   "scrolled": true,
+   "ok": true
+  }
+ ],
+ "g": [
+  {
+   "name": "選體驗潛水 2 人",
+   "expect": 5000,
+   "got": 5000,
+   "side": 5000,
+   "ok": true
+  },
+  {
+   "name": "加 OW 1 人",
+   "expect": 20000,
+   "got": 20000,
+   "side": 20000,
+   "ok": true
+  },
+  {
+   "name": "勾活動：夜釣 3 人",
+   "expect": 22400,
+   "got": 22400,
+   "side": 22400,
+   "ok": true
+  },
+  {
+   "name": "勾住宿：雙人房 1 間 2 晚",
+   "expect": 27200,
+   "got": 27200,
+   "side": 27200,
+   "ok": true
+  },
+  {
+   "name": "勾裝備：輕裝 2 套 1 天",
+   "expect": 27600,
+   "got": 27600,
+   "side": 27600,
+   "ok": true
+  },
+  {
+   "name": "體驗潛水改 0 人",
+   "expect": 22600,
+   "got": 22600,
+   "side": 22600,
+   "ok": true
+  },
+  {
+   "name": "取消勾選夜釣（刪除一列）",
+   "expect": 20200,
+   "got": 20200,
+   "side": 20200,
+   "ok": true
+  },
+  {
+   "name": "再勾回夜釣（預設 1 人）",
+   "expect": 21000,
+   "got": 21000,
+   "side": 21000,
+   "ok": true
+  },
+  {
+   "name": "課程改回『請選擇課程』",
+   "expect": 6000,
+   "got": 6000,
+   "side": 6000,
+   "ok": true
+  },
+  {
+   "name": "套裝選了但雙人 0 組、單人 0 位",
+   "expect": 6000,
+   "got": 6000,
+   "side": 6000,
+   "ok": true
+  },
+  {
+   "name": "套裝勾升等但 0 人",
+   "expect": 6000,
+   "got": 6000,
+   "side": 6000,
+   "ok": true
+  },
+  {
+   "name": "住宿晚數填 0（最少 1 晚，會變回 1）",
+   "expect": 3600,
+   "got": 3600,
+   "side": 3600,
+   "ok": true
+  },
+  {
+   "name": "全部清空：取消所有勾選、套裝改回請選擇",
+   "expect": 0,
+   "got": 0,
+   "side": 0,
+   "ok": true
+  },
+  {
+   "name": "清空後右側摘要七區都顯示「—」",
+   "expect": "—",
+   "got": "—",
+   "ok": true
+  }
+ ],
+ "bad": 0
+}

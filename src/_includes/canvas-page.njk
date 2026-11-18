@@ -8,7 +8,7 @@
   - 頁首、頁尾：其他頁用 section.shared 直接拿首頁（home.json）的那幾個元素，所以全站只有一份
   - 價格：一律從 _data/prices.json 讀
 #}
-{%- set cvMap = { "home": home, "courses": courses, "stay": stay, "trips": trips, "about": about } -%}
+{%- set cvMap = { "home": home, "courses": courses, "stay": stay, "trips": trips, "about": about, "booking": booking } -%}
 {%- set cv = cvMap[canvasKey or "home"] -%}
 {%- set imgDir = cv.imgDir or "home" -%}
 <head>
@@ -20,7 +20,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/canvas-page.css">
-  <link rel="stylesheet" href="/assets/css/back-to-top.css">
+  <link rel="stylesheet" href="/assets/css/back-to-top.css">{% if cv.css %}
+  <link rel="stylesheet" href="{{ cv.css }}">{% endif %}
   <script>if (!(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) && "IntersectionObserver" in window) document.documentElement.classList.add("hc-anim");</script>
 </head>
 {%- macro textBody(it, active) -%}
@@ -115,6 +116,19 @@ LINE 官方帳號｜{% if site.company.lineUrl %}<a href="{{ site.company.lineUr
     </section>
     {% endfor %}
   </div>
+  {#- 互動頁（預訂）：中間是一般排版的表單（cv.flow），下面再接一段照 Canva 座標的頁尾（cv.after）。其他頁沒有這兩個設定，輸出不變 #}
+  {% if cv.flow %}
+  <div class="hc-flow">{% include cv.flow %}</div>
+  {% for s in cv.after %}
+  <div class="hc hc-after" style="height:{{ s.height }}px">
+    <div class="hc-bg" aria-hidden="true"><img src="/assets/img/{{ imgDir }}/{{ s.img }}" alt="" width="1440" height="{{ s.height }}" style="top:0" loading="lazy"></div>
+    <section class="hc-sec hc-sec-{{ s.key }}" data-name="{{ s.name }}" style="top:0;height:{{ s.height }}px">
+      {% for it in s.items %}{{ item(it, 0, 0, cv.active) }}{% endfor %}
+      {% for sh in s.shared or [] %}{% for hs in home.sections %}{% if hs.key == sh.from %}{% for it in hs.items %}{% if (not sh.maxY or it.y < sh.maxY) and it.kind != "fish" %}{{ item(it, sh.dx or 0, sh.dy or 0, cv.active) }}{% endif %}{% endfor %}{% endif %}{% endfor %}{% endfor %}
+    </section>
+  </div>
+  {% endfor %}
+  {% endif %}
   </div>
   {# FAQ 結構化標記（給搜尋引擎） #}
   {% for s in cv.sections %}{% for it in s.items %}{% if it.kind == "faq" %}
@@ -123,6 +137,7 @@ LINE 官方帳號｜{% if site.company.lineUrl %}<a href="{{ site.company.lineUr
   {% include "back-to-top.njk" %}
   <script src="/assets/js/canvas-page.js" defer></script>
   <script src="/assets/js/back-to-top.js" defer></script>{% if cv.form %}
-  <script src="/assets/js/contact-form.js" defer></script>{% endif %}
+  <script src="/assets/js/contact-form.js" defer></script>{% endif %}{% for js in cv.scripts or [] %}
+  <script src="{{ js }}" defer></script>{% endfor %}
 </body>
 </html>

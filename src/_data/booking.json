@@ -1,0 +1,45 @@
+{
+ "_說明": "預訂頁（電腦版 1440）：頁首、頁尾照 Canva 座標（用首頁 home.json 的元素，底圖切自關於頁同一段）；中間的七區塊選購＋第 2–4 步是真的網頁表單（src/_includes/booking-flow.njk），尺寸照 Canva「UI v4｜預訂第 1 步」。價格讀 prices.json，算錢只用 pricing.js。",
+ "width": 1440,
+ "height": 136,
+ "imgDir": "booking",
+ "active": "/booking/",
+ "css": "/assets/css/booking.css",
+ "flow": "booking-flow.njk",
+ "scripts": [
+  "/assets/js/pricing.js",
+  "/assets/js/booking.js"
+ ],
+ "sections": [
+  {
+   "key": "open",
+   "name": "頁首",
+   "top": 0,
+   "height": 136,
+   "img": "booking_s_header.webp",
+   "items": [],
+   "shared": [
+    {
+     "from": "open",
+     "maxY": 140
+    }
+   ]
+  }
+ ],
+ "after": [
+  {
+   "key": "footer",
+   "name": "頁尾",
+   "height": 950,
+   "img": "booking_s_footer.webp",
+   "items": [],
+   "shared": [
+    {
+     "from": "footer",
+     "dx": 0,
+     "dy": 0
+    }
+   ]
+  }
+ ]
+}
