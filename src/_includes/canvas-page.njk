@@ -8,7 +8,7 @@
   - 頁首、頁尾：其他頁用 section.shared 直接拿首頁（home.json）的那幾個元素，所以全站只有一份
   - 價格：一律從 _data/prices.json 讀
 #}
-{%- set cvMap = { "home": home, "courses": courses, "stay": stay, "trips": trips, "about": about, "booking": booking } -%}
+{%- set cvMap = { "home": home, "courses": courses, "stay": stay, "trips": trips, "about": about, "booking": booking, "terms": terms } -%}
 {%- set cv = cvMap[canvasKey or "home"] -%}
 {%- set imgDir = cv.imgDir or "home" -%}
 <head>
@@ -36,6 +36,13 @@ LINE 官方帳號｜{% if site.company.lineUrl %}<a href="{{ site.company.lineUr
 地址｜{{ site.company.address }}
   {%- elif it.site == "companyInfo" -%}公司名稱｜{{ site.company.name or "（待填）" }}
 統一編號｜{{ site.company.taxId or "（待填）" }}
+  {%- elif it.site == "operator" -%}{{ site.company.name or "（待填）" }}（以下稱「綠芙」）
+統一編號：{{ site.company.taxId or "（待填）" }}
+地址：{{ site.company.address or "（待填）" }}
+電話：<a href="{{ site.company.phoneHref }}">{{ site.company.phone }}</a>　信箱：{% if site.company.email %}<a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>{% else %}（待填）{% endif %}
+  {%- elif it.site == "askPhone" -%}{{ it.pre }}
+<a href="{{ site.company.phoneHref }}">{{ site.company.phone }}</a>
+  {%- elif it.site == "askLine" -%}{{ it.pre }}，請打 <a href="{{ site.company.phoneHref }}">{{ site.company.phone }}</a>，或寄信到{% if site.company.email %} <a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>{% else %}（待填）{% endif %}。
   {%- elif it.site == "legalLinks" -%}{% for l in site.legalLinks %}<a href="{{ l.href }}">{{ l.label }}</a>{% if not loop.last %}
 {% endif %}{% endfor %}
   {%- elif it.site == "social" -%}{% if site.company.instagramUrl %}<a href="{{ site.company.instagramUrl }}">Instagram</a>{% else %}Instagram{% endif %}
@@ -107,6 +114,17 @@ LINE 官方帳號｜{% if site.company.lineUrl %}<a href="{{ site.company.lineUr
       {#- 共用的頁首／頁尾：從首頁那一段拿元素，照 dx、dy 位移 #}
       {% for sh in s.shared or [] %}{% for hs in home.sections %}{% if hs.key == sh.from %}{% for it in hs.items %}{% if (not sh.maxY or it.y < sh.maxY) and it.kind != "fish" %}{{ item(it, sh.dx or 0, sh.dy or 0, cv.active) }}{% endif %}{% endfor %}{% endif %}{% endfor %}{% endfor %}
     </section>
+    {% endfor %}
+    {#- 跟著捲動的卡片（條款頁右側目錄）：外框在 y～until 之間，裡面的卡片 position: sticky #}
+    {% for st in cv.stickies or [] %}
+    <nav class="hc-stickywrap" id="{{ st.id }}" aria-label="{{ st.label }}" style="left:{{ st.x }}px;top:{{ st.y }}px;width:{{ st.w }}px;height:{{ st.until - st.y }}px">
+      <div class="hc-sticky" style="top:{{ st.top }}px;width:{{ st.w }}px;height:{{ st.h }}px">
+        <div class="hc-sticky-card" style="left:{{ st.card.x }}px;top:{{ st.card.y }}px;width:{{ st.card.w }}px;height:{{ st.card.h }}px;border-radius:{{ st.card.radius }}px;background:{{ st.card.bg }};opacity:{{ st.card.op }}"></div>
+        {% for ln in st.lines %}<div class="hc-sticky-line" style="left:{{ ln.x }}px;top:{{ ln.y }}px;width:{{ ln.w }}px;height:{{ ln.h }}px;background:{{ ln.bg }};opacity:{{ ln.op }}"></div>{% endfor %}
+        {% for im in st.imgs %}<img class="hc-sticky-img" src="/assets/img/{{ imgDir }}/{{ im.file }}.webp" alt="{{ im.alt }}" style="left:{{ im.x }}px;top:{{ im.y }}px;width:{{ im.w }}px;height:{{ im.h }}px">{% endfor %}
+        {% for it in st.items %}{{ item(it, 0, 0, cv.active) }}{% endfor %}
+      </div>
+    </nav>
     {% endfor %}
   </div>
   {#- 互動頁（預訂）：中間是一般排版的表單（cv.flow），下面再接一段照 Canva 座標的頁尾（cv.after）。其他頁沒有這兩個設定，輸出不變 #}

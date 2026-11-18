@@ -258,3 +258,60 @@ PAGES = {
         },
     },
 }
+
+# 三個條款頁（服務條款、隱私權、退款與停航）共用：右側目錄跟著捲動、〈…政策〉自動變連結
+LEGAL_LINKS = {"〈服務條款〉": "/terms/", "〈隱私權政策〉": "/privacy/", "〈退款與停航政策〉": "/refund/"}
+
+
+def toc_spans(lines, color):
+    """目錄每一行連到該條（#t1、#t2…）"""
+    out = []
+    for i, t in enumerate(lines):
+        out.append({"t": t, "c": color, "href": f"#t{i + 1}"})
+        if i < len(lines) - 1:
+            out.append({"t": "\n", "c": color})
+    return out
+
+
+PAGES["terms"] = {
+    "canva": "terms-canva-elements.json",
+    "title": "服務條款",
+    "active": None,
+    "textScale": 0.9,  # 全站規則（11/17 Ambre）：字級 ×0.9，位置、框寬不變
+    "sections": [
+        ("open", "開場", 0, 580),
+        ("c1", "第 1–4 條", 580, 1320),
+        ("c2", "第 5–9 條", 1320, 2110),
+        ("c3", "第 10–13 條", 2110, 2770),
+        ("closing", "還有其他問題？", 2770, 3040),
+        ("footer", "頁尾", 3040, 4000),
+    ],
+    # 目錄點了跳到該條：標題上面留 40px
+    "anchors": {f"t{i + 1}": round(y - 40) for i, y in enumerate([609.4, 768.1, 993.2, 1151.8, 1343.7, 1535.6, 1694.3, 1853.0, 2011.7, 2137.2, 2329.0, 2487.7, 2613.2])},
+    "shared": {
+        "open": [{"from": "open", "maxY": 140}],                 # 頁首：跟首頁同位置（Canva 這頁選單還有「聯絡」，全站已拿掉）
+        "footer": [{"from": "footer", "dx": 35.6, "dy": 16.4}],  # 頁尾：Canva 這頁的頁尾是首頁舊版複本（整組往右、往下），用首頁那份；dx、dy 用像素量測對齊左欄
+    },
+    "skip": ["LBR7S9PnyPPK4HjL", "LBfzD2VxRlF0mGyG",
+             "LBFhfblnYZNk9w2t", "LB6j44GPp3lZ06p5", "LBV1CtJNxnBG7jHF", "LB7CcJy7kXTjWkth", "LBq4f68s7JDtsxZB",
+             "LBVnVlzSd01s80qc", "LB3Dqt9QGf7Yv3pY", "LBXCsZC1nLDhyXgd"],
+    "keep": ["LBk3Yn14GsLGg9Gy"],  # 「最後更新：2026 年 11 月（草稿）」是黃色，但不是設計標籤，是內容
+    "autoLinks": LEGAL_LINKS,
+    # 右側目錄：Canva 上的白色卡片、分隔線、紅珊瑚、目錄文字一起跟著捲動（需求總表第 4 節），捲到「還有其他問題？」上面就停
+    "sticky": [{
+        "id": "toc", "label": "本頁目錄", "box": "LBGTjwr8NBd07yj8", "lines": ["LBwK4ZPPq1P2frht"],
+        "imgs": [{"id": "LBSX3vZnbRPtk9G1", "file": "terms_coral", "alt": "", "box": [1229, 346, 171, 170]}],
+        "members": ["LBTp9CBCd778jnz1", "LByXL1nwHM05vc8b", "LBJjjbwBLsbFNCNX"],
+        "until": 2760, "top": 16,
+    }],
+    "overrides": {
+        "LB20qVqxDNk9Bry9": {"site": "operator"},                        # 經營者資訊：讀 site.json
+        "LBJjjbwBLsbFNCNX": {"site": "askPhone", "pre": "有疑問？"},       # 目錄下面：電話可撥號
+        "LBL14qQxcl13Bx1v": {"site": "askLine", "pre": "對條款有疑問"},    # 還有其他問題？：電話、信箱讀 site.json
+        # 目錄清單：字縮小 0.9 但每一行的位置照 Canva（行距 29.3px 不縮），清單才會剛好排到分隔線上面
+        "LByXL1nwHM05vc8b": {"lh": 2.083, "y": 494.1, "spans": toc_spans(["1 適用範圍", "2 經營者資訊", "3 預訂與訂單成立", "4 價格與付款", "5 參加資格與健康", "6 安全規定",
+                                                 "7 天候與停航", "8 住宿規範", "9 裝備使用", "10 保險與責任", "11 照片與影像", "12 條款修改", "13 準據法與管轄"], "#12355b")},
+        "LBncY3BCBfMbsdFq": {"spans": [{"t": "隱私權政策 →", "c": "#ec6c0c", "href": "/privacy/"}, {"t": "\n", "c": "#ec6c0c"},
+                                       {"t": "退款與停航政策 →", "c": "#ec6c0c", "href": "/refund/"}]},
+    },
+}

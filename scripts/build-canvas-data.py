@@ -120,6 +120,64 @@ def cut_illustrations(cfg, allel, illus, src, key):
     return out
 
 
+def auto_links(it, links):
+    """autoLinks：文字裡提到〈隱私權政策〉這類名稱 → 那幾個字變成連結（顏色不變）。已經有 spans／site／links 的不動。"""
+    if not links or "text" not in it or any(k in it for k in ("site", "links", "href", "priceId")):
+        return it
+    import re
+    pat = re.compile("|".join(re.escape(k) for k in links))
+    if not pat.search(it["text"]):
+        return it
+    spans, pos = [], 0
+    for m in pat.finditer(it["text"]):
+        if m.start() > pos:
+            spans.append({"t": it["text"][pos:m.start()], "c": it["color"]})
+        spans.append({"t": m.group(0), "c": it["color"], "href": links[m.group(0)]})
+        pos = m.end()
+    if pos < len(it["text"]):
+        spans.append({"t": it["text"][pos:], "c": it["color"]})
+    it = dict(it)
+    it.pop("text")
+    it["spans"] = spans
+    return it
+
+
+def sticky_groups(cfg, allel, items, sc, key):
+    """sticky：右側目錄這種「跟著捲動」的卡片。卡片（白底圓角）、分隔線、裝飾圖、文字一起放進一個盒子，
+    盒子在 y～until 之間跟著捲動（CSS position: sticky，距離螢幕上緣 top px）。座標都換成相對盒子左上角。"""
+    out = []
+    for st in cfg.get("sticky", []):
+        box = allel[st["box"]]
+        def img_el(im):  # box＝切圖時實際的範圍（去背圖可能比 Canva 元素大一點點）
+            if "box" in im:
+                bx, by, bw, bh = im["box"]
+                return {"left": bx, "top": by, "width": bw, "height": bh}
+            return allel[im["id"]]
+        parts = [box] + [allel[i] for i in st.get("lines", [])] + [img_el(i) for i in st.get("imgs", [])] + [allel[i] for i in st["members"]]
+        x0 = min(p["left"] for p in parts)
+        y0 = min(p["top"] for p in parts)
+        x1 = max(p["left"] + p["width"] for p in parts)
+        y1 = max(p["top"] + p["height"] for p in parts)
+        g = {"id": st["id"], "label": st["label"], "x": r(x0), "y": r(y0), "w": r(x1 - x0), "h": r(y1 - y0), "until": st["until"], "top": st["top"],
+             "card": {"x": r(box["left"] - x0), "y": r(box["top"] - y0), "w": r(box["width"]), "h": r(box["height"]),
+                      "radius": r(box["paths"][0]["cornerRounding"]), "bg": box["paths"][0]["fill"]["color"]["color"], "op": r(box.get("opacity", 1), 2)},
+             "lines": [], "imgs": [], "items": []}
+        for lid in st.get("lines", []):
+            ln = allel[lid]
+            g["lines"].append({"x": r(ln["left"] - x0), "y": r(ln["top"] - y0), "w": r(ln["width"]), "h": r(ln["height"]),
+                               "bg": ln["paths"][0]["fill"]["color"]["color"], "op": r(ln.get("opacity", 1), 2)})
+        for im in st.get("imgs", []):
+            e = img_el(im)
+            g["imgs"].append({"file": im["file"], "alt": im.get("alt", ""), "x": r(e["left"] - x0), "y": r(e["top"] - y0), "w": r(e["width"]), "h": r(e["height"])})
+        for it in [i for i in items if i.get("id") in st["members"]]:
+            items.remove(it)
+            it2 = dict(it)
+            it2["x"], it2["y"] = r(it["x"] - x0), r(it["y"] - y0)
+            g["items"].append(it2)
+        out.append(g)
+    return out
+
+
 def form_items(fm, allel, items, sc):
     """留言表單：每個欄位＝Canva 輸入框（形狀）的位置大小；字級、提示字、左邊留白照 Canva 提示字；標題文字改成 <label>。"""
     from PIL import ImageFont
@@ -201,9 +259,9 @@ def main():
         if e["type"] == "text":
             if not e.get("textRegions"):
                 return
-            if all(g["formatting"]["color"].lower() == LABEL_COLOR for g in e["textRegions"]):
-                return
-            items.append(text_item(e, cfg.get("overrides", {}).get(e["id"], {}), sc))
+            if e["id"] not in cfg.get("keep", []) and all(g["formatting"]["color"].lower() == LABEL_COLOR for g in e["textRegions"]):
+                return  # keep＝顏色剛好跟設計標籤一樣、但其實是內容的文字（例如條款頁黃色「最後更新」）
+            items.append(auto_links(text_item(e, cfg.get("overrides", {}).get(e["id"], {}), sc), cfg.get("autoLinks", {})))
             return
         for c in e.get("children") or []:
             walk(c)
@@ -219,6 +277,9 @@ def main():
     # 留言表單（真的網頁欄位，照 Canva 輸入框座標放；輸入框外觀在底圖）
     if fm:
         items.extend(form_items(fm, allel, items, sc))
+
+    # 跟著捲動的卡片（右側目錄）：成員文字從段落裡拿出來，另外放在頁面層
+    stickies = sticky_groups(cfg, allel, items, sc, key)
 
     # 欄寬：參考段落的文字實際最右邊 → 其他段落縮到同寬（收在框內）
     texts = {i.get("id"): i for i in items if i["kind"] == "text"}
@@ -255,6 +316,10 @@ def main():
         out["anchors"] = [{"id": k, "y": v} for k, v in cfg["anchors"].items()]
     if fm:
         out["form"] = fm["id"]
+    if stickies:
+        out["stickies"] = stickies
+    if cfg.get("css"):
+        out["css"] = cfg["css"]
     im = Image.open(base).convert("RGB")
     assert im.size == (1440, H), im.size
     for k, name, a, b in cfg["sections"]:
