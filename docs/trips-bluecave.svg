@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 175" width="400" height="350">
+  <defs>
+    <radialGradient id="sun" cx="50%" cy="45%" r="55%">
+      <stop offset="0" stop-color="#f9cd0a"/><stop offset="0.75" stop-color="#f7c41f"/><stop offset="1" stop-color="#f4c766"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4"/></filter>
+  </defs>
+  <!-- 洞口的太陽：跟頁首選單的太陽同色（黃色、邊緣柔光） -->
+  <circle cx="104" cy="100" r="34" fill="#f8d88a" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="104" cy="100" r="31" fill="url(#sun)"/>
+  <!-- 岩石拱門（藍洞），黑色剪影，邊緣不規則 -->
+  <path fill="#141414" fill-rule="evenodd" d="
+    M6 140 C 8 126, 4 116, 12 104 C 16 92, 14 80, 26 68 C 34 58, 36 46, 50 38 C 60 30, 66 20, 82 18 C 92 16, 98 10, 110 13 C 124 15, 134 14, 144 24 C 154 32, 166 36, 172 50 C 178 62, 186 70, 186 86 C 186 98, 194 108, 192 122 C 191 130, 196 136, 196 140 Z
+    M58 140 C 60 128, 60 116, 66 104 C 70 94, 72 84, 82 78 C 90 72, 98 68, 108 69 C 120 70, 128 76, 134 86 C 140 96, 142 108, 146 120 C 148 128, 150 134, 150 140 Z"/>
+  <!-- 水面線（同 SUP 下方的波浪線） -->
+  <path d="M2 148 C 30 143, 60 153, 100 148 S 170 143, 198 148" fill="none" stroke="#141414" stroke-width="3.6" stroke-linecap="round"/>
+  <path d="M30 159 C 55 155, 80 163, 104 159 S 150 155, 172 159" fill="none" stroke="#141414" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M62 168 C 80 165, 100 171, 118 168 S 140 165, 150 168" fill="none" stroke="#141414" stroke-width="2" stroke-linecap="round"/>
+</svg>
