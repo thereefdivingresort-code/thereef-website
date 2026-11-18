@@ -1,0 +1,3780 @@
+{
+ "_說明": "由 scripts/booking-verify-expect.py 從 Sheet 01／03 產生；expect 是 python 另外算的（不是網站算的）。",
+ "c": [
+  {
+   "no": "1",
+   "id": "fun-shore",
+   "acts": [
+    [
+     "sel",
+     "fun",
+     "fun-shore"
+    ],
+    [
+     "ctr",
+     "fun",
+     "t",
+     1
+    ],
+    [
+     "ctr",
+     "fun",
+     "p",
+     1
+    ]
+   ],
+   "read": "fun",
+   "expect": 1950,
+   "total": 1950
+  },
+  {
+   "no": "2",
+   "id": "fun-shore",
+   "acts": [
+    [
+     "sel",
+     "fun",
+     "fun-shore"
+    ],
+    [
+     "ctr",
+     "fun",
+     "t",
+     1
+    ],
+    [
+     "ctr",
+     "fun",
+     "p",
+     2
+    ]
+   ],
+   "read": "fun",
+   "expect": 2900,
+   "total": 2900
+  },
+  {
+   "no": "3",
+   "id": "fun-shore",
+   "acts": [
+    [
+     "sel",
+     "fun",
+     "fun-shore"
+    ],
+    [
+     "ctr",
+     "fun",
+     "t",
+     1
+    ],
+    [
+     "ctr",
+     "fun",
+     "p",
+     3
+    ]
+   ],
+   "read": "fun",
+   "expect": 3750,
+   "total": 3750
+  },
+  {
+   "no": "4",
+   "id": "fun-shore",
+   "acts": [
+    [
+     "sel",
+     "fun",
+     "fun-shore"
+    ],
+    [
+     "ctr",
+     "fun",
+     "t",
+     1
+    ],
+    [
+     "ctr",
+     "fun",
+     "p",
+     4
+    ]
+   ],
+   "read": "fun",
+   "expect": 4600,
+   "total": 4600
+  },
+  {
+   "no": "5",
+   "id": "fun-shore",
+   "acts": [
+    [
+     "sel",
+     "fun",
+     "fun-shore"
+    ],
+    [
+     "ctr",
+     "fun",
+     "t",
+     1
+    ],
+    [
+     "ctr",
+     "fun",
+     "p",
+     6
+    ]
+   ],
+   "read": "fun",
+   "expect": 6900,
+   "total": 6900
+  },
+  {
+   "no": "6",
+   "id": "fun-shore",
+   "acts": [
+    [
+     "sel",
+     "fun",
+     "fun-shore"
+    ],
+    [
+     "ctr",
+     "fun",
+     "t",
+     3
+    ],
+    [
+     "ctr",
+     "fun",
+     "p",
+     2
+    ]
+   ],
+   "read": "fun",
+   "expect": 8700,
+   "total": 8700
+  },
+  {
+   "no": "7",
+   "id": "fun-boat",
+   "acts": [
+    [
+     "sel",
+     "fun",
+     "fun-boat"
+    ],
+    [
+     "ctr",
+     "fun",
+     "t",
+     1
+    ],
+    [
+     "ctr",
+     "fun",
+     "p",
+     1
+    ]
+   ],
+   "read": "fun",
+   "expect": 4900,
+   "total": 4900
+  },
+  {
+   "no": "8",
+   "id": "fun-boat",
+   "acts": [
+    [
+     "sel",
+     "fun",
+     "fun-boat"
+    ],
+    [
+     "ctr",
+     "fun",
+     "t",
+     1
+    ],
+    [
+     "ctr",
+     "fun",
+     "p",
+     3
+    ]
+   ],
+   "read": "fun",
+   "expect": 10500,
+   "total": 10500
+  },
+  {
+   "no": "9",
+   "id": "fun-boat",
+   "acts": [
+    [
+     "sel",
+     "fun",
+     "fun-boat"
+    ],
+    [
+     "ctr",
+     "fun",
+     "t",
+     1
+    ],
+    [
+     "ctr",
+     "fun",
+     "p",
+     5
+    ]
+   ],
+   "read": "fun",
+   "expect": 16500,
+   "total": 16500
+  },
+  {
+   "no": "10",
+   "id": "dsd",
+   "acts": [
+    [
+     "ctr",
+     "dsd",
+     "p",
+     2
+    ]
+   ],
+   "read": "dsd",
+   "expect": 5000,
+   "total": 5000
+  },
+  {
+   "no": "11",
+   "id": "ow",
+   "acts": [
+    [
+     "sel",
+     "course",
+     "ow"
+    ],
+    [
+     "ctr",
+     "course",
+     "p",
+     1
+    ]
+   ],
+   "read": "course",
+   "expect": 15000,
+   "total": 15000
+  },
+  {
+   "no": "12",
+   "id": "pkg-fun",
+   "acts": [
+    [
+     "sel",
+     "pkg",
+     "pkg-fun"
+    ],
+    [
+     "ctr",
+     "pkg",
+     "pair",
+     0
+    ],
+    [
+     "ctr",
+     "pkg",
+     "single",
+     1
+    ]
+   ],
+   "read": "pkg",
+   "expect": 9700,
+   "total": 9700
+  },
+  {
+   "no": "13",
+   "id": "pkg-fun",
+   "acts": [
+    [
+     "sel",
+     "pkg",
+     "pkg-fun"
+    ],
+    [
+     "ctr",
+     "pkg",
+     "pair",
+     1
+    ],
+    [
+     "ctr",
+     "pkg",
+     "single",
+     0
+    ]
+   ],
+   "read": "pkg",
+   "expect": 17400,
+   "total": 17400
+  },
+  {
+   "no": "14",
+   "id": "pkg-snorkel",
+   "acts": [
+    [
+     "sel",
+     "pkg",
+     "pkg-snorkel"
+    ],
+    [
+     "ctr",
+     "pkg",
+     "pair",
+     0
+    ],
+    [
+     "ctr",
+     "pkg",
+     "single",
+     1
+    ]
+   ],
+   "read": "pkg",
+   "expect": 4100,
+   "total": 4100
+  },
+  {
+   "no": "15",
+   "id": "room-double",
+   "acts": [
+    [
+     "tick",
+     "room-double"
+    ],
+    [
+     "ctr",
+     "room-double",
+     "r",
+     1
+    ],
+    [
+     "ctr",
+     "room-double",
+     "d",
+     2
+    ]
+   ],
+   "read": "room-double",
+   "expect": 4800,
+   "total": 4800
+  },
+  {
+   "no": "16",
+   "id": "scooter",
+   "acts": [
+    [
+     "tick",
+     "scooter"
+    ],
+    [
+     "ctr",
+     "scooter",
+     "q",
+     1
+    ],
+    [
+     "ctr",
+     "scooter",
+     "d",
+     3
+    ]
+   ],
+   "read": "scooter",
+   "expect": 1500,
+   "total": 1500
+  },
+  {
+   "no": "17-1",
+   "id": "fun-shore",
+   "acts": [
+    [
+     "sel",
+     "fun",
+     "fun-shore"
+    ],
+    [
+     "ctr",
+     "fun",
+     "t",
+     1
+    ],
+    [
+     "ctr",
+     "fun",
+     "p",
+     2
+    ]
+   ],
+   "read": "fun",
+   "expect": 2900,
+   "total": 2900
+  },
+  {
+   "no": "17-2",
+   "id": "ow",
+   "acts": [
+    [
+     "sel",
+     "course",
+     "ow"
+    ],
+    [
+     "ctr",
+     "course",
+     "p",
+     1
+    ]
+   ],
+   "read": "course",
+   "expect": 15000,
+   "total": 15000
+  },
+  {
+   "no": "18-1",
+   "id": "fun-boat",
+   "acts": [
+    [
+     "sel",
+     "fun",
+     "fun-boat"
+    ],
+    [
+     "ctr",
+     "fun",
+     "t",
+     1
+    ],
+    [
+     "ctr",
+     "fun",
+     "p",
+     3
+    ]
+   ],
+   "read": "fun",
+   "expect": 10500,
+   "total": 10500
+  },
+  {
+   "no": "18-2",
+   "id": "room-quad",
+   "acts": [
+    [
+     "tick",
+     "room-quad"
+    ],
+    [
+     "ctr",
+     "room-quad",
+     "r",
+     1
+    ],
+    [
+     "ctr",
+     "room-quad",
+     "d",
+     2
+    ]
+   ],
+   "read": "room-quad",
+   "expect": 7200,
+   "total": 7200
+  },
+  {
+   "no": "18-3",
+   "id": "scooter",
+   "acts": [
+    [
+     "tick",
+     "scooter"
+    ],
+    [
+     "ctr",
+     "scooter",
+     "q",
+     2
+    ],
+    [
+     "ctr",
+     "scooter",
+     "d",
+     2
+    ]
+   ],
+   "read": "scooter",
+   "expect": 2000,
+   "total": 2000
+  },
+  {
+   "no": "19",
+   "id": "gear-heavy-half",
+   "acts": [
+    [
+     "tick",
+     "gear-heavy"
+    ],
+    [
+     "sel",
+     "gear-heavy",
+     "gear-heavy-half"
+    ],
+    [
+     "ctr",
+     "gear-heavy",
+     "q",
+     1
+    ],
+    [
+     "ctr",
+     "gear-heavy",
+     "d",
+     1
+    ]
+   ],
+   "read": "gear-heavy",
+   "expect": 500,
+   "total": 500
+  },
+  {
+   "no": "20",
+   "id": "gear-full-full",
+   "acts": [
+    [
+     "tick",
+     "gear-full"
+    ],
+    [
+     "sel",
+     "gear-full",
+     "gear-full-full"
+    ],
+    [
+     "ctr",
+     "gear-full",
+     "q",
+     2
+    ],
+    [
+     "ctr",
+     "gear-full",
+     "d",
+     1
+    ]
+   ],
+   "read": "gear-full",
+   "expect": 2000,
+   "total": 2000
+  },
+  {
+   "no": "21",
+   "id": "gear-computer-full",
+   "acts": [
+    [
+     "tick",
+     "gear-computer"
+    ],
+    [
+     "sel",
+     "gear-computer",
+     "gear-computer-full"
+    ],
+    [
+     "ctr",
+     "gear-computer",
+     "q",
+     1
+    ],
+    [
+     "ctr",
+     "gear-computer",
+     "d",
+     2
+    ]
+   ],
+   "read": "gear-computer",
+   "expect": 1000,
+   "total": 1000
+  },
+  {
+   "no": "22",
+   "id": "gear-light",
+   "acts": [
+    [
+     "tick",
+     "gear-light"
+    ],
+    [
+     "ctr",
+     "gear-light",
+     "q",
+     3
+    ],
+    [
+     "ctr",
+     "gear-light",
+     "d",
+     1
+    ]
+   ],
+   "read": "gear-light",
+   "expect": 600,
+   "total": 600
+  },
+  {
+   "no": "23",
+   "id": "pkg-fun",
+   "acts": [
+    [
+     "sel",
+     "pkg",
+     "pkg-fun"
+    ],
+    [
+     "ctr",
+     "pkg",
+     "pair",
+     1
+    ],
+    [
+     "ctr",
+     "pkg",
+     "single",
+     1
+    ]
+   ],
+   "read": "pkg",
+   "expect": 27100,
+   "total": 27100
+  },
+  {
+   "no": "24",
+   "id": "up-fun",
+   "acts": [
+    [
+     "sel",
+     "pkg",
+     "pkg-fun"
+    ],
+    [
+     "ctr",
+     "pkg",
+     "pair",
+     1
+    ],
+    [
+     "ctr",
+     "pkg",
+     "single",
+     1
+    ],
+    [
+     "up",
+     true
+    ]
+   ],
+   "read": "@up",
+   "expect": 2400,
+   "total": 29500
+  },
+  {
+   "no": "25",
+   "id": "ferry-rt",
+   "acts": [
+    [
+     "tick",
+     "ferry"
+    ],
+    [
+     "sel",
+     "ferry",
+     "ferry-rt"
+    ],
+    [
+     "ctr",
+     "ferry",
+     "p",
+     2
+    ]
+   ],
+   "read": "ferry",
+   "expect": 2640,
+   "total": 2640
+  },
+  {
+   "no": "26",
+   "id": "ferry-ow",
+   "acts": [
+    [
+     "tick",
+     "ferry"
+    ],
+    [
+     "sel",
+     "ferry",
+     "ferry-ow"
+    ],
+    [
+     "ctr",
+     "ferry",
+     "p",
+     1
+    ]
+   ],
+   "read": "ferry",
+   "expect": 670,
+   "total": 670
+  },
+  {
+   "no": "27",
+   "id": "fun-boat",
+   "acts": [
+    [
+     "sel",
+     "fun",
+     "fun-boat"
+    ],
+    [
+     "ctr",
+     "fun",
+     "t",
+     2
+    ],
+    [
+     "ctr",
+     "fun",
+     "p",
+     3
+    ]
+   ],
+   "read": "fun",
+   "expect": 21000,
+   "total": 21000
+  },
+  {
+   "no": "17",
+   "id": "組合",
+   "acts": [
+    [
+     "sel",
+     "fun",
+     "fun-shore"
+    ],
+    [
+     "ctr",
+     "fun",
+     "t",
+     1
+    ],
+    [
+     "ctr",
+     "fun",
+     "p",
+     2
+    ],
+    [
+     "sel",
+     "course",
+     "ow"
+    ],
+    [
+     "ctr",
+     "course",
+     "p",
+     1
+    ]
+   ],
+   "read": "@total",
+   "expect": 17900,
+   "total": 17900
+  },
+  {
+   "no": "18",
+   "id": "組合",
+   "acts": [
+    [
+     "sel",
+     "fun",
+     "fun-boat"
+    ],
+    [
+     "ctr",
+     "fun",
+     "t",
+     1
+    ],
+    [
+     "ctr",
+     "fun",
+     "p",
+     3
+    ],
+    [
+     "tick",
+     "room-quad"
+    ],
+    [
+     "ctr",
+     "room-quad",
+     "r",
+     1
+    ],
+    [
+     "ctr",
+     "room-quad",
+     "d",
+     2
+    ],
+    [
+     "tick",
+     "scooter"
+    ],
+    [
+     "ctr",
+     "scooter",
+     "q",
+     2
+    ],
+    [
+     "ctr",
+     "scooter",
+     "d",
+     2
+    ]
+   ],
+   "read": "@total",
+   "expect": 19700,
+   "total": 19700
+  }
+ ],
+ "d": [
+  {
+   "name": "dsd 1 份",
+   "acts": [
+    [
+     "ctr",
+     "dsd",
+     "p",
+     1
+    ]
+   ],
+   "read": "dsd",
+   "expect": 2500,
+   "total": 2500
+  },
+  {
+   "name": "dsd 2 份",
+   "acts": [
+    [
+     "ctr",
+     "dsd",
+     "p",
+     2
+    ]
+   ],
+   "read": "dsd",
+   "expect": 5000,
+   "total": 5000
+  },
+  {
+   "name": "fun-shore 1 人 1 支",
+   "acts": [
+    [
+     "sel",
+     "fun",
+     "fun-shore"
+    ],
+    [
+     "ctr",
+     "fun",
+     "t",
+     1
+    ],
+    [
+     "ctr",
+     "fun",
+     "p",
+     1
+    ]
+   ],
+   "read": "fun",
+   "expect": 1950,
+   "total": 1950
+  },
+  {
+   "name": "fun-shore 2 人 1 支",
+   "acts": [
+    [
+     "sel",
+     "fun",
+     "fun-shore"
+    ],
+    [
+     "ctr",
+     "fun",
+     "t",
+     1
+    ],
+    [
+     "ctr",
+     "fun",
+     "p",
+     2
+    ]
+   ],
+   "read": "fun",
+   "expect": 2900,
+   "total": 2900
+  },
+  {
+   "name": "fun-shore 3 人 1 支",
+   "acts": [
+    [
+     "sel",
+     "fun",
+     "fun-shore"
+    ],
+    [
+     "ctr",
+     "fun",
+     "t",
+     1
+    ],
+    [
+     "ctr",
+     "fun",
+     "p",
+     3
+    ]
+   ],
+   "read": "fun",
+   "expect": 3750,
+   "total": 3750
+  },
+  {
+   "name": "fun-shore 4 人 1 支",
+   "acts": [
+    [
+     "sel",
+     "fun",
+     "fun-shore"
+    ],
+    [
+     "ctr",
+     "fun",
+     "t",
+     1
+    ],
+    [
+     "ctr",
+     "fun",
+     "p",
+     4
+    ]
+   ],
+   "read": "fun",
+   "expect": 4600,
+   "total": 4600
+  },
+  {
+   "name": "fun-shore 5 人 1 支",
+   "acts": [
+    [
+     "sel",
+     "fun",
+     "fun-shore"
+    ],
+    [
+     "ctr",
+     "fun",
+     "t",
+     1
+    ],
+    [
+     "ctr",
+     "fun",
+     "p",
+     5
+    ]
+   ],
+   "read": "fun",
+   "expect": 5750,
+   "total": 5750
+  },
+  {
+   "name": "fun-shore 2 人 2 支",
+   "acts": [
+    [
+     "sel",
+     "fun",
+     "fun-shore"
+    ],
+    [
+     "ctr",
+     "fun",
+     "t",
+     2
+    ],
+    [
+     "ctr",
+     "fun",
+     "p",
+     2
+    ]
+   ],
+   "read": "fun",
+   "expect": 5800,
+   "total": 5800
+  },
+  {
+   "name": "fun-boat 1 人 1 趟",
+   "acts": [
+    [
+     "sel",
+     "fun",
+     "fun-boat"
+    ],
+    [
+     "ctr",
+     "fun",
+     "t",
+     1
+    ],
+    [
+     "ctr",
+     "fun",
+     "p",
+     1
+    ]
+   ],
+   "read": "fun",
+   "expect": 4900,
+   "total": 4900
+  },
+  {
+   "name": "fun-boat 2 人 1 趟",
+   "acts": [
+    [
+     "sel",
+     "fun",
+     "fun-boat"
+    ],
+    [
+     "ctr",
+     "fun",
+     "t",
+     1
+    ],
+    [
+     "ctr",
+     "fun",
+     "p",
+     2
+    ]
+   ],
+   "read": "fun",
+   "expect": 7800,
+   "total": 7800
+  },
+  {
+   "name": "fun-boat 3 人 1 趟",
+   "acts": [
+    [
+     "sel",
+     "fun",
+     "fun-boat"
+    ],
+    [
+     "ctr",
+     "fun",
+     "t",
+     1
+    ],
+    [
+     "ctr",
+     "fun",
+     "p",
+     3
+    ]
+   ],
+   "read": "fun",
+   "expect": 10500,
+   "total": 10500
+  },
+  {
+   "name": "fun-boat 4 人 1 趟",
+   "acts": [
+    [
+     "sel",
+     "fun",
+     "fun-boat"
+    ],
+    [
+     "ctr",
+     "fun",
+     "t",
+     1
+    ],
+    [
+     "ctr",
+     "fun",
+     "p",
+     4
+    ]
+   ],
+   "read": "fun",
+   "expect": 13200,
+   "total": 13200
+  },
+  {
+   "name": "fun-boat 5 人 1 趟",
+   "acts": [
+    [
+     "sel",
+     "fun",
+     "fun-boat"
+    ],
+    [
+     "ctr",
+     "fun",
+     "t",
+     1
+    ],
+    [
+     "ctr",
+     "fun",
+     "p",
+     5
+    ]
+   ],
+   "read": "fun",
+   "expect": 16500,
+   "total": 16500
+  },
+  {
+   "name": "fun-boat 2 人 2 趟",
+   "acts": [
+    [
+     "sel",
+     "fun",
+     "fun-boat"
+    ],
+    [
+     "ctr",
+     "fun",
+     "t",
+     2
+    ],
+    [
+     "ctr",
+     "fun",
+     "p",
+     2
+    ]
+   ],
+   "read": "fun",
+   "expect": 15600,
+   "total": 15600
+  },
+  {
+   "name": "ow 1 份",
+   "acts": [
+    [
+     "sel",
+     "course",
+     "ow"
+    ],
+    [
+     "ctr",
+     "course",
+     "p",
+     1
+    ]
+   ],
+   "read": "course",
+   "expect": 15000,
+   "total": 15000
+  },
+  {
+   "name": "ow 2 份",
+   "acts": [
+    [
+     "sel",
+     "course",
+     "ow"
+    ],
+    [
+     "ctr",
+     "course",
+     "p",
+     2
+    ]
+   ],
+   "read": "course",
+   "expect": 30000,
+   "total": 30000
+  },
+  {
+   "name": "aow 1 份",
+   "acts": [
+    [
+     "sel",
+     "course",
+     "aow"
+    ],
+    [
+     "ctr",
+     "course",
+     "p",
+     1
+    ]
+   ],
+   "read": "course",
+   "expect": 15000,
+   "total": 15000
+  },
+  {
+   "name": "aow 2 份",
+   "acts": [
+    [
+     "sel",
+     "course",
+     "aow"
+    ],
+    [
+     "ctr",
+     "course",
+     "p",
+     2
+    ]
+   ],
+   "read": "course",
+   "expect": 30000,
+   "total": 30000
+  },
+  {
+   "name": "ow-aow 1 份",
+   "acts": [
+    [
+     "sel",
+     "course",
+     "ow-aow"
+    ],
+    [
+     "ctr",
+     "course",
+     "p",
+     1
+    ]
+   ],
+   "read": "course",
+   "expect": 30000,
+   "total": 30000
+  },
+  {
+   "name": "ow-aow 2 份",
+   "acts": [
+    [
+     "sel",
+     "course",
+     "ow-aow"
+    ],
+    [
+     "ctr",
+     "course",
+     "p",
+     2
+    ]
+   ],
+   "read": "course",
+   "expect": 60000,
+   "total": 60000
+  },
+  {
+   "name": "reactive 1 份",
+   "acts": [
+    [
+     "sel",
+     "course",
+     "reactive"
+    ],
+    [
+     "ctr",
+     "course",
+     "p",
+     1
+    ]
+   ],
+   "read": "course",
+   "expect": 5000,
+   "total": 5000
+  },
+  {
+   "name": "reactive 2 份",
+   "acts": [
+    [
+     "sel",
+     "course",
+     "reactive"
+    ],
+    [
+     "ctr",
+     "course",
+     "p",
+     2
+    ]
+   ],
+   "read": "course",
+   "expect": 10000,
+   "total": 10000
+  },
+  {
+   "name": "ean 1 份",
+   "acts": [
+    [
+     "sel",
+     "course",
+     "ean"
+    ],
+    [
+     "ctr",
+     "course",
+     "p",
+     1
+    ]
+   ],
+   "read": "course",
+   "expect": 5000,
+   "total": 5000
+  },
+  {
+   "name": "ean 2 份",
+   "acts": [
+    [
+     "sel",
+     "course",
+     "ean"
+    ],
+    [
+     "ctr",
+     "course",
+     "p",
+     2
+    ]
+   ],
+   "read": "course",
+   "expect": 10000,
+   "total": 10000
+  },
+  {
+   "name": "efr 1 份",
+   "acts": [
+    [
+     "sel",
+     "course",
+     "efr"
+    ],
+    [
+     "ctr",
+     "course",
+     "p",
+     1
+    ]
+   ],
+   "read": "course",
+   "expect": 4500,
+   "total": 4500
+  },
+  {
+   "name": "efr 2 份",
+   "acts": [
+    [
+     "sel",
+     "course",
+     "efr"
+    ],
+    [
+     "ctr",
+     "course",
+     "p",
+     2
+    ]
+   ],
+   "read": "course",
+   "expect": 9000,
+   "total": 9000
+  },
+  {
+   "name": "rescue 1 份",
+   "acts": [
+    [
+     "sel",
+     "course",
+     "rescue"
+    ],
+    [
+     "ctr",
+     "course",
+     "p",
+     1
+    ]
+   ],
+   "read": "course",
+   "expect": 8000,
+   "total": 8000
+  },
+  {
+   "name": "rescue 2 份",
+   "acts": [
+    [
+     "sel",
+     "course",
+     "rescue"
+    ],
+    [
+     "ctr",
+     "course",
+     "p",
+     2
+    ]
+   ],
+   "read": "course",
+   "expect": 16000,
+   "total": 16000
+  },
+  {
+   "name": "dm 1 份",
+   "acts": [
+    [
+     "sel",
+     "course",
+     "dm"
+    ],
+    [
+     "ctr",
+     "course",
+     "p",
+     1
+    ]
+   ],
+   "read": "course",
+   "expect": 38000,
+   "total": 38000
+  },
+  {
+   "name": "dm 2 份",
+   "acts": [
+    [
+     "sel",
+     "course",
+     "dm"
+    ],
+    [
+     "ctr",
+     "course",
+     "p",
+     2
+    ]
+   ],
+   "read": "course",
+   "expect": 76000,
+   "total": 76000
+  },
+  {
+   "name": "pkg-snorkel 1 人（雙人 0 組＋單人 1 位）",
+   "acts": [
+    [
+     "sel",
+     "pkg",
+     "pkg-snorkel"
+    ],
+    [
+     "ctr",
+     "pkg",
+     "pair",
+     0
+    ],
+    [
+     "ctr",
+     "pkg",
+     "single",
+     1
+    ]
+   ],
+   "read": "pkg",
+   "expect": 4100,
+   "total": 4100
+  },
+  {
+   "name": "pkg-snorkel 2 人（雙人 1 組＋單人 0 位）",
+   "acts": [
+    [
+     "sel",
+     "pkg",
+     "pkg-snorkel"
+    ],
+    [
+     "ctr",
+     "pkg",
+     "pair",
+     1
+    ],
+    [
+     "ctr",
+     "pkg",
+     "single",
+     0
+    ]
+   ],
+   "read": "pkg",
+   "expect": 7200,
+   "total": 7200
+  },
+  {
+   "name": "pkg-snorkel 3 人（雙人 1 組＋單人 1 位）",
+   "acts": [
+    [
+     "sel",
+     "pkg",
+     "pkg-snorkel"
+    ],
+    [
+     "ctr",
+     "pkg",
+     "pair",
+     1
+    ],
+    [
+     "ctr",
+     "pkg",
+     "single",
+     1
+    ]
+   ],
+   "read": "pkg",
+   "expect": 11300,
+   "total": 11300
+  },
+  {
+   "name": "pkg-snorkel 4 人（雙人 2 組＋單人 0 位）",
+   "acts": [
+    [
+     "sel",
+     "pkg",
+     "pkg-snorkel"
+    ],
+    [
+     "ctr",
+     "pkg",
+     "pair",
+     2
+    ],
+    [
+     "ctr",
+     "pkg",
+     "single",
+     0
+    ]
+   ],
+   "read": "pkg",
+   "expect": 14400,
+   "total": 14400
+  },
+  {
+   "name": "pkg-dsd 1 人（雙人 0 組＋單人 1 位）",
+   "acts": [
+    [
+     "sel",
+     "pkg",
+     "pkg-dsd"
+    ],
+    [
+     "ctr",
+     "pkg",
+     "pair",
+     0
+    ],
+    [
+     "ctr",
+     "pkg",
+     "single",
+     1
+    ]
+   ],
+   "read": "pkg",
+   "expect": 6200,
+   "total": 6200
+  },
+  {
+   "name": "pkg-dsd 2 人（雙人 1 組＋單人 0 位）",
+   "acts": [
+    [
+     "sel",
+     "pkg",
+     "pkg-dsd"
+    ],
+    [
+     "ctr",
+     "pkg",
+     "pair",
+     1
+    ],
+    [
+     "ctr",
+     "pkg",
+     "single",
+     0
+    ]
+   ],
+   "read": "pkg",
+   "expect": 11400,
+   "total": 11400
+  },
+  {
+   "name": "pkg-dsd 3 人（雙人 1 組＋單人 1 位）",
+   "acts": [
+    [
+     "sel",
+     "pkg",
+     "pkg-dsd"
+    ],
+    [
+     "ctr",
+     "pkg",
+     "pair",
+     1
+    ],
+    [
+     "ctr",
+     "pkg",
+     "single",
+     1
+    ]
+   ],
+   "read": "pkg",
+   "expect": 17600,
+   "total": 17600
+  },
+  {
+   "name": "pkg-dsd 4 人（雙人 2 組＋單人 0 位）",
+   "acts": [
+    [
+     "sel",
+     "pkg",
+     "pkg-dsd"
+    ],
+    [
+     "ctr",
+     "pkg",
+     "pair",
+     2
+    ],
+    [
+     "ctr",
+     "pkg",
+     "single",
+     0
+    ]
+   ],
+   "read": "pkg",
+   "expect": 22800,
+   "total": 22800
+  },
+  {
+   "name": "pkg-fun 1 人（雙人 0 組＋單人 1 位）",
+   "acts": [
+    [
+     "sel",
+     "pkg",
+     "pkg-fun"
+    ],
+    [
+     "ctr",
+     "pkg",
+     "pair",
+     0
+    ],
+    [
+     "ctr",
+     "pkg",
+     "single",
+     1
+    ]
+   ],
+   "read": "pkg",
+   "expect": 9700,
+   "total": 9700
+  },
+  {
+   "name": "pkg-fun 2 人（雙人 1 組＋單人 0 位）",
+   "acts": [
+    [
+     "sel",
+     "pkg",
+     "pkg-fun"
+    ],
+    [
+     "ctr",
+     "pkg",
+     "pair",
+     1
+    ],
+    [
+     "ctr",
+     "pkg",
+     "single",
+     0
+    ]
+   ],
+   "read": "pkg",
+   "expect": 17400,
+   "total": 17400
+  },
+  {
+   "name": "pkg-fun 3 人（雙人 1 組＋單人 1 位）",
+   "acts": [
+    [
+     "sel",
+     "pkg",
+     "pkg-fun"
+    ],
+    [
+     "ctr",
+     "pkg",
+     "pair",
+     1
+    ],
+    [
+     "ctr",
+     "pkg",
+     "single",
+     1
+    ]
+   ],
+   "read": "pkg",
+   "expect": 27100,
+   "total": 27100
+  },
+  {
+   "name": "pkg-fun 4 人（雙人 2 組＋單人 0 位）",
+   "acts": [
+    [
+     "sel",
+     "pkg",
+     "pkg-fun"
+    ],
+    [
+     "ctr",
+     "pkg",
+     "pair",
+     2
+    ],
+    [
+     "ctr",
+     "pkg",
+     "single",
+     0
+    ]
+   ],
+   "read": "pkg",
+   "expect": 34800,
+   "total": 34800
+  },
+  {
+   "name": "up-snorkel 1 人（套裝 1 人＋升等）",
+   "acts": [
+    [
+     "sel",
+     "pkg",
+     "pkg-snorkel"
+    ],
+    [
+     "ctr",
+     "pkg",
+     "pair",
+     0
+    ],
+    [
+     "ctr",
+     "pkg",
+     "single",
+     1
+    ],
+    [
+     "up",
+     true
+    ]
+   ],
+   "read": "@up",
+   "expect": 800,
+   "total": 4900
+  },
+  {
+   "name": "up-snorkel 2 人（套裝 2 人＋升等）",
+   "acts": [
+    [
+     "sel",
+     "pkg",
+     "pkg-snorkel"
+    ],
+    [
+     "ctr",
+     "pkg",
+     "pair",
+     1
+    ],
+    [
+     "ctr",
+     "pkg",
+     "single",
+     0
+    ],
+    [
+     "up",
+     true
+    ]
+   ],
+   "read": "@up",
+   "expect": 1600,
+   "total": 8800
+  },
+  {
+   "name": "up-dsd 1 人（套裝 1 人＋升等）",
+   "acts": [
+    [
+     "sel",
+     "pkg",
+     "pkg-dsd"
+    ],
+    [
+     "ctr",
+     "pkg",
+     "pair",
+     0
+    ],
+    [
+     "ctr",
+     "pkg",
+     "single",
+     1
+    ],
+    [
+     "up",
+     true
+    ]
+   ],
+   "read": "@up",
+   "expect": 500,
+   "total": 6700
+  },
+  {
+   "name": "up-dsd 2 人（套裝 2 人＋升等）",
+   "acts": [
+    [
+     "sel",
+     "pkg",
+     "pkg-dsd"
+    ],
+    [
+     "ctr",
+     "pkg",
+     "pair",
+     1
+    ],
+    [
+     "ctr",
+     "pkg",
+     "single",
+     0
+    ],
+    [
+     "up",
+     true
+    ]
+   ],
+   "read": "@up",
+   "expect": 1000,
+   "total": 12400
+  },
+  {
+   "name": "up-fun 1 人（套裝 1 人＋升等）",
+   "acts": [
+    [
+     "sel",
+     "pkg",
+     "pkg-fun"
+    ],
+    [
+     "ctr",
+     "pkg",
+     "pair",
+     0
+    ],
+    [
+     "ctr",
+     "pkg",
+     "single",
+     1
+    ],
+    [
+     "up",
+     true
+    ]
+   ],
+   "read": "@up",
+   "expect": 800,
+   "total": 10500
+  },
+  {
+   "name": "up-fun 2 人（套裝 2 人＋升等）",
+   "acts": [
+    [
+     "sel",
+     "pkg",
+     "pkg-fun"
+    ],
+    [
+     "ctr",
+     "pkg",
+     "pair",
+     1
+    ],
+    [
+     "ctr",
+     "pkg",
+     "single",
+     0
+    ],
+    [
+     "up",
+     true
+    ]
+   ],
+   "read": "@up",
+   "expect": 1600,
+   "total": 19000
+  },
+  {
+   "name": "tidal 1 份",
+   "acts": [
+    [
+     "tick",
+     "tidal"
+    ],
+    [
+     "ctr",
+     "tidal",
+     "p",
+     1
+    ]
+   ],
+   "read": "tidal",
+   "expect": 350,
+   "total": 350
+  },
+  {
+   "name": "tidal 2 份",
+   "acts": [
+    [
+     "tick",
+     "tidal"
+    ],
+    [
+     "ctr",
+     "tidal",
+     "p",
+     2
+    ]
+   ],
+   "read": "tidal",
+   "expect": 700,
+   "total": 700
+  },
+  {
+   "name": "snorkel 1 份",
+   "acts": [
+    [
+     "tick",
+     "snorkel"
+    ],
+    [
+     "ctr",
+     "snorkel",
+     "p",
+     1
+    ]
+   ],
+   "read": "snorkel",
+   "expect": 400,
+   "total": 400
+  },
+  {
+   "name": "snorkel 2 份",
+   "acts": [
+    [
+     "tick",
+     "snorkel"
+    ],
+    [
+     "ctr",
+     "snorkel",
+     "p",
+     2
+    ]
+   ],
+   "read": "snorkel",
+   "expect": 800,
+   "total": 800
+  },
+  {
+   "name": "glassboat 1 份",
+   "acts": [
+    [
+     "tick",
+     "glassboat"
+    ],
+    [
+     "ctr",
+     "glassboat",
+     "p",
+     1
+    ]
+   ],
+   "read": "glassboat",
+   "expect": 400,
+   "total": 400
+  },
+  {
+   "name": "glassboat 2 份",
+   "acts": [
+    [
+     "tick",
+     "glassboat"
+    ],
+    [
+     "ctr",
+     "glassboat",
+     "p",
+     2
+    ]
+   ],
+   "read": "glassboat",
+   "expect": 800,
+   "total": 800
+  },
+  {
+   "name": "fishing 1 份",
+   "acts": [
+    [
+     "tick",
+     "fishing"
+    ],
+    [
+     "ctr",
+     "fishing",
+     "p",
+     1
+    ]
+   ],
+   "read": "fishing",
+   "expect": 800,
+   "total": 800
+  },
+  {
+   "name": "fishing 2 份",
+   "acts": [
+    [
+     "tick",
+     "fishing"
+    ],
+    [
+     "ctr",
+     "fishing",
+     "p",
+     2
+    ]
+   ],
+   "read": "fishing",
+   "expect": 1600,
+   "total": 1600
+  },
+  {
+   "name": "bluecave 1 份",
+   "acts": [
+    [
+     "tick",
+     "bluecave"
+    ],
+    [
+     "ctr",
+     "bluecave",
+     "p",
+     1
+    ]
+   ],
+   "read": "bluecave",
+   "expect": 500,
+   "total": 500
+  },
+  {
+   "name": "bluecave 2 份",
+   "acts": [
+    [
+     "tick",
+     "bluecave"
+    ],
+    [
+     "ctr",
+     "bluecave",
+     "p",
+     2
+    ]
+   ],
+   "read": "bluecave",
+   "expect": 1000,
+   "total": 1000
+  },
+  {
+   "name": "sup1 1 份",
+   "acts": [
+    [
+     "tick",
+     "sup1"
+    ],
+    [
+     "ctr",
+     "sup1",
+     "p",
+     1
+    ]
+   ],
+   "read": "sup1",
+   "expect": 1800,
+   "total": 1800
+  },
+  {
+   "name": "sup1 2 份",
+   "acts": [
+    [
+     "tick",
+     "sup1"
+    ],
+    [
+     "ctr",
+     "sup1",
+     "p",
+     2
+    ]
+   ],
+   "read": "sup1",
+   "expect": 3600,
+   "total": 3600
+  },
+  {
+   "name": "sup2 1 份",
+   "acts": [
+    [
+     "tick",
+     "sup2"
+    ],
+    [
+     "ctr",
+     "sup2",
+     "p",
+     1
+    ]
+   ],
+   "read": "sup2",
+   "expect": 1300,
+   "total": 1300
+  },
+  {
+   "name": "sup2 2 份",
+   "acts": [
+    [
+     "tick",
+     "sup2"
+    ],
+    [
+     "ctr",
+     "sup2",
+     "p",
+     2
+    ]
+   ],
+   "read": "sup2",
+   "expect": 2600,
+   "total": 2600
+  },
+  {
+   "name": "room-double 1 份",
+   "acts": [
+    [
+     "tick",
+     "room-double"
+    ],
+    [
+     "ctr",
+     "room-double",
+     "r",
+     1
+    ],
+    [
+     "ctr",
+     "room-double",
+     "d",
+     1
+    ]
+   ],
+   "read": "room-double",
+   "expect": 2400,
+   "total": 2400
+  },
+  {
+   "name": "room-double 2 份",
+   "acts": [
+    [
+     "tick",
+     "room-double"
+    ],
+    [
+     "ctr",
+     "room-double",
+     "r",
+     2
+    ],
+    [
+     "ctr",
+     "room-double",
+     "d",
+     1
+    ]
+   ],
+   "read": "room-double",
+   "expect": 4800,
+   "total": 4800
+  },
+  {
+   "name": "room-quad 1 份",
+   "acts": [
+    [
+     "tick",
+     "room-quad"
+    ],
+    [
+     "ctr",
+     "room-quad",
+     "r",
+     1
+    ],
+    [
+     "ctr",
+     "room-quad",
+     "d",
+     1
+    ]
+   ],
+   "read": "room-quad",
+   "expect": 3600,
+   "total": 3600
+  },
+  {
+   "name": "room-quad 2 份",
+   "acts": [
+    [
+     "tick",
+     "room-quad"
+    ],
+    [
+     "ctr",
+     "room-quad",
+     "r",
+     2
+    ],
+    [
+     "ctr",
+     "room-quad",
+     "d",
+     1
+    ]
+   ],
+   "read": "room-quad",
+   "expect": 7200,
+   "total": 7200
+  },
+  {
+   "name": "room-quad-extra 加 1 位 × 1 晚（四人房 1 間）",
+   "acts": [
+    [
+     "tick",
+     "room-quad"
+    ],
+    [
+     "ctr",
+     "room-quad",
+     "r",
+     1
+    ],
+    [
+     "ctr",
+     "room-quad",
+     "d",
+     1
+    ],
+    [
+     "ctr",
+     "room-quad",
+     "x",
+     1,
+     "extra"
+    ]
+   ],
+   "read": "@extra",
+   "expect": 400,
+   "total": 4000
+  },
+  {
+   "name": "room-quad-extra 加 2 位 × 1 晚（四人房 1 間）",
+   "acts": [
+    [
+     "tick",
+     "room-quad"
+    ],
+    [
+     "ctr",
+     "room-quad",
+     "r",
+     1
+    ],
+    [
+     "ctr",
+     "room-quad",
+     "d",
+     1
+    ],
+    [
+     "ctr",
+     "room-quad",
+     "x",
+     2,
+     "extra"
+    ]
+   ],
+   "read": "@extra",
+   "expect": 800,
+   "total": 4400
+  },
+  {
+   "name": "room-quad-extra 加 2 位 × 2 晚（四人房 1 間）",
+   "acts": [
+    [
+     "tick",
+     "room-quad"
+    ],
+    [
+     "ctr",
+     "room-quad",
+     "r",
+     1
+    ],
+    [
+     "ctr",
+     "room-quad",
+     "d",
+     2
+    ],
+    [
+     "ctr",
+     "room-quad",
+     "x",
+     2,
+     "extra"
+    ]
+   ],
+   "read": "@extra",
+   "expect": 1600,
+   "total": 8800
+  },
+  {
+   "name": "room-quad-extra 1 間最多加 2 位（填 3 會變 2）",
+   "acts": [
+    [
+     "tick",
+     "room-quad"
+    ],
+    [
+     "ctr",
+     "room-quad",
+     "r",
+     1
+    ],
+    [
+     "ctr",
+     "room-quad",
+     "x",
+     3,
+     "extra"
+    ]
+   ],
+   "read": "@extra",
+   "expect": 800,
+   "total": 4400
+  },
+  {
+   "name": "bed-backpacker 1 份",
+   "acts": [
+    [
+     "tick",
+     "bed-backpacker"
+    ],
+    [
+     "ctr",
+     "bed-backpacker",
+     "r",
+     1
+    ],
+    [
+     "ctr",
+     "bed-backpacker",
+     "d",
+     1
+    ]
+   ],
+   "read": "bed-backpacker",
+   "expect": 800,
+   "total": 800
+  },
+  {
+   "name": "bed-backpacker 2 份",
+   "acts": [
+    [
+     "tick",
+     "bed-backpacker"
+    ],
+    [
+     "ctr",
+     "bed-backpacker",
+     "r",
+     2
+    ],
+    [
+     "ctr",
+     "bed-backpacker",
+     "d",
+     1
+    ]
+   ],
+   "read": "bed-backpacker",
+   "expect": 1600,
+   "total": 1600
+  },
+  {
+   "name": "scooter 1 份",
+   "acts": [
+    [
+     "tick",
+     "scooter"
+    ],
+    [
+     "ctr",
+     "scooter",
+     "q",
+     1
+    ],
+    [
+     "ctr",
+     "scooter",
+     "d",
+     1
+    ]
+   ],
+   "read": "scooter",
+   "expect": 500,
+   "total": 500
+  },
+  {
+   "name": "scooter 2 份",
+   "acts": [
+    [
+     "tick",
+     "scooter"
+    ],
+    [
+     "ctr",
+     "scooter",
+     "q",
+     2
+    ],
+    [
+     "ctr",
+     "scooter",
+     "d",
+     1
+    ]
+   ],
+   "read": "scooter",
+   "expect": 1000,
+   "total": 1000
+  },
+  {
+   "name": "ebike 1 份",
+   "acts": [
+    [
+     "tick",
+     "ebike"
+    ],
+    [
+     "ctr",
+     "ebike",
+     "q",
+     1
+    ],
+    [
+     "ctr",
+     "ebike",
+     "d",
+     1
+    ]
+   ],
+   "read": "ebike",
+   "expect": 600,
+   "total": 600
+  },
+  {
+   "name": "ebike 2 份",
+   "acts": [
+    [
+     "tick",
+     "ebike"
+    ],
+    [
+     "ctr",
+     "ebike",
+     "q",
+     2
+    ],
+    [
+     "ctr",
+     "ebike",
+     "d",
+     1
+    ]
+   ],
+   "read": "ebike",
+   "expect": 1200,
+   "total": 1200
+  },
+  {
+   "name": "car5 1 份",
+   "acts": [
+    [
+     "tick",
+     "car5"
+    ],
+    [
+     "ctr",
+     "car5",
+     "q",
+     1
+    ],
+    [
+     "ctr",
+     "car5",
+     "d",
+     1
+    ]
+   ],
+   "read": "car5",
+   "expect": 2300,
+   "total": 2300
+  },
+  {
+   "name": "car5 2 份",
+   "acts": [
+    [
+     "tick",
+     "car5"
+    ],
+    [
+     "ctr",
+     "car5",
+     "q",
+     2
+    ],
+    [
+     "ctr",
+     "car5",
+     "d",
+     1
+    ]
+   ],
+   "read": "car5",
+   "expect": 4600,
+   "total": 4600
+  },
+  {
+   "name": "car8 1 份",
+   "acts": [
+    [
+     "tick",
+     "car8"
+    ],
+    [
+     "ctr",
+     "car8",
+     "q",
+     1
+    ],
+    [
+     "ctr",
+     "car8",
+     "d",
+     1
+    ]
+   ],
+   "read": "car8",
+   "expect": 3500,
+   "total": 3500
+  },
+  {
+   "name": "car8 2 份",
+   "acts": [
+    [
+     "tick",
+     "car8"
+    ],
+    [
+     "ctr",
+     "car8",
+     "q",
+     2
+    ],
+    [
+     "ctr",
+     "car8",
+     "d",
+     1
+    ]
+   ],
+   "read": "car8",
+   "expect": 7000,
+   "total": 7000
+  },
+  {
+   "name": "ferry-rt 1 份",
+   "acts": [
+    [
+     "tick",
+     "ferry"
+    ],
+    [
+     "sel",
+     "ferry",
+     "ferry-rt"
+    ],
+    [
+     "ctr",
+     "ferry",
+     "p",
+     1
+    ]
+   ],
+   "read": "ferry",
+   "expect": 1320,
+   "total": 1320
+  },
+  {
+   "name": "ferry-rt 2 份",
+   "acts": [
+    [
+     "tick",
+     "ferry"
+    ],
+    [
+     "sel",
+     "ferry",
+     "ferry-rt"
+    ],
+    [
+     "ctr",
+     "ferry",
+     "p",
+     2
+    ]
+   ],
+   "read": "ferry",
+   "expect": 2640,
+   "total": 2640
+  },
+  {
+   "name": "ferry-ow 1 份",
+   "acts": [
+    [
+     "tick",
+     "ferry"
+    ],
+    [
+     "sel",
+     "ferry",
+     "ferry-ow"
+    ],
+    [
+     "ctr",
+     "ferry",
+     "p",
+     1
+    ]
+   ],
+   "read": "ferry",
+   "expect": 670,
+   "total": 670
+  },
+  {
+   "name": "ferry-ow 2 份",
+   "acts": [
+    [
+     "tick",
+     "ferry"
+    ],
+    [
+     "sel",
+     "ferry",
+     "ferry-ow"
+    ],
+    [
+     "ctr",
+     "ferry",
+     "p",
+     2
+    ]
+   ],
+   "read": "ferry",
+   "expect": 1340,
+   "total": 1340
+  },
+  {
+   "name": "gear-light 1 份",
+   "acts": [
+    [
+     "tick",
+     "gear-light"
+    ],
+    [
+     "ctr",
+     "gear-light",
+     "q",
+     1
+    ],
+    [
+     "ctr",
+     "gear-light",
+     "d",
+     1
+    ]
+   ],
+   "read": "gear-light",
+   "expect": 200,
+   "total": 200
+  },
+  {
+   "name": "gear-light 2 份",
+   "acts": [
+    [
+     "tick",
+     "gear-light"
+    ],
+    [
+     "ctr",
+     "gear-light",
+     "q",
+     2
+    ],
+    [
+     "ctr",
+     "gear-light",
+     "d",
+     1
+    ]
+   ],
+   "read": "gear-light",
+   "expect": 400,
+   "total": 400
+  },
+  {
+   "name": "gear-heavy-half 1 份",
+   "acts": [
+    [
+     "tick",
+     "gear-heavy"
+    ],
+    [
+     "sel",
+     "gear-heavy",
+     "gear-heavy-half"
+    ],
+    [
+     "ctr",
+     "gear-heavy",
+     "q",
+     1
+    ],
+    [
+     "ctr",
+     "gear-heavy",
+     "d",
+     1
+    ]
+   ],
+   "read": "gear-heavy",
+   "expect": 500,
+   "total": 500
+  },
+  {
+   "name": "gear-heavy-half 2 份",
+   "acts": [
+    [
+     "tick",
+     "gear-heavy"
+    ],
+    [
+     "sel",
+     "gear-heavy",
+     "gear-heavy-half"
+    ],
+    [
+     "ctr",
+     "gear-heavy",
+     "q",
+     2
+    ],
+    [
+     "ctr",
+     "gear-heavy",
+     "d",
+     1
+    ]
+   ],
+   "read": "gear-heavy",
+   "expect": 1000,
+   "total": 1000
+  },
+  {
+   "name": "gear-heavy-full 1 份",
+   "acts": [
+    [
+     "tick",
+     "gear-heavy"
+    ],
+    [
+     "sel",
+     "gear-heavy",
+     "gear-heavy-full"
+    ],
+    [
+     "ctr",
+     "gear-heavy",
+     "q",
+     1
+    ],
+    [
+     "ctr",
+     "gear-heavy",
+     "d",
+     1
+    ]
+   ],
+   "read": "gear-heavy",
+   "expect": 900,
+   "total": 900
+  },
+  {
+   "name": "gear-heavy-full 2 份",
+   "acts": [
+    [
+     "tick",
+     "gear-heavy"
+    ],
+    [
+     "sel",
+     "gear-heavy",
+     "gear-heavy-full"
+    ],
+    [
+     "ctr",
+     "gear-heavy",
+     "q",
+     2
+    ],
+    [
+     "ctr",
+     "gear-heavy",
+     "d",
+     1
+    ]
+   ],
+   "read": "gear-heavy",
+   "expect": 1800,
+   "total": 1800
+  },
+  {
+   "name": "gear-full-half 1 份",
+   "acts": [
+    [
+     "tick",
+     "gear-full"
+    ],
+    [
+     "sel",
+     "gear-full",
+     "gear-full-half"
+    ],
+    [
+     "ctr",
+     "gear-full",
+     "q",
+     1
+    ],
+    [
+     "ctr",
+     "gear-full",
+     "d",
+     1
+    ]
+   ],
+   "read": "gear-full",
+   "expect": 600,
+   "total": 600
+  },
+  {
+   "name": "gear-full-half 2 份",
+   "acts": [
+    [
+     "tick",
+     "gear-full"
+    ],
+    [
+     "sel",
+     "gear-full",
+     "gear-full-half"
+    ],
+    [
+     "ctr",
+     "gear-full",
+     "q",
+     2
+    ],
+    [
+     "ctr",
+     "gear-full",
+     "d",
+     1
+    ]
+   ],
+   "read": "gear-full",
+   "expect": 1200,
+   "total": 1200
+  },
+  {
+   "name": "gear-full-full 1 份",
+   "acts": [
+    [
+     "tick",
+     "gear-full"
+    ],
+    [
+     "sel",
+     "gear-full",
+     "gear-full-full"
+    ],
+    [
+     "ctr",
+     "gear-full",
+     "q",
+     1
+    ],
+    [
+     "ctr",
+     "gear-full",
+     "d",
+     1
+    ]
+   ],
+   "read": "gear-full",
+   "expect": 1000,
+   "total": 1000
+  },
+  {
+   "name": "gear-full-full 2 份",
+   "acts": [
+    [
+     "tick",
+     "gear-full"
+    ],
+    [
+     "sel",
+     "gear-full",
+     "gear-full-full"
+    ],
+    [
+     "ctr",
+     "gear-full",
+     "q",
+     2
+    ],
+    [
+     "ctr",
+     "gear-full",
+     "d",
+     1
+    ]
+   ],
+   "read": "gear-full",
+   "expect": 2000,
+   "total": 2000
+  },
+  {
+   "name": "gear-computer-half 1 份",
+   "acts": [
+    [
+     "tick",
+     "gear-computer"
+    ],
+    [
+     "sel",
+     "gear-computer",
+     "gear-computer-half"
+    ],
+    [
+     "ctr",
+     "gear-computer",
+     "q",
+     1
+    ],
+    [
+     "ctr",
+     "gear-computer",
+     "d",
+     1
+    ]
+   ],
+   "read": "gear-computer",
+   "expect": 300,
+   "total": 300
+  },
+  {
+   "name": "gear-computer-half 2 份",
+   "acts": [
+    [
+     "tick",
+     "gear-computer"
+    ],
+    [
+     "sel",
+     "gear-computer",
+     "gear-computer-half"
+    ],
+    [
+     "ctr",
+     "gear-computer",
+     "q",
+     2
+    ],
+    [
+     "ctr",
+     "gear-computer",
+     "d",
+     1
+    ]
+   ],
+   "read": "gear-computer",
+   "expect": 600,
+   "total": 600
+  },
+  {
+   "name": "gear-computer-full 1 份",
+   "acts": [
+    [
+     "tick",
+     "gear-computer"
+    ],
+    [
+     "sel",
+     "gear-computer",
+     "gear-computer-full"
+    ],
+    [
+     "ctr",
+     "gear-computer",
+     "q",
+     1
+    ],
+    [
+     "ctr",
+     "gear-computer",
+     "d",
+     1
+    ]
+   ],
+   "read": "gear-computer",
+   "expect": 500,
+   "total": 500
+  },
+  {
+   "name": "gear-computer-full 2 份",
+   "acts": [
+    [
+     "tick",
+     "gear-computer"
+    ],
+    [
+     "sel",
+     "gear-computer",
+     "gear-computer-full"
+    ],
+    [
+     "ctr",
+     "gear-computer",
+     "q",
+     2
+    ],
+    [
+     "ctr",
+     "gear-computer",
+     "d",
+     1
+    ]
+   ],
+   "read": "gear-computer",
+   "expect": 1000,
+   "total": 1000
+  }
+ ],
+ "e": {
+  "rows": [
+   {
+    "name": "體驗潛水 2 人",
+    "canva": 5000,
+    "acts": [
+     [
+      "ctr",
+      "dsd",
+      "p",
+      2
+     ]
+    ],
+    "read": "dsd",
+    "expect": 5000
+   },
+   {
+    "name": "Fun Dive 岸潛 2 支 2 人",
+    "canva": 5800,
+    "acts": [
+     [
+      "sel",
+      "fun",
+      "fun-shore"
+     ],
+     [
+      "ctr",
+      "fun",
+      "t",
+      2
+     ],
+     [
+      "ctr",
+      "fun",
+      "p",
+      2
+     ]
+    ],
+    "read": "fun",
+    "expect": 5800
+   },
+   {
+    "name": "OW 初級考照 1 人",
+    "canva": 15000,
+    "acts": [
+     [
+      "sel",
+      "course",
+      "ow"
+     ],
+     [
+      "ctr",
+      "course",
+      "p",
+      1
+     ]
+    ],
+    "read": "course",
+    "expect": 15000
+   },
+   {
+    "name": "夏日 Fun Dive 套裝 雙人 1 組＋單人 1 位",
+    "canva": 27100,
+    "acts": [
+     [
+      "sel",
+      "pkg",
+      "pkg-fun"
+     ],
+     [
+      "ctr",
+      "pkg",
+      "pair",
+      1
+     ],
+     [
+      "ctr",
+      "pkg",
+      "single",
+      1
+     ]
+    ],
+    "read": "pkg",
+    "expect": 27100
+   },
+   {
+    "name": "升等雙人套房 每人 +800 × 3 人",
+    "canva": 2400,
+    "acts": [
+     [
+      "up",
+      true
+     ]
+    ],
+    "read": "@up",
+    "expect": 2400
+   },
+   {
+    "name": "浮潛行程 2 人",
+    "canva": 800,
+    "acts": [
+     [
+      "tick",
+      "snorkel"
+     ],
+     [
+      "ctr",
+      "snorkel",
+      "p",
+      2
+     ]
+    ],
+    "read": "snorkel",
+    "expect": 800
+   },
+   {
+    "name": "夜釣 2 人",
+    "canva": 1600,
+    "acts": [
+     [
+      "tick",
+      "fishing"
+     ],
+     [
+      "ctr",
+      "fishing",
+      "p",
+      2
+     ]
+    ],
+    "read": "fishing",
+    "expect": 1600
+   },
+   {
+    "name": "豪華四人房 1 間 2 晚",
+    "canva": 7200,
+    "acts": [
+     [
+      "tick",
+      "room-quad"
+     ],
+     [
+      "ctr",
+      "room-quad",
+      "r",
+      1
+     ],
+     [
+      "ctr",
+      "room-quad",
+      "d",
+      2
+     ]
+    ],
+    "read": "room-quad",
+    "expect": 7200
+   },
+   {
+    "name": "船票（來回）2 人",
+    "canva": 2640,
+    "acts": [
+     [
+      "tick",
+      "ferry"
+     ],
+     [
+      "sel",
+      "ferry",
+      "ferry-rt"
+     ],
+     [
+      "ctr",
+      "ferry",
+      "p",
+      2
+     ]
+    ],
+    "read": "ferry",
+    "expect": 2640
+   },
+   {
+    "name": "摩托車 1 台 2 天",
+    "canva": 1000,
+    "acts": [
+     [
+      "tick",
+      "scooter"
+     ],
+     [
+      "ctr",
+      "scooter",
+      "q",
+      1
+     ],
+     [
+      "ctr",
+      "scooter",
+      "d",
+      2
+     ]
+    ],
+    "read": "scooter",
+    "expect": 1000
+   },
+   {
+    "name": "潛水電腦錶（全天）1 支 2 天",
+    "canva": 1000,
+    "acts": [
+     [
+      "tick",
+      "gear-computer"
+     ],
+     [
+      "sel",
+      "gear-computer",
+      "gear-computer-full"
+     ],
+     [
+      "ctr",
+      "gear-computer",
+      "q",
+      1
+     ],
+     [
+      "ctr",
+      "gear-computer",
+      "d",
+      2
+     ]
+    ],
+    "read": "gear-computer",
+    "expect": 1000
+   }
+  ],
+  "canvaTotal": 69540,
+  "canvaSummary": {
+   "dive": 10800,
+   "course": 15000,
+   "pkg": 29500,
+   "act": 2400,
+   "stay": 7200,
+   "trans": 3640,
+   "gear": 1000
+  },
+  "expectTotal": 69540
+ },
+ "f": [
+  {
+   "id": "dsd",
+   "expect": 2500
+  },
+  {
+   "id": "fun-shore",
+   "expect": 1950
+  },
+  {
+   "id": "fun-boat",
+   "expect": 4900
+  },
+  {
+   "id": "ow",
+   "expect": 15000
+  },
+  {
+   "id": "aow",
+   "expect": 15000
+  },
+  {
+   "id": "ow-aow",
+   "expect": 30000
+  },
+  {
+   "id": "reactive",
+   "expect": 5000
+  },
+  {
+   "id": "ean",
+   "expect": 5000
+  },
+  {
+   "id": "efr",
+   "expect": 4500
+  },
+  {
+   "id": "rescue",
+   "expect": 8000
+  },
+  {
+   "id": "dm",
+   "expect": 38000
+  },
+  {
+   "id": "pkg-snorkel",
+   "expect": 7200
+  },
+  {
+   "id": "pkg-dsd",
+   "expect": 11400
+  },
+  {
+   "id": "pkg-fun",
+   "expect": 17400
+  },
+  {
+   "id": "up-snorkel",
+   "expect": 1600
+  },
+  {
+   "id": "up-dsd",
+   "expect": 1000
+  },
+  {
+   "id": "up-fun",
+   "expect": 1600
+  },
+  {
+   "id": "tidal",
+   "expect": 350
+  },
+  {
+   "id": "snorkel",
+   "expect": 400
+  },
+  {
+   "id": "glassboat",
+   "expect": 400
+  },
+  {
+   "id": "fishing",
+   "expect": 800
+  },
+  {
+   "id": "bluecave",
+   "expect": 500
+  },
+  {
+   "id": "sup1",
+   "expect": 1800
+  },
+  {
+   "id": "sup2",
+   "expect": 1300
+  },
+  {
+   "id": "room-double",
+   "expect": 2400
+  },
+  {
+   "id": "room-quad",
+   "expect": 3600
+  },
+  {
+   "id": "room-quad-extra",
+   "expect": 400
+  },
+  {
+   "id": "bed-backpacker",
+   "expect": 800
+  },
+  {
+   "id": "scooter",
+   "expect": 500
+  },
+  {
+   "id": "ebike",
+   "expect": 600
+  },
+  {
+   "id": "car5",
+   "expect": 2300
+  },
+  {
+   "id": "car8",
+   "expect": 3500
+  },
+  {
+   "id": "ferry-rt",
+   "expect": 1320
+  },
+  {
+   "id": "ferry-ow",
+   "expect": 670
+  },
+  {
+   "id": "gear-light",
+   "expect": 200
+  },
+  {
+   "id": "gear-heavy-half",
+   "expect": 500
+  },
+  {
+   "id": "gear-heavy-full",
+   "expect": 900
+  },
+  {
+   "id": "gear-full-half",
+   "expect": 600
+  },
+  {
+   "id": "gear-full-full",
+   "expect": 1000
+  },
+  {
+   "id": "gear-computer-half",
+   "expect": 300
+  },
+  {
+   "id": "gear-computer-full",
+   "expect": 500
+  }
+ ],
+ "g": [
+  {
+   "name": "選體驗潛水 2 人",
+   "acts": [
+    [
+     "ctr",
+     "dsd",
+     "p",
+     2
+    ]
+   ],
+   "total": 5000
+  },
+  {
+   "name": "加 OW 1 人",
+   "acts": [
+    [
+     "sel",
+     "course",
+     "ow"
+    ],
+    [
+     "ctr",
+     "course",
+     "p",
+     1
+    ]
+   ],
+   "total": 20000
+  },
+  {
+   "name": "勾活動：夜釣 3 人",
+   "acts": [
+    [
+     "tick",
+     "fishing"
+    ],
+    [
+     "ctr",
+     "fishing",
+     "p",
+     3
+    ]
+   ],
+   "total": 22400
+  },
+  {
+   "name": "勾住宿：雙人房 1 間 2 晚",
+   "acts": [
+    [
+     "tick",
+     "room-double"
+    ],
+    [
+     "ctr",
+     "room-double",
+     "r",
+     1
+    ],
+    [
+     "ctr",
+     "room-double",
+     "d",
+     2
+    ]
+   ],
+   "total": 27200
+  },
+  {
+   "name": "勾裝備：輕裝 2 套 1 天",
+   "acts": [
+    [
+     "tick",
+     "gear-light"
+    ],
+    [
+     "ctr",
+     "gear-light",
+     "q",
+     2
+    ],
+    [
+     "ctr",
+     "gear-light",
+     "d",
+     1
+    ]
+   ],
+   "total": 27600
+  },
+  {
+   "name": "體驗潛水改 0 人",
+   "acts": [
+    [
+     "ctr",
+     "dsd",
+     "p",
+     0
+    ]
+   ],
+   "total": 22600
+  },
+  {
+   "name": "取消勾選夜釣（刪除一列）",
+   "acts": [
+    [
+     "untick",
+     "fishing"
+    ]
+   ],
+   "total": 20200
+  },
+  {
+   "name": "再勾回夜釣（預設 1 人）",
+   "acts": [
+    [
+     "tick",
+     "fishing"
+    ]
+   ],
+   "total": 21000
+  },
+  {
+   "name": "課程改回『請選擇課程』",
+   "acts": [
+    [
+     "sel",
+     "course",
+     ""
+    ]
+   ],
+   "total": 6000
+  },
+  {
+   "name": "套裝選了但雙人 0 組、單人 0 位",
+   "acts": [
+    [
+     "sel",
+     "pkg",
+     "pkg-fun"
+    ],
+    [
+     "ctr",
+     "pkg",
+     "pair",
+     0
+    ],
+    [
+     "ctr",
+     "pkg",
+     "single",
+     0
+    ]
+   ],
+   "total": 6000
+  },
+  {
+   "name": "套裝勾升等但 0 人",
+   "acts": [
+    [
+     "up",
+     true
+    ]
+   ],
+   "total": 6000
+  },
+  {
+   "name": "住宿晚數填 0（最少 1 晚，會變回 1）",
+   "acts": [
+    [
+     "ctr",
+     "room-double",
+     "d",
+     0
+    ]
+   ],
+   "total": 3600
+  },
+  {
+   "name": "全部清空：取消所有勾選、套裝改回請選擇",
+   "acts": [
+    [
+     "untick",
+     "fishing"
+    ],
+    [
+     "untick",
+     "room-double"
+    ],
+    [
+     "untick",
+     "gear-light"
+    ],
+    [
+     "sel",
+     "pkg",
+     ""
+    ]
+   ],
+   "total": 0
+  }
+ ]
+}

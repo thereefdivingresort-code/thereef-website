@@ -1,0 +1,5115 @@
+{
+ "presenter_notes": [
+  {
+   "page_id": "PBDRhLWtzmrxjlqr",
+   "page_number": 1
+  }
+ ],
+ "design_content": {
+  "title": "網站地圖 v1",
+  "pages": [
+   {
+    "type": "fixed",
+    "id": "PBDRhLWtzmrxjlqr",
+    "title": "UI v4｜預訂第 1 步：選購（七區塊）",
+    "dimensions": {
+     "width": 1440,
+     "height": 2760
+    },
+    "background": {
+     "color": {
+      "type": "solid",
+      "color": "#f5f3ee"
+     },
+     "isMediaReplaceable": true
+    },
+    "elements": [
+     {
+      "id": "LBDrHLDq9lKW8Zn0",
+      "top": 64,
+      "left": 154,
+      "width": 700,
+      "height": 24,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "BOOKING　·　線上預訂（第 1 步：選購）",
+        "formatting": {
+         "fontSize": 20,
+         "fontWeight": "bold",
+         "fontStyle": "normal",
+         "color": "#2a8a9a",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBDrHLDq9lKW8Zn0"
+     },
+     {
+      "id": "LBtqT5NNn2LDC9QG",
+      "top": 132,
+      "left": 152,
+      "width": 1100,
+      "height": 67,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "住宿。潛水。水陸活動都能玩！",
+        "formatting": {
+         "fontSize": 56,
+         "fontWeight": "bold",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.2,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBtqT5NNn2LDC9QG"
+     },
+     {
+      "id": "LBXYrwDDcGtT3HWt",
+      "top": 262,
+      "left": 154,
+      "width": 300,
+      "height": 21.4,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "出發日期",
+        "formatting": {
+         "fontSize": 18,
+         "fontWeight": "bold",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBXYrwDDcGtT3HWt"
+     },
+     {
+      "id": "LBpzSlpl8dg8VkCl",
+      "top": 292,
+      "left": 154,
+      "width": 320,
+      "height": 48,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 2,
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         }
+        },
+        "cornerRounding": 10
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 320,
+        "height": 48
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBpzSlpl8dg8VkCl"
+     },
+     {
+      "id": "LBqpzP1B7ks0nKhJ",
+      "top": 304.99999999999994,
+      "left": 174,
+      "width": 280,
+      "height": 19.6,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "2026 / 12 / 05（六）　▾",
+        "formatting": {
+         "fontSize": 17,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBqpzP1B7ks0nKhJ"
+     },
+     {
+      "id": "LBJshwCnMwxt8rWR",
+      "top": 370,
+      "left": 154,
+      "width": 720,
+      "height": 284,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 0,
+         "color": {
+          "type": "solid",
+          "color": "#000000"
+         }
+        },
+        "cornerRounding": 20
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 720,
+        "height": 284
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBJshwCnMwxt8rWR"
+     },
+     {
+      "id": "LB4PxcpgjXnqPT46",
+      "top": 393.99999999999994,
+      "left": 184,
+      "width": 640,
+      "height": 25.6,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "①　潛水",
+        "formatting": {
+         "fontSize": 22,
+         "fontWeight": "bold",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LB4PxcpgjXnqPT46"
+     },
+     {
+      "id": "LBrWdps5CTcjpnXr",
+      "top": 429.99999999999994,
+      "left": 184,
+      "width": 660,
+      "height": 16.2,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "體驗潛水不用證照；Fun Dive 需有證照，系統依人數自動套用 1 對 1～1 對 4 價。",
+        "formatting": {
+         "fontSize": 14,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#7a6a55",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBrWdps5CTcjpnXr"
+     },
+     {
+      "id": "LBjRfQ4F0RVwy49j",
+      "top": 466,
+      "left": 184,
+      "width": 300,
+      "height": 48,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 2,
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         }
+        },
+        "cornerRounding": 10
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 300,
+        "height": 48
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBjRfQ4F0RVwy49j"
+     },
+     {
+      "id": "LBfNqBYNZxP6fZLl",
+      "top": 478.99999999999994,
+      "left": 198,
+      "width": 272,
+      "height": 19.6,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "體驗潛水（不用證照）",
+        "formatting": {
+         "fontSize": 17,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBfNqBYNZxP6fZLl"
+     },
+     {
+      "id": "LBB3twHttRHPC9tp",
+      "top": 479,
+      "left": 498,
+      "width": 122,
+      "height": 18,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "2,500／人",
+        "formatting": {
+         "fontSize": 15,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#7a6a55",
+         "textAlign": "center",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBB3twHttRHPC9tp"
+     },
+     {
+      "id": "LBmhGbhKTFBwzjs5",
+      "top": 466,
+      "left": 634,
+      "width": 120,
+      "height": 48,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 2,
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         }
+        },
+        "cornerRounding": 10
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 120,
+        "height": 48
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBmhGbhKTFBwzjs5"
+     },
+     {
+      "id": "LBQyyFtwKDGfskwB",
+      "top": 479,
+      "left": 638,
+      "width": 112,
+      "height": 18,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "−　2 人　＋",
+        "formatting": {
+         "fontSize": 15,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "center",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBQyyFtwKDGfskwB"
+     },
+     {
+      "id": "LB2F6g09HNw60MWF",
+      "top": 479,
+      "left": 764,
+      "width": 80,
+      "height": 21.4,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "5,000",
+        "formatting": {
+         "fontSize": 18,
+         "fontWeight": "bold",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "end",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LB2F6g09HNw60MWF"
+     },
+     {
+      "id": "LBStY3mDzHW1CyG2",
+      "top": 528,
+      "left": 184,
+      "width": 300,
+      "height": 48,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 2,
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         }
+        },
+        "cornerRounding": 10
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 300,
+        "height": 48
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBStY3mDzHW1CyG2"
+     },
+     {
+      "id": "LBNgJcj9KzlwdrVZ",
+      "top": 541,
+      "left": 198,
+      "width": 272,
+      "height": 19.6,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "Fun Dive 岸潛（有證照）　▾",
+        "formatting": {
+         "fontSize": 17,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBNgJcj9KzlwdrVZ"
+     },
+     {
+      "id": "LB6ctsG8FsWjqdLK",
+      "top": 528,
+      "left": 494,
+      "width": 130,
+      "height": 48,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 2,
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         }
+        },
+        "cornerRounding": 10
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 130,
+        "height": 48
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LB6ctsG8FsWjqdLK"
+     },
+     {
+      "id": "LBscqpDQdgZQrKKZ",
+      "top": 541,
+      "left": 498,
+      "width": 122,
+      "height": 18,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "−　2 支　＋",
+        "formatting": {
+         "fontSize": 15,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "center",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBscqpDQdgZQrKKZ"
+     },
+     {
+      "id": "LBdyvL1Lt21vDT0d",
+      "top": 528,
+      "left": 634,
+      "width": 120,
+      "height": 48,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 2,
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         }
+        },
+        "cornerRounding": 10
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 120,
+        "height": 48
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBdyvL1Lt21vDT0d"
+     },
+     {
+      "id": "LBq8ZMrx1DJ2bdWV",
+      "top": 541,
+      "left": 638,
+      "width": 112,
+      "height": 18,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "−　2 人　＋",
+        "formatting": {
+         "fontSize": 15,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "center",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBq8ZMrx1DJ2bdWV"
+     },
+     {
+      "id": "LBnbMqRB9gLsRr20",
+      "top": 540.9999999999999,
+      "left": 764,
+      "width": 80,
+      "height": 21.4,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "5,800",
+        "formatting": {
+         "fontSize": 18,
+         "fontWeight": "bold",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "end",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBnbMqRB9gLsRr20"
+     },
+     {
+      "id": "LBlsQs8dD3hxtYwv",
+      "top": 594,
+      "left": 184,
+      "width": 660,
+      "height": 16.2,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "Fun Dive 下拉：岸潛（每人每支，要選支數）／船潛（一趟約 2 支，不用選支數）。已含輕重裝備。",
+        "formatting": {
+         "fontSize": 14,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#7a6a55",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBlsQs8dD3hxtYwv"
+     },
+     {
+      "id": "LBJ90gk5t2Lqf2yV",
+      "top": 678,
+      "left": 154,
+      "width": 720,
+      "height": 188,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 0,
+         "color": {
+          "type": "solid",
+          "color": "#000000"
+         }
+        },
+        "cornerRounding": 20
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 720,
+        "height": 188
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBJ90gk5t2Lqf2yV"
+     },
+     {
+      "id": "LBwTTlptK0CQDXYh",
+      "top": 702,
+      "left": 184,
+      "width": 640,
+      "height": 25.6,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "②　考證照與進階課程",
+        "formatting": {
+         "fontSize": 22,
+         "fontWeight": "bold",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBwTTlptK0CQDXYh"
+     },
+     {
+      "id": "LBdrcB1XkBn5bnXm",
+      "top": 738,
+      "left": 184,
+      "width": 660,
+      "height": 16.2,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "下拉：OW 初級／AOW 進階／OW＋AOW 一次考／複習／高氧 EAN／EFR／救援／潛水長 DM",
+        "formatting": {
+         "fontSize": 14,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#7a6a55",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBdrcB1XkBn5bnXm"
+     },
+     {
+      "id": "LBNCsd6JXy0sThZD",
+      "top": 774,
+      "left": 184,
+      "width": 300,
+      "height": 48,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 2,
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         }
+        },
+        "cornerRounding": 10
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 300,
+        "height": 48
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBNCsd6JXy0sThZD"
+     },
+     {
+      "id": "LBMM5G3gbwSV5nlr",
+      "top": 787,
+      "left": 198,
+      "width": 272,
+      "height": 19.6,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "OW 初級考照（3 天 2 夜）　▾",
+        "formatting": {
+         "fontSize": 17,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBMM5G3gbwSV5nlr"
+     },
+     {
+      "id": "LBCCkyg7WD5vrRbg",
+      "top": 787,
+      "left": 498,
+      "width": 122,
+      "height": 18,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "15,000／人",
+        "formatting": {
+         "fontSize": 15,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#7a6a55",
+         "textAlign": "center",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBCCkyg7WD5vrRbg"
+     },
+     {
+      "id": "LB2qpSpdXHTQw7F8",
+      "top": 774,
+      "left": 634,
+      "width": 120,
+      "height": 48,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 2,
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         }
+        },
+        "cornerRounding": 10
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 120,
+        "height": 48
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LB2qpSpdXHTQw7F8"
+     },
+     {
+      "id": "LBJDnHq75sq893kT",
+      "top": 787,
+      "left": 638,
+      "width": 112,
+      "height": 18,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "−　1 人　＋",
+        "formatting": {
+         "fontSize": 15,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "center",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBJDnHq75sq893kT"
+     },
+     {
+      "id": "LBjd49H0bfTVKn9m",
+      "top": 786.9999999999999,
+      "left": 764,
+      "width": 80,
+      "height": 21.4,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "15,000",
+        "formatting": {
+         "fontSize": 18,
+         "fontWeight": "bold",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "end",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBjd49H0bfTVKn9m"
+     },
+     {
+      "id": "LBcyhCt9NYms06YF",
+      "top": 890,
+      "left": 154,
+      "width": 720,
+      "height": 284,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 0,
+         "color": {
+          "type": "solid",
+          "color": "#000000"
+         }
+        },
+        "cornerRounding": 20
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 720,
+        "height": 284
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBcyhCt9NYms06YF"
+     },
+     {
+      "id": "LBXQFL3M5rrT93ZB",
+      "top": 914,
+      "left": 184,
+      "width": 640,
+      "height": 25.6,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "③　3 天 2 夜套裝",
+        "formatting": {
+         "fontSize": 22,
+         "fontWeight": "bold",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBXQFL3M5rrT93ZB"
+     },
+     {
+      "id": "LBvRp7YkfF2rtkTZ",
+      "top": 950,
+      "left": 184,
+      "width": 660,
+      "height": 16.2,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "船票、機車、住宿都包好。下拉：夏日浮潛／夏日體驗潛水／夏日 Fun Dive。",
+        "formatting": {
+         "fontSize": 14,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#7a6a55",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBvRp7YkfF2rtkTZ"
+     },
+     {
+      "id": "LB2rdX5bVdwlcTht",
+      "top": 986,
+      "left": 184,
+      "width": 300,
+      "height": 48,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 2,
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         }
+        },
+        "cornerRounding": 10
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 300,
+        "height": 48
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LB2rdX5bVdwlcTht"
+     },
+     {
+      "id": "LBYZ9MDp6PcjxZM4",
+      "top": 999,
+      "left": 198,
+      "width": 272,
+      "height": 19.6,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "夏日 Fun Dive 套裝　▾",
+        "formatting": {
+         "fontSize": 17,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBYZ9MDp6PcjxZM4"
+     },
+     {
+      "id": "LBFxGzRdr7vJWTSs",
+      "top": 986,
+      "left": 494,
+      "width": 130,
+      "height": 48,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 2,
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         }
+        },
+        "cornerRounding": 10
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 130,
+        "height": 48
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBFxGzRdr7vJWTSs"
+     },
+     {
+      "id": "LBZ81sLghpggKFZW",
+      "top": 999,
+      "left": 498,
+      "width": 122,
+      "height": 18,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "雙人：1 組 ±",
+        "formatting": {
+         "fontSize": 15,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "center",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBZ81sLghpggKFZW"
+     },
+     {
+      "id": "LBDHbrZ3QbNHzmYj",
+      "top": 986,
+      "left": 634,
+      "width": 120,
+      "height": 48,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 2,
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         }
+        },
+        "cornerRounding": 10
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 120,
+        "height": 48
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBDHbrZ3QbNHzmYj"
+     },
+     {
+      "id": "LBg3XmX6mLvNkrXF",
+      "top": 999,
+      "left": 638,
+      "width": 112,
+      "height": 18,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "單人：1 位 ±",
+        "formatting": {
+         "fontSize": 15,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "center",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBg3XmX6mLvNkrXF"
+     },
+     {
+      "id": "LB7KFG2sp4K6t0Tb",
+      "top": 998.9999999999999,
+      "left": 764,
+      "width": 80,
+      "height": 21.4,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "27,100",
+        "formatting": {
+         "fontSize": 18,
+         "fontWeight": "bold",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "end",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LB7KFG2sp4K6t0Tb"
+     },
+     {
+      "id": "LBSp8ZSYCDPMTpFv",
+      "top": 1060,
+      "left": 184,
+      "width": 24,
+      "height": 24,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#12355b"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 0,
+         "color": {
+          "type": "solid",
+          "color": "#000000"
+         }
+        },
+        "cornerRounding": 4
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 24,
+        "height": 24
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBSp8ZSYCDPMTpFv"
+     },
+     {
+      "id": "LBdwK2j8sx4DxG7t",
+      "top": 1060,
+      "left": 184,
+      "width": 24,
+      "height": 18.8,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "✓",
+        "formatting": {
+         "fontSize": 16,
+         "fontWeight": "bold",
+         "fontStyle": "normal",
+         "color": "#ffffff",
+         "textAlign": "center",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBdwK2j8sx4DxG7t"
+     },
+     {
+      "id": "LBG6lChbk86J2HpD",
+      "top": 1061.0000000000002,
+      "left": 222,
+      "width": 520,
+      "height": 19.6,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "升等雙人套房　每人 +800 × 3 人",
+        "formatting": {
+         "fontSize": 17,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBG6lChbk86J2HpD"
+     },
+     {
+      "id": "LBkrZ6bWmtt36b1S",
+      "top": 1061,
+      "left": 764,
+      "width": 80,
+      "height": 21.4,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "2,400",
+        "formatting": {
+         "fontSize": 18,
+         "fontWeight": "bold",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "end",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBkrZ6bWmtt36b1S"
+     },
+     {
+      "id": "LB6m0Lm6fKNcr2PR",
+      "top": 1114.0000000000002,
+      "left": 184,
+      "width": 660,
+      "height": 16.2,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "雙人每人 8,700、單人 9,700（已含單人加價）；3 人＝1 組雙人＋1 位單人。升等每人加價。",
+        "formatting": {
+         "fontSize": 14,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#7a6a55",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LB6m0Lm6fKNcr2PR"
+     },
+     {
+      "id": "LBzs5lfrgCxfZxgB",
+      "top": 1198,
+      "left": 154,
+      "width": 720,
+      "height": 346,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 0,
+         "color": {
+          "type": "solid",
+          "color": "#000000"
+         }
+        },
+        "cornerRounding": 20
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 720,
+        "height": 346
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBzs5lfrgCxfZxgB"
+     },
+     {
+      "id": "LBp3HH1LPXBGWR1M",
+      "top": 1222.0000000000002,
+      "left": 184,
+      "width": 640,
+      "height": 25.6,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "④　活動（可複選）",
+        "formatting": {
+         "fontSize": 22,
+         "fontWeight": "bold",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBp3HH1LPXBGWR1M"
+     },
+     {
+      "id": "LB3JD646fwYnDHHZ",
+      "top": 1258.0000000000002,
+      "left": 184,
+      "width": 660,
+      "height": 16.2,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "打開下拉勾選想參加的活動，每勾一項就多一列填人數；取消勾選就移除。",
+        "formatting": {
+         "fontSize": 14,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#7a6a55",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LB3JD646fwYnDHHZ"
+     },
+     {
+      "id": "LB9yrC9KRywfR6s2",
+      "top": 1294,
+      "left": 184,
+      "width": 660,
+      "height": 48,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 2,
+         "color": {
+          "type": "solid",
+          "color": "#12355b"
+         }
+        },
+        "cornerRounding": 10
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 660,
+        "height": 48
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LB9yrC9KRywfR6s2"
+     },
+     {
+      "id": "LB9fp8cyV96RKWlJ",
+      "top": 1307.0000000000002,
+      "left": 200,
+      "width": 628,
+      "height": 19.6,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "已選 2 項：浮潛行程、夜釣　　　▾",
+        "formatting": {
+         "fontSize": 17,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LB9fp8cyV96RKWlJ"
+     },
+     {
+      "id": "LBnGwND6dX3k3GTz",
+      "top": 1356,
+      "left": 184,
+      "width": 300,
+      "height": 48,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#f5f3ee"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 2,
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         }
+        },
+        "cornerRounding": 10
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 300,
+        "height": 48
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBnGwND6dX3k3GTz"
+     },
+     {
+      "id": "LB0V8mX47ydJpkYG",
+      "top": 1369.0000000000002,
+      "left": 198,
+      "width": 272,
+      "height": 19.6,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "浮潛行程",
+        "formatting": {
+         "fontSize": 17,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LB0V8mX47ydJpkYG"
+     },
+     {
+      "id": "LBklRN3G2vcbCmDt",
+      "top": 1369,
+      "left": 498,
+      "width": 122,
+      "height": 18,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "400／人",
+        "formatting": {
+         "fontSize": 15,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#7a6a55",
+         "textAlign": "center",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBklRN3G2vcbCmDt"
+     },
+     {
+      "id": "LBFVWCNzjpZKlxR0",
+      "top": 1356,
+      "left": 634,
+      "width": 120,
+      "height": 48,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 2,
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         }
+        },
+        "cornerRounding": 10
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 120,
+        "height": 48
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBFVWCNzjpZKlxR0"
+     },
+     {
+      "id": "LBl6KwzKlqfvXZVW",
+      "top": 1369,
+      "left": 638,
+      "width": 112,
+      "height": 18,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "−　2 人　＋",
+        "formatting": {
+         "fontSize": 15,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "center",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBl6KwzKlqfvXZVW"
+     },
+     {
+      "id": "LBH9J97CdV9BJ5NP",
+      "top": 1369,
+      "left": 764,
+      "width": 80,
+      "height": 21.4,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "800",
+        "formatting": {
+         "fontSize": 18,
+         "fontWeight": "bold",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "end",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBH9J97CdV9BJ5NP"
+     },
+     {
+      "id": "LBPfrbxFgVt7ZlPJ",
+      "top": 1418,
+      "left": 184,
+      "width": 300,
+      "height": 48,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#f5f3ee"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 2,
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         }
+        },
+        "cornerRounding": 10
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 300,
+        "height": 48
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBPfrbxFgVt7ZlPJ"
+     },
+     {
+      "id": "LB7G3zwpR5P7WcHG",
+      "top": 1431.0000000000002,
+      "left": 198,
+      "width": 272,
+      "height": 19.6,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "夜釣",
+        "formatting": {
+         "fontSize": 17,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LB7G3zwpR5P7WcHG"
+     },
+     {
+      "id": "LBrmg3K4lwGzrdyW",
+      "top": 1431,
+      "left": 498,
+      "width": 122,
+      "height": 18,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "800／人",
+        "formatting": {
+         "fontSize": 15,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#7a6a55",
+         "textAlign": "center",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBrmg3K4lwGzrdyW"
+     },
+     {
+      "id": "LBbSPbXVdxdrwYvJ",
+      "top": 1418,
+      "left": 634,
+      "width": 120,
+      "height": 48,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 2,
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         }
+        },
+        "cornerRounding": 10
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 120,
+        "height": 48
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBbSPbXVdxdrwYvJ"
+     },
+     {
+      "id": "LB6y2wZWbNFGzp5K",
+      "top": 1431,
+      "left": 638,
+      "width": 112,
+      "height": 18,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "−　2 人　＋",
+        "formatting": {
+         "fontSize": 15,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "center",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LB6y2wZWbNFGzp5K"
+     },
+     {
+      "id": "LB4NWXsQ5X9dWmvz",
+      "top": 1431,
+      "left": 764,
+      "width": 80,
+      "height": 21.4,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "1,600",
+        "formatting": {
+         "fontSize": 18,
+         "fontWeight": "bold",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "end",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LB4NWXsQ5X9dWmvz"
+     },
+     {
+      "id": "LB3jHp3j5pjldGkr",
+      "top": 1484.0000000000002,
+      "left": 184,
+      "width": 660,
+      "height": 35.2,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "可選（每人）：潮間帶導覽 350、浮潛行程 400、玻璃船 400、夜釣 800、藍洞秘境探險 500、SUP 單人板 1,800、SUP 雙人板 1,300",
+        "formatting": {
+         "fontSize": 14,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#7a6a55",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LB3jHp3j5pjldGkr"
+     },
+     {
+      "id": "LBjmWryqmncnzG3d",
+      "top": 1568,
+      "left": 154,
+      "width": 720,
+      "height": 284,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 0,
+         "color": {
+          "type": "solid",
+          "color": "#000000"
+         }
+        },
+        "cornerRounding": 20
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 720,
+        "height": 284
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBjmWryqmncnzG3d"
+     },
+     {
+      "id": "LBqwKQYPyhDmbDMm",
+      "top": 1592.0000000000002,
+      "left": 184,
+      "width": 640,
+      "height": 25.6,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "⑤　住宿・每晚（可複選）",
+        "formatting": {
+         "fontSize": 22,
+         "fontWeight": "bold",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBqwKQYPyhDmbDMm"
+     },
+     {
+      "id": "LBt51DjJszXJbFcl",
+      "top": 1628.0000000000002,
+      "left": 184,
+      "width": 660,
+      "height": 16.2,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "勾選房型後填間數（床數）和晚數。",
+        "formatting": {
+         "fontSize": 14,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#7a6a55",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBt51DjJszXJbFcl"
+     },
+     {
+      "id": "LBWMz6L3HNqdzNNT",
+      "top": 1664,
+      "left": 184,
+      "width": 660,
+      "height": 48,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 2,
+         "color": {
+          "type": "solid",
+          "color": "#12355b"
+         }
+        },
+        "cornerRounding": 10
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 660,
+        "height": 48
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBWMz6L3HNqdzNNT"
+     },
+     {
+      "id": "LBcXz7s51W4J62ln",
+      "top": 1677.0000000000002,
+      "left": 200,
+      "width": 628,
+      "height": 19.6,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "已選 1 項：豪華四人房　　　▾",
+        "formatting": {
+         "fontSize": 17,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBcXz7s51W4J62ln"
+     },
+     {
+      "id": "LBf14SKTKHw3PfYW",
+      "top": 1726,
+      "left": 184,
+      "width": 300,
+      "height": 48,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#f5f3ee"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 2,
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         }
+        },
+        "cornerRounding": 10
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 300,
+        "height": 48
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBf14SKTKHw3PfYW"
+     },
+     {
+      "id": "LBhks3YRJl8VBwmY",
+      "top": 1739.0000000000002,
+      "left": 198,
+      "width": 272,
+      "height": 19.6,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "豪華四人房　3,600／晚",
+        "formatting": {
+         "fontSize": 17,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBhks3YRJl8VBwmY"
+     },
+     {
+      "id": "LBhKBdxZ97kKHy7g",
+      "top": 1726,
+      "left": 494,
+      "width": 130,
+      "height": 48,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 2,
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         }
+        },
+        "cornerRounding": 10
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 130,
+        "height": 48
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBhKBdxZ97kKHy7g"
+     },
+     {
+      "id": "LBK8SfG6MXP93kN2",
+      "top": 1739,
+      "left": 498,
+      "width": 122,
+      "height": 18,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "−　1 間　＋",
+        "formatting": {
+         "fontSize": 15,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "center",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBK8SfG6MXP93kN2"
+     },
+     {
+      "id": "LBv3VLxHJBn1xFDH",
+      "top": 1726,
+      "left": 634,
+      "width": 120,
+      "height": 48,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 2,
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         }
+        },
+        "cornerRounding": 10
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 120,
+        "height": 48
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBv3VLxHJBn1xFDH"
+     },
+     {
+      "id": "LBq4ghsB15yhl6Hm",
+      "top": 1739,
+      "left": 638,
+      "width": 112,
+      "height": 18,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "−　2 晚　＋",
+        "formatting": {
+         "fontSize": 15,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "center",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBq4ghsB15yhl6Hm"
+     },
+     {
+      "id": "LBDPrNVV6dqwP4DW",
+      "top": 1739,
+      "left": 764,
+      "width": 80,
+      "height": 21.4,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "7,200",
+        "formatting": {
+         "fontSize": 18,
+         "fontWeight": "bold",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "end",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBDPrNVV6dqwP4DW"
+     },
+     {
+      "id": "LBj5VHXgTDDzt0Z3",
+      "top": 1792.0000000000002,
+      "left": 184,
+      "width": 660,
+      "height": 35.2,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "可選（每晚）：豪華雙人房 2,400、豪華四人房 3,600、背包客房 800／床。\n豪華四人房可加床位， 400／人，最多住6人。",
+        "formatting": {
+         "fontSize": 14,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#7a6a55",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBj5VHXgTDDzt0Z3"
+     },
+     {
+      "id": "LBkzJz1YHchgx1WZ",
+      "top": 1876,
+      "left": 154,
+      "width": 720,
+      "height": 346,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 0,
+         "color": {
+          "type": "solid",
+          "color": "#000000"
+         }
+        },
+        "cornerRounding": 20
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 720,
+        "height": 346
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBkzJz1YHchgx1WZ"
+     },
+     {
+      "id": "LBLgqLxRDcqftgBB",
+      "top": 1900.0000000000002,
+      "left": 184,
+      "width": 640,
+      "height": 25.6,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "⑥　交通・船票（可複選）",
+        "formatting": {
+         "fontSize": 22,
+         "fontWeight": "bold",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBLgqLxRDcqftgBB"
+     },
+     {
+      "id": "LB4lLgLsJlSmYXf1",
+      "top": 1936.0000000000002,
+      "left": 184,
+      "width": 660,
+      "height": 16.2,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "船票選來回或單程；車輛填台數和天數。",
+        "formatting": {
+         "fontSize": 14,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#7a6a55",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LB4lLgLsJlSmYXf1"
+     },
+     {
+      "id": "LBkx1D4cZcjH2vPP",
+      "top": 1972,
+      "left": 184,
+      "width": 660,
+      "height": 48,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 2,
+         "color": {
+          "type": "solid",
+          "color": "#12355b"
+         }
+        },
+        "cornerRounding": 10
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 660,
+        "height": 48
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBkx1D4cZcjH2vPP"
+     },
+     {
+      "id": "LBHzs9s4c10tCJq0",
+      "top": 1985.0000000000002,
+      "left": 200,
+      "width": 628,
+      "height": 19.6,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "已選 2 項：船票、摩托車　　　▾",
+        "formatting": {
+         "fontSize": 17,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBHzs9s4c10tCJq0"
+     },
+     {
+      "id": "LByznMTw9dnZbhwX",
+      "top": 2034,
+      "left": 184,
+      "width": 300,
+      "height": 48,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#f5f3ee"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 2,
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         }
+        },
+        "cornerRounding": 10
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 300,
+        "height": 48
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LByznMTw9dnZbhwX"
+     },
+     {
+      "id": "LBCWznSSMDYD9VGd",
+      "top": 2047.0000000000002,
+      "left": 198,
+      "width": 272,
+      "height": 19.6,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "船票（來回　▾）",
+        "formatting": {
+         "fontSize": 17,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBCWznSSMDYD9VGd"
+     },
+     {
+      "id": "LB9wdxjQTjt0Ptfk",
+      "top": 2047,
+      "left": 498,
+      "width": 122,
+      "height": 18,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "1,320／人",
+        "formatting": {
+         "fontSize": 15,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#7a6a55",
+         "textAlign": "center",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LB9wdxjQTjt0Ptfk"
+     },
+     {
+      "id": "LBLtKgbsdPBVgc5z",
+      "top": 2034,
+      "left": 634,
+      "width": 120,
+      "height": 48,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 2,
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         }
+        },
+        "cornerRounding": 10
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 120,
+        "height": 48
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBLtKgbsdPBVgc5z"
+     },
+     {
+      "id": "LBrqHv5DL0y0ZK7W",
+      "top": 2047,
+      "left": 638,
+      "width": 112,
+      "height": 18,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "−　2 人　＋",
+        "formatting": {
+         "fontSize": 15,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "center",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBrqHv5DL0y0ZK7W"
+     },
+     {
+      "id": "LBpKQw5KtF2FJ2Z0",
+      "top": 2047.0000000000002,
+      "left": 764,
+      "width": 80,
+      "height": 21.4,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "2,640",
+        "formatting": {
+         "fontSize": 18,
+         "fontWeight": "bold",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "end",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBpKQw5KtF2FJ2Z0"
+     },
+     {
+      "id": "LBK45bJlfTrwDkC4",
+      "top": 2096,
+      "left": 184,
+      "width": 300,
+      "height": 48,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#f5f3ee"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 2,
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         }
+        },
+        "cornerRounding": 10
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 300,
+        "height": 48
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBK45bJlfTrwDkC4"
+     },
+     {
+      "id": "LBnKfTV4yPJY6XPF",
+      "top": 2109,
+      "left": 198,
+      "width": 272,
+      "height": 19.6,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "摩托車　500／天",
+        "formatting": {
+         "fontSize": 17,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBnKfTV4yPJY6XPF"
+     },
+     {
+      "id": "LBdzrWmrz5tsLcvN",
+      "top": 2096,
+      "left": 494,
+      "width": 130,
+      "height": 48,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 2,
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         }
+        },
+        "cornerRounding": 10
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 130,
+        "height": 48
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBdzrWmrz5tsLcvN"
+     },
+     {
+      "id": "LBhYByM7wNw6Z7YL",
+      "top": 2109,
+      "left": 498,
+      "width": 122,
+      "height": 18,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "−　1 台　＋",
+        "formatting": {
+         "fontSize": 15,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "center",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBhYByM7wNw6Z7YL"
+     },
+     {
+      "id": "LBVZFnq5wSTjGyd9",
+      "top": 2096,
+      "left": 634,
+      "width": 120,
+      "height": 48,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 2,
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         }
+        },
+        "cornerRounding": 10
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 120,
+        "height": 48
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBVZFnq5wSTjGyd9"
+     },
+     {
+      "id": "LBVfC9lXcmFT7Hq8",
+      "top": 2109,
+      "left": 638,
+      "width": 112,
+      "height": 18,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "−　2 天　＋",
+        "formatting": {
+         "fontSize": 15,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "center",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBVfC9lXcmFT7Hq8"
+     },
+     {
+      "id": "LBydNqGmGKB4wBGQ",
+      "top": 2109.0000000000005,
+      "left": 764,
+      "width": 80,
+      "height": 21.4,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "1,000",
+        "formatting": {
+         "fontSize": 18,
+         "fontWeight": "bold",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "end",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBydNqGmGKB4wBGQ"
+     },
+     {
+      "id": "LBhtnGNlvvnZXLNQ",
+      "top": 2162,
+      "left": 184,
+      "width": 660,
+      "height": 16.2,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "可選：船票（來回 1,320／單程 670）、摩托車、電動自行車、五人座汽車、八人座汽車",
+        "formatting": {
+         "fontSize": 14,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#7a6a55",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBhtnGNlvvnZXLNQ"
+     },
+     {
+      "id": "LBtWhyRs9nWvPx4D",
+      "top": 2246,
+      "left": 154,
+      "width": 720,
+      "height": 284,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 0,
+         "color": {
+          "type": "solid",
+          "color": "#000000"
+         }
+        },
+        "cornerRounding": 20
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 720,
+        "height": 284
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBtWhyRs9nWvPx4D"
+     },
+     {
+      "id": "LBqDqmckT4l3ZX9P",
+      "top": 2270,
+      "left": 184,
+      "width": 640,
+      "height": 25.6,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "⑦　裝備租借（可複選）",
+        "formatting": {
+         "fontSize": 22,
+         "fontWeight": "bold",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBqDqmckT4l3ZX9P"
+     },
+     {
+      "id": "LBp19MwXrDVwCYYW",
+      "top": 2306,
+      "left": 184,
+      "width": 660,
+      "height": 16.2,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "Fun Dive 已含輕重裝備，不用另租。",
+        "formatting": {
+         "fontSize": 14,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#7a6a55",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBp19MwXrDVwCYYW"
+     },
+     {
+      "id": "LBZM3SPxl1vYyQZK",
+      "top": 2342,
+      "left": 184,
+      "width": 660,
+      "height": 48,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 2,
+         "color": {
+          "type": "solid",
+          "color": "#12355b"
+         }
+        },
+        "cornerRounding": 10
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 660,
+        "height": 48
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBZM3SPxl1vYyQZK"
+     },
+     {
+      "id": "LB4hfY3fBdxmQgG5",
+      "top": 2355,
+      "left": 200,
+      "width": 628,
+      "height": 19.6,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "已選 1 項：潛水電腦錶　　　▾",
+        "formatting": {
+         "fontSize": 17,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LB4hfY3fBdxmQgG5"
+     },
+     {
+      "id": "LBDhMWqF9WRLgQD8",
+      "top": 2404,
+      "left": 184,
+      "width": 300,
+      "height": 48,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#f5f3ee"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 2,
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         }
+        },
+        "cornerRounding": 10
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 300,
+        "height": 48
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBDhMWqF9WRLgQD8"
+     },
+     {
+      "id": "LBsTkbhVmN3RB8HS",
+      "top": 2417,
+      "left": 198,
+      "width": 272,
+      "height": 19.6,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "潛水電腦錶（全天　▾）",
+        "formatting": {
+         "fontSize": 17,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBsTkbhVmN3RB8HS"
+     },
+     {
+      "id": "LBNwSWxzhdZFG4WC",
+      "top": 2404,
+      "left": 494,
+      "width": 130,
+      "height": 48,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 2,
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         }
+        },
+        "cornerRounding": 10
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 130,
+        "height": 48
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBNwSWxzhdZFG4WC"
+     },
+     {
+      "id": "LB5x5RCq1CLHDfyr",
+      "top": 2417,
+      "left": 498,
+      "width": 122,
+      "height": 18,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "−　1 支　＋",
+        "formatting": {
+         "fontSize": 15,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "center",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LB5x5RCq1CLHDfyr"
+     },
+     {
+      "id": "LBpHZSWQqJmh0Dv1",
+      "top": 2404,
+      "left": 634,
+      "width": 120,
+      "height": 48,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 2,
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         }
+        },
+        "cornerRounding": 10
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 120,
+        "height": 48
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBpHZSWQqJmh0Dv1"
+     },
+     {
+      "id": "LBfRcrkTpTty0jPy",
+      "top": 2417,
+      "left": 638,
+      "width": 112,
+      "height": 18,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "−　2 天　＋",
+        "formatting": {
+         "fontSize": 15,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "center",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBfRcrkTpTty0jPy"
+     },
+     {
+      "id": "LB7mwWwrDlmhDWB9",
+      "top": 2417.0000000000005,
+      "left": 764,
+      "width": 80,
+      "height": 21.4,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "1,000",
+        "formatting": {
+         "fontSize": 18,
+         "fontWeight": "bold",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "end",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LB7mwWwrDlmhDWB9"
+     },
+     {
+      "id": "LBn56nLbQ2F3ZtKT",
+      "top": 2470,
+      "left": 184,
+      "width": 660,
+      "height": 35.2,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "可選：輕裝 200／日、重裝 500 半日／900 全日\n全套輕重裝 600 半日／1,000 全日、潛水電腦錶 300半日／500全日",
+        "formatting": {
+         "fontSize": 14,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#7a6a55",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBn56nLbQ2F3ZtKT"
+     },
+     {
+      "id": "LBpWyyqtGCH1QxW4",
+      "top": 2554,
+      "left": 154,
+      "width": 720,
+      "height": 96,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 0,
+         "color": {
+          "type": "solid",
+          "color": "#000000"
+         }
+        },
+        "cornerRounding": 20
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 720,
+        "height": 96
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBpWyyqtGCH1QxW4"
+     },
+     {
+      "id": "LB9J9yB5t0gygV3k",
+      "top": 2586.0000000000005,
+      "left": 184,
+      "width": 360,
+      "height": 33.4,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "合計　NT$ 69,540",
+        "formatting": {
+         "fontSize": 28,
+         "fontWeight": "bold",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LB9J9yB5t0gygV3k"
+     },
+     {
+      "id": "LBy103hjkJdktvNN",
+      "top": 2574,
+      "left": 604,
+      "width": 240,
+      "height": 56,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ec6b0c"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 0,
+         "color": {
+          "type": "solid",
+          "color": "#000000"
+         }
+        },
+        "cornerRounding": 28
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 240,
+        "height": 56
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBy103hjkJdktvNN"
+     },
+     {
+      "id": "LBMnb4SjCHYjstsw",
+      "top": 2590,
+      "left": 604,
+      "width": 240,
+      "height": 24,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "下一步：填資料",
+        "formatting": {
+         "fontSize": 20,
+         "fontWeight": "bold",
+         "fontStyle": "normal",
+         "color": "#ffffff",
+         "textAlign": "center",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBMnb4SjCHYjstsw"
+     },
+     {
+      "id": "LBZm7jwJnWCHdcvs",
+      "top": 370,
+      "left": 906,
+      "width": 380,
+      "height": 620,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 0,
+         "color": {
+          "type": "solid",
+          "color": "#000000"
+         }
+        },
+        "cornerRounding": 20
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 380,
+        "height": 620
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBZm7jwJnWCHdcvs"
+     },
+     {
+      "id": "LBQpcCt2hCZZyK0P",
+      "top": 406,
+      "left": 942,
+      "width": 310,
+      "height": 30.8,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "訂單摘要",
+        "formatting": {
+         "fontSize": 26,
+         "fontWeight": "bold",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBQpcCt2hCZZyK0P"
+     },
+     {
+      "id": "LBhS6yMbZLXvPtq9",
+      "top": 455.99999999999994,
+      "left": 942,
+      "width": 310,
+      "height": 19.6,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "2026 / 12 / 05（六）出發",
+        "formatting": {
+         "fontSize": 17,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBhS6yMbZLXvPtq9"
+     },
+     {
+      "id": "LBYgrJTBMkHpWmCL",
+      "top": 500,
+      "left": 942,
+      "width": 310,
+      "height": 8,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 0,
+         "color": {
+          "type": "solid",
+          "color": "#000000"
+         }
+        },
+        "cornerRounding": 0
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 310,
+        "height": 8
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBYgrJTBMkHpWmCL"
+     },
+     {
+      "id": "LB1Qh0rgtKXVtCrY",
+      "top": 522,
+      "left": 942,
+      "width": 190,
+      "height": 212.1,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "潛水\n考證照與進階課程\n3 天 2 夜套裝＋升等\n活動\n住宿\n交通・船票\n裝備租借",
+        "formatting": {
+         "fontSize": 17,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#7a6a55",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.9,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LB1Qh0rgtKXVtCrY"
+     },
+     {
+      "id": "LB4jQTLzDt95QWx7",
+      "top": 522,
+      "left": 1102,
+      "width": 150,
+      "height": 212.1,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "NT$ 10,800\nNT$ 15,000\nNT$ 29,500\nNT$ 2,400\nNT$ 7,200\nNT$ 3,640\nNT$ 1,000",
+        "formatting": {
+         "fontSize": 17,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "end",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.9,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LB4jQTLzDt95QWx7"
+     },
+     {
+      "id": "LBNQJkp4WmXymMH3",
+      "top": 780,
+      "left": 942,
+      "width": 310,
+      "height": 8,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 0,
+         "color": {
+          "type": "solid",
+          "color": "#000000"
+         }
+        },
+        "cornerRounding": 0
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 310,
+        "height": 8
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBNQJkp4WmXymMH3"
+     },
+     {
+      "id": "LBLvtMY4jGTvjQS3",
+      "top": 806,
+      "left": 942,
+      "width": 120,
+      "height": 25.6,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "合計",
+        "formatting": {
+         "fontSize": 22,
+         "fontWeight": "bold",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBLvtMY4jGTvjQS3"
+     },
+     {
+      "id": "LBV4HLWmtBLWjJbG",
+      "top": 799.9999999999999,
+      "left": 1042,
+      "width": 210,
+      "height": 33.4,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "NT$ 69,540",
+        "formatting": {
+         "fontSize": 28,
+         "fontWeight": "bold",
+         "fontStyle": "normal",
+         "color": "#12355b",
+         "textAlign": "end",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBV4HLWmtBLWjJbG"
+     },
+     {
+      "id": "LBBljQYk8Gcl4bpS",
+      "top": 864,
+      "left": 942,
+      "width": 310,
+      "height": 56,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "shape",
+      "viewBox": {
+       "top": 0,
+       "left": 0,
+       "width": 100,
+       "height": 100
+      },
+      "paths": [
+       {
+        "d": "M0 0 H100 V100 H0 Z",
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ec6b0c"
+         },
+         "isMediaReplaceable": false
+        },
+        "stroke": {
+         "weight": 0,
+         "color": {
+          "type": "solid",
+          "color": "#000000"
+         }
+        },
+        "cornerRounding": 28
+       }
+      ],
+      "textContents": [
+       {
+        "textRegions": []
+       }
+      ],
+      "nineSlice": {
+       "sliceBox": {
+        "top": 0,
+        "left": 0,
+        "width": 100,
+        "height": 100
+       },
+       "resizeCenter": {
+        "width": 310,
+        "height": 56
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBBljQYk8Gcl4bpS"
+     },
+     {
+      "id": "LB98w39xjTp9gbls",
+      "top": 880,
+      "left": 942,
+      "width": 310,
+      "height": 24,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "下一步：填資料",
+        "formatting": {
+         "fontSize": 20,
+         "fontWeight": "bold",
+         "fontStyle": "normal",
+         "color": "#ffffff",
+         "textAlign": "center",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LB98w39xjTp9gbls"
+     },
+     {
+      "id": "LBWXwyj4rtyxqk4R",
+      "top": 936,
+      "left": 942,
+      "width": 310,
+      "height": 16.2,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "金額為示意。第 2–4 步同第 9 頁。",
+        "formatting": {
+         "fontSize": 14,
+         "fontWeight": "normal",
+         "fontStyle": "normal",
+         "color": "#7a6a55",
+         "textAlign": "start",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0,
+         "fontRef": "YACgEZ1cb1Q,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBWXwyj4rtyxqk4R"
+     },
+     {
+      "id": "LBswTH6003grgdrr",
+      "top": 253.20355932795192,
+      "left": 783.115780159435,
+      "width": 57.307185003687906,
+      "height": 52.72261020339289,
+      "rotation": -90,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "rect",
+      "fill": {
+       "media": {
+        "type": "image",
+        "mediaId": "MAFcgYNTPL8",
+        "imageBox": {
+         "top": 0,
+         "left": -1.0658141036401503e-14,
+         "width": 57.30718500368793,
+         "height": 52.72261020339289,
+         "rotation": 0
+        },
+        "recoloring": {
+         "#000000": "#ec6c0c"
+        }
+       },
+       "isMediaReplaceable": false,
+       "flipX": true,
+       "flipY": true
+      },
+      "stroke": {
+       "weight": 0,
+       "color": {
+        "type": "solid",
+        "color": "#000000"
+       }
+      },
+      "locator_id": "PBDRhLWtzmrxjlqr-LBswTH6003grgdrr"
+     },
+     {
+      "id": "LBKBJ9rrCsQPVTPH",
+      "top": 322.01116,
+      "left": 754,
+      "width": 108.73476627558259,
+      "height": 23.98884,
+      "rotation": 0,
+      "opacity": 1,
+      "isLocked": false,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "開始訂製",
+        "formatting": {
+         "fontSize": 20.0558,
+         "fontWeight": "bold",
+         "fontStyle": "normal",
+         "color": "#ec6c0c",
+         "textAlign": "center",
+         "decoration": "none",
+         "strikethrough": "none",
+         "link": "",
+         "listMarker": "none",
+         "listLevel": 0,
+         "lineHeight": 1.4,
+         "letterSpacing": 0.13,
+         "fontRef": "YAFcfgxAU44,0"
+        }
+       }
+      ],
+      "locator_id": "PBDRhLWtzmrxjlqr-LBKBJ9rrCsQPVTPH"
+     }
+    ],
+    "isEditable": true,
+    "locator_id": "PBDRhLWtzmrxjlqr"
+   }
+  ]
+ }
+}
