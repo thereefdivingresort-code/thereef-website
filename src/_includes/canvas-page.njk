@@ -126,7 +126,7 @@ LINE 官方帳號｜{% if site.company.lineUrl %}<a href="{{ site.company.lineUr
     </section>
     {% endfor %}
     {#- 跟著捲動的卡片（條款頁右側目錄）：外框在 y～until 之間，裡面的卡片 position: sticky #}
-    {% for st in cv.stickies or [] %}
+    {%- for st in cv.stickies or [] %}
     <nav class="hc-stickywrap" id="{{ st.id }}" aria-label="{{ st.label }}" style="left:{{ st.x }}px;top:{{ st.y }}px;width:{{ st.w }}px;height:{{ st.until - st.y }}px">
       <div class="hc-sticky" style="top:{{ st.top }}px;width:{{ st.w }}px;height:{{ st.h }}px">
         <div class="hc-sticky-card" style="left:{{ st.card.x }}px;top:{{ st.card.y }}px;width:{{ st.card.w }}px;height:{{ st.card.h }}px;border-radius:{{ st.card.radius }}px;background:{{ st.card.bg }};opacity:{{ st.card.op }}"></div>
