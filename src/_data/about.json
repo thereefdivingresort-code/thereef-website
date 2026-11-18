@@ -74,6 +74,25 @@
      "lh": 1.7,
      "align": "left",
      "text": "從小在關島長大\n在菲律賓及澳洲長期教學\n\n中英台語多聲道\n30年以上的潛水教學資歷\n水下兇巴巴只是怕你會危險\n水上不正經基本是他的常態\n想去世界各地的潛點問他沒錯\n他是活字典。"
+    },
+    {
+     "kind": "fish",
+     "code": "K1",
+     "file": "about_ken",
+     "name": "KEN 漫畫潛水員",
+     "anim": {
+      "dx": 0,
+      "dy": 24,
+      "dur": 2.8,
+      "delay": 0,
+      "float": 0,
+      "wobble": 7
+     },
+     "x": 887,
+     "y": 221,
+     "w": 515,
+     "h": 719,
+     "rot": 0
     }
    ],
    "shared": [
@@ -295,6 +314,60 @@
        "site:googleMapUrl"
       ]
      ]
+    },
+    {
+     "kind": "fish",
+     "code": "M1",
+     "file": "about_mermaid",
+     "name": "美人魚潛水員",
+     "anim": {
+      "dx": 0,
+      "dy": 0,
+      "dur": 1.2,
+      "delay": 0,
+      "float": 0,
+      "bob": 5.5,
+      "amp": 6
+     },
+     "x": 872,
+     "y": 11,
+     "w": 338,
+     "h": 743,
+     "rot": 0
+    },
+    {
+     "kind": "fish",
+     "code": "M2",
+     "file": "about_jelly",
+     "name": "水母",
+     "anim": {
+      "dx": 0,
+      "dy": 0,
+      "dur": 1.2,
+      "delay": 0,
+      "float": 0,
+      "bob": 3.2,
+      "amp": 18
+     },
+     "x": 877,
+     "y": 98,
+     "w": 92,
+     "h": 107,
+     "rot": 0
+    },
+    {
+     "x": 360,
+     "y": 51,
+     "w": 190,
+     "h": 50,
+     "radius": 25,
+     "bg": "#ec6b0c",
+     "color": "#ffffff",
+     "fs": 18,
+     "label": "加 LINE 好友",
+     "href": "site:lineUrl",
+     "newTab": true,
+     "kind": "button"
     }
    ]
   },
@@ -385,7 +458,7 @@
      "lh": 1.4,
      "align": "left",
      "text": "想問的方案",
-     "labelFor": "contact-form-plan"
+     "labelFor": "contact-form-plan-btn"
     },
     {
      "kind": "text",
@@ -501,6 +574,7 @@
      "tag": "input",
      "type": "email",
      "name": "email",
+     "required": true,
      "autocomplete": "email"
     },
     {
@@ -521,6 +595,7 @@
      "padB": 18.9,
      "tag": "select",
      "name": "plan",
+     "required": true,
      "options": [
       "體驗潛水",
       "OW",
