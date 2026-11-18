@@ -3,6 +3,8 @@
    字級照全站規則 ×0.9（框的位置、大小不變）。文字框的上緣照 canvas-page 的算法：Canva 上緣 −（行高 − 1.2）× 字級 ÷ 2。
    卡片高度不寫死：客人勾選項目時列數會變，卡片跟著長高。 */
 body:has(.bk) { background: #f5f3ee; }
+/* 右側訂單摘要要跟著捲動（sticky）：外層原本 overflow-x: hidden 會讓 sticky 失效，預訂頁改用 clip（一樣切掉超出 1440 的部分） */
+body:has(.bk) .hc-scale { overflow-x: clip; }
 .hc-flow { width: 1440px; margin: 0 auto; background: #f5f3ee; }
 .bk { position: relative; width: 1440px; padding-bottom: 86px; color: #12355b; font-size: 15.3px; line-height: 1.4; }
 .bk *, .bk *::before, .bk *::after { box-sizing: border-box; }
@@ -88,22 +90,24 @@ body:has(.bk) { background: #f5f3ee; }
 .bk-btn:hover, .bk-btn:focus-visible { filter: brightness(1.12); }
 
 /* 右側訂單摘要（Canva x 906 y 370，380×620）：照 Canva 座標 */
-.bk-summary { position: relative; width: 380px; height: 620px; background: #fff; border-radius: 20px; }
+/* 11/18 Ambre：摘要不能太長、不能無限制加長 → 卡片最高 620（Canva 高度），視窗比較矮時縮到視窗內；中間的項目清單超出時在卡片裡用滾輪捲。
+   上半部（標題、日期、第一條線、清單）從上往下排，下半部（第二條線、合計、按鈕、說明）從下往上排，620 高時位置跟 Canva 一樣 */
+.bk-summary { position: relative; width: 380px; height: min(620px, calc(100vh - 48px)); min-height: 420px; background: #fff; border-radius: 20px; }
 .bk-summary > * { position: absolute; left: 36px; width: 310px; margin: 0; }
 .bk-sum-h { top: 33.66px; font-size: 23.4px; font-weight: 700; line-height: 1.4; }
 .bk-sum-date { top: 84.47px; font-size: 15.3px; }
 .bk-bar { height: 8px; border: 0; background: #d9d2c3; }
 .bk-summary .bk-bar:first-of-type { top: 130px; }
-.bk-summary .bk-bar:last-of-type { top: 410px; }
-.bk-sum-lines { top: 142px; padding: 0; list-style: none; font-size: 15.3px; line-height: 32.3px; } /* 行距照 Canva 的 32px（字縮小後行距不縮，七行剛好填到下一條線） */
+.bk-summary .bk-bar:last-of-type { bottom: 202px; }
+.bk-sum-lines { top: 142px; bottom: 212px; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #d9d2c3 transparent; padding: 0; list-style: none; font-size: 15.3px; line-height: 32.3px; } /* 行距照 Canva 的 32px（字縮小後行距不縮，七行剛好填到下一條線） */
 .bk-sum-lines li { display: flex; justify-content: space-between; }
 .bk-sum-lines span { color: #7a6a55; }
 .bk-sum-lines b { font-weight: 400; }
-.bk-sum-total { top: 427.5px; display: flex; justify-content: space-between; align-items: center; height: 35.28px; }
+.bk-sum-total { bottom: 157.22px; display: flex; justify-content: space-between; align-items: center; height: 35.28px; }
 .bk-sum-total span { font-size: 19.8px; font-weight: 700; }
 .bk-sum-total strong { font-size: 25.2px; font-weight: 700; }
-.bk-summary .bk-next { top: 494px; }
-.bk-sum-note { top: 564.74px; font-size: 12.6px; color: #7a6a55; }
+.bk-summary .bk-next { bottom: 70px; }
+.bk-sum-note { bottom: 37.62px; font-size: 12.6px; line-height: 1.4; color: #7a6a55; }
 
 /* ---------- 第 2–4 步（11/18 Ambre：送審需要；Canva 沒有這幾頁 → 延續第 1 步的卡片、框線、按鈕） ---------- */
 .bk-steps { display: none; left: 154px; top: 256px; margin: 0; padding: 0; list-style: none; gap: 10px; }
