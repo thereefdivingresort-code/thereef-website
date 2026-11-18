@@ -201,6 +201,16 @@ PAGES = {
             ("form", "留言表單", 1940, 2950),
             ("footer", "頁尾", 2950, 3900),
         ],
+        # 插圖動畫（11/18 Ambre）：KEN 漫畫滑到時慢慢浮現（比住宿頁的 1.8 秒慢）＋一直上下左右輕輕晃；
+        #   美人魚潛水員微微上下浮動；她手上的水母（從同一張圖分出來）明顯上下飄
+        "illustrations": {
+            "LBLnjyDMXnTGlchB": {"code": "K1", "file": "about_ken", "name": "KEN 漫畫潛水員",
+                                 "anim": {"dx": 0, "dy": 24, "dur": 2.8, "delay": 0, "float": 0, "wobble": 7}},
+            "LBxyHnkMr8DdqfFL": {"code": "M1", "file": "about_mermaid", "name": "美人魚潛水員", "minus": ["jelly"],
+                                 "anim": {"dx": 0, "dy": 0, "dur": 1.2, "delay": 0, "float": 0, "bob": 5.5, "amp": 6}},
+            "jelly": {"code": "M2", "file": "about_jelly", "name": "水母", "box": [860, 1340, 1000, 1475],
+                      "anim": {"dx": 0, "dy": 0, "dur": 1.2, "delay": 0, "float": 0, "bob": 3.2, "amp": 18}},
+        },
         # /about/#contact：頁尾「聯絡我們」按鈕連這裡。「聯絡我們」標題（y 1310）上面留 60px，捲過來不會貼齊螢幕頂端
         "anchors": {"contact": 1250},
         "shared": {
@@ -215,9 +225,9 @@ PAGES = {
             "fields": [
                 ("LBDZH9trsd15r4rD", "LBBYrgmDdwSkL5dt", "LBCz2WF6cRRFVfH4", {"tag": "input", "type": "text", "name": "name", "required": True, "autocomplete": "name"}),
                 ("LB7jhWNphkTcsmhn", "LB2Kp8jWMwN1XhHr", "LBRBYVfk5R1XDhZ4", {"tag": "input", "type": "tel", "name": "phone", "required": True, "autocomplete": "tel"}),
-                ("LBnmZmrdsyQ1qnvK", "LBKnSRNlb5F5Hkkk", "LBM69tzyTwyxtfyT", {"tag": "input", "type": "email", "name": "email", "autocomplete": "email"}),
-                # 想問的方案：Canva 只寫「課程／住宿／套裝／其他」沒列選項 → 用排程說明給的清單（待 Ambre 決定）
-                ("LBDJqVXwyb92RgQg", "LBy9y3phwwPh0T8Q", "LBCVxK5vywktxSgM", {"tag": "select", "name": "plan", "options":
+                ("LBnmZmrdsyQ1qnvK", "LBKnSRNlb5F5Hkkk", "LBM69tzyTwyxtfyT", {"tag": "input", "type": "email", "name": "email", "required": True, "autocomplete": "email"}),
+                # 想問的方案：選項 11/18 Ambre 確認；做成自己畫的下拉清單（固定高度、裡面捲動，不會拉出一整條超長的框）。11/18 Ambre：全部必填
+                ("LBDJqVXwyb92RgQg", "LBy9y3phwwPh0T8Q", "LBCVxK5vywktxSgM", {"tag": "select", "name": "plan", "required": True, "options":
                     ["體驗潛水", "OW", "AOW", "OW＋AOW", "Fun Dive", "3 天 2 夜套裝", "住宿", "其他"]}),
                 ("LB2sfSdvwKVBRF3V", "LBNRpGRdTTzNWjJv", "LBvDHf4PSJjpnMCJ", {"tag": "textarea", "name": "message", "required": True}),
             ],
@@ -225,6 +235,11 @@ PAGES = {
             "submit": ("LBk81ls7yY7ZwJf4", "LBgp81XgB2Whc7v9"),
             "msg": {"x": 403.4, "w": 830},  # 送出鈕右邊，垂直置中對齊送出鈕
         },
+        # 「加 LINE 好友」按鈕（11/18 Ambre：聯絡我們那段 LINE 放最顯眼）：放在「聯絡我們」標題右邊，連 site.json 的 lineUrl
+        "extraButtons": [
+            {"x": 360, "y": 1311, "w": 190, "h": 50, "radius": 25, "bg": "#ec6b0c", "color": "#ffffff", "fs": 18,
+             "label": "加 LINE 好友", "href": "site:lineUrl", "newTab": True},
+        ],
         "overrides": {
             # 開場：橘色標題那一行 26px 粗體、下面說明 22px（Canva 同一個文字框兩種字級）
             "LBHYTVnZQPcWzF46": {"fs": 19.8, "fw": 400, "spans": [

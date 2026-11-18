@@ -93,19 +93,36 @@ def cut_illustrations(cfg, allel, illus, src, key):
     out = []
     imgdir = os.path.join(ROOT, "src", "assets", "img", key)
     os.makedirs(imgdir, exist_ok=True)
-    for eid, spec in illus.items():
-        e = allel[eid]
-        cx, cy = e["left"] + e["width"] / 2, e["top"] + e["height"] / 2
-        a = math.radians(e.get("rotation", 0))
-        pts = []
-        for dx, dy in [(-1, -1), (1, -1), (1, 1), (-1, 1)]:
-            x, y = dx * e["width"] / 2, dy * e["height"] / 2
-            pts.append((cx + x * math.cos(a) - y * math.sin(a), cy + x * math.sin(a) + y * math.cos(a)))
+    masks = {}
+    # 有 box 的先切（例如美人魚手上的水母），沒有 box 的（整張插圖）可以用 minus 扣掉它們
+    for eid, spec in sorted(illus.items(), key=lambda kv: "box" not in kv[1]):
         m = Image.new("L", (Ww, Hh), 0)
         d = ImageDraw.Draw(m)
-        d.polygon(pts, fill=255)
+        if "box" in spec:  # 從某張插圖裡分出一塊：框內最大的一塊（不透明部分連在一起的那塊），外擴 2px 留邊緣
+            from scipy import ndimage
+            x0, y0, x1, y1 = spec["box"]
+            sub = img[y0:y1, x0:x1, 3] > 8
+            lab, n = ndimage.label(sub)
+            big = np.argmax(ndimage.sum(sub, lab, range(1, n + 1))) + 1
+            blob = ndimage.binary_dilation(lab == big, iterations=2)
+            arr = np.zeros((Hh, Ww), np.uint8)
+            arr[y0:y1, x0:x1] = blob * 255
+            m = Image.fromarray(arr, "L")
+            d = ImageDraw.Draw(m)
+        else:
+            e = allel[eid]
+            cx, cy = e["left"] + e["width"] / 2, e["top"] + e["height"] / 2
+            a = math.radians(e.get("rotation", 0))
+            pts = []
+            for dx, dy in [(-1, -1), (1, -1), (1, 1), (-1, 1)]:
+                x, y = dx * e["width"] / 2, dy * e["height"] / 2
+                pts.append((cx + x * math.cos(a) - y * math.sin(a), cy + x * math.sin(a) + y * math.cos(a)))
+            d.polygon(pts, fill=255)
         for x0, y0, x1, y1 in cfg.get("illusClip", {}).get(eid, []):
             d.rectangle((x0, y0, x1, y1), fill=0)
+        for other in spec.get("minus", []):
+            m = Image.fromarray(np.minimum(np.array(m), 255 - np.array(masks[other])), "L")
+        masks[eid] = m
         layer = Image.new("RGBA", (Ww, Hh), (0, 0, 0, 0))
         layer.paste(full, (0, 0), m)
         bb = layer.getchannel("A").point(lambda v: 255 if v > 3 else 0).getbbox()
@@ -113,7 +130,8 @@ def cut_illustrations(cfg, allel, illus, src, key):
         layer.crop((x0, y0, x1, y1)).save(os.path.join(imgdir, spec["file"] + ".webp"), "WEBP", quality=90, method=6)
         out.append({"kind": "fish", "code": spec["code"], "file": spec["file"], "name": spec["name"], "anim": spec["anim"],
                     "x": x0, "y": y0, "w": x1 - x0, "h": y1 - y0, "rot": 0})
-    return out
+    order = [spec["code"] for spec in illus.values()]  # 輸出照設定的順序（後面的疊在上面）
+    return sorted(out, key=lambda f: order.index(f["code"]))
 
 
 def form_items(fm, allel, items, sc):
@@ -137,7 +155,7 @@ def form_items(fm, allel, items, sc):
             font = ImageFont.truetype(FONT_DIR + "NotoSansCJK-Regular.ttc", round(fs * 4), index=3)
             it["ph"] = pre.rstrip("　 ")
             it["arrowX"] = r(p["left"] - b["left"] + font.getlength(pre) / 4)
-        texts[label]["labelFor"] = fid
+        texts[label]["labelFor"] = fid + ("-btn" if spec["tag"] == "select" else "")
         out.append(it)
     box, label, name = fm["check"]
     b = allel[box]
@@ -211,6 +229,10 @@ def main():
     illus = cfg.get("illustrations", {})
     if illus:
         items.extend(cut_illustrations(cfg, allel, illus, sys.argv[3], key))
+
+    # 設計稿上沒有、另外加的按鈕（例如關於頁的「加 LINE 好友」）
+    for b in cfg.get("extraButtons", []):
+        items.append(dict(b, kind="button"))
 
     # 留言表單（真的網頁欄位，照 Canva 輸入框座標放；輸入框外觀在底圖）
     if fm:
