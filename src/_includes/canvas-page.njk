@@ -42,7 +42,7 @@ LINE 官方帳號｜{% if site.company.lineUrl %}<a href="{{ site.company.lineUr
 電話：<a href="{{ site.company.phoneHref }}">{{ site.company.phone }}</a>　信箱：{% if site.company.email %}<a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>{% else %}（待填）{% endif %}
   {%- elif it.site == "askPhone" -%}{{ it.pre }}
 <a href="{{ site.company.phoneHref }}">{{ site.company.phone }}</a>
-  {%- elif it.site == "askLine" -%}{{ it.pre }}請打 <a href="{{ site.company.phoneHref }}">{{ site.company.phone }}</a>，或寄信到{% if site.company.email %} <a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>{% else %}（待填）{% endif %}{{ it.post }}。
+  {%- elif it.site == "askLine" -%}{{ it.pre }}請打 <a href="{{ site.company.phoneHref }}">{{ site.company.phone }}</a>，或寄信到{% if site.company.email %} <a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>{% else %}（待填）{% endif %}{{ it.post }}{{ "。" if it.end is not defined else it.end }}
   {%- elif it.site == "contactWindow" -%}{{ site.company.name or "（待填）" }}
 電話：<a href="{{ site.company.phoneHref }}">{{ site.company.phone }}</a>　信箱：{% if site.company.email %}<a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>{% else %}（待填）{% endif %}
 地址：{{ site.company.address or "（待填）" }}
@@ -53,7 +53,7 @@ LINE 官方帳號｜{% if site.company.lineUrl %}<a href="{{ site.company.lineUr
   {%- elif it.links -%}{% for l in it.links %}{% if l[1] %}<a href="{{ site.company.googleMapUrl if l[1] == 'site:googleMapUrl' else l[1] }}"{% if l[1] == 'site:googleMapUrl' %} target="_blank" rel="noopener"{% endif %}{% if active and l[1] == active %} class="is-active" aria-current="page"{% endif %}>{{ l[0] }}</a>{% else %}{{ l[0] }}{% endif %}{% endfor %}
   {%- elif it.runs -%}{% for run in it.runs %}<span style="color:{{ run.c }}">{{ run.t }}</span>{% if not loop.last %}
 {% endif %}{% endfor %}
-  {%- elif it.spans -%}{% for sp in it.spans %}{% if sp.href %}<a href="{{ sp.href }}"{% if sp.newTab %} target="_blank" rel="noopener"{% endif %} style="color:{{ sp.c }}{% if sp.fs %};font-size:{{ sp.fs }}px{% endif %}{% if sp.fw %};font-weight:{{ sp.fw }}{% endif %}">{{ sp.t | fillPrices(prices) }}</a>{% else %}<span style="color:{{ sp.c }}{% if sp.fs %};font-size:{{ sp.fs }}px{% endif %}{% if sp.fw %};font-weight:{{ sp.fw }}{% endif %}">{{ sp.t | fillPrices(prices) }}</span>{% endif %}{% endfor %}
+  {%- elif it.spans -%}{% for sp in it.spans %}{% if sp.href %}<a href="{{ sp.href }}"{% if sp.newTab %} target="_blank" rel="noopener"{% endif %} style="color:{{ sp.c }}{% if sp.fs %};font-size:{{ sp.fs }}px{% endif %}{% if sp.fw %};font-weight:{{ sp.fw }}{% endif %}{% if sp.ul %};text-decoration:underline;text-underline-offset:4px{% endif %}">{{ sp.t | fillPrices(prices) }}</a>{% else %}<span style="color:{{ sp.c }}{% if sp.fs %};font-size:{{ sp.fs }}px{% endif %}{% if sp.fw %};font-weight:{{ sp.fw }}{% endif %}">{{ sp.t | fillPrices(prices) }}</span>{% endif %}{% endfor %}
   {%- elif it.fill -%}{{ it.text | fillPrices(prices) }}
   {%- elif it.href -%}<a href="{{ it.href }}">{{ it.text }}</a>
   {%- else -%}{{ it.text }}{%- endif -%}
