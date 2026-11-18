@@ -7,6 +7,7 @@
   const PAYMENT_LIVE = false;
   const P = window.ReefPricing;
   const data = JSON.parse(document.getElementById("price-data").textContent);
+  const SITE = JSON.parse(document.getElementById("site-data").textContent); // 電話、LINE 讀 site.json
   const I = P.index(data);
   const n = (v) => Number(v).toLocaleString("en-US");
   const fmt = (v) => "NT$ " + n(v);
@@ -305,43 +306,17 @@
   })(new URLSearchParams(location.search).get("item"));
   update();
 
-  // 「下一步：填資料」：至少選一個項目才往下
+  // 「下一步：填資料」：11/18 Ambre 決定照 Canva 只有這一頁（舊版第 2–4 步已取消）。
+  // 送審版還不能線上付款：有選項目就請客人來電或加 LINE；沒選就提醒先選。PAYUNi 過審後在這裡接付款流程。
   const form = document.getElementById("booking-form");
+  form.addEventListener("submit", (e) => e.preventDefault());
   const pickMsg = form.querySelector(".bk-pick-msg");
   document.querySelectorAll("[data-next]").forEach((b) => b.addEventListener("click", () => {
     const { count } = update();
-    if (!count) { pickMsg.textContent = "請至少選一個項目，人數或數量要大於 0。"; pickMsg.scrollIntoView({ block: "center" }); return; }
-    pickMsg.textContent = "";
-    document.getElementById("bk-step2").scrollIntoView({ behavior: "smooth", block: "start" });
-  }));
-
-  // 新增參加者：每位都要姓名和出生年月日
-  let people = 1;
-  document.getElementById("add-person").addEventListener("click", () => {
-    people++;
-    const box = document.createElement("div");
-    box.className = "bk-fields";
-    box.innerHTML =
-      '<label class="bk-field"><span>參加者 ' + people + ' 姓名</span><input name="p' + people + '_name" required></label>' +
-      '<label class="bk-field"><span>出生年月日</span><input name="p' + people + '_birthday" type="date" required></label>';
-    document.getElementById("participants").appendChild(box);
-  });
-
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const msg = document.getElementById("form-msg");
-    const { count } = update();
-    if (!count) { msg.textContent = "請至少選一個項目。"; return; }
-    if (!form.checkValidity() || !document.getElementById("bk-date").checkValidity()) {
-      form.reportValidity();
-      if (!document.getElementById("bk-date").value) document.getElementById("bk-date").reportValidity();
-      msg.textContent = "還有欄位沒填（含出發日期），或條款還沒勾選。";
-      return;
-    }
+    if (!count) { pickMsg.textContent = "請至少選一個項目，人數或數量要大於 0。"; return; }
     if (!PAYMENT_LIVE) {
-      msg.innerHTML = "線上付款正在開通中。請先打 <a href=\"tel:+886936871525\">0936-871-525</a> 預訂，我們會幫你保留名額。";
-      return;
+      pickMsg.innerHTML = "線上付款開通中，請先打 <a href=\"" + SITE.phoneHref + "\">" + SITE.phone + "</a>" +
+        (SITE.lineUrl ? " 或加 <a href=\"" + SITE.lineUrl + "\" target=\"_blank\" rel=\"noopener\">LINE 官方帳號</a>" : "") + " 預訂，我們會幫你保留名額。";
     }
-    // submitOrder(form) — 金流上線後接到伺服器端產生 PAYUNi 付款單（伺服器要用 pricing.js 重算一次總價）
-  });
+  }));
 })();
