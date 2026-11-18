@@ -147,10 +147,13 @@ PAGES = {
             "LB6ZkxmTckCCLlBy": ("dsd", None),
             "LBZ9wlyDbmv99gFr": ("fun", None),
         },
-        # 插圖：月亮夜釣、SUP（連同後面的太陽）滑到時慢慢浮現（11/18 Ambre）；烤肉插圖拿掉（11/18 Ambre）
+        # 插圖：月亮夜釣、SUP（連同後面的太陽）、藍洞探險（取代烤肉）滑到時慢慢浮現（11/18 Ambre）
         "illustrations": {
             "LBZQVMYsBZZF9mqP": {"code": "T1", "file": "trips_moon_fishing", "name": "月亮夜釣", "anim": {"dx": 0, "dy": 12, "dur": 1.8, "delay": 0, "float": 0}},
             "LB8f2js7y9qclGlr": {"code": "T2", "file": "trips_sup_sun", "name": "SUP 立槳與太陽", "with": ["LBT3trKSS4gn3Z1n"], "anim": {"dx": 0, "dy": 12, "dur": 1.8, "delay": 0, "float": 0}},
+            # 原本烤肉的位置換成藍洞探險（11/18 Ambre）：不是 Canva 的圖，是照同風格畫的 docs/trips-bluecave.svg，
+            #   匯出插圖 PNG 後貼在烤肉的範圍（x1012.4 y3381.7 w178.6 h155.4）再跑產生器；太陽跟頁首選單的太陽同色
+            "LBQszyFHm6Q0GkDP": {"code": "T3", "file": "trips_bluecave", "name": "藍洞探險", "anim": {"dx": 0, "dy": 12, "dur": 1.8, "delay": 0, "float": 0}},
         },
         "sections": [
             ("open", "開場", 0, 1330),
