@@ -113,3 +113,12 @@ label.hc-t { cursor: pointer; }
 .hc-dd-list li { padding: 9px 20px; font-size: var(--fs); line-height: 1.4; color: #12355b; cursor: pointer; }
 .hc-dd-list li:hover, .hc-dd-list li.is-active { background: #f5f3ee; }
 .hc-dd-list li[aria-selected="true"] { font-weight: 700; color: #2a8a9a; }
+
+/* 跟著捲動的卡片（條款頁右側目錄）：外框照 Canva 位置、高度到 until；卡片本身 sticky。
+   外層 .hc-scale 原本 overflow-x: hidden 會讓 sticky 失效，有這種卡片的頁面改用 clip（一樣切掉超出 1440 的部分） */
+.hc-scale:has(.hc-stickywrap) { overflow-x: clip; }
+.hc-stickywrap { position: absolute; z-index: 2; }
+.hc-sticky { position: sticky; }
+.hc-sticky-card, .hc-sticky-line, .hc-sticky-img { position: absolute; display: block; }
+.hc-sticky .hc-t a { text-decoration: none; }
+.hc-sticky .hc-t a:hover, .hc-sticky .hc-t a:focus-visible { text-decoration: underline; text-underline-offset: 3px; }

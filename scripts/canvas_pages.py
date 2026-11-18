@@ -273,3 +273,118 @@ PAGES = {
         },
     },
 }
+
+# 三個條款頁（服務條款、隱私權、退款與停航）共用：右側目錄跟著捲動、〈…政策〉自動變連結
+LEGAL_LINKS = {"〈服務條款〉": "/terms/", "〈隱私權政策〉": "/privacy/", "〈退款與停航政策〉": "/refund/"}
+
+
+def toc_spans(lines, color):
+    """目錄每一行連到該條（#t1、#t2…）"""
+    out = []
+    for i, t in enumerate(lines):
+        out.append({"t": t, "c": color, "href": f"#t{i + 1}"})
+        if i < len(lines) - 1:
+            out.append({"t": "\n", "c": color})
+    return out
+
+
+PAGES["terms"] = {
+    "canva": "terms-canva-elements.json",
+    "title": "服務條款",
+    "active": None,
+    "textScale": 0.9,  # 全站規則（11/17 Ambre）：字級 ×0.9，位置、框寬不變
+    "sections": [
+        ("open", "開場", 0, 580),
+        ("c1", "第 1–4 條", 580, 1320),
+        ("c2", "第 5–9 條", 1320, 2110),
+        ("c3", "第 10–13 條", 2110, 2770),
+        ("closing", "還有其他問題？", 2770, 3040),
+        ("footer", "頁尾", 3040, 4000),
+    ],
+    # 目錄點了跳到該條：標題上面留 40px
+    "anchors": {f"t{i + 1}": round(y - 40) for i, y in enumerate([609.4, 768.1, 993.2, 1151.8, 1343.7, 1535.6, 1694.3, 1853.0, 2011.7, 2137.2, 2329.0, 2487.7, 2613.2])},
+    "shared": {
+        "open": [{"from": "open", "maxY": 140}],                 # 頁首：跟首頁同位置（Canva 這頁選單還有「聯絡」，全站已拿掉）
+        "footer": [{"from": "footer", "dx": 35.6, "dy": 16.4}],  # 頁尾：Canva 這頁的頁尾是首頁舊版複本（整組往右、往下），用首頁那份；dx、dy 用像素量測對齊左欄
+    },
+    "skip": ["LBR7S9PnyPPK4HjL", "LBfzD2VxRlF0mGyG",
+             "LBFhfblnYZNk9w2t", "LB6j44GPp3lZ06p5", "LBV1CtJNxnBG7jHF", "LB7CcJy7kXTjWkth", "LBq4f68s7JDtsxZB",
+             "LBVnVlzSd01s80qc", "LB3Dqt9QGf7Yv3pY", "LBXCsZC1nLDhyXgd"],
+    "keep": ["LBk3Yn14GsLGg9Gy"],  # 「最後更新：2026 年 11 月」是黃色，但不是設計標籤，是內容
+    "autoLinks": LEGAL_LINKS,
+    "autoLinksUnderline": ["〈退款與停航政策〉"],  # 11/18 Ambre：條文裡的〈退款與停航政策〉一直有底線（跟文字同色）；〈隱私權政策〉維持滑過才有
+    # 右側目錄：Canva 上的白色卡片、分隔線、紅珊瑚、目錄文字一起跟著捲動（需求總表第 4 節），捲到「還有其他問題？」上面就停
+    "sticky": [{
+        "id": "toc", "label": "本頁目錄", "box": "LBGTjwr8NBd07yj8", "lines": ["LBwK4ZPPq1P2frht"],
+        "imgs": [{"id": "LBSX3vZnbRPtk9G1", "file": "terms_coral", "alt": "", "box": [1229, 346, 171, 170]}],
+        "members": ["LBTp9CBCd778jnz1", "LByXL1nwHM05vc8b", "LBJjjbwBLsbFNCNX"],
+        "until": 2760, "top": 16,
+    }],
+    "overrides": {
+        # 11/18 Ambre 條文更新圖（docs/compare/terms/_Ambre_11-18_條文更新.webp）：11/19 照圖改
+        "LBk3Yn14GsLGg9Gy": {"text": "最後更新：2026 年 11 月"},
+        "LBpbkLrMbXwgMV7v": {"text": "預訂前請先讀這一頁，這裡說明你和綠芙雙方的權利與責任。"},
+        "LBqx79KDNQ71VLcv": {"text": "本條款適用於你在綠芙 The Reef 網站預訂的潛水課程、住宿、3 天 2 夜套裝和島上行程。\n完成預訂，代表你已閱讀並同意本條款、〈隱私權政策〉和〈退款與停航政策〉。"},
+        "LB7CpwCjV5n2sTQp": {"text": "送出預訂並在 PAYUNi 統一金流完成付款後，我們會寄確認信給你，訂單才算成立。\n如果遇到客滿、價格標示錯誤或其他無法提供服務的情況，我們會主動通知你，並全額退款。"},
+        "LBR7HBpb5zk4wVqG": {"text": "網站價格以新台幣計算。付款由 PAYUNi 統一金流處理，可用的付款方式以付款頁為準。套裝內容、加購項目和額外費用（例如單人加價、升等房型），以預訂時頁面顯示的內容為準，綠島為免稅區域，不另開發票。"},
+        "LBC8tLD02Jx4hTnt": {"text": "參加潛水課程或體驗前，請誠實填寫 PADI 健康問卷；問卷中有需要醫師評估的項目時，請先取得醫師同意。未滿 18 歲的參加者需要法定代理人同意；各課程的最低年齡依 PADI 規定，例如：體驗潛水為 10 歲。懷孕、近期動過手術或有心肺疾病的人，請先和我們聯絡。"},
+        "LBY179B2jHKSxcJB": {"text": "入住和退房時間：下午3點後入住，隔天中午12點前退房。請愛惜房間和公共設備；因故意或過失造成損壞，需依實際修復費用負責。"},
+        "LBSf4JrFKXDHqCl7": {"text": "潛水是一項有風險的活動，綠芙為全數水上活動投保責任保險，你也可以依自己的需要另外投保旅遊平安險。因綠芙的過失造成你的損害，我們依法負責；因參加者未遵守安全規定或隱瞞健康狀況造成的損害，依法減輕或免除綠芙的責任。"},
+        "LBBnmsGwvwtbZtWS": {"text": "教練可能在活動中拍攝照片或影片，讓你留念。如果要把能認出你的照片用在官網或社群，請在下水前與教練溝通，也可以事先購買明信片寫好至海底信箱投遞。"},  # 圖上寫「投地」，錯字，改「投遞」
+        "LBvBM3XsJTPBlvY0": {"text": "綠芙保有更新本條款的權益，更新後將公布在本頁並標示日期。已成立之訂單，適用下單當時的條款。"},
+        "LB20qVqxDNk9Bry9": {"site": "operator"},                        # 經營者資訊：讀 site.json
+        "LBJjjbwBLsbFNCNX": {"site": "askPhone", "pre": "有疑問？"},       # 目錄下面：電話可撥號
+        "LBL14qQxcl13Bx1v": {"site": "askLine", "pre": "對條款有疑問，", "end": ""},  # 還有其他問題？：電話、信箱讀 site.json；11/18 圖上信箱後面沒有句號
+        # 目錄清單：字縮小 0.9 但每一行的位置照 Canva（行距 29.3px 不縮），清單才會剛好排到分隔線上面
+        "LByXL1nwHM05vc8b": {"lh": 2.083, "y": 494.1, "spans": toc_spans(["1 適用範圍", "2 經營者資訊", "3 預訂與訂單成立", "4 價格與付款", "5 參加資格與健康", "6 安全規定",
+                                                 "7 天候與停航", "8 住宿規範", "9 裝備使用", "10 保險與責任", "11 照片與影像", "12 條款修改", "13 準據法與管轄"], "#12355b")},
+        "LBncY3BCBfMbsdFq": {"spans": [{"t": "隱私權政策 →", "c": "#ec6c0c", "href": "/privacy/"}, {"t": "\n", "c": "#ec6c0c"},
+                                       {"t": "退款與停航政策 →", "c": "#ec6c0c", "href": "/refund/"}]},
+    },
+}
+
+
+PAGES["privacy"] = {
+    "canva": "privacy-canva-elements.json",
+    "title": "隱私權政策",
+    "active": None,
+    "textScale": 0.9,  # 全站規則（11/17 Ambre）：字級 ×0.9，位置、框寬不變
+    "sections": [
+        ("open", "開場", 0, 520),
+        ("c1", "第 1–3 條", 520, 1210),
+        ("c2", "第 4–6 條", 1210, 1880),
+        ("c3", "第 7–10 條", 1880, 2640),
+        ("closing", "想查詢或刪除你的資料？", 2640, 2840),
+        ("footer", "頁尾", 2840, 3800),
+    ],
+    "anchors": {f"t{i + 1}": round(y - 40) for i, y in enumerate([557.8, 772.5, 1055.8, 1236.2, 1519.5, 1734.2, 1914.5, 2094.9, 2275.2, 2421.2])},
+    "shared": {
+        "open": [{"from": "open", "maxY": 140}],                 # 頁首：跟首頁同位置（Canva 這頁選單還有「聯絡」，全站已拿掉）
+        "footer": [{"from": "footer", "dx": 7.45, "dy": 12.1}],  # 頁尾：Canva 這頁的頁尾是首頁舊版複本，用首頁那份；dx、dy 用像素量測對齊左欄
+    },
+    "skip": ["LB5ZnYjRz316jkpb", "LBTgYjgcT4TcxNPF",
+             "LBtTMyldXbfk41Bm", "LBgbLq8q6wlkd0hQ", "LByFWjyNgw1t2v4G", "LBPQR54dv8j7KJTw", "LBFSMRjkPZr1HsYj",
+             "LBqjhQzw9MPJzByp", "LBWg5417YV1BW3YZ", "LBD1vChFMT92fggq"],
+    "autoLinks": LEGAL_LINKS,
+    # 右側目錄：白卡、分隔線、海星、目錄文字一起跟著捲動；捲到右下角珊瑚插圖上面就停（不蓋到珊瑚）
+    "sticky": [{
+        "id": "toc", "label": "本頁目錄", "box": "LBn2RDcT65vYnd6b", "lines": ["LBsSLcbNN3bz6PzW"],
+        "imgs": [{"id": "LBKCtsR4CySFqZ0Q", "file": "privacy_star", "alt": "", "box": [1255, 535, 96, 96]}],
+        "members": ["LBnJrB0C6GSHRBml", "LBkYfHfxw1PqN0vR", "LBy5sjrZYxFS5mSV"],
+        "until": 2215, "top": 79,
+    }],
+    "overrides": {
+        # 11/18 Ambre 回覆：11/19 改
+        "LBBj6Pt2KdhyNpJ7": {"text": "最後更新：2026 年 11 月"},
+        "LBnlPyllz6CpH6lw": {"text": "綠芙只蒐集「提供服務所需」的資料，並妥善保管，這一頁將說明細節。"},
+        "LB5v7M095jYbj3BM": {"text": "提供和管理你預訂的課程、住宿與行程；辦理保險；申請 PADI 潛水證照；聯絡與客服；記帳；分析網站使用狀況、改善服務。"},
+        "LBpCc0hcJVzbyM8P": {"site": "contactWindow"},                                   # 聯絡窗口：讀 site.json
+        "LBy5sjrZYxFS5mSV": {"site": "askPhone", "pre": "有疑問？"},                       # 目錄下面：電話可撥號
+        "LBSFxG3Vlfk7cd7j": {"site": "askLine", "pre": "", "post": "，告訴我們你的姓名和訂單編號"},  # 電話、信箱讀 site.json
+        # 目錄清單：字縮小 0.9 但每一行的位置照 Canva（行距不縮）
+        "LBkYfHfxw1PqN0vR": {"lh": 2.083, "y": 630.5 - (2.083 - 1.2) * 16.156 * 0.9 / 2 - 0.9, "spans": toc_spans(["1 適用範圍", "2 我們蒐集的資料", "3 使用目的", "4 利用期間與對象", "5 你的權利",
+                                                 "6 不提供的影響", "7 Cookie", "8 資料安全", "9 政策修改", "10 聯絡窗口"], "#12355b")},
+        "LBCvT42HV427v1X1": {"spans": [{"t": "服務條款 →", "c": "#ec6c0c", "href": "/terms/"}, {"t": "\n", "c": "#ec6c0c"},
+                                       {"t": "退款與停航政策 →", "c": "#ec6c0c", "href": "/refund/"}]},
+    },
+}
