@@ -1,0 +1,1330 @@
+{
+ "_說明": "Canva 原檔 DAHao-HiYfI 第 11 頁（UI v3｜退款與停航政策，頁面 ID PBDhcF4Hj0jsFYHW，1440×3600）。11/18 從工作檔 DAHbRi8fvgA（copy-design）讀一次 design_content 整理而成（只留座標與文字格式需要的欄位；圖片只記位置），之後不要再讀整頁。",
+ "source": {
+  "design": "DAHao-HiYfI",
+  "page": 11,
+  "pageId": "PBDhcF4Hj0jsFYHW",
+  "workCopy": "DAHbRi8fvgA",
+  "workCopyPageId": "PBf4j1TZ9FvVGf9h"
+ },
+ "presenter_notes": "UI v3｜退款與停航政策（2026-11-15，草稿）。頁首、頁尾照搬首頁 page 20。\n第 2 項住宿：依交通部觀光署〈個別旅客訂房定型化契約應記載及不得記載事項〉（全額預付：3 天前 100%、前 1～2 天 50%、當天 0，或保留 1 年折抵）。上線前再對一次最新版。\n第 3 項課程／套裝：比例是建議值，參考〈國內個別旅遊定型化契約書範本〉的旅客解約賠償級距（21–30 天 10%、11–20 天 20%、4–10 天 30%、1–3 天 70%、當天 100%）換算成退款比例；31 天以前全退是建議的寬鬆版。業主可以更寬鬆，不建議比範本更嚴。\n第 1 項天候：不可歸責雙方時可解約，扣除已支出且無法退回的必要費用後退還。\n待業主確認：回程停航延宿怎麼處理、改期規則、個人因素無法下水的處理、ATM 退款手續費、退款作業天數、信箱。\n這是草稿，不是法律意見；建議上線前請法律專業人士看過。",
+ "design_content": {
+  "title": "UI v3｜退款與停航政策",
+  "pages": [
+   {
+    "type": "fixed",
+    "id": "PBf4j1TZ9FvVGf9h",
+    "notes": "UI v3｜退款與停航政策（2026-11-15，草稿）。頁首、頁尾照搬首頁 page 20。\n第 2 項住宿：依交通部觀光署〈個別旅客訂房定型化契約應記載及不得記載事項〉（全額預付：3 天前 100%、前 1～2 天 50%、當天 0，或保留 1 年折抵）。上線前再對一次最新版。\n第 3 項課程／套裝：比例是建議值，參考〈國內個別旅遊定型化契約書範本〉的旅客解約賠償級距（21–30 天 10%、11–20 天 20%、4–10 天 30%、1–3 天 70%、當天 100%）換算成退款比例；31 天以前全退是建議的寬鬆版。業主可以更寬鬆，不建議比範本更嚴。\n第 1 項天候：不可歸責雙方時可解約，扣除已支出且無法退回的必要費用後退還。\n待業主確認：回程停航延宿怎麼處理、改期規則、個人因素無法下水的處理、ATM 退款手續費、退款作業天數、信箱。\n這是草稿，不是法律意見；建議上線前請法律專業人士看過。",
+    "title": "UI v3｜退款與停航政策",
+    "dimensions": {
+     "width": 1440,
+     "height": 3600
+    },
+    "background": {
+     "color": {
+      "type": "solid",
+      "color": "#f5f3ee"
+     }
+    },
+    "elements": [
+     {
+      "id": "LBlSgZQMhFg7LMV6",
+      "top": 232.99999999999818,
+      "left": 133.83273760947213,
+      "width": 724.936151475121,
+      "height": 24.854953764861293,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "REFUND　·　退款與停航政策",
+        "formatting": {
+         "fontSize": 20.71246147071774,
+         "fontWeight": "bold",
+         "color": "#2a8a9a",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBm5y8hD2lZlB2C2",
+      "top": 274.4249229414337,
+      "left": 133.83273760947213,
+      "width": 1139.185380889476,
+      "height": 89.0635843240863,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "退款與停航政策",
+        "formatting": {
+         "fontSize": 74.56486129458388,
+         "fontWeight": "bold",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.2,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBh7gVRk1WdjXX0q",
+      "top": 377.98723029502236,
+      "left": 133.8327376094722,
+      "width": 890.635843240863,
+      "height": 22.16233377366799,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "最後更新：2026 年 11 月（草稿）",
+        "formatting": {
+         "fontSize": 18.64121532364597,
+         "fontWeight": "normal",
+         "color": "#7a6a55",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBWyXLG81RTVq9LW",
+      "top": 429.7683839718167,
+      "left": 133.83273760947202,
+      "width": 1035.6230735358872,
+      "height": 26.926199911933065,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "綠島的船班和海上活動常受天候影響。這一頁說明取消、改期和退款怎麼處理。",
+        "formatting": {
+         "fontSize": 22.783707617789517,
+         "fontWeight": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.7,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBkbnGsk9QxqlKr4",
+      "top": 554.0431527961233,
+      "left": 133.84194314790352,
+      "width": 1172.3253192426243,
+      "height": 265.1195068251871,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "shape",
+      "paths": [
+       {
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         }
+        },
+        "stroke": {
+         "weight": 0,
+         "color": {
+          "type": "solid",
+          "color": "#000000"
+         }
+        },
+        "cornerRounding": 18
+       }
+      ]
+     },
+     {
+      "id": "LB4Q6rtR7CbQPWkF",
+      "top": 595.4680757375587,
+      "left": 175.25766055090764,
+      "width": 1035.6230735358872,
+      "height": 29.204570673712016,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "1　天候、停航與不可抗力",
+        "formatting": {
+         "fontSize": 24.854953764861293,
+         "fontWeight": "bold",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LB2GnCz9ZZzDVn2t",
+      "top": 645.1779832672814,
+      "left": 175.26686608933903,
+      "width": 1089.4754733597533,
+      "height": 129.03863496257154,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "・出發前遇到颱風、海象不佳、船班停航，或主管機關公告停止活動，我們會主動聯絡你。你可以選擇免費改期，或退款。\n・行程中因天候停航或無法下水，未進行的部分可以改期或退款。\n・已代購且無法退回的費用（例如已出票的船票），會先扣除並提供單據。\n・回程船班停航、需要延長住宿時的處理方式：（待業主確認）。",
+        "formatting": {
+         "fontSize": 19.676838397181854,
+         "fontWeight": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.8,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LB1BjMNT8PpGw65m",
+      "top": 912.3687362395402,
+      "left": 133.83273760947202,
+      "width": 1035.6230735358872,
+      "height": 29.204570673712016,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "2　只訂住宿",
+        "formatting": {
+         "fontSize": 24.854953764861293,
+         "fontWeight": "bold",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBWg3mbqD7Sww9hm",
+      "top": 957.9361514751193,
+      "left": 133.84194314790352,
+      "width": 1172.3253192426243,
+      "height": 20.29821224130339,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "依交通部觀光署〈個別旅客訂房定型化契約應記載及不得記載事項〉，全額預付的訂單：",
+        "formatting": {
+         "fontSize": 17.605592250110085,
+         "fontWeight": "normal",
+         "color": "#7a6a55",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBblKr8qwDfKBDxC",
+      "top": 999.3610744165549,
+      "left": 133.84194314790352,
+      "width": 1172.3253192426243,
+      "height": 227.83707617789517,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "shape",
+      "paths": [
+       {
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         }
+        },
+        "stroke": {
+         "weight": 0,
+         "color": {
+          "type": "solid",
+          "color": "#000000"
+         }
+        },
+        "cornerRounding": 18
+       }
+      ]
+     },
+     {
+      "id": "LBRwTXznQ0kNd9hN",
+      "top": 1028.3585204755595,
+      "left": 175.25766055090764,
+      "width": 621.3738441215323,
+      "height": 20.29821224130339,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "取消時間",
+        "formatting": {
+         "fontSize": 17.605592250110085,
+         "fontWeight": "bold",
+         "color": "#7a6a55",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBNBz0czMDNDXLkY",
+      "top": 1028.3585204755595,
+      "left": 906.4259615441068,
+      "width": 358.3255834434169,
+      "height": 20.29821224130339,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "退款比例",
+        "formatting": {
+         "fontSize": 17.605592250110085,
+         "fontWeight": "bold",
+         "color": "#7a6a55",
+         "textAlign": "end",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LByTfThF4yWcBD0V",
+      "top": 1063.5697049757798,
+      "left": 175.26686608933903,
+      "width": 1089.4754733597533,
+      "height": 8.284984588287097,
+      "rotation": 0,
+      "opacity": 0.5,
+      "type": "shape",
+      "paths": [
+       {
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         }
+        },
+        "stroke": {
+         "weight": 0,
+         "color": {
+          "type": "solid",
+          "color": "#000000"
+         }
+        },
+        "cornerRounding": 0
+       }
+      ]
+     },
+     {
+      "id": "LByjlfqcdqtfKytN",
+      "top": 1086.3534125935694,
+      "left": 175.2576605509076,
+      "width": 662.7987670629678,
+      "height": 107.70479964773226,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "入住日 3 天前（含）以前取消\n入住日前 1～2 天取消\n入住當天取消或未到",
+        "formatting": {
+         "fontSize": 19.67683839718186,
+         "fontWeight": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 2.2,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LB1xdspvPbXjJ2Y6",
+      "top": 1086.3534125935694,
+      "left": 906.4259615441068,
+      "width": 358.3255834434169,
+      "height": 107.70479964773226,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "退還 100%\n退還 50%\n不退款",
+        "formatting": {
+         "fontSize": 19.676838397181854,
+         "fontWeight": "bold",
+         "color": "#12355b",
+         "textAlign": "end",
+         "decoration": "none",
+         "lineHeight": 2.2,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBmJkfy6HXFdmBRM",
+      "top": 1247.9106120651677,
+      "left": 133.84194314790352,
+      "width": 1172.3253192426243,
+      "height": 20.29821224130339,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "也可以選擇不退款，把已付金額保留 1 年，折抵之後的住宿。",
+        "formatting": {
+         "fontSize": 17.605592250110085,
+         "fontWeight": "normal",
+         "color": "#7a6a55",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBhqvVcGMM0csKMB",
+      "top": 1361.8291501541153,
+      "left": 133.83273760947202,
+      "width": 1035.6230735358872,
+      "height": 29.204570673712016,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "3　課程、潛水活動與 3 天 2 夜套裝",
+        "formatting": {
+         "fontSize": 24.854953764861293,
+         "fontWeight": "bold",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBc2cntVy45KQ3Nj",
+      "top": 1407.3965653896942,
+      "left": 133.84194314790352,
+      "width": 1172.3253192426243,
+      "height": 20.29821224130339,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "旅客自己取消時，依出發日往前算（建議比例，參考〈國內個別旅遊定型化契約〉，待業主確認）：",
+        "formatting": {
+         "fontSize": 17.605592250110085,
+         "fontWeight": "normal",
+         "color": "#7a6a55",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBjxXqb5QKgLCf3m",
+      "top": 1448.8214883311296,
+      "left": 133.84194314790352,
+      "width": 1172.3253192426243,
+      "height": 355.2187142228093,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "shape",
+      "paths": [
+       {
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         }
+        },
+        "stroke": {
+         "weight": 0,
+         "color": {
+          "type": "solid",
+          "color": "#000000"
+         }
+        },
+        "cornerRounding": 18
+       }
+      ]
+     },
+     {
+      "id": "LBlVtH4qn5dTkkhb",
+      "top": 1477.8189343901347,
+      "left": 175.25766055090764,
+      "width": 621.3738441215323,
+      "height": 20.29821224130339,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "取消時間",
+        "formatting": {
+         "fontSize": 17.605592250110085,
+         "fontWeight": "bold",
+         "color": "#7a6a55",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBYgK7c8yDFC4YB1",
+      "top": 1477.8189343901347,
+      "left": 906.4259615441068,
+      "width": 358.3255834434169,
+      "height": 20.29821224130339,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "退款比例",
+        "formatting": {
+         "fontSize": 17.605592250110085,
+         "fontWeight": "bold",
+         "color": "#7a6a55",
+         "textAlign": "end",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBpYpcPb819SfqpP",
+      "top": 1513.0301188903547,
+      "left": 175.26686608933903,
+      "width": 1089.4754733597533,
+      "height": 8.284984588287097,
+      "rotation": 0,
+      "opacity": 0.5,
+      "type": "shape",
+      "paths": [
+       {
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         }
+        },
+        "stroke": {
+         "weight": 0,
+         "color": {
+          "type": "solid",
+          "color": "#000000"
+         }
+        },
+        "cornerRounding": 0
+       }
+      ]
+     },
+     {
+      "id": "LBxgkx7n9q8stbLQ",
+      "top": 1535.8138265081443,
+      "left": 175.2576605509076,
+      "width": 662.7987670629678,
+      "height": 235.0864376926464,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "出發日 31 天前（含）以前\n出發日前 21～30 天\n出發日前 11～20 天\n出發日前 4～10 天\n出發日前 1～3 天\n出發當天取消或未到",
+        "formatting": {
+         "fontSize": 19.67683839718186,
+         "fontWeight": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 2.2,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBgB8t3nxwJTB3qZ",
+      "top": 1535.8138265081443,
+      "left": 906.4259615441068,
+      "width": 358.3255834434169,
+      "height": 235.0864376926464,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "退還 100%\n退還 90%\n退還 80%\n退還 70%\n退還 30%\n不退款",
+        "formatting": {
+         "fontSize": 19.676838397181854,
+         "fontWeight": "bold",
+         "color": "#12355b",
+         "textAlign": "end",
+         "decoration": "none",
+         "lineHeight": 2.2,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBMkC6zkqmjtsg5t",
+      "top": 1824.7526640246567,
+      "left": 133.84194314790352,
+      "width": 1172.3253192426243,
+      "height": 20.29821224130339,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "改期：出發前請盡早聯絡我們，依船班和名額安排（改期規則待業主確認）。",
+        "formatting": {
+         "fontSize": 17.605592250110085,
+         "fontWeight": "normal",
+         "color": "#7a6a55",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBTqgcKB5zyc5mQy",
+      "top": 1938.6712021136043,
+      "left": 133.83273760947202,
+      "width": 1035.6230735358872,
+      "height": 29.204570673712016,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "4　因個人因素無法下水",
+        "formatting": {
+         "fontSize": 24.854953764861293,
+         "fontWeight": "bold",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBqlZ2gbMGwH5SY0",
+      "top": 1986.3098634962555,
+      "left": 133.84194314790352,
+      "width": 1172.3253192426243,
+      "height": 23.40508146191105,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "因身體狀況、健康問卷未通過或未遵守安全規定而無法下水，屬於旅客自身因素，依第 3 項處理；已使用的住宿和交通費用不退。",
+        "formatting": {
+         "fontSize": 19.67683839718186,
+         "fontWeight": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.8,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBjp0YJsDgQcByW1",
+      "top": 2138.5464553060306,
+      "left": 133.83273760947202,
+      "width": 1035.6230735358872,
+      "height": 29.204570673712016,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "5　退款方式與時間",
+        "formatting": {
+         "fontSize": 24.854953764861293,
+         "fontWeight": "bold",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBxY8mwCGqFJRRBp",
+      "top": 2186.1851166886813,
+      "left": 133.84194314790352,
+      "width": 1172.3253192426243,
+      "height": 128.19392,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "・信用卡付款：退回原信用卡，入帳時間依發卡銀行作業。\n・ATM 轉帳：退到你提供的帳戶。\n・作業時間：確認退款後七個工作天內處理。\n・申請方式：",
+        "formatting": {
+         "fontSize": 19.6768,
+         "fontWeight": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.8,
+         "letterSpacing": 0
+        }
+       },
+       {
+        "characters": "加入LINE",
+        "formatting": {
+         "fontSize": 19.6768,
+         "fontWeight": "bold",
+         "color": "#ec6c0c",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.8,
+         "letterSpacing": 0
+        }
+       },
+       {
+        "characters": "，或寄信到thereef.divingresort@gmail.com，告訴我們訂單編號和原因。",
+        "formatting": {
+         "fontSize": 19.6768,
+         "fontWeight": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.8,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBM8Rp1BlvjdT2mR",
+      "top": 2059.843977290454,
+      "left": 1057.66,
+      "width": 269.8547331213897,
+      "height": 269.8547331213897,
+      "rotation": 0,
+      "opacity": 0.74,
+      "type": "rect",
+      "alt": "藍倒吊魚插圖"
+     },
+     {
+      "id": "LBRRqrffLW4txFx5",
+      "top": 2408.844077498897,
+      "left": 133.84194314790352,
+      "width": 1172.3253192426243,
+      "height": 176.0559225011008,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "shape",
+      "paths": [
+       {
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         }
+        },
+        "stroke": {
+         "weight": 0,
+         "color": {
+          "type": "solid",
+          "color": "#000000"
+         }
+        },
+        "cornerRounding": 18
+       }
+      ]
+     },
+     {
+      "id": "LB7grLNC4NZq5vyt",
+      "top": 2448.197754293261,
+      "left": 175.2576605509076,
+      "width": 662.7987670629678,
+      "height": 31.897190664905324,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "需要改期或退款？",
+        "formatting": {
+         "fontSize": 26.92619991193307,
+         "fontWeight": "bold",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBm9fRRCyRzpp3rn",
+      "top": 2504.121400264198,
+      "left": 175.25766055090753,
+      "width": 745.6486129458387,
+      "height": 22.990832232496697,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "請打 0936-871-525，或寄信到（待填），告訴我們訂單編號。",
+        "formatting": {
+         "fontSize": 19.676838397181854,
+         "fontWeight": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBPF2mjTRc9cbxdQ",
+      "top": 2450.269000440333,
+      "left": 943.7083921913988,
+      "width": 321.043152796125,
+      "height": 60.79337580116444,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "服務條款 →\n隱私權政策 →",
+        "formatting": {
+         "fontSize": 19.676838397181854,
+         "fontWeight": "bold",
+         "color": "#ec6c0c",
+         "textAlign": "end",
+         "decoration": "underline",
+         "lineHeight": 1.9,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBl11sWxBWdzWPzQ",
+      "top": 2927.775525712414,
+      "left": -299.62066669786145,
+      "width": 2061.68066491975,
+      "height": 672.2244742875856,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "rect",
+      "alt": "頁尾深藍浪緣（另有島嶼、浪花、礁岩 7 張圖）"
+     },
+     {
+      "id": "LB9g2wdXwmdT02JP",
+      "top": 3340.341205371766,
+      "left": 114.38073847737598,
+      "width": 1240.6023714379294,
+      "height": 8.864228627579426,
+      "rotation": 0,
+      "opacity": 0.2,
+      "type": "shape",
+      "paths": [
+       {
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         }
+        },
+        "stroke": {
+         "weight": 0,
+         "color": {
+          "type": "solid",
+          "color": "#000000"
+         }
+        },
+        "cornerRounding": 0
+       }
+      ]
+     },
+     {
+      "id": "LBjf4PZFQW93wH47",
+      "top": 3254.731306911235,
+      "left": 156.80028646296373,
+      "width": 428.8118244349818,
+      "height": 55.45966262692432,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "準備好下水了嗎？",
+        "formatting": {
+         "fontSize": 46.692843105142465,
+         "fontWeight": "bold",
+         "color": "#efe8da",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBvg7Xlkph7cbv2g",
+      "top": 3247.1926891582048,
+      "left": 590.5460938655185,
+      "width": 243.69217163445782,
+      "height": 66.45842122502454,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "shape",
+      "paths": [
+       {
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ec6b0c"
+         }
+        },
+        "stroke": {
+         "weight": 0,
+         "color": {
+          "type": "solid",
+          "color": "#000000"
+         }
+        },
+        "cornerRounding": 27.000606134843295
+       }
+      ]
+     },
+     {
+      "id": "LBwRmxDm89zJXNlp",
+      "top": 3264.3155158860136,
+      "left": 585.180122689626,
+      "width": 243.69217163445782,
+      "height": 24.39462823452341,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "預訂課程",
+        "formatting": {
+         "fontSize": 20.964406897736175,
+         "fontWeight": "bold",
+         "color": "#ffffff",
+         "textAlign": "center",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LB4sNSD4H7P2k7d2",
+      "top": 3247.1926891582048,
+      "left": 849.2816195779325,
+      "width": 199.37526367507363,
+      "height": 66.45842122502454,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "shape",
+      "paths": [
+       {
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#0a1c2e"
+         }
+        },
+        "stroke": {
+         "weight": 1.8000143391446557,
+         "color": {
+          "type": "solid",
+          "color": "#efe8da"
+         }
+        },
+        "cornerRounding": 27.000215087169835
+       }
+      ]
+     },
+     {
+      "id": "LBvjY0WMf9mS4k73",
+      "top": 3264.3155158860136,
+      "left": 849.2816195779325,
+      "width": 199.37526367507363,
+      "height": 24.39462823452341,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "聯絡我們",
+        "formatting": {
+         "fontSize": 20.963799650392488,
+         "fontWeight": "bold",
+         "color": "#efe8da",
+         "textAlign": "center",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LB3cqxHGDyJNjTkK",
+      "top": 3382.172063544055,
+      "left": 162.8947083430818,
+      "width": 443.1055519161479,
+      "height": 29.349787094660975,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "The Reef 綠芙潛水",
+        "formatting": {
+         "fontSize": 24.77579430068784,
+         "fontWeight": "bold",
+         "color": "#efe8da",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBVBF2nYNqgyWg6B",
+      "top": 3437.555492957746,
+      "left": 162.89470834308173,
+      "width": 664.609623321323,
+      "height": 81.18837209302323,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "潛伴有限公司　統一編號 83201186\n台東縣綠島鄉公館村柴口 172 號之 2\n電話 0936-871-525　信箱（待填）",
+        "formatting": {
+         "fontSize": 17.1524456517081,
+         "fontWeight": "normal",
+         "color": "#efe8da",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.8,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBLXXZM98xSpkCr0",
+      "top": 3437.555492957746,
+      "left": 848.6209317299142,
+      "width": 243.69217163445782,
+      "height": 81.18837209302323,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "服務條款\n隱私權政策\n退款與停航政策",
+        "formatting": {
+         "fontSize": 17.152696552693236,
+         "fontWeight": "normal",
+         "color": "#efe8da",
+         "textAlign": "start",
+         "decoration": "underline",
+         "lineHeight": 1.8,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBkZPwDGcTBjdmnr",
+      "top": 3468.573940386505,
+      "left": 1181.8278364138314,
+      "width": 221.5337176547657,
+      "height": 50.69508679986897,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "Instagram\nLINE 官方帳號",
+        "formatting": {
+         "fontSize": 17.152472977399274,
+         "fontWeight": "normal",
+         "color": "#efe8da",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.8,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBn2lw0p79JpZC2W",
+      "top": 3547.99200786112,
+      "left": 162.8947083430818,
+      "width": 443.1055519161479,
+      "height": 14.674893547330488,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "© 2026 The Reef Diving",
+        "formatting": {
+         "fontSize": 12.38789715034392,
+         "fontWeight": "normal",
+         "color": "#8fa3b8",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LB67bk4Sb7x9pc0B",
+      "top": 0,
+      "left": 0,
+      "width": 1440,
+      "height": 141.79,
+      "type": "group",
+      "children": [
+       {
+        "id": "LBX5KwkbNyvfxxgm",
+        "top": 0,
+        "left": 0,
+        "width": 1440,
+        "height": 137.86,
+        "rotation": 0,
+        "opacity": 1,
+        "type": "shape",
+        "paths": [
+         {
+          "fill": {
+           "color": {
+            "type": "solid",
+            "color": "#ffffff"
+           }
+          },
+          "stroke": {
+           "weight": 0,
+           "color": {
+            "type": "solid",
+            "color": "#000000"
+           }
+          },
+          "cornerRounding": 0
+         }
+        ]
+       },
+       {
+        "id": "LBw8fydr02KrPRDt",
+        "top": 4.57,
+        "left": 1287.82,
+        "width": 111.84,
+        "height": 137.22,
+        "rotation": 0,
+        "opacity": 1,
+        "type": "rect",
+        "alt": "裝飾光暈"
+       },
+       {
+        "id": "LBSW8bMHmvhv96ZZ",
+        "top": 57.25,
+        "left": 1195.7,
+        "width": 137.86,
+        "height": 47.27,
+        "rotation": 0,
+        "opacity": 1,
+        "type": "shape",
+        "paths": [
+         {
+          "fill": {
+           "color": {
+            "type": "solid",
+            "color": "#ec6b0c"
+           }
+          },
+          "stroke": {
+           "weight": 0,
+           "color": {
+            "type": "solid",
+            "color": "#000000"
+           }
+          },
+          "cornerRounding": 24
+         }
+        ]
+       },
+       {
+        "id": "LBL4yhPgLJzQ5yxT",
+        "top": 60.09,
+        "left": 473.79,
+        "width": 72.43,
+        "height": 42.37,
+        "rotation": 0,
+        "opacity": 1,
+        "type": "rect",
+        "alt": "潛水員剪影"
+       },
+       {
+        "id": "LBftNmTQXSDsZNQ4",
+        "top": 34.11,
+        "left": 1358.2,
+        "width": 53.63,
+        "height": 45.32,
+        "rotation": 0,
+        "opacity": 1,
+        "type": "rect",
+        "alt": "海鳥剪影"
+       },
+       {
+        "id": "LBgfbpnlT9Ttw6XF",
+        "top": 15.15,
+        "left": 40.32,
+        "width": 301.16,
+        "height": 111.13,
+        "rotation": 0,
+        "opacity": 1,
+        "type": "rect",
+        "alt": "The Reef 綠芙潛水 logo"
+       },
+       {
+        "id": "LB4FL7gHvbM0T5HF",
+        "top": 66.86,
+        "left": 698.32,
+        "width": 492.68,
+        "height": 25.6,
+        "rotation": 0,
+        "opacity": 1,
+        "type": "text",
+        "textRegions": [
+         {
+          "characters": "課程    住宿    行程    關於    聯絡        中｜EN",
+          "formatting": {
+           "fontSize": 22,
+           "fontWeight": "normal",
+           "color": "#000000",
+           "textAlign": "start",
+           "decoration": "none",
+           "lineHeight": 1.4,
+           "letterSpacing": 0
+          }
+         }
+        ]
+       },
+       {
+        "id": "LBrJ1NrjbpFF2DMR",
+        "top": 69.06,
+        "left": 1195.7,
+        "width": 137.86,
+        "height": 21.4,
+        "rotation": 0,
+        "opacity": 1,
+        "type": "text",
+        "textRegions": [
+         {
+          "characters": "預訂",
+          "formatting": {
+           "fontSize": 18,
+           "fontWeight": "bold",
+           "color": "#ffffff",
+           "textAlign": "center",
+           "decoration": "none",
+           "lineHeight": 1.4,
+           "letterSpacing": 0
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

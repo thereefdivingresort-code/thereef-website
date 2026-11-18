@@ -8,7 +8,7 @@
   - 頁首、頁尾：其他頁用 section.shared 直接拿首頁（home.json）的那幾個元素，所以全站只有一份
   - 價格：一律從 _data/prices.json 讀
 #}
-{%- set cvMap = { "home": home, "courses": courses, "stay": stay, "trips": trips, "about": about, "booking": booking, "terms": terms, "privacy": privacy } -%}
+{%- set cvMap = { "home": home, "courses": courses, "stay": stay, "trips": trips, "about": about, "booking": booking, "terms": terms, "privacy": privacy, "refund": refund } -%}
 {%- set cv = cvMap[canvasKey or "home"] -%}
 {%- set imgDir = cv.imgDir or "home" -%}
 <head>
@@ -43,6 +43,7 @@ LINE 官方帳號｜{% if site.company.lineUrl %}<a href="{{ site.company.lineUr
   {%- elif it.site == "askPhone" -%}{{ it.pre }}
 <a href="{{ site.company.phoneHref }}">{{ site.company.phone }}</a>
   {%- elif it.site == "askLine" -%}{{ it.pre }}請打 <a href="{{ site.company.phoneHref }}">{{ site.company.phone }}</a>，或寄信到{% if site.company.email %} <a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>{% else %}（待填）{% endif %}{{ it.post }}。
+  {%- elif it.site == "refundApply" -%}{{ it.pre }}{% if site.company.lineUrl %}<a href="{{ site.company.lineUrl }}" target="_blank" rel="noopener" style="color:#ec6c0c;font-weight:700">加入LINE</a>{% else %}<span style="color:#ec6c0c;font-weight:700">加入LINE</span>{% endif %}，或寄信到{% if site.company.email %}<a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>{% else %}（待填）{% endif %}，告訴我們訂單編號和原因。
   {%- elif it.site == "contactWindow" -%}{{ site.company.name or "（待填）" }}
 電話：<a href="{{ site.company.phoneHref }}">{{ site.company.phone }}</a>　信箱：{% if site.company.email %}<a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>{% else %}（待填）{% endif %}
 地址：{{ site.company.address or "（待填）" }}

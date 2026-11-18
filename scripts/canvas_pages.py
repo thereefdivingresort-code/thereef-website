@@ -372,3 +372,47 @@ PAGES["privacy"] = {
                                        {"t": "退款與停航政策 →", "c": "#ec6c0c", "href": "/refund/"}]},
     },
 }
+
+
+# 退款頁表格：字縮小 0.9 但每一列的位置照 Canva（行距 2.2 → 2.2 ÷ 0.9，不縮），右欄（退款比例）右緣對齊 Canva（文字框寬 +4 的部分往左移回來）
+def _row_fix(top, fs=19.67683839718186, lh=2.2, sc=0.9):
+    lhn = lh / sc
+    return {"lh": round(lhn, 4), "y": round(top - (lhn - 1.2) * fs * sc / 2, 1)}
+
+
+PAGES["refund"] = {
+    "canva": "refund-canva-elements.json",
+    "title": "退款與停航政策",
+    "active": None,
+    "textScale": 0.9,  # 全站規則（11/17 Ambre）：字級 ×0.9，位置、框寬不變
+    "sections": [
+        ("open", "開場", 0, 520),
+        ("c1", "第 1 條 天候與停航", 520, 880),
+        ("c2", "第 2 條 只訂住宿", 880, 1330),
+        ("c3", "第 3 條 課程與套裝", 1330, 1880),
+        ("c4", "第 4–5 條", 1880, 2380),
+        ("closing", "需要改期或退款？", 2380, 2640),
+        ("footer", "頁尾", 2640, 3600),
+    ],
+    "shared": {
+        "open": [{"from": "open", "maxY": 140}],                 # 頁首：跟首頁同位置（Canva 這頁選單還有「聯絡」，全站已拿掉）
+        "footer": [{"from": "footer", "dx": 34.8, "dy": 18.3}],  # 頁尾：Canva 這頁的頁尾是首頁舊版複本，用首頁那份；dx、dy 用像素量測對齊左欄
+    },
+    "skip": ["LB4FL7gHvbM0T5HF", "LBrJ1NrjbpFF2DMR",
+             "LBjf4PZFQW93wH47", "LBwRmxDm89zJXNlp", "LBvjY0WMf9mS4k73", "LB3cqxHGDyJNjTkK", "LBVBF2nYNqgyWg6B",
+             "LBLXXZM98xSpkCr0", "LBkZPwDGcTBjdmnr", "LBn2lw0p79JpZC2W"],
+    "autoLinks": LEGAL_LINKS,
+    "overrides": {
+        "LByjlfqcdqtfKytN": _row_fix(1086.3534125935694),
+        "LB1xdspvPbXjJ2Y6": dict(_row_fix(1086.3534125935694), x=902.4),
+        "LBxgkx7n9q8stbLQ": _row_fix(1535.8138265081443),
+        "LBgB8t3nxwJTB3qZ": dict(_row_fix(1535.8138265081443), x=902.4),
+        "LBNBz0czMDNDXLkY": {"x": 902.4},
+        "LBYgK7c8yDFC4YB1": {"x": 902.4},
+        # 第 5 條申請方式：「加入LINE」橘色粗體、點了開 LINE（讀 site.json 的 LINE 網址）；信箱讀 site.json、可寄信（Ambre 11/18 已在 Canva 改好這段文字）
+        "LBxY8mwCGqFJRRBp": {"site": "refundApply", "pre": "・信用卡付款：退回原信用卡，入帳時間依發卡銀行作業。\n・ATM 轉帳：退到你提供的帳戶。\n・作業時間：確認退款後七個工作天內處理。\n・申請方式："},
+        "LBm9fRRCyRzpp3rn": {"site": "askLine", "pre": "", "post": "，告訴我們訂單編號"},
+        "LBPF2mjTRc9cbxdQ": {"spans": [{"t": "服務條款 →", "c": "#ec6c0c", "href": "/terms/"}, {"t": "\n", "c": "#ec6c0c"},
+                                       {"t": "隱私權政策 →", "c": "#ec6c0c", "href": "/privacy/"}]},
+    },
+}
