@@ -6,17 +6,32 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
 
   // rich：把多行文字轉成段落；「・」開頭的行變成條列
+  // 連結語法：[文字](網址) → 橘色粗體連結（沿用全站 .link-orange 樣式），例如 [加入LINE]({lineUrl})
   eleventyConfig.addFilter("rich", function (text) {
     if (!text) return "";
     const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    const LINK_RE = /\[([^\]]+)\]\(([^)]+)\)/g;
+    const renderLine = (t) => {
+      let html = "";
+      let last = 0;
+      let m;
+      LINK_RE.lastIndex = 0;
+      while ((m = LINK_RE.exec(t))) {
+        html += esc(t.slice(last, m.index));
+        html += '<a href="' + esc(m[2]) + '" class="link-orange">' + esc(m[1]) + "</a>";
+        last = m.index + m[0].length;
+      }
+      html += esc(t.slice(last));
+      return html;
+    };
     const out = [];
     let list = [];
     const flush = () => { if (list.length) { out.push("<ul>" + list.join("") + "</ul>"); list = []; } };
     String(text).split("\n").forEach((line) => {
       const t = line.trim();
       if (!t) { flush(); return; }
-      if (t.startsWith("・")) list.push("<li>" + esc(t.slice(1).trim()) + "</li>");
-      else { flush(); out.push("<p>" + esc(t) + "</p>"); }
+      if (t.startsWith("・")) list.push("<li>" + renderLine(t.slice(1).trim()) + "</li>");
+      else { flush(); out.push("<p>" + renderLine(t) + "</p>"); }
     });
     flush();
     return out.join("");

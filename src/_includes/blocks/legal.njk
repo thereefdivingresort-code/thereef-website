@@ -6,7 +6,7 @@
       <article class="legal-sec{% if s.style == 'card' %} card{% endif %}" id="s{{ loop.index }}">
         <h2><span class="num">{{ loop.index }}</span>{{ s.title }}</h2>
         {% if s.note %}<p class="small muted">{{ s.note }}</p>{% endif %}
-        {% if s.body %}{{ s.body | rich | safe }}{% endif %}
+        {% if s.body %}{{ s.body | replace("{lineUrl}", site.company.lineUrl) | rich | safe }}{% endif %}
         {% if s.table %}
         <div class="card table-card">
           <table>
