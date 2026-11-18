@@ -322,11 +322,53 @@ PAGES["terms"] = {
     "overrides": {
         "LB20qVqxDNk9Bry9": {"site": "operator"},                        # 經營者資訊：讀 site.json
         "LBJjjbwBLsbFNCNX": {"site": "askPhone", "pre": "有疑問？"},       # 目錄下面：電話可撥號
-        "LBL14qQxcl13Bx1v": {"site": "askLine", "pre": "對條款有疑問"},    # 還有其他問題？：電話、信箱讀 site.json
+        "LBL14qQxcl13Bx1v": {"site": "askLine", "pre": "對條款有疑問，"},    # 還有其他問題？：電話、信箱讀 site.json
         # 目錄清單：字縮小 0.9 但每一行的位置照 Canva（行距 29.3px 不縮），清單才會剛好排到分隔線上面
         "LByXL1nwHM05vc8b": {"lh": 2.083, "y": 494.1, "spans": toc_spans(["1 適用範圍", "2 經營者資訊", "3 預訂與訂單成立", "4 價格與付款", "5 參加資格與健康", "6 安全規定",
                                                  "7 天候與停航", "8 住宿規範", "9 裝備使用", "10 保險與責任", "11 照片與影像", "12 條款修改", "13 準據法與管轄"], "#12355b")},
         "LBncY3BCBfMbsdFq": {"spans": [{"t": "隱私權政策 →", "c": "#ec6c0c", "href": "/privacy/"}, {"t": "\n", "c": "#ec6c0c"},
+                                       {"t": "退款與停航政策 →", "c": "#ec6c0c", "href": "/refund/"}]},
+    },
+}
+
+
+PAGES["privacy"] = {
+    "canva": "privacy-canva-elements.json",
+    "title": "隱私權政策",
+    "active": None,
+    "textScale": 0.9,  # 全站規則（11/17 Ambre）：字級 ×0.9，位置、框寬不變
+    "sections": [
+        ("open", "開場", 0, 520),
+        ("c1", "第 1–3 條", 520, 1210),
+        ("c2", "第 4–6 條", 1210, 1880),
+        ("c3", "第 7–10 條", 1880, 2640),
+        ("closing", "想查詢或刪除你的資料？", 2640, 2840),
+        ("footer", "頁尾", 2840, 3800),
+    ],
+    "anchors": {f"t{i + 1}": round(y - 40) for i, y in enumerate([557.8, 772.5, 1055.8, 1236.2, 1519.5, 1734.2, 1914.5, 2094.9, 2275.2, 2421.2])},
+    "shared": {
+        "open": [{"from": "open", "maxY": 140}],                 # 頁首：跟首頁同位置（Canva 這頁選單還有「聯絡」，全站已拿掉）
+        "footer": [{"from": "footer", "dx": 7.45, "dy": 12.1}],  # 頁尾：Canva 這頁的頁尾是首頁舊版複本，用首頁那份；dx、dy 用像素量測對齊左欄
+    },
+    "skip": ["LB5ZnYjRz316jkpb", "LBTgYjgcT4TcxNPF",
+             "LBtTMyldXbfk41Bm", "LBgbLq8q6wlkd0hQ", "LByFWjyNgw1t2v4G", "LBPQR54dv8j7KJTw", "LBFSMRjkPZr1HsYj",
+             "LBqjhQzw9MPJzByp", "LBWg5417YV1BW3YZ", "LBD1vChFMT92fggq"],
+    "autoLinks": LEGAL_LINKS,
+    # 右側目錄：白卡、分隔線、海星、目錄文字一起跟著捲動；捲到右下角珊瑚插圖上面就停（不蓋到珊瑚）
+    "sticky": [{
+        "id": "toc", "label": "本頁目錄", "box": "LBn2RDcT65vYnd6b", "lines": ["LBsSLcbNN3bz6PzW"],
+        "imgs": [{"id": "LBKCtsR4CySFqZ0Q", "file": "privacy_star", "alt": "", "box": [1255, 535, 96, 96]}],
+        "members": ["LBnJrB0C6GSHRBml", "LBkYfHfxw1PqN0vR", "LBy5sjrZYxFS5mSV"],
+        "until": 2215, "top": 79,
+    }],
+    "overrides": {
+        "LBpCc0hcJVzbyM8P": {"site": "contactWindow"},                                   # 聯絡窗口：讀 site.json
+        "LBy5sjrZYxFS5mSV": {"site": "askPhone", "pre": "有疑問？"},                       # 目錄下面：電話可撥號
+        "LBSFxG3Vlfk7cd7j": {"site": "askLine", "pre": "", "post": "，告訴我們你的姓名和訂單編號"},  # 電話、信箱讀 site.json
+        # 目錄清單：字縮小 0.9 但每一行的位置照 Canva（行距不縮）
+        "LBkYfHfxw1PqN0vR": {"lh": 2.083, "y": 630.5 - (2.083 - 1.2) * 16.156 * 0.9 / 2 - 0.9, "spans": toc_spans(["1 適用範圍", "2 我們蒐集的資料", "3 使用目的", "4 利用期間與對象", "5 你的權利",
+                                                 "6 不提供的影響", "7 Cookie", "8 資料安全", "9 政策修改", "10 聯絡窗口"], "#12355b")},
+        "LBCvT42HV427v1X1": {"spans": [{"t": "服務條款 →", "c": "#ec6c0c", "href": "/terms/"}, {"t": "\n", "c": "#ec6c0c"},
                                        {"t": "退款與停航政策 →", "c": "#ec6c0c", "href": "/refund/"}]},
     },
 }

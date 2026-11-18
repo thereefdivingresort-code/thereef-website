@@ -1,0 +1,1315 @@
+{
+ "_說明": "Canva 原檔 DAHao-HiYfI 第 10 頁（UI v3｜隱私權政策，頁面 ID PBy8BxD0kC2pdKcV，1440×3800）。11/18 從工作檔 DAHbRpTu_IY（copy-design）讀一次 design_content 整理而成（只留座標與文字格式需要的欄位；圖片只記位置），之後不要再讀整頁。",
+ "source": {
+  "design": "DAHao-HiYfI",
+  "page": 10,
+  "pageId": "PBy8BxD0kC2pdKcV",
+  "workCopy": "DAHbRpTu_IY",
+  "workCopyPageId": "PBZwdgKT22LCkfSJ"
+ },
+ "presenter_notes": "UI v3｜隱私權政策（2026-11-15，草稿）。頁首、頁尾照搬首頁 page 20。\n依個人資料保護法第 8 條告知事項寫：蒐集者名稱、目的、類別、利用期間／地區／對象／方式、第 3 條當事人權利、不提供的影響。健康問卷屬第 6 條特種個資，預訂流程需有「同意」勾選。\n這是草稿，不是法律意見。上線前請業主確認：實際合作的保險公司、是否代訂船票、網站實際使用的分析工具（例如 GA）、信箱。\n可請法律專業人士補上法定特定目的代號。",
+ "design_content": {
+  "title": "UI v3｜隱私權政策",
+  "pages": [
+   {
+    "type": "fixed",
+    "id": "PBZwdgKT22LCkfSJ",
+    "notes": "UI v3｜隱私權政策（2026-11-15，草稿）。頁首、頁尾照搬首頁 page 20。\n依個人資料保護法第 8 條告知事項寫：蒐集者名稱、目的、類別、利用期間／地區／對象／方式、第 3 條當事人權利、不提供的影響。健康問卷屬第 6 條特種個資，預訂流程需有「同意」勾選。\n這是草稿，不是法律意見。上線前請業主確認：實際合作的保險公司、是否代訂船票、網站實際使用的分析工具（例如 GA）、信箱。\n可請法律專業人士補上法定特定目的代號。",
+    "title": "UI v3｜隱私權政策",
+    "dimensions": {
+     "width": 1440,
+     "height": 3800
+    },
+    "background": {
+     "color": {
+      "type": "solid",
+      "color": "#f5f3ee"
+     }
+    },
+    "elements": [
+     {
+      "id": "LBn2RDcT65vYnd6b",
+      "top": 557.839011001973,
+      "left": 1115.4897174528016,
+      "width": 212.0437534328507,
+      "height": 525.0607227861065,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "shape",
+      "paths": [
+       {
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         }
+        },
+        "stroke": {
+         "weight": 0,
+         "color": {
+          "type": "solid",
+          "color": "#000000"
+         }
+        },
+        "cornerRounding": 18.095238095238095
+       }
+      ]
+     },
+     {
+      "id": "LBsSLcbNN3bz6PzW",
+      "top": 961.7318746835932,
+      "left": 1139.7232892736984,
+      "width": 163.57660979105617,
+      "height": 8.077857273632379,
+      "rotation": 0,
+      "opacity": 0.5,
+      "type": "shape",
+      "paths": [
+       {
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#d9d2c3"
+         }
+        },
+        "stroke": {
+         "weight": 0,
+         "color": {
+          "type": "solid",
+          "color": "#000000"
+         }
+        },
+        "cornerRounding": 0
+       }
+      ]
+     },
+     {
+      "id": "LBPfXZRTZ2fzJVvf",
+      "top": 2647.984580554358,
+      "left": 184.51666666666665,
+      "width": 1143.0168042189857,
+      "height": 171.65446706468867,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "shape",
+      "paths": [
+       {
+        "fill": {
+         "color": {
+          "type": "solid",
+          "color": "#ffffff"
+         }
+        },
+        "stroke": {
+         "weight": 0,
+         "color": {
+          "type": "solid",
+          "color": "#000000"
+         }
+        },
+        "cornerRounding": 18.095238095238095
+       }
+      ]
+     },
+     {
+      "id": "LBSZ15SHFn7mQcC1",
+      "top": 2869.1961582318113,
+      "left": -340.1169968296962,
+      "width": 2120.233993659392,
+      "height": 930.8038417681884,
+      "type": "group",
+      "children": [
+       {
+        "id": "LBl30LbgHrybZWTf",
+        "top": 3108.683474619453,
+        "left": -340.1169968296962,
+        "width": 2120.233993659392,
+        "height": 691.3165253805466,
+        "rotation": 0,
+        "opacity": 1,
+        "type": "rect",
+        "alt": "頁尾深藍浪緣（另有島嶼、浪花、礁岩 7 張圖）"
+       },
+       {
+        "id": "LBSZKptRgsHPmb7t",
+        "top": 3532.965468358833,
+        "left": 85.63496570656275,
+        "width": 1275.834917771793,
+        "height": 9.113806540654178,
+        "rotation": 0,
+        "opacity": 0.2,
+        "type": "shape",
+        "paths": [
+         {
+          "fill": {
+           "color": {
+            "type": "solid",
+            "color": "#ffffff"
+           }
+          },
+          "stroke": {
+           "weight": 0,
+           "color": {
+            "type": "solid",
+            "color": "#000000"
+           }
+          },
+          "cornerRounding": 0
+         }
+        ]
+       },
+       {
+        "id": "LBtTMyldXbfk41Bm",
+        "top": 3444.9241372177175,
+        "left": 129.2734393899316,
+        "width": 440.99063906391183,
+        "height": 57.034789318932596,
+        "rotation": 0,
+        "opacity": 1,
+        "type": "text",
+        "textRegions": [
+         {
+          "characters": "準備好下水了嗎？",
+          "formatting": {
+           "fontSize": 48.0189806980704,
+           "fontWeight": "bold",
+           "color": "#efe8da",
+           "textAlign": "start",
+           "decoration": "none",
+           "lineHeight": 1.4,
+           "letterSpacing": 0
+          }
+         }
+        ]
+       },
+       {
+        "id": "LBlq46CblZPb6XF6",
+        "top": 3437.1725017621716,
+        "left": 575.3403706990681,
+        "width": 250.61008028403148,
+        "height": 68.34374926292713,
+        "rotation": 0,
+        "opacity": 1,
+        "type": "shape",
+        "paths": [
+         {
+          "fill": {
+           "color": {
+            "type": "solid",
+            "color": "#ec6b0c"
+           }
+          },
+          "stroke": {
+           "weight": 0,
+           "color": {
+            "type": "solid",
+            "color": "#000000"
+           }
+          },
+          "cornerRounding": 30
+         }
+        ]
+       },
+       {
+        "id": "LBgbLq8q6wlkd0hQ",
+        "top": 3454.7827279487906,
+        "left": 569.8230878147793,
+        "width": 250.61008028403148,
+        "height": 25.087467466746986,
+        "rotation": 0,
+        "opacity": 1,
+        "type": "text",
+        "textRegions": [
+         {
+          "characters": "預訂課程",
+          "formatting": {
+           "fontSize": 21.55954235423569,
+           "fontWeight": "bold",
+           "color": "#ffffff",
+           "textAlign": "center",
+           "decoration": "none",
+           "lineHeight": 1.4,
+           "letterSpacing": 0
+          }
+         }
+        ]
+       },
+       {
+        "id": "LB2tT8s2JSxrynKw",
+        "top": 3437.1725017621716,
+        "left": 841.4047229342948,
+        "width": 205.0410475807606,
+        "height": 68.34374926292713,
+        "rotation": 0,
+        "opacity": 1,
+        "type": "shape",
+        "paths": [
+         {
+          "fill": {
+           "color": {
+            "type": "solid",
+            "color": "#0a1c2e"
+           }
+          },
+          "stroke": {
+           "weight": 2,
+           "color": {
+            "type": "solid",
+            "color": "#efe8da"
+           }
+          },
+          "cornerRounding": 30
+         }
+        ]
+       },
+       {
+        "id": "LByFWjyNgw1t2v4G",
+        "top": 3454.7827279487906,
+        "left": 841.4047229342948,
+        "width": 205.0410475807606,
+        "height": 25.087467466746986,
+        "rotation": 0,
+        "opacity": 1,
+        "type": "text",
+        "textRegions": [
+         {
+          "characters": "聯絡我們",
+          "formatting": {
+           "fontSize": 21.55954235423569,
+           "fontWeight": "bold",
+           "color": "#efe8da",
+           "textAlign": "center",
+           "decoration": "none",
+           "lineHeight": 1.4,
+           "letterSpacing": 0
+          }
+         }
+        ]
+       },
+       {
+        "id": "LBPQR54dv8j7KJTw",
+        "top": 3575.9865551475114,
+        "left": 135.54530625661835,
+        "width": 455.69032703270886,
+        "height": 30.183359295929964,
+        "rotation": 0,
+        "opacity": 1,
+        "type": "text",
+        "textRegions": [
+         {
+          "characters": "The Reef 綠芙潛水",
+          "formatting": {
+           "fontSize": 25.479459145914905,
+           "fontWeight": "bold",
+           "color": "#efe8da",
+           "textAlign": "start",
+           "decoration": "none",
+           "lineHeight": 1.4,
+           "letterSpacing": 0
+          }
+         }
+        ]
+       },
+       {
+        "id": "LBFSMRjkPZr1HsYj",
+        "top": 3632.94294613061,
+        "left": 135.54530625661835,
+        "width": 683.4864915891674,
+        "height": 83.4942276627673,
+        "rotation": 0,
+        "opacity": 1,
+        "type": "text",
+        "textRegions": [
+         {
+          "characters": "潛伴有限公司　統一編號 83201186\n台東縣綠島鄉公館村柴口 172 號之 2\n電話 0936-871-525　信箱（待填）",
+          "formatting": {
+           "fontSize": 17.63962556255647,
+           "fontWeight": "normal",
+           "color": "#efe8da",
+           "textAlign": "start",
+           "decoration": "none",
+           "lineHeight": 1.8,
+           "letterSpacing": 0
+          }
+         }
+        ]
+       },
+       {
+        "id": "LBqjhQzw9MPJzByp",
+        "top": 3632.94294613061,
+        "left": 840.7285372877301,
+        "width": 250.61008028403148,
+        "height": 83.4942276627673,
+        "rotation": 0,
+        "opacity": 1,
+        "type": "text",
+        "textRegions": [
+         {
+          "characters": "服務條款\n隱私權政策\n退款與停航政策",
+          "formatting": {
+           "fontSize": 17.63962556255647,
+           "fontWeight": "normal",
+           "color": "#efe8da",
+           "textAlign": "start",
+           "decoration": "underline",
+           "lineHeight": 1.8,
+           "letterSpacing": 0
+          }
+         }
+        ]
+       },
+       {
+        "id": "LBWg5417YV1BW3YZ",
+        "top": 3664.8412690228997,
+        "left": 1183.397863424348,
+        "width": 227.82556393239602,
+        "height": 52.13489332933358,
+        "rotation": 0,
+        "opacity": 1,
+        "type": "text",
+        "textRegions": [
+         {
+          "characters": "Instagram\nLINE 官方帳號",
+          "formatting": {
+           "fontSize": 17.63962556255647,
+           "fontWeight": "normal",
+           "color": "#efe8da",
+           "textAlign": "start",
+           "decoration": "none",
+           "lineHeight": 1.8,
+           "letterSpacing": 0
+          }
+         }
+        ]
+       },
+       {
+        "id": "LBD1vChFMT92fggq",
+        "top": 3746.512735377537,
+        "left": 135.54530625661835,
+        "width": 455.69032703270886,
+        "height": 15.091679647964982,
+        "rotation": 0,
+        "opacity": 1,
+        "type": "text",
+        "textRegions": [
+         {
+          "characters": "© 2026 The Reef Diving",
+          "formatting": {
+           "fontSize": 12.739729572957453,
+           "fontWeight": "normal",
+           "color": "#8fa3b8",
+           "textAlign": "start",
+           "decoration": "none",
+           "lineHeight": 1.4,
+           "letterSpacing": 0
+          }
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "id": "LB3VB9gjjpzB5sZL",
+      "top": 0,
+      "left": 0,
+      "width": 1440,
+      "height": 141.79,
+      "type": "group",
+      "children": [
+       {
+        "id": "LBLCc71wpfJ0RHBP",
+        "top": 0,
+        "left": 0,
+        "width": 1440,
+        "height": 137.86,
+        "rotation": 0,
+        "opacity": 1,
+        "type": "shape",
+        "paths": [
+         {
+          "fill": {
+           "color": {
+            "type": "solid",
+            "color": "#ffffff"
+           }
+          },
+          "stroke": {
+           "weight": 0,
+           "color": {
+            "type": "solid",
+            "color": "#000000"
+           }
+          },
+          "cornerRounding": 0
+         }
+        ]
+       },
+       {
+        "id": "LBKHKFVvFJsYV15v",
+        "top": 4.57,
+        "left": 1287.82,
+        "width": 111.84,
+        "height": 137.22,
+        "rotation": 0,
+        "opacity": 1,
+        "type": "rect",
+        "alt": "裝飾光暈"
+       },
+       {
+        "id": "LBWDW8RYB4bcCZhC",
+        "top": 57.25,
+        "left": 1195.7,
+        "width": 137.86,
+        "height": 47.27,
+        "rotation": 0,
+        "opacity": 1,
+        "type": "shape",
+        "paths": [
+         {
+          "fill": {
+           "color": {
+            "type": "solid",
+            "color": "#ec6b0c"
+           }
+          },
+          "stroke": {
+           "weight": 0,
+           "color": {
+            "type": "solid",
+            "color": "#000000"
+           }
+          },
+          "cornerRounding": 24
+         }
+        ]
+       },
+       {
+        "id": "LBKd6ltsrC4gcHGp",
+        "top": 60.09,
+        "left": 473.79,
+        "width": 72.43,
+        "height": 42.37,
+        "rotation": 0,
+        "opacity": 1,
+        "type": "rect",
+        "alt": "潛水員剪影"
+       },
+       {
+        "id": "LBGsJl54sYQjlM30",
+        "top": 34.11,
+        "left": 1358.2,
+        "width": 53.63,
+        "height": 45.32,
+        "rotation": 0,
+        "opacity": 1,
+        "type": "rect",
+        "alt": "海鳥剪影"
+       },
+       {
+        "id": "LB2zfNBYhkN5Ycgt",
+        "top": 15.15,
+        "left": 40.32,
+        "width": 301.16,
+        "height": 111.13,
+        "rotation": 0,
+        "opacity": 1,
+        "type": "rect",
+        "alt": "The Reef 綠芙潛水 logo"
+       },
+       {
+        "id": "LB5ZnYjRz316jkpb",
+        "top": 66.86,
+        "left": 698.32,
+        "width": 492.68,
+        "height": 25.6,
+        "rotation": 0,
+        "opacity": 1,
+        "type": "text",
+        "textRegions": [
+         {
+          "characters": "課程    住宿    行程    關於    聯絡        中｜EN",
+          "formatting": {
+           "fontSize": 22,
+           "fontWeight": "normal",
+           "color": "#000000",
+           "textAlign": "start",
+           "decoration": "none",
+           "lineHeight": 1.4,
+           "letterSpacing": 0
+          }
+         }
+        ]
+       },
+       {
+        "id": "LBTgYjgcT4TcxNPF",
+        "top": 69.06,
+        "left": 1195.7,
+        "width": 137.86,
+        "height": 21.4,
+        "rotation": 0,
+        "opacity": 1,
+        "type": "text",
+        "textRegions": [
+         {
+          "characters": "預訂",
+          "formatting": {
+           "fontSize": 18,
+           "fontWeight": "bold",
+           "color": "#ffffff",
+           "textAlign": "center",
+           "decoration": "none",
+           "lineHeight": 1.4,
+           "letterSpacing": 0
+          }
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "id": "LBKCtsR4CySFqZ0Q",
+      "top": 535.6249034994839,
+      "left": 1255.8424875821643,
+      "width": 94.91482296518078,
+      "height": 94.91482296518078,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "rect",
+      "alt": "海星（目錄卡右上）"
+     },
+     {
+      "id": "LBF9nXWpwhYrXCcv",
+      "top": 2232.086332884021,
+      "left": 664.9946661660074,
+      "width": 662.5388047196449,
+      "height": 406.6992563157674,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "rect",
+      "alt": "粉紅珊瑚插圖"
+     },
+     {
+      "id": "LB86xQVdPwYsqvxb",
+      "top": 224.62739846463612,
+      "left": 184.51666666666682,
+      "width": 706.8125114428354,
+      "height": 24.233571820897225,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "PRIVACY　·　隱私權政策",
+        "formatting": {
+         "fontSize": 20.194643184081013,
+         "fontWeight": "bold",
+         "color": "#2a8a9a",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBtpBXD3smbT567p",
+      "top": 265.016684832798,
+      "left": 184.51666666666677,
+      "width": 1110.705375124456,
+      "height": 86.8369656915484,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "隱私權政策",
+        "formatting": {
+         "fontSize": 72.70071546269166,
+         "fontWeight": "bold",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.2,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBBj6Pt2KdhyNpJ7",
+      "top": 365.9899007532032,
+      "left": 184.5166666666667,
+      "width": 868.3696569154837,
+      "height": 21.60826820696666,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "最後更新：2026 年 11 月（草稿）",
+        "formatting": {
+         "fontSize": 18.175178865672915,
+         "fontWeight": "normal",
+         "color": "#7a6a55",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBnlPyllz6CpH6lw",
+      "top": 416.4765087134058,
+      "left": 184.5166666666667,
+      "width": 868.3696569154837,
+      "height": 26.25303613930532,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "我們只蒐集提供服務需要的資料，並妥善保管。這一頁說明細節。",
+        "formatting": {
+         "fontSize": 22.21410750248912,
+         "fontWeight": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.7,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBPvVggzPwR8kn2S",
+      "top": 557.839011001973,
+      "left": 184.5166666666667,
+      "width": 868.3696569154837,
+      "height": 28.474446889554272,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "1　適用範圍",
+        "formatting": {
+         "fontSize": 24.23357182089722,
+         "fontWeight": "bold",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBT4slKb5RtZh2Tb",
+      "top": 604.2866903253594,
+      "left": 184.5166666666667,
+      "width": 868.3696569154837,
+      "height": 91.48173362388695,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "本政策說明潛伴有限公司（綠芙 The Reef，以下稱「綠芙」）如何蒐集、使用和保護你的個人資料。適用於本網站、線上預訂、留言表單，以及你透過電話、Email 或 LINE 官方帳號和我們聯絡時提供的資料。",
+        "formatting": {
+         "fontSize": 19.184911024876968,
+         "fontWeight": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.8,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBKdVRQVT472nDwP",
+      "top": 772.5080680487542,
+      "left": 184.5166666666667,
+      "width": 868.3696569154837,
+      "height": 28.474446889554272,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "2　我們蒐集的資料",
+        "formatting": {
+         "fontSize": 24.23357182089722,
+         "fontWeight": "bold",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBRYxZ7d4Z30ZHNx",
+      "top": 818.9557473721404,
+      "left": 184.5166666666667,
+      "width": 868.3696569154837,
+      "height": 160.14352044976243,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "・預訂與聯絡：姓名、手機、Email、出生年月日、緊急聯絡人姓名與電話。\n・活動安全：PADI 健康問卷內容、潛水證照與經驗、近視度數、飲食需求。健康資料屬於個人資料保護法規定的特種資料，我們只在你勾選同意後，為了活動安全使用。\n・付款：付款由 PAYUNi 統一金流處理，我們只收到付款結果和交易編號，不會取得你的完整卡號。\n・瀏覽紀錄：Cookie、IP 位址、瀏覽器類型和瀏覽的頁面。",
+        "formatting": {
+         "fontSize": 19.184911024876968,
+         "fontWeight": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.8,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBgBcMmc674SzQs1",
+      "top": 1055.8389119214107,
+      "left": 184.5166666666667,
+      "width": 868.3696569154837,
+      "height": 28.474446889554272,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "3　使用目的",
+        "formatting": {
+         "fontSize": 24.23357182089722,
+         "fontWeight": "bold",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LB5v7M095jYbj3BM",
+      "top": 1102.2865912447974,
+      "left": 184.5166666666667,
+      "width": 868.3696569154837,
+      "height": 57.15084021094931,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "提供和管理你預訂的課程、住宿與行程；辦理保險；申請 PADI 潛水證照；聯絡與客服；開立發票與記帳；分析網站使用狀況、改善服務。",
+        "formatting": {
+         "fontSize": 19.184911024876968,
+         "fontWeight": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.8,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LB0ZNWzp1xXtQ91R",
+      "top": 1236.1770755552545,
+      "left": 184.5166666666667,
+      "width": 868.3696569154837,
+      "height": 28.474446889554272,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "4　利用期間、地區、對象與方式",
+        "formatting": {
+         "fontSize": 24.23357182089722,
+         "fontWeight": "bold",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBC594mh09KHrwLx",
+      "top": 1282.6247548786405,
+      "left": 184.5166666666667,
+      "width": 868.3696569154837,
+      "height": 160.14352044976243,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "・期間：服務提供期間，以及法律或會計規定需要保存的期間。\n・地區：中華民國境內，以及下列合作單位提供服務的地區（例如 PADI 證照系統位於國外）。\n・對象：綠芙，以及為了提供服務需要的合作單位：保險公司、PADI（證照申請）、PAYUNi 統一金流（付款）、船運公司（代訂船票時）。\n・方式：以電子或紙本方式，在上述目的範圍內使用。",
+        "formatting": {
+         "fontSize": 19.184911024876968,
+         "fontWeight": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.8,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBkRSLQ99CBw1RB8",
+      "top": 1519.507919427911,
+      "left": 184.5166666666667,
+      "width": 868.3696569154837,
+      "height": 28.474446889554272,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "5　你的權利",
+        "formatting": {
+         "fontSize": 24.23357182089722,
+         "fontWeight": "bold",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBFqY9ZrJNMm2xY1",
+      "top": 1565.9555987512972,
+      "left": 184.5166666666667,
+      "width": 868.3696569154837,
+      "height": 91.48173362388695,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "依個人資料保護法第 3 條，你可以向我們：查詢或請求閱覽、請求製給複製本、請求補充或更正、請求停止蒐集處理或利用、請求刪除。請用本頁的聯絡方式提出。法律規定必須保存的資料（例如交易與會計紀錄），可能無法立即刪除。",
+        "formatting": {
+         "fontSize": 19.184911024876968,
+         "fontWeight": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.8,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LB7vy565FcPs65tG",
+      "top": 1734.1769764746923,
+      "left": 184.5166666666667,
+      "width": 868.3696569154837,
+      "height": 28.474446889554272,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "6　不提供資料的影響",
+        "formatting": {
+         "fontSize": 24.23357182089722,
+         "fontWeight": "bold",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBQjhgNVXzq4VgR8",
+      "top": 1780.6246557980787,
+      "left": 184.5166666666667,
+      "width": 868.3696569154837,
+      "height": 57.15084021094931,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "你可以自由選擇是否提供資料。但缺少必要資料（例如姓名、聯絡方式、出生年月日、健康問卷）時，我們可能無法完成預訂、辦理保險或安排下水。",
+        "formatting": {
+         "fontSize": 19.184911024876968,
+         "fontWeight": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.8,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBwrQ0WsTV2c3dG8",
+      "top": 1914.5151401085357,
+      "left": 184.5166666666667,
+      "width": 868.3696569154837,
+      "height": 28.474446889554272,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "7　Cookie",
+        "formatting": {
+         "fontSize": 24.23357182089722,
+         "fontWeight": "bold",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBG7tjV0dcKVRjbD",
+      "top": 1960.9628194319216,
+      "left": 184.5166666666667,
+      "width": 868.3696569154837,
+      "height": 57.15084021094931,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "網站使用 Cookie 記住你的設定、分析流量。你可以在瀏覽器設定拒絕 Cookie，但部分功能（例如預訂流程）可能無法正常使用。",
+        "formatting": {
+         "fontSize": 19.184911024876968,
+         "fontWeight": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.8,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBrT5knTmhpklT6g",
+      "top": 2094.8533037423786,
+      "left": 184.5166666666667,
+      "width": 868.3696569154837,
+      "height": 28.474446889554272,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "8　資料安全",
+        "formatting": {
+         "fontSize": 24.23357182089722,
+         "fontWeight": "bold",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBT1ZnLZYHjpjqz1",
+      "top": 2141.3009830657656,
+      "left": 184.5166666666667,
+      "width": 868.3696569154837,
+      "height": 57.15084021094931,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "我們以合理的技術和管理方式保護你的資料，只有處理訂單的人員可以查看。付款資料由 PAYUNi 統一金流加密處理。",
+        "formatting": {
+         "fontSize": 19.184911024876968,
+         "fontWeight": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.8,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBxYq9c3whFpXCVT",
+      "top": 2275.191467376223,
+      "left": 184.5166666666667,
+      "width": 868.3696569154837,
+      "height": 28.474446889554272,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "9　政策修改",
+        "formatting": {
+         "fontSize": 24.23357182089722,
+         "fontWeight": "bold",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LB3hbN5DxjD14Fz3",
+      "top": 2321.6391466996092,
+      "left": 184.5166666666667,
+      "width": 868.3696569154837,
+      "height": 22.819946798011667,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "本政策更新時，會公布在本頁並標示更新日期。",
+        "formatting": {
+         "fontSize": 19.184911024876968,
+         "fontWeight": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.8,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBQvC5JZGYj4r86L",
+      "top": 2421.1987375971275,
+      "left": 184.5166666666667,
+      "width": 868.3696569154837,
+      "height": 28.474446889554272,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "10　聯絡窗口",
+        "formatting": {
+         "fontSize": 24.23357182089722,
+         "fontWeight": "bold",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBpCc0hcJVzbyM8P",
+      "top": 2467.6464169205146,
+      "left": 184.5166666666667,
+      "width": 868.3696569154837,
+      "height": 91.48173362388695,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "潛伴有限公司\n電話：0936-871-525　信箱：（待填）\n地址：台東縣綠島鄉公館村柴口 172 號之 2",
+        "formatting": {
+         "fontSize": 19.184911024876968,
+         "fontWeight": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.8,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBnJrB0C6GSHRBml",
+      "top": 590.1504400965024,
+      "left": 1139.7232892736986,
+      "width": 171.65446706468867,
+      "height": 21.608268206966716,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "本頁目錄",
+        "formatting": {
+         "fontSize": 18.17517886567292,
+         "fontWeight": "bold",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBkYfHfxw1PqN0vR",
+      "top": 630.5397264646648,
+      "left": 1139.7232892736986,
+      "width": 171.65446706468867,
+      "height": 291.6106475781299,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "1 適用範圍\n2 我們蒐集的資料\n3 使用目的\n4 利用期間與對象\n5 你的權利\n6 不提供的影響\n7 Cookie\n8 資料安全\n9 政策修改\n10 聯絡窗口",
+        "formatting": {
+         "fontSize": 16.155714547264818,
+         "fontWeight": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.9,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBy5sjrZYxFS5mSV",
+      "top": 987.9849108228985,
+      "left": 1139.7232892736986,
+      "width": 171.65446706468867,
+      "height": 46.44767932338639,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "有疑問？\n0936-871-525",
+        "formatting": {
+         "fontSize": 16.155714547264818,
+         "fontWeight": "bold",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.7,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBBtzG74MryvvFnr",
+      "top": 2686.354402604112,
+      "left": 224.90595303482866,
+      "width": 646.2285818905924,
+      "height": 31.09975050348493,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "想查詢或刪除你的資料？",
+        "formatting": {
+         "fontSize": 26.25303613930532,
+         "fontWeight": "bold",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBSFxG3Vlfk7cd7j",
+      "top": 2740.8799392011315,
+      "left": 224.90595303482877,
+      "width": 727.0071546269165,
+      "height": 22.416053934330133,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "請打 0936-871-525，或寄信到（待填），告訴我們你的姓名和訂單編號。",
+        "formatting": {
+         "fontSize": 19.184911024876964,
+         "fontWeight": "normal",
+         "color": "#12355b",
+         "textAlign": "start",
+         "decoration": "none",
+         "lineHeight": 1.4,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     },
+     {
+      "id": "LBCvT42HV427v1X1",
+      "top": 2688.3738669225204,
+      "left": 974.1272151642343,
+      "width": 313.0169693532558,
+      "height": 59.271277745277814,
+      "rotation": 0,
+      "opacity": 1,
+      "type": "text",
+      "textRegions": [
+       {
+        "characters": "服務條款 →\n退款與停航政策 →",
+        "formatting": {
+         "fontSize": 19.184911024876968,
+         "fontWeight": "bold",
+         "color": "#ec6c0c",
+         "textAlign": "end",
+         "decoration": "underline",
+         "lineHeight": 1.9,
+         "letterSpacing": 0
+        }
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

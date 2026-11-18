@@ -36,7 +36,7 @@ const server = http.createServer((req, res) => {
       if (out && width === 1440) await page.screenshot({ path: path.join(out, `toc_${y}.png`) });
       ok(c.bottom <= (await closing()) + 1, `${width} 寬 捲到 ${y}：目錄卡片沒有蓋到「還有其他問題？」`);
     }
-    ok(tops[2] === tops[3] && tops[3] < 200, `${width} 寬：中段捲動時目錄停在螢幕上方同一位置（${tops.join("/")}）`);
+    ok(tops[1] === tops[2] && tops[2] < 200, `${width} 寬：中段捲動時目錄停在螢幕上方同一位置（${tops.join("/")}）`);
     const links = await page.$$eval(".hc-sticky a[href^='#']", (as) => as.map((a) => a.getAttribute("href")));
     ok(links.length > 0, `${width} 寬：目錄有 ${links.length} 條連結`);
     for (const h of links) {
