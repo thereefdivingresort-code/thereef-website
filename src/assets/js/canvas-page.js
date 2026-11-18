@@ -1,10 +1,10 @@
 // 照 Canva 排版的頁面（電腦版）：窄於 1440 的螢幕整頁等比縮小；魚類插圖進入畫面約 20% 時播一次進場動畫
 (function () {
   var root = document.documentElement;
-  var page = document.querySelector(".hc");
+  var pages = document.querySelectorAll(".hc, .hc-flow"); // 預訂頁：上面頁首、中間表單、下面頁尾分成三塊，一起縮放
   function fit() {
     var w = document.documentElement.clientWidth;
-    page.style.zoom = w < 1440 ? String(w / 1440) : "";
+    pages.forEach(function (page) { page.style.zoom = w < 1440 ? String(w / 1440) : ""; });
   }
   fit();
   window.addEventListener("resize", fit);
