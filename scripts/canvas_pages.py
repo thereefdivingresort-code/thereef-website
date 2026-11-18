@@ -147,6 +147,11 @@ PAGES = {
             "LB6ZkxmTckCCLlBy": ("dsd", None),
             "LBZ9wlyDbmv99gFr": ("fun", None),
         },
+        # 插圖：月亮夜釣、SUP（連同後面的太陽）滑到時慢慢浮現（11/18 Ambre）；烤肉插圖拿掉（11/18 Ambre）
+        "illustrations": {
+            "LBZQVMYsBZZF9mqP": {"code": "T1", "file": "trips_moon_fishing", "name": "月亮夜釣", "anim": {"dx": 0, "dy": 12, "dur": 1.8, "delay": 0, "float": 0}},
+            "LB8f2js7y9qclGlr": {"code": "T2", "file": "trips_sup_sun", "name": "SUP 立槳與太陽", "with": ["LBT3trKSS4gn3Z1n"], "anim": {"dx": 0, "dy": 12, "dur": 1.8, "delay": 0, "float": 0}},
+        },
         "sections": [
             ("open", "開場", 0, 1330),
             ("includes", "每個套裝皆含", 1330, 1560),
@@ -181,7 +186,7 @@ PAGES = {
             # 島上加購：價格從 prices.json 讀
             "LBs4ySQ7DzrGbxvL": {"fill": True, "text": "潮間帶導覽　{item:tidal}\n夜釣　{item:fishing}\n藍洞秘境探險　{item:bluecave}"},
             "LBQjBtrl9LjzlkRT": {"fill": True, "text": "SUP 立槳（單人板）　{item:sup1}\nSUP 立槳（雙人板）　{item:sup2}\n玻璃船　{item:glassboat}"},
-            # 烤肉吃到飽、招牌桶仔雞：Sheet 沒有（11/16 Ambre 拿掉餐食）→ 先不放；電動自行車 Sheet 只有單人 600（ebike），
+            # 烤肉吃到飽、招牌桶仔雞：Sheet 沒有（11/16 Ambre 拿掉餐食）→ 不放（11/18 Ambre 確認，烤肉插圖也拿掉）；電動自行車 Sheet 只有單人 600（ebike），
             #   Canva「600／天起」的「起」是指雙人 800，Sheet 沒有 → 拿掉「起」（都列在待 Ambre 決定）
             "LBRvm9XldnhzNjsQ": {"fill": True, "text": "電動自行車　{item:ebike}／天"},
         },

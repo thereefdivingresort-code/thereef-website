@@ -572,6 +572,42 @@
      "align": "left",
      "fill": true,
      "text": "電動自行車　{item:ebike}／天"
+    },
+    {
+     "kind": "fish",
+     "code": "T1",
+     "file": "trips_moon_fishing",
+     "name": "月亮夜釣",
+     "anim": {
+      "dx": 0,
+      "dy": 12,
+      "dur": 1.8,
+      "delay": 0,
+      "float": 0
+     },
+     "x": 139,
+     "y": 388,
+     "w": 189,
+     "h": 180,
+     "rot": 0
+    },
+    {
+     "kind": "fish",
+     "code": "T2",
+     "file": "trips_sup_sun",
+     "name": "SUP 立槳與太陽",
+     "anim": {
+      "dx": 0,
+      "dy": 12,
+      "dur": 1.8,
+      "delay": 0,
+      "float": 0
+     },
+     "x": 476,
+     "y": 359,
+     "w": 392,
+     "h": 287,
+     "rot": 0
     }
    ]
   },
