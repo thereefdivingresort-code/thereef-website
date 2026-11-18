@@ -7,7 +7,6 @@
   const PAYMENT_LIVE = false;
   const P = window.ReefPricing;
   const data = JSON.parse(document.getElementById("price-data").textContent);
-  const SITE = JSON.parse(document.getElementById("site-data").textContent); // 電話、LINE 讀 site.json
   const I = P.index(data);
   const n = (v) => Number(v).toLocaleString("en-US");
   const fmt = (v) => "NT$ " + n(v);
@@ -245,6 +244,7 @@
     });
     document.getElementById("cart-total").textContent = fmt(total);
     document.getElementById("sum-total").textContent = fmt(total);
+    document.querySelectorAll(".js-total").forEach((el) => { el.textContent = fmt(total); });
     document.getElementById("sum-lines").innerHTML = sums.map(([t, s, k]) =>
       '<li data-sum="' + k + '"><span>' + esc(t) + "</span><b>" + (s ? fmt(s) : "—") + "</b></li>").join("");
     const d = document.getElementById("bk-date").value;
@@ -306,17 +306,71 @@
   })(new URLSearchParams(location.search).get("item"));
   update();
 
-  // 「下一步：填資料」：11/18 Ambre 決定照 Canva 只有這一頁（舊版第 2–4 步已取消）。
-  // 送審版還不能線上付款：有選項目就請客人來電或加 LINE；沒選就提醒先選。PAYUNi 過審後在這裡接付款流程。
+  // ---------- 第 2–4 步（11/18 Ambre：送審需要，不能捨棄；延續第 1 步風格）----------
+  // 同一個網址，一次顯示一步：#step-2 填資料、#step-3 確認條款、#step-4 付款。往下一步前先檢查這一步填好了沒。
   const form = document.getElementById("booking-form");
   form.addEventListener("submit", (e) => e.preventDefault());
-  const pickMsg = form.querySelector(".bk-pick-msg");
-  document.querySelectorAll("[data-next]").forEach((b) => b.addEventListener("click", () => {
-    const { count } = update();
-    if (!count) { pickMsg.textContent = "請至少選一個項目，人數或數量要大於 0。"; return; }
-    if (!PAYMENT_LIVE) {
-      pickMsg.innerHTML = "線上付款開通中，請先打 <a href=\"" + SITE.phoneHref + "\">" + SITE.phone + "</a>" +
-        (SITE.lineUrl ? " 或加 <a href=\"" + SITE.lineUrl + "\" target=\"_blank\" rel=\"noopener\">LINE 官方帳號</a>" : "") + " 預訂，我們會幫你保留名額。";
+  const bk = document.getElementById("bk");
+  const views = document.querySelectorAll(".bk-stepview");
+  const STEP_NAMES = { 1: "選購", 2: "填資料", 3: "確認條款", 4: "付款" };
+  const SUM_NEXT = { 1: ["下一步：填資料", 2], 2: ["下一步：確認條款", 3], 3: ["前往付款", 4] };
+  const msg = (n, t) => { const el = form.querySelector('.bk-pick-msg[data-msg="' + n + '"]'); if (el) el.textContent = t || ""; };
+  const dateEl = document.getElementById("bk-date");
+
+  function check(step) { // 這一步可以往下走嗎？不行就回傳提示文字
+    if (step === 1) {
+      if (!update().count) return "請至少選一個項目，人數或數量要大於 0。";
+      if (!dateEl.value) return "請先選出發日期（最上面）。";
     }
-  }));
+    if (step === 2) {
+      const bad = [...views[1].querySelectorAll("input, textarea")].find((el) => !el.checkValidity());
+      if (bad) { bad.reportValidity(); return "還有欄位沒填好。"; }
+    }
+    if (step === 3) {
+      if ([...views[2].querySelectorAll("input[type=checkbox]")].some((el) => !el.checked)) return "四個都要勾選才能前往付款。";
+    }
+    return "";
+  }
+  function show(step) {
+    bk.dataset.step = step;
+    views.forEach((v) => { v.hidden = Number(v.dataset.step) !== step; });
+    document.getElementById("bk-eyebrow").textContent = "BOOKING　·　線上預訂（第 " + step + " 步：" + STEP_NAMES[step] + "）";
+    document.querySelectorAll(".bk-steps li").forEach((li) => li.classList.toggle("is-on", Number(li.dataset.s) === step));
+    const sn = document.getElementById("sum-next");
+    sn.hidden = !SUM_NEXT[step];
+    if (SUM_NEXT[step]) { sn.textContent = SUM_NEXT[step][0]; sn.dataset.go = SUM_NEXT[step][1]; }
+    [1, 2, 3].forEach((n) => msg(n));
+  }
+  function go(to) {
+    const from = Number(bk.dataset.step);
+    if (to > from) {
+      for (let s = from; s < to; s++) { const t = check(s); if (t) { msg(s, t); return; } }
+    }
+    if (location.hash !== "#step-" + to) history.pushState(null, "", to === 1 ? location.pathname + location.search : "#step-" + to);
+    show(to);
+    window.scrollTo({ top: 0 });
+  }
+  document.addEventListener("click", (e) => { const b = e.target.closest("[data-go]"); if (b) go(Number(b.dataset.go)); });
+  // 瀏覽器的上一頁／下一頁：只能回到已經填好的步驟
+  window.addEventListener("popstate", () => {
+    const want = Number((location.hash.match(/^#step-([2-4])$/) || [0, 1])[1]);
+    let ok = 1;
+    while (ok < want && !check(ok)) ok++;
+    show(ok);
+  });
+  show(1);
+
+  // 新增參加者：每位都要姓名和出生年月日
+  let people = 1;
+  document.getElementById("add-person").addEventListener("click", () => {
+    people++;
+    const box = document.createElement("div");
+    box.className = "bk-fields";
+    box.innerHTML =
+      '<label class="bk-field"><span>參加者 ' + people + ' 姓名</span><input name="p' + people + '_name" required></label>' +
+      '<label class="bk-field"><span>出生年月日</span><input name="p' + people + '_birthday" type="date" required></label>';
+    document.getElementById("participants").appendChild(box);
+  });
+  // 第 4 步「前往付款」：PAYMENT_LIVE = false（送審版）只顯示開通中訊息（寫在頁面上）；PAYUNi 過審後在這裡接伺服器端付款程式（伺服器要用 pricing.js 再算一次總價）
+  if (PAYMENT_LIVE) { /* submitOrder(form) */ }
 })();
