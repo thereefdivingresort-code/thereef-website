@@ -93,6 +93,15 @@ def cut_illustrations(cfg, allel, illus, src, key):
     out = []
     imgdir = os.path.join(ROOT, "src", "assets", "img", key)
     os.makedirs(imgdir, exist_ok=True)
+    def corners(e):
+        cx, cy = e["left"] + e["width"] / 2, e["top"] + e["height"] / 2
+        a = math.radians(e.get("rotation", 0))
+        pts = []
+        for dx, dy in [(-1, -1), (1, -1), (1, 1), (-1, 1)]:
+            x, y = dx * e["width"] / 2, dy * e["height"] / 2
+            pts.append((cx + x * math.cos(a) - y * math.sin(a), cy + x * math.sin(a) + y * math.cos(a)))
+        return pts
+
     masks = {}
     # 有 box 的先切（例如美人魚手上的水母），沒有 box 的（整張插圖）可以用 minus 扣掉它們
     for eid, spec in sorted(illus.items(), key=lambda kv: "box" not in kv[1]):
@@ -110,14 +119,9 @@ def cut_illustrations(cfg, allel, illus, src, key):
             m = Image.fromarray(arr, "L")
             d = ImageDraw.Draw(m)
         else:
-            e = allel[eid]
-            cx, cy = e["left"] + e["width"] / 2, e["top"] + e["height"] / 2
-            a = math.radians(e.get("rotation", 0))
-            pts = []
-            for dx, dy in [(-1, -1), (1, -1), (1, 1), (-1, 1)]:
-                x, y = dx * e["width"] / 2, dy * e["height"] / 2
-                pts.append((cx + x * math.cos(a) - y * math.sin(a), cy + x * math.sin(a) + y * math.cos(a)))
-            d.polygon(pts, fill=255)
+            # with＝跟這張插圖疊在一起、要一起動的其他元素（例如 SUP 後面的太陽），範圍合併成一張
+            for xid in [eid] + spec.get("with", []):
+                d.polygon(corners(allel[xid]), fill=255)
         for x0, y0, x1, y1 in cfg.get("illusClip", {}).get(eid, []):
             d.rectangle((x0, y0, x1, y1), fill=0)
         for other in spec.get("minus", []):
