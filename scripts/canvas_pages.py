@@ -416,7 +416,8 @@ PAGES["refund"] = {
     },
     "skip": ["LB4FL7gHvbM0T5HF", "LBrJ1NrjbpFF2DMR",
              "LBjf4PZFQW93wH47", "LBwRmxDm89zJXNlp", "LBvjY0WMf9mS4k73", "LB3cqxHGDyJNjTkK", "LBVBF2nYNqgyWg6B",
-             "LBLXXZM98xSpkCr0", "LBkZPwDGcTBjdmnr", "LBn2lw0p79JpZC2W"],
+             "LBLXXZM98xSpkCr0", "LBkZPwDGcTBjdmnr", "LBn2lw0p79JpZC2W",
+             "LBmJkfy6HXFdmBRM"],  # 11/19 Ambre 文字修改：整句刪掉「也可以選擇不退款，把已付金額保留 1 年，折抵之後的住宿。」
     "autoLinks": LEGAL_LINKS,
     "overrides": {
         "LByjlfqcdqtfKytN": _row_fix(1086.3534125935694),
@@ -425,6 +426,10 @@ PAGES["refund"] = {
         "LBgB8t3nxwJTB3qZ": dict(_row_fix(1535.8138265081443), x=902.4),
         "LBNBz0czMDNDXLkY": {"x": 902.4},
         "LBYgK7c8yDFC4YB1": {"x": 902.4},
+        # 第 1 條天候與停航｜11/19 Ambre 文字修改：①「會先扣除並提供單據」拿掉「並提供單據」②「回程船班停航、需要延長住宿時」句改成「…，每天的住宿有半價優惠。」（保留條件句，Ambre 11/19 確認）
+        "LB2GnCz9ZZzDVn2t": {"text": "・出發前遇到颱風、海象不佳、船班停航，或主管機關公告停止活動，我們會主動聯絡你。你可以選擇免費改期，或退款。\n・行程中因天候停航或無法下水，未進行的部分可以改期或退款。\n・已代購且無法退回的費用（例如已出票的船票），會先扣除。\n・回程船班停航、需要延長住宿時，每天的住宿有半價優惠。"},
+        # 第 3 條課程與套裝｜改期那句｜11/19 Ambre 文字修改：拿掉「（改期規則待業主確認）」括號，其餘不變
+        "LBMkC6zkqmjtsg5t": {"text": "改期：出發前請盡早聯絡我們，依船班和名額安排。"},
         # 第 5 條申請方式：「加入LINE」橘色粗體、點了開 LINE（讀 site.json 的 LINE 網址）；信箱讀 site.json、可寄信（Ambre 11/18 已在 Canva 改好這段文字）
         "LBxY8mwCGqFJRRBp": {"site": "refundApply", "pre": "・信用卡付款：退回原信用卡，入帳時間依發卡銀行作業。\n・ATM 轉帳：退到你提供的帳戶。\n・作業時間：確認退款後七個工作天內處理。\n・申請方式："},
         "LBm9fRRCyRzpp3rn": {"site": "askLine", "pre": "", "post": "，告訴我們訂單編號"},
