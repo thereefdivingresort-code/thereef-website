@@ -138,8 +138,9 @@ def cut_illustrations(cfg, allel, illus, src, key):
     return sorted(out, key=lambda f: order.index(f["code"]))
 
 
-def auto_links(it, links):
-    """autoLinks：文字裡提到〈隱私權政策〉這類名稱 → 那幾個字變成連結（顏色不變）。已經有 spans／site／links 的不動。"""
+def auto_links(it, links, underline=()):
+    """autoLinks：文字裡提到〈隱私權政策〉這類名稱 → 那幾個字變成連結（顏色不變）。已經有 spans／site／links 的不動。
+    underline（cfg 的 autoLinksUnderline）：列在裡面的名稱，連結一直有底線（span 加 ul，底線跟文字同色）。"""
     if not links or "text" not in it or any(k in it for k in ("site", "links", "href", "priceId")):
         return it
     import re
@@ -150,7 +151,10 @@ def auto_links(it, links):
     for m in pat.finditer(it["text"]):
         if m.start() > pos:
             spans.append({"t": it["text"][pos:m.start()], "c": it["color"]})
-        spans.append({"t": m.group(0), "c": it["color"], "href": links[m.group(0)]})
+        sp = {"t": m.group(0), "c": it["color"], "href": links[m.group(0)]}
+        if m.group(0) in underline:
+            sp["ul"] = True
+        spans.append(sp)
         pos = m.end()
     if pos < len(it["text"]):
         spans.append({"t": it["text"][pos:], "c": it["color"]})
@@ -279,7 +283,7 @@ def main():
                 return
             if e["id"] not in cfg.get("keep", []) and all(g["formatting"]["color"].lower() == LABEL_COLOR for g in e["textRegions"]):
                 return  # keep＝顏色剛好跟設計標籤一樣、但其實是內容的文字（例如條款頁黃色「最後更新」）
-            items.append(auto_links(text_item(e, cfg.get("overrides", {}).get(e["id"], {}), sc), cfg.get("autoLinks", {})))
+            items.append(auto_links(text_item(e, cfg.get("overrides", {}).get(e["id"], {}), sc), cfg.get("autoLinks", {}), cfg.get("autoLinksUnderline", ())))
             return
         for c in e.get("children") or []:
             walk(c)
