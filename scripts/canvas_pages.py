@@ -59,7 +59,7 @@ PAGES = {
             "LBVPTq767chDn6td": {"fill": True, "lh": 1.582, "text":
                 "已有證照，岸潛和船潛都能約。\n岸潛 1 支\n"
                 "1 對 1 NT${tier:fun-shore:1}／人\n1 對 2 NT${tier:fun-shore:2}／人\n1 對 3 NT${tier:fun-shore:3}／人\n1 對 4（含以上）NT${tier:fun-shore:4}／人\n\n"
-                "船潛 1 支\n"
+                "船潛 1 趟（2 支）\n"  # 11/19 Ambre：船潛以趟計價（一趟通常 2 支），原 Canva「船潛 1 支」
                 "1 對 1 NT${tier:fun-boat:1}／人\n1 對 2 NT${tier:fun-boat:2}／人\n1 對 3 NT${tier:fun-boat:3}／人\n1 對 4（含以上）NT${tier:fun-boat:4}／人"},
             # Canva「近一步」是錯字 → 「進一步」
             "LB8p0P2RKSVGfw4g": {"fill": True, "lh": 1.582, "text":
