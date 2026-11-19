@@ -1,0 +1,456 @@
+{
+ "_說明": "退款與停航政策頁（電腦版 1440 寬）每段的文字、按鈕座標，由 scripts/build-canvas-data.py 從 Canva 產生（設定在 scripts/canvas_pages.py）。座標單位＝px，以 1440 寬為準。頁首、頁尾用首頁（home.json）的元素。",
+ "width": 1440,
+ "height": 3600,
+ "imgDir": "refund",
+ "active": null,
+ "sections": [
+  {
+   "key": "open",
+   "name": "開場",
+   "top": 0,
+   "height": 520,
+   "img": "refund_s_open.webp",
+   "items": [
+    {
+     "kind": "text",
+     "id": "LBlSgZQMhFg7LMV6",
+     "x": 133.8,
+     "y": 231.1,
+     "w": 728.9,
+     "fs": 18.6,
+     "fw": 700,
+     "color": "#2a8a9a",
+     "lh": 1.4,
+     "align": "left",
+     "text": "REFUND　·　退款與停航政策"
+    },
+    {
+     "kind": "text",
+     "id": "LBm5y8hD2lZlB2C2",
+     "x": 133.8,
+     "y": 274.4,
+     "w": 1143.2,
+     "fs": 67.1,
+     "fw": 700,
+     "color": "#12355b",
+     "lh": 1.2,
+     "align": "left",
+     "text": "退款與停航政策"
+    },
+    {
+     "kind": "text",
+     "id": "LBh7gVRk1WdjXX0q",
+     "x": 133.8,
+     "y": 376.3,
+     "w": 894.6,
+     "fs": 16.8,
+     "fw": 400,
+     "color": "#7a6a55",
+     "lh": 1.4,
+     "align": "left",
+     "text": "最後更新：2026 年 11 月（草稿）"
+    },
+    {
+     "kind": "text",
+     "id": "LBWyXLG81RTVq9LW",
+     "x": 133.8,
+     "y": 424.6,
+     "w": 1039.6,
+     "fs": 20.5,
+     "fw": 400,
+     "color": "#12355b",
+     "lh": 1.7,
+     "align": "left",
+     "text": "綠島的船班和海上活動常受天候影響。這一頁說明取消、改期和退款怎麼處理。"
+    }
+   ],
+   "shared": [
+    {
+     "from": "open",
+     "maxY": 140
+    }
+   ]
+  },
+  {
+   "key": "c1",
+   "name": "第 1 條 天候與停航",
+   "top": 520,
+   "height": 360,
+   "img": "refund_s_c1.webp",
+   "items": [
+    {
+     "kind": "text",
+     "id": "LB4Q6rtR7CbQPWkF",
+     "x": 175.3,
+     "y": 73.2,
+     "w": 1039.6,
+     "fs": 22.4,
+     "fw": 700,
+     "color": "#12355b",
+     "lh": 1.4,
+     "align": "left",
+     "text": "1　天候、停航與不可抗力"
+    },
+    {
+     "kind": "text",
+     "id": "LB2GnCz9ZZzDVn2t",
+     "x": 175.3,
+     "y": 119.9,
+     "w": 1093.5,
+     "fs": 17.7,
+     "fw": 400,
+     "color": "#12355b",
+     "lh": 1.8,
+     "align": "left",
+     "text": "・出發前遇到颱風、海象不佳、船班停航，或主管機關公告停止活動，我們會主動聯絡你。你可以選擇免費改期，或退款。\n・行程中因天候停航或無法下水，未進行的部分可以改期或退款。\n・已代購且無法退回的費用（例如已出票的船票），會先扣除。\n・回程船班停航、需要延長住宿時，每天的住宿有半價優惠。"
+    }
+   ]
+  },
+  {
+   "key": "c2",
+   "name": "第 2 條 只訂住宿",
+   "top": 880,
+   "height": 450,
+   "img": "refund_s_c2.webp",
+   "items": [
+    {
+     "kind": "text",
+     "id": "LB1BjMNT8PpGw65m",
+     "x": 133.8,
+     "y": 30.1,
+     "w": 1039.6,
+     "fs": 22.4,
+     "fw": 700,
+     "color": "#12355b",
+     "lh": 1.4,
+     "align": "left",
+     "text": "2　只訂住宿"
+    },
+    {
+     "kind": "text",
+     "id": "LBWg3mbqD7Sww9hm",
+     "x": 133.8,
+     "y": 76.4,
+     "w": 1176.3,
+     "fs": 15.8,
+     "fw": 400,
+     "color": "#7a6a55",
+     "lh": 1.4,
+     "align": "left",
+     "text": "依交通部觀光署〈個別旅客訂房定型化契約應記載及不得記載事項〉，全額預付的訂單："
+    },
+    {
+     "kind": "text",
+     "id": "LBRwTXznQ0kNd9hN",
+     "x": 175.3,
+     "y": 146.8,
+     "w": 625.4,
+     "fs": 15.8,
+     "fw": 700,
+     "color": "#7a6a55",
+     "lh": 1.4,
+     "align": "left",
+     "text": "取消時間"
+    },
+    {
+     "kind": "text",
+     "id": "LBNBz0czMDNDXLkY",
+     "x": 902.4,
+     "y": 146.8,
+     "w": 362.3,
+     "fs": 15.8,
+     "fw": 700,
+     "color": "#7a6a55",
+     "lh": 1.4,
+     "align": "right",
+     "text": "退款比例"
+    },
+    {
+     "kind": "text",
+     "id": "LByjlfqcdqtfKytN",
+     "x": 175.3,
+     "y": 195.3,
+     "w": 666.8,
+     "fs": 17.7,
+     "fw": 400,
+     "color": "#12355b",
+     "lh": 2.4444,
+     "align": "left",
+     "text": "入住日 3 天前（含）以前取消\n入住日前 1～2 天取消\n入住當天取消或未到"
+    },
+    {
+     "kind": "text",
+     "id": "LB1xdspvPbXjJ2Y6",
+     "x": 902.4,
+     "y": 195.3,
+     "w": 362.3,
+     "fs": 17.7,
+     "fw": 700,
+     "color": "#12355b",
+     "lh": 2.4444,
+     "align": "right",
+     "text": "退還 100%\n退還 50%\n不退款"
+    }
+   ]
+  },
+  {
+   "key": "c3",
+   "name": "第 3 條 課程與套裝",
+   "top": 1330,
+   "height": 550,
+   "img": "refund_s_c3.webp",
+   "items": [
+    {
+     "kind": "text",
+     "id": "LBhqvVcGMM0csKMB",
+     "x": 133.8,
+     "y": 29.6,
+     "w": 1039.6,
+     "fs": 22.4,
+     "fw": 700,
+     "color": "#12355b",
+     "lh": 1.4,
+     "align": "left",
+     "text": "3　課程、潛水活動與 3 天 2 夜套裝"
+    },
+    {
+     "kind": "text",
+     "id": "LBc2cntVy45KQ3Nj",
+     "x": 133.8,
+     "y": 75.8,
+     "w": 1176.3,
+     "fs": 15.8,
+     "fw": 400,
+     "color": "#7a6a55",
+     "lh": 1.4,
+     "align": "left",
+     "text": "旅客自己取消時，依出發日往前算（建議比例，參考〈國內個別旅遊定型化契約〉，待業主確認）："
+    },
+    {
+     "kind": "text",
+     "id": "LBlVtH4qn5dTkkhb",
+     "x": 175.3,
+     "y": 146.2,
+     "w": 625.4,
+     "fs": 15.8,
+     "fw": 700,
+     "color": "#7a6a55",
+     "lh": 1.4,
+     "align": "left",
+     "text": "取消時間"
+    },
+    {
+     "kind": "text",
+     "id": "LBYgK7c8yDFC4YB1",
+     "x": 902.4,
+     "y": 146.2,
+     "w": 362.3,
+     "fs": 15.8,
+     "fw": 700,
+     "color": "#7a6a55",
+     "lh": 1.4,
+     "align": "right",
+     "text": "退款比例"
+    },
+    {
+     "kind": "text",
+     "id": "LBxgkx7n9q8stbLQ",
+     "x": 175.3,
+     "y": 194.8,
+     "w": 666.8,
+     "fs": 17.7,
+     "fw": 400,
+     "color": "#12355b",
+     "lh": 2.4444,
+     "align": "left",
+     "text": "出發日 31 天前（含）以前\n出發日前 21～30 天\n出發日前 11～20 天\n出發日前 4～10 天\n出發日前 1～3 天\n出發當天取消或未到"
+    },
+    {
+     "kind": "text",
+     "id": "LBgB8t3nxwJTB3qZ",
+     "x": 902.4,
+     "y": 194.8,
+     "w": 362.3,
+     "fs": 17.7,
+     "fw": 700,
+     "color": "#12355b",
+     "lh": 2.4444,
+     "align": "right",
+     "text": "退還 100%\n退還 90%\n退還 80%\n退還 70%\n退還 30%\n不退款"
+    },
+    {
+     "kind": "text",
+     "id": "LBMkC6zkqmjtsg5t",
+     "x": 133.8,
+     "y": 493.2,
+     "w": 1176.3,
+     "fs": 15.8,
+     "fw": 400,
+     "color": "#7a6a55",
+     "lh": 1.4,
+     "align": "left",
+     "text": "改期：出發前請盡早聯絡我們，依船班和名額安排。"
+    }
+   ]
+  },
+  {
+   "key": "c4",
+   "name": "第 4–5 條",
+   "top": 1880,
+   "height": 500,
+   "img": "refund_s_c4.webp",
+   "items": [
+    {
+     "kind": "text",
+     "id": "LBTqgcKB5zyc5mQy",
+     "x": 133.8,
+     "y": 56.4,
+     "w": 1039.6,
+     "fs": 22.4,
+     "fw": 700,
+     "color": "#12355b",
+     "lh": 1.4,
+     "align": "left",
+     "text": "4　因個人因素無法下水"
+    },
+    {
+     "kind": "text",
+     "id": "LBqlZ2gbMGwH5SY0",
+     "x": 133.8,
+     "y": 101.0,
+     "w": 1176.3,
+     "fs": 17.7,
+     "fw": 400,
+     "color": "#12355b",
+     "lh": 1.8,
+     "align": "left",
+     "text": "因身體狀況、健康問卷未通過或未遵守安全規定而無法下水，屬於旅客自身因素，依第 3 項處理；已使用的住宿和交通費用不退。"
+    },
+    {
+     "kind": "text",
+     "id": "LBjp0YJsDgQcByW1",
+     "x": 133.8,
+     "y": 256.3,
+     "w": 1039.6,
+     "fs": 22.4,
+     "fw": 700,
+     "color": "#12355b",
+     "lh": 1.4,
+     "align": "left",
+     "text": "5　退款方式與時間"
+    },
+    {
+     "kind": "text",
+     "id": "LBxY8mwCGqFJRRBp",
+     "x": 133.8,
+     "y": 300.9,
+     "w": 1176.3,
+     "fs": 17.7,
+     "fw": 400,
+     "color": "#12355b",
+     "lh": 1.8,
+     "align": "left",
+     "spans": [
+      {
+       "t": "・信用卡付款：退回原信用卡，入帳時間依發卡銀行作業。\n・ATM 轉帳：退到你提供的帳戶。\n・作業時間：確認退款後七個工作天內處理。\n・申請方式：",
+       "c": "#12355b"
+      },
+      {
+       "t": "加入LINE",
+       "c": "#ec6c0c"
+      },
+      {
+       "t": "，或寄信到thereef.divingresort@gmail.com，告訴我們訂單編號和原因。",
+       "c": "#12355b"
+      }
+     ],
+     "site": "refundApply",
+     "pre": "・信用卡付款：退回原信用卡，入帳時間依發卡銀行作業。\n・ATM 轉帳：退到你提供的帳戶。\n・作業時間：確認退款後七個工作天內處理。\n・申請方式："
+    }
+   ]
+  },
+  {
+   "key": "closing",
+   "name": "需要改期或退款？",
+   "top": 2380,
+   "height": 260,
+   "img": "refund_s_closing.webp",
+   "items": [
+    {
+     "kind": "text",
+     "id": "LB7grLNC4NZq5vyt",
+     "x": 175.3,
+     "y": 65.8,
+     "w": 666.8,
+     "fs": 24.2,
+     "fw": 700,
+     "color": "#12355b",
+     "lh": 1.4,
+     "align": "left",
+     "text": "需要改期或退款？"
+    },
+    {
+     "kind": "text",
+     "id": "LBm9fRRCyRzpp3rn",
+     "x": 175.3,
+     "y": 122.4,
+     "w": 749.6,
+     "fs": 17.7,
+     "fw": 400,
+     "color": "#12355b",
+     "lh": 1.4,
+     "align": "left",
+     "text": "請打 0936-871-525，或寄信到（待填），告訴我們訂單編號。",
+     "site": "askLine",
+     "pre": "",
+     "post": "，告訴我們訂單編號"
+    },
+    {
+     "kind": "text",
+     "id": "LBPF2mjTRc9cbxdQ",
+     "x": 943.7,
+     "y": 64.1,
+     "w": 325.0,
+     "fs": 17.7,
+     "fw": 700,
+     "color": "#ec6c0c",
+     "lh": 1.9,
+     "align": "right",
+     "ul": true,
+     "spans": [
+      {
+       "t": "服務條款 →",
+       "c": "#ec6c0c",
+       "href": "/terms/"
+      },
+      {
+       "t": "\n",
+       "c": "#ec6c0c"
+      },
+      {
+       "t": "隱私權政策 →",
+       "c": "#ec6c0c",
+       "href": "/privacy/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "footer",
+   "name": "頁尾",
+   "top": 2640,
+   "height": 960,
+   "img": "refund_s_footer.webp",
+   "items": [],
+   "shared": [
+    {
+     "from": "footer",
+     "dx": 34.8,
+     "dy": 18.3
+    }
+   ]
+  }
+ ]
+}
