@@ -1,4 +1,5 @@
 // 關於頁留言表單＋錨點檢查：node scripts/about-form-test.js <輸出資料夾>
+// 手機版也要過：MOBILE=1 node scripts/about-form-test.js …（用 iPhone 13 跑同樣的檢查）
 //   1. /about/#contact 直接跳到「聯絡我們」（1440 寬與 1280 寬）；頁尾「聯絡我們」按鈕也跳到這裡
 //   2. 全部必填（11/18 Ambre）：少填一項就不送；下拉清單固定高度、可點可用鍵盤選；全部填好、勾同意 → 顯示「線上留言開通中…」
 const { chromium } = require("playwright");
@@ -31,7 +32,7 @@ const ok = (c, m) => { console.log((c ? "OK  " : "NG  ") + m); if (!c) fail++; }
     await page.screenshot({ path: path.join(out, `anchor_${w}.png`) });
     await page.close();
   }
-  const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+  const page = await browser.newPage(process.env.MOBILE ? { ...require("playwright").devices["iPhone 13"] } : { viewport: { width: 1440, height: 900 } });
   await page.goto("http://localhost:8766/about/", { waitUntil: "networkidle" });
   await page.click('.hc-sec-footer a.hc-btn[href="/about/#contact"]');
   await page.waitForTimeout(1200);

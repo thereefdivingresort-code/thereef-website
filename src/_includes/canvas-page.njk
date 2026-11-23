@@ -137,7 +137,7 @@ LINE 官方帳號｜{% if site.company.lineUrl %}<a href="{{ site.company.lineUr
     <div class="hc-bg" aria-hidden="true">
       {% for s in cv.sections %}<img src="/assets/img/{{ imgDir }}/{{ s.img }}" alt="" width="1440" height="{{ s.height }}" style="top:{{ s.top }}px"{% if not loop.first %} loading="lazy"{% endif %}>{% endfor %}
     </div>
-    <a class="hc-logo" href="/" aria-label="{{ site.brand }} 首頁"></a>{% for a in cv.anchors or [] %}<div class="hc-anchor" id="{{ a.id }}" style="top:{{ a.y }}px"></div>{% endfor %}
+    <a class="hc-logo" href="/" aria-label="{{ site.brand }} 首頁"></a>{% for a in cv.anchors or [] %}<div class="hc-anchor" id="{{ a.id }}" style="top:{{ a.y }}px;--so:{{ a | mAnchorOrder(cv.sections) }}"></div>{% endfor %}
     {% for s in cv.sections %}
     {%- set mb = s | mBlocks(canvasKey or "home", home, mobile, imgDir, "/" | url) %}
     <section class="hc-sec hc-sec-{{ s.key }}" data-name="{{ s.name }}" style="top:{{ s.top }}px;height:{{ s.height }}px;--so:{{ loop.index * 10 }};{{ mb.vars }}">

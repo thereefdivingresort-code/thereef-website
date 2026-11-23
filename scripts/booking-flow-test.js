@@ -1,4 +1,5 @@
 // 預訂頁第 1→4 步流程檢查（Playwright）：每一步沒填好不能往下、上一步資料不會不見、合計一路一樣、第 4 步「LINE 預訂」是橘色粗體。
+// 手機版也要過：MOBILE=1 node scripts/booking-flow-test.js …（用 iPhone 13 跑同樣的檢查）
 // 每一步截一張全頁圖：node scripts/booking-flow-test.js <截圖資料夾>
 const { chromium } = require("playwright");
 const http = require("http"), fs = require("fs"), path = require("path");
@@ -15,7 +16,7 @@ const server = http.createServer((req, res) => {
 (async () => {
   await new Promise((r) => server.listen(8768, r));
   const browser = await chromium.launch();
-  const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+  const page = await browser.newPage(process.env.MOBILE ? { ...require("playwright").devices["iPhone 13"] } : { viewport: { width: 1440, height: 900 } });
   const R = [];
   const ok = (name, cond, got) => { R.push({ name, ok: !!cond, got }); };
   const step = () => page.evaluate(() => document.getElementById("bk").dataset.step);
@@ -67,7 +68,7 @@ const server = http.createServer((req, res) => {
   ok("第 4 步按上一步 → 第 3 步、勾選還在", (await step()) === "3" && (await cbs.nth(3).isChecked()), await step());
   await page.goBack(); await page.waitForTimeout(100);
   ok("瀏覽器上一頁 → 回到前一步", ["2", "4"].includes(await step()), await step());
-  const p2 = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+  const p2 = await browser.newPage(process.env.MOBILE ? { ...require("playwright").devices["iPhone 13"] } : { viewport: { width: 1440, height: 900 } });
   await p2.goto("http://localhost:8768/booking/#step-3", { waitUntil: "load" });
   const s2 = await p2.evaluate(() => document.getElementById("bk").dataset.step);
   ok("新開網頁直接打開 #step-3（還沒選東西）→ 從第 1 步開始", s2 === "1", s2);

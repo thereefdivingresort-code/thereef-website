@@ -9,7 +9,7 @@
 //   footer ＝ 全站頁尾（座標用首頁頁尾那段），每頁頁尾自動照該頁的 dx、dy 位移
 //   pages.<頁>.<段>：
 //     bg     ＝ 這段手機上的底圖：{ crop: [y0, y1] 只用底圖這個高度範圍, x: 水平焦點 0–100, color: 底色, shade: 疊一層漸層 }
-//     pad    ＝ 這段上下留白（CSS padding）
+//     pad    ＝ 這段上下留白（CSS padding）；msgap＝這段裡區塊和區塊的間距（px）
 //     blocks ＝ 由上往下的區塊：
 //       { band: [x0, y0, x1, y1], img: true/false, fish: true/false, w: 最大寬(px), cls }  ← 插圖窗：底圖＋插圖的一塊，等比縮到手機寬
 //       { items: [元素, ...], cls, gap, pad }  ← 文字組：元素＝文字 id 或 "#序號"（這段 items 的第幾個，從 0 起）；
@@ -21,7 +21,7 @@ function r(n) { return Math.round(n * 1000) / 1000; }
 
 function bandData(b, s, imgUrl, dx, dy) {
   const [x0r, y0r, x1r, y1r] = b.band;
-  const x0 = x0r + dx, x1 = x1r + dx, y0 = y0r + dy, y1 = y1r + dy;
+  const x0 = x0r + dx, x1 = x1r + dx, y1 = y1r + dy, y0 = Math.max(0, y0r + dy); // 頁尾往上位移的頁：不切到底圖外面
   const w = x1 - x0, h = y1 - y0;
   const out = { type: "band", cls: b.cls || "", ar: r(w / h), maxW: b.w || null, fish: [] };
   if (b.img !== false && !(b.img == null && b.fish !== false)) { // 有魚的插圖窗預設不帶底圖（魚直接疊在這段的底圖上，才不會有接縫）
@@ -114,7 +114,9 @@ module.exports = function mBlocks(s, pageKey, home, mobile, imgDir, prefix) {
   }
   const hide = new Set([...(cfg.hide || []), ...bandHide]);
   const rest = entries.filter((e) => !used.has(e) && !hide.has(e.key));
-  if (rest.length) blocks.push({ type: "group", cls: "hc-mrest", vars: "", items: rest });
+  // 沒寫 blocks 的段：全部元素照由上往下（同高度由左往右）排成一組；cls、gap 可以寫在段的設定
+  if (!cfg.blocks) rest.sort((a, b) => (Math.round(a.it.y + a.dy) - Math.round(b.it.y + b.dy)) || (a.it.x - b.it.x));
+  if (rest.length) blocks.push({ type: "group", cls: "hc-mrest" + (cfg.blocks ? "" : " " + (cfg.cls || "")), vars: !cfg.blocks && cfg.gap != null ? `--mgap:${cfg.gap}px;` : "", items: rest });
   const hidden = entries.filter((e) => !used.has(e) && hide.has(e.key));
   if (hidden.length) blocks.push({ type: "group", cls: "hc-mhide", vars: "", items: hidden });
 
@@ -134,5 +136,13 @@ module.exports = function mBlocks(s, pageKey, home, mobile, imgDir, prefix) {
   if (bg.shade) vars += `--mshade:${bg.shade};`;
   if (bg.none) vars += `--mbgimg:none;`;
   if (cfg.pad) vars += `--mspad:${cfg.pad};`;
+  if (cfg.msgap != null) vars += `--msgap:${cfg.msgap}px;`;
   return { blocks, vars };
+};
+
+// 錨點（例如 /about/#contact）在手機上的排序：放在它所在那一段的前面
+module.exports.anchorOrder = function (a, sections) {
+  let o = 0;
+  sections.forEach((s, i) => { if (a.y >= s.top) o = (i + 1) * 10 - 1; });
+  return o;
 };

@@ -1,4 +1,5 @@
 // 預訂頁驗算（Playwright 真的在網頁上點）：讀 docs/booking-verify/scenarios.json（正確答案由 scripts/booking-verify-expect.py 用 Sheet 另外算），
+// 手機版也要過：MOBILE=1 node scripts/booking-test.js …（用 iPhone 13 跑同樣的檢查）
 // 在 /booking/ 選項目、填數量、勾選，讀畫面上的小計與合計比對。結果寫到 docs/booking-verify/results.json。
 // 用法：npx @11ty/eleventy && python3 scripts/booking-verify-expect.py && node scripts/booking-test.js
 const { chromium } = require("playwright");
@@ -49,7 +50,7 @@ async function totals(page) {
 (async () => {
   await new Promise((r) => server.listen(8766, r));
   const browser = await chromium.launch();
-  const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+  const page = await browser.newPage(process.env.MOBILE ? { ...require("playwright").devices["iPhone 13"] } : { viewport: { width: 1440, height: 900 } });
   const out = { at: new Date().toISOString(), c: [], d: [], e: null, f: [], g: [] };
   let bad = 0;
   async function scenario(sc) {

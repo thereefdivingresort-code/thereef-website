@@ -27,7 +27,7 @@
 }
 .hc-mg > .hc-t { width: 100% !important; max-width: 100%; }
 /* 字級：電腦版字級換算成手機（內文至少 14px、標題等比縮）；個別可在 mobile.json 用 fs 指定 */
-.hc-t { font-size: var(--mfs, max(14px, calc(var(--fs) * .56px + 5px))) !important; }
+.hc-t { font-size: var(--mfs, max(14px, calc(var(--fs) * .62px + 4px))) !important; }
 .hc-t[style*="text-align:justify"] { text-align: left !important; }
 
 /* 按鈕：保留顏色、圓角，手機上至少 44px 高 */
@@ -119,3 +119,49 @@
 
 /* 錨點（例如 /about/#contact）：手機上放在目標那段前面 */
 .hc-anchor { position: relative !important; top: auto !important; order: var(--so, 0); height: 0; scroll-margin-top: 8px; }
+
+/* 卡片：毛玻璃（課程其他方案）、白卡上半是照片（行程套裝） */
+.hc-mg.glass { --mcard: rgba(255,255,255,.16); --mshadow: none; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,.28); }
+.hc-mband.cardtop { width: calc(100% - 32px); border-radius: 14px 14px 0 0; }
+.hc-mband.cardtop + .hc-mg.card { margin-top: calc(-1 * var(--msgap, 28px)); border-radius: 0 0 14px 14px; }
+/* 兩欄小格（行程「每個套裝皆含」）、上緣細線 */
+.hc-mg.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 16px; align-items: start; }
+.hc-mg.grid2 > .hc-t { padding-top: 12px; border-top: 3px solid var(--mline, #2a8a9a); }
+.hc-mg.grid2 > .hc-t:first-child { grid-column: 1 / -1; border-top: 0; padding-top: 0; }
+.hc-mg.lines { border-top: 1px solid var(--mline, rgba(18,53,91,.22)); margin: 0 22px; padding: 16px 0 0; }
+.hc-mg.tline { border-top: 3px solid var(--mline, #2a8a9a); margin: 0 22px; padding: 14px 0 0; }
+/* 退款比例表：左欄條件、右欄比例，一行對一行 */
+.hc-mg.table { display: grid; grid-template-columns: 1fr auto; gap: 10px 14px; align-items: start; }
+.hc-mg.table > .hc-t:not(.m-col) { grid-column: 1 / -1; }
+.hc-mg.table > .m-col { width: auto !important; }
+
+/* 留言表單（關於頁）：電腦版輸入框外觀在底圖上，手機上自己畫框 */
+.hc-mg > .hc-field, .hc-mg > .hc-dd { width: 100% !important; height: 50px !important; }
+.hc-mg > .hc-field { background: #fff; border: 2px solid #d9d2c3; border-radius: 10px !important; padding: 0 16px !important; font-size: 16px !important; }
+.hc-mg > textarea.hc-field { height: 150px !important; padding: 12px 16px !important; }
+.hc-mg > .hc-dd .hc-dd-btn { width: 100% !important; height: 50px !important; background: #fff; border: 2px solid #d9d2c3; border-radius: 10px !important; padding: 0 40px 0 16px !important; font-size: 16px !important; line-height: 46px !important; }
+.hc-mg > .hc-dd .hc-select-arrow { left: auto !important; right: 16px; top: 13px !important; font-size: 16px !important; line-height: 1.4 !important; }
+.hc-mg > .hc-dd .hc-dd-list li { padding: 12px 18px; font-size: 16px; }
+.hc-mg > .hc-field + .hc-t, .hc-mg > .hc-dd + .hc-t { margin-top: 8px; }
+.hc-mg.check { flex-direction: row; align-items: flex-start; gap: 12px; }
+.hc-mg.check > .hc-check { flex: none; width: 26px !important; height: 26px !important; border: 2px solid var(--bc); border-radius: 6px !important; background-color: #fff; margin-top: 2px; }
+.hc-mg.check > .hc-check:checked { background-color: var(--bc); }
+.hc-mg.check > .hc-t { width: auto !important; flex: 1; }
+.hc-mg > .hc-submit { min-width: 160px; }
+
+/* 條款頁右側目錄：手機上改成內容前面的一張卡（不跟著捲動、不擋內容） */
+.hc-stickywrap { position: relative !important; left: auto !important; top: auto !important; width: auto !important; height: auto !important; order: var(--so, 15); margin: 0 16px 8px; }
+.hc-sticky { position: relative !important; top: auto !important; width: auto !important; height: auto !important; padding: 18px 20px; border-radius: 14px; background: var(--mcard, #fff); box-shadow: 0 6px 20px rgba(18,53,91,.08); display: flex; flex-direction: column; gap: 10px; }
+.hc-sticky-card, .hc-sticky-line, .hc-sticky-img { display: none !important; }
+.hc-sticky > .hc-t { position: relative !important; left: auto !important; top: auto !important; width: auto !important; }
+
+/* 一張卡分成幾組（關於頁留言表單、課程其他方案）：ctop 上半、cmid 中間、cbot 下半，接在一起 */
+.hc-mg.card.ctop { border-radius: 14px 14px 0 0; padding-bottom: 10px; }
+.hc-mg.card.cmid { border-radius: 0; padding-top: 10px; padding-bottom: 10px; }
+.hc-mg.card.cbot { border-radius: 0 0 14px 14px; padding-top: 10px; }
+.hc-mg.card.cmid, .hc-mg.card.cbot { margin-top: calc(-1 * var(--msgap, 28px)); }
+.hc-mg.card.flat { --mshadow: none; }
+.hc-mg.card.glass.cbot { border-top: 0; }
+.hc-mg.card.glass.ctop { border-bottom: 0; }
+/* 一張照片跨兩段（住宿背包客房）：下半段接在上一段最後，中間不留縫 */
+.hc-mband.joined { margin-top: calc(-1 * var(--msgap, 28px) + var(--msgap, 28px)); }
