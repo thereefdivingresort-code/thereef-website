@@ -37,9 +37,10 @@
   .bt-label { font-size: 10px; }
 }
 
-/* 手機（≤768px，直排版）：改放右下角、捲動一段之後才出現，不擋內容 */
+/* 手機（≤768px，直排版）：11/24 Ambre：每頁一直看得到，簡化成明顯的白底深藍「向上」箭頭，固定在右下角跟著畫面 */
 @media (max-width: 768px) {
-  .back-to-top { top: auto !important; bottom: 16px; right: 12px; width: 52px; padding: 8px 4px 7px; border-radius: 12px; gap: 3px; background: rgba(13,27,46,.88); }
-  .bt-chevrons { width: 18px; height: 18px; }
-  .bt-label { font-size: 10px; letter-spacing: 0; }
+  .back-to-top { top: auto !important; bottom: 18px; right: 14px; width: 48px; height: 48px; padding: 0; border-radius: 50%; gap: 0;
+    background: #fff; color: #12355b; border: 2px solid #12355b; box-shadow: 0 6px 16px rgba(13,27,46,.25); }
+  .bt-chevrons { width: 22px; height: 22px; color: #12355b; }
+  .bt-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 }

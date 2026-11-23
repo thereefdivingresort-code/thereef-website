@@ -164,7 +164,7 @@
   }
 
   root.innerHTML = BLOCKS.map((b) => {
-    let h = '<section class="bk-card' + (b.multi ? " bk-multi" : "") + (b.note ? "" : " no-note") + '" data-block="' + b.key + '">' +
+    let h = '<section class="bk-card' + (b.multi ? " bk-multi" : "") + (b.note ? "" : " no-note") + '" id="bk-b-' + b.key + '" data-block="' + b.key + '">' +
       '<h2 class="bk-title">' + esc(b.title) + '</h2><p class="bk-intro">' + esc(b.intro) + '</p><div class="bk-rows">';
     if (b.multi) {
       h += '<details class="bk-ms"><summary>請選擇（可複選）' + SP + "▾</summary><div class=\"bk-ms-list\">" +
@@ -174,6 +174,9 @@
     if (b.note) h += '<p class="bk-note"></p>';
     return h + "</section>";
   }).join("");
+  // 手機版「目錄區塊」（11/24 Ambre）：列出七個區塊，點了跳過去；電腦版 CSS 不顯示
+  const toc = document.getElementById("bk-toc-list");
+  if (toc) toc.innerHTML = BLOCKS.map((b) => '<li><a href="#bk-b-' + b.key + '">' + esc(b.title.replace(/（可複選）/, "")) + "</a></li>").join("");
 
   const rowEl = (b, r) => root.querySelector('.bk-row[data-block="' + b.key + '"][data-row="' + r.key + '"]:not([data-extra])');
   const extraEl = (b, r) => root.querySelector('.bk-row[data-block="' + b.key + '"][data-row="' + r.key + '"][data-extra]');

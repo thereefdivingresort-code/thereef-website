@@ -167,3 +167,27 @@
 /* 一張照片跨兩段（住宿背包客房）：下半段接在上一段最後，中間不留縫 */
 .hc-mband.joined { margin-top: calc(-1 * var(--msgap, 28px) + var(--msgap, 28px)); }
 .hc-sticky > .hc-t { line-height: 2.4 !important; } /* 目錄每一條比較好點 */
+
+/* ===== 11/24 Ambre 修改 ===== */
+/* 「向下捲動」：照開場那個樣子（粗體、字距、下面一條細線輕輕往下動），每兩段放一個 */
+.hc-mscroll { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 8px 0 4px; color: var(--msc, #fff); font-size: 14px; font-weight: 700; letter-spacing: .13em; }
+.hc-mscroll::after { content: ""; width: 1.5px; height: 40px; background: linear-gradient(currentColor, transparent); transform-origin: top; animation: hc-mscroll 2.2s ease-in-out infinite; }
+.hc-mscroll.dark { --msc: #12355b; }
+@keyframes hc-mscroll { 0% { transform: scaleY(0); opacity: 1; } 60% { transform: scaleY(1); opacity: 1; } 100% { transform: scaleY(1); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .hc-mscroll::after { animation: none; } }
+
+/* 插圖窗上緣淡入（接上一段的底色，不留分界線） */
+.hc-mband.fade { -webkit-mask-image: linear-gradient(transparent, #000 var(--mfade, 60px)); mask-image: linear-gradient(transparent, #000 var(--mfade, 60px)); }
+.hc-mband.fade-long { --mfade: 120px; }
+/* 住宿豪華雙人房照片縮 10% */
+.hc-mband.inset.s90 { width: calc((100% - 44px) * .9); }
+/* 靠左、超出版面左邊（隱私權珊瑚），底部壓在下一段的卡片後面 */
+.hc-mband.bleedl { margin-left: -36px; margin-right: auto; }
+.hc-sec.overlap-up { z-index: 2; }
+.hc-sec.overlap-up > .hc-mg.card:first-child { margin-top: -26px; }
+/* 跟在文字旁邊上下飄的小插圖（關於頁水母，放在「在 Google 地圖開啟」右邊） */
+.hc-mband.beside { width: 56px; margin: calc(-1 * var(--msgap, 28px) - 58px) 0 0 210px; overflow: visible; }
+
+/* 課程頁：字再小 15%（內文最小 14px 不變） */
+.hc-page-courses { --mk: .85; }
+.hc-page-courses .hc-t { font-size: max(14px, calc(var(--mfs, calc(var(--fs) * .62px + 4px)) * var(--mk))) !important; }

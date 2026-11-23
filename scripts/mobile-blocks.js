@@ -19,14 +19,23 @@
 
 function r(n) { return Math.round(n * 1000) / 1000; }
 
-function bandData(b, s, imgUrl, dx, dy) {
+function bandData(b, s, imgUrl, dx, dy, page) {
   const [x0r, y0r, x1r, y1r] = b.band;
-  const x0 = x0r + dx, x1 = x1r + dx, y1 = y1r + dy, y0 = Math.max(0, y0r + dy); // 頁尾往上位移的頁：不切到底圖外面
+  // 位移後夾在底圖範圍內（頁尾往上／往左右位移的頁：不切到底圖外面，才不會露出色條）
+  // span：這塊跨到上一段或下一段（例如住宿珊瑚跨「入住前請先看」和頁尾）→ 用整頁座標，把相鄰段的底圖接起來
+  const span = !!(b.span && page && page.secs.length);
+  const x0 = Math.max(0, x0r + dx), x1 = Math.min(1440, x1r + dx), y1 = y1r + dy, y0 = span ? y0r + dy : Math.max(0, y0r + dy);
   const w = x1 - x0, h = y1 - y0;
-  const out = { type: "band", cls: b.cls || "", ar: r(w / h), maxW: b.w || null, fish: [] };
+  const out = { type: "band", cls: b.cls || "", ar: r(w / h), maxW: b.w || null, fish: [], imgs: [] };
   if (b.img !== false && !(b.img == null && b.fish !== false)) { // 有魚的插圖窗預設不帶底圖（魚直接疊在這段的底圖上，才不會有接縫）
-    out.img = imgUrl;
-    out.imgStyle = `left:${r(-x0 / w * 100)}%;top:${r(-y0 / h * 100)}%;width:${r(1440 / w * 100)}%;height:${r(s.height / h * 100)}%`;
+    const one = (src, top, height) => out.imgs.push({ src, style: `left:${r(-x0 / w * 100)}%;top:${r((top - y0) / h * 100)}%;width:${r(1440 / w * 100)}%;height:${r(height / h * 100)}%` });
+    if (span) {
+      const me = page.secs.find((x) => x.key === s.key);
+      for (const n of page.secs) {
+        const top = n.top - me.top;
+        if (top < y1 && top + n.height > y0) one(`/assets/img/${page.imgDir}/${n.img}`, top, n.height);
+      }
+    } else one(imgUrl, 0, s.height);
   }
   if (b.fish !== false) {
     const pick = Array.isArray(b.fish) ? b.fish : null;
@@ -46,7 +55,8 @@ function bandData(b, s, imgUrl, dx, dy) {
   return out;
 }
 
-module.exports = function mBlocks(s, pageKey, home, mobile, imgDir, prefix) {
+module.exports = function mBlocks(s, pageKey, home, mobile, imgDir, prefix, secs) {
+  const page = { secs: secs || [], imgDir };
   mobile = mobile || {};
   // 圖片網址：<img src> 由 Eleventy 自動加網址前綴；寫在 CSS 變數裡的要自己加（prefix＝"/" | url）
   const pre = (prefix || "/").replace(/\/$/, "");
@@ -67,7 +77,14 @@ module.exports = function mBlocks(s, pageKey, home, mobile, imgDir, prefix) {
   const isHomeOpen = pageKey === "home" && s.key === "open";
   const isHead = (e) => e.from === "open" || (isHomeOpen && e.it.y < 140);
   const isFooter = !!footerShift || (pageKey === "home" && s.key === "footer");
-  const cfg = isFooter ? (mobile.footer || {}) : (((mobile.pages || {})[pageKey] || {})[s.key] || {});
+  const pcfg = (mobile.pages || {})[pageKey] || {};
+  // 頁尾全站一份；個別頁可在 pages.<頁>.footer 寫 band（換掉插圖窗範圍）、bg、pad
+  let cfg = isFooter ? (mobile.footer || {}) : (pcfg[s.key] || {});
+  if (isFooter && pcfg.footer) {
+    const o = pcfg.footer;
+    cfg = { ...cfg, ...o, blocks: (cfg.blocks || []).filter((b) => !(b.band && o.band === false))
+      .map((b) => (b.band ? { ...b, band: o.band || b.band, cls: [b.cls, o.bandCls].filter(Boolean).join(" ") } : b)) };
+  }
   const shift = footerShift || { dx: 0, dy: 0 };
 
   const used = new Set();
@@ -86,8 +103,9 @@ module.exports = function mBlocks(s, pageKey, home, mobile, imgDir, prefix) {
   }
   const find = (ref) => entries.find((e) => !used.has(e) && !isHead(e) && e.key === ref);
   for (const b of cfg.blocks || []) {
+    if (b.scroll) { blocks.push({ type: "scroll", cls: b.cls || "" }); continue; } // 手機版「向下捲動」
     if (b.band) {
-      const bd = bandData(b, s, imgUrl, shift.dx, shift.dy);
+      const bd = bandData(b, s, imgUrl, shift.dx, shift.dy, page);
       // 疊在插圖上的文字（例如地圖上的地名）：照比例放在插圖窗裡，字至少 14px
       const [x0, y0, x1, y1] = b.band, w = x1 - x0, h = y1 - y0;
       bd.texts = [];
@@ -137,7 +155,7 @@ module.exports = function mBlocks(s, pageKey, home, mobile, imgDir, prefix) {
   if (bg.none) vars += `--mbgimg:none;`;
   if (cfg.pad) vars += `--mspad:${cfg.pad};`;
   if (cfg.msgap != null) vars += `--msgap:${cfg.msgap}px;`;
-  return { blocks, vars };
+  return { blocks, vars, cls: cfg.scls || "" };
 };
 
 // 錨點（例如 /about/#contact）在手機上的排序：放在它所在那一段的前面

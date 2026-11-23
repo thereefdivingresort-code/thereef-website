@@ -125,4 +125,4 @@ label.hc-t { cursor: pointer; }
 
 /* 手機版（≤768px，canvas-mobile.css）用的分組外框與元件：電腦版不產生方框、不顯示，畫面跟原本一樣 */
 .hc-mg { display: contents; }
-.hc-mband, .hc-mlogo, .hc-msun, .hc-mnav-btn { display: none; }
+.hc-mband, .hc-mlogo, .hc-msun, .hc-mnav-btn, .hc-mscroll { display: none; }

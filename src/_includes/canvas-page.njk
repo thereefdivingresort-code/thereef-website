@@ -121,13 +121,15 @@ LINE 官方帳號｜{% if site.company.lineUrl %}<a href="{{ site.company.lineUr
 {%- for b in mb.blocks -%}
 {%- if b.type == "head" %}
       <div class="hc-mg hc-mhead">
-        {% if b.logo %}<a class="hc-mlogo" href="/" aria-label="{{ site.brand }} 首頁"><span class="hc-mcrop" style="aspect-ratio:{{ b.logo.ar }}"><img src="{{ b.logo.img }}" alt="" loading="lazy" style="{{ b.logo.imgStyle }}"></span></a>{% endif %}
-        {% if b.sun %}<span class="hc-msun hc-mcrop" aria-hidden="true" style="aspect-ratio:{{ b.sun.ar }}"><img src="{{ b.sun.img }}" alt="" loading="lazy" style="{{ b.sun.imgStyle }}"></span>{% endif %}
+        {% if b.logo %}<a class="hc-mlogo" href="/" aria-label="{{ site.brand }} 首頁"><span class="hc-mcrop" style="aspect-ratio:{{ b.logo.ar }}"><img src="{{ b.logo.imgs[0].src }}" alt="" loading="lazy" style="{{ b.logo.imgs[0].style }}"></span></a>{% endif %}
+        {% if b.sun %}<span class="hc-msun hc-mcrop" aria-hidden="true" style="aspect-ratio:{{ b.sun.ar }}"><img src="{{ b.sun.imgs[0].src }}" alt="" loading="lazy" style="{{ b.sun.imgs[0].style }}"></span>{% endif %}
         {% for e in b.items %}{{ item(e.it, e.dx, e.dy, active, e.m) }}{% endfor %}
         <button type="button" class="hc-mnav-btn" aria-label="選單" aria-expanded="false"><span></span></button>
       </div>
+{%- elif b.type == "scroll" %}
+      <div class="hc-mscroll{% if b.cls %} {{ b.cls }}{% endif %}" aria-hidden="true"><span>向下捲動</span></div>
 {%- elif b.type == "band" %}
-      <div class="hc-mband{% if b.cls %} {{ b.cls }}{% endif %}" aria-hidden="true" style="aspect-ratio:{{ b.ar }};{% if b.maxW %}max-width:{{ b.maxW }}px;{% endif %}">{% if b.img %}<img class="hc-mband-bg" src="{{ b.img }}" alt="" loading="lazy" style="{{ b.imgStyle }}">{% endif %}{% for f in b.fish %}{{ mfish(f, dir) }}{% endfor %}{% for e in b.texts %}{{ item(e.it, e.dx, e.dy, active, e.m) }}{% endfor %}</div>
+      <div class="hc-mband{% if b.cls %} {{ b.cls }}{% endif %}" aria-hidden="true" style="aspect-ratio:{{ b.ar }};{% if b.maxW %}max-width:{{ b.maxW }}px;{% endif %}">{% for im in b.imgs %}<img class="hc-mband-bg" src="{{ im.src }}" alt="" loading="lazy" style="{{ im.style }}">{% endfor %}{% for f in b.fish %}{{ mfish(f, dir) }}{% endfor %}{% for e in b.texts %}{{ item(e.it, e.dx, e.dy, active, e.m) }}{% endfor %}</div>
 {%- else %}
       <div class="hc-mg{% if b.cls %} {{ b.cls }}{% endif %}"{% if b.vars %} style="{{ b.vars }}"{% endif %}>{% for e in b.items %}{{ item(e.it, e.dx, e.dy, active, e.m) }}{% endfor %}</div>
 {%- endif %}
@@ -141,8 +143,8 @@ LINE 官方帳號｜{% if site.company.lineUrl %}<a href="{{ site.company.lineUr
     </div>
     <a class="hc-logo" href="/" aria-label="{{ site.brand }} 首頁"></a>{% for a in cv.anchors or [] %}<div class="hc-anchor" id="{{ a.id }}" style="top:{{ a.y }}px;--so:{{ a | mAnchorOrder(cv.sections) }}"></div>{% endfor %}
     {% for s in cv.sections %}
-    {%- set mb = s | mBlocks(canvasKey or "home", home, mobile, imgDir, "/" | url) %}
-    <section class="hc-sec hc-sec-{{ s.key }}" data-name="{{ s.name }}" style="top:{{ s.top }}px;height:{{ s.height }}px;--so:{{ loop.index * 10 }};{{ mb.vars }}">
+    {%- set mb = s | mBlocks(canvasKey or "home", home, mobile, imgDir, "/" | url, cv.sections) %}
+    <section class="hc-sec hc-sec-{{ s.key }}{% if mb.cls %} {{ mb.cls }}{% endif %}" data-name="{{ s.name }}" style="top:{{ s.top }}px;height:{{ s.height }}px;--so:{{ loop.index * 10 }};{{ mb.vars }}">
       {% for it in s.items %}{% if it.kind == "fish" %}
 {{ fishItem(it, imgDir) }}
       {% endif %}{% endfor %}
@@ -168,7 +170,7 @@ LINE 官方帳號｜{% if site.company.lineUrl %}<a href="{{ site.company.lineUr
   {% for s in cv.after %}
   <div class="hc hc-after" style="height:{{ s.height }}px">
     <div class="hc-bg" aria-hidden="true"><img src="/assets/img/{{ imgDir }}/{{ s.img }}" alt="" width="1440" height="{{ s.height }}" style="top:0" loading="lazy"></div>
-    {%- set mb = s | mBlocks(canvasKey or "home", home, mobile, imgDir, "/" | url) %}
+    {%- set mb = s | mBlocks(canvasKey or "home", home, mobile, imgDir, "/" | url, cv.sections) %}
     <section class="hc-sec hc-sec-{{ s.key }}" data-name="{{ s.name }}" style="top:0;height:{{ s.height }}px;{{ mb.vars }}">
       {{ mblocks(mb, cv.active, imgDir) }}
     </section>

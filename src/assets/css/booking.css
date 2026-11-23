@@ -139,6 +139,8 @@ body:has(.bk) .hc-scale { overflow-x: clip; }
 .bk-info h3 { margin: 0 0 8px; color: #12355b; font-size: 15.3px; font-weight: 700; }
 .bk-info p { margin: 0; }
 
+.bk-toc { display: none; } /* 目錄區塊只在手機顯示 */
+
 /* ---------- 手機（≤768px）：同樣的卡片、框線、橘色按鈕，改成一欄由上往下；訂單摘要接在表單下面 ---------- */
 @media (max-width: 768px) {
   .hc-flow, .bk { width: 100%; }
@@ -202,4 +204,10 @@ body:has(.bk) .hc-scale { overflow-x: clip; }
   .bk-sum-total span { font-size: 18px; }
   .bk-sum-total strong { font-size: 23px; }
   .bk-summary .bk-next { width: 100%; }
+  /* 目錄區塊（11/24 Ambre）：最上面一張卡，兩欄，點了跳到該區塊 */
+  .bk[data-step="1"] .bk-toc { display: block; margin: 0 12px 16px; padding: 16px 16px 10px; border-radius: 16px; background: #fff; }
+  .bk-toc-h { margin: 0 0 6px; font-size: 16px; font-weight: 700; }
+  .bk-toc ol { display: grid; grid-template-columns: 1fr 1fr; column-gap: 12px; margin: 0; padding: 0; list-style: none; }
+  .bk-toc a { display: flex; align-items: center; min-height: 44px; font-size: 15px; color: #12355b; text-decoration: none; border-bottom: 1px solid #ece6da; }
+  .bk-card[id] { scroll-margin-top: 12px; }
 }
