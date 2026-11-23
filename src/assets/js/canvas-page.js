@@ -21,6 +21,22 @@
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") set(false); });
   });
 
+  // 錨點（/about/#contact、條款頁目錄）：手機版元素改成直排，電腦版的高度不能用了 → 把錨點的 id 移到原本高度最接近的那個元素上
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    var els = [];
+    document.querySelectorAll(".hc-sec").forEach(function (sec) {
+      var top = parseFloat(sec.style.top) || 0;
+      sec.querySelectorAll(".hc-t, .hc-btn").forEach(function (el) { if (el.closest(".hc-mhead")) return; els.push({ el: el, y: top + (parseFloat(el.style.top) || 0) }); });
+    });
+    document.querySelectorAll(".hc-anchor[id]").forEach(function (a) {
+      var y = parseFloat(a.style.top) || 0, best = null;
+      els.forEach(function (o) { if (o.y >= y - 10 && (!best || o.y < best.y)) best = o; });
+      if (!best || best.el.id) return;
+      best.el.id = a.id; a.removeAttribute("id"); best.el.style.scrollMarginTop = "16px";
+    });
+    if (location.hash && document.getElementById(location.hash.slice(1))) document.getElementById(location.hash.slice(1)).scrollIntoView();
+  }
+
   var fish = document.querySelectorAll(".hc-fish");
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (reduce || !("IntersectionObserver" in window)) { root.classList.remove("hc-anim"); return; } // 不加動畫：直接顯示

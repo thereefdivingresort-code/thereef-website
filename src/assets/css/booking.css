@@ -138,3 +138,65 @@ body:has(.bk) .hc-scale { overflow-x: clip; }
 .bk-info { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 22px; padding-top: 18px; border-top: 8px solid #d9d2c3; font-size: 12.6px; color: #7a6a55; }
 .bk-info h3 { margin: 0 0 8px; color: #12355b; font-size: 15.3px; font-weight: 700; }
 .bk-info p { margin: 0; }
+
+/* ---------- 手機版（螢幕寬 ≤ 768px；電腦版不受影響）：11/23 「看起來一樣，只是排法變直」 ----------
+   同樣的白卡片、米色底、框線、橘色按鈕；左右兩欄改成上下排（選購卡片 → 合計 → 訂單摘要），每列品項在上、數量在下 */
+@media (max-width: 768px) {
+  .hc-flow, .bk { width: 100%; }
+  .bk { padding-bottom: 48px; font-size: 15px; }
+  .bk-head { height: auto; display: flex; flex-direction: column; gap: 10px; padding: 28px 22px 24px; }
+  .bk-head > * { position: static; }
+  .bk-eyebrow { font-size: 15px; white-space: normal; }
+  .bk-h1 { font-size: 28px; white-space: normal; }
+  .bk-date-label { margin-top: 8px; font-size: 15px; }
+  .bk-date { width: 100%; height: 50px; font-size: 16px; }
+  .bk-start { display: none; }
+  .bk-grid { display: flex; flex-direction: column; margin: 0 16px; }
+  .bk-side { position: static; width: 100%; }
+  .bk-card { padding: 20px 18px 22px; margin-bottom: 18px; border-radius: 18px; }
+  .bk-card.no-note { padding-bottom: 26px; }
+  .bk-title { font-size: 18px; white-space: normal; }
+  .bk-intro, .bk-note { font-size: 14px; }
+  .bk-note { min-height: 0; }
+  /* 一列：品項滿寬；下面一行「價格｜數量｜小計」 */
+  .bk-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; height: auto; }
+  .bk-row > .bk-item { flex: 1 1 100%; white-space: normal; min-height: 48px; height: auto; padding: 10px 12px; font-size: 15px; }
+  .bk-price { font-size: 14px; text-align: left; }
+  .bk-sub { margin-left: auto; font-size: 16px; }
+  .ctr { height: 44px; padding: 0 2px; font-size: 14px; }
+  .ctr .c-btn { width: 36px; height: 44px; font-size: 17px; }
+  .ctr input { width: 2.6ch; font-size: 15px; }
+  .bk-upline { grid-template-columns: 1fr auto; height: auto; margin-top: 18px; }
+  .bk-upline label { white-space: normal; font-size: 15px; }
+  .bk-card[data-block="pkg"] .bk-note { margin-top: 16px; }
+  .bk-ms summary { height: auto; min-height: 48px; white-space: normal; font-size: 15px; }
+  .bk-ms-list label { font-size: 15px; min-height: 44px; padding: 4px 0; }
+  /* 合計列 */
+  .bk-totalbar { height: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 18px; }
+  .bk-totalbar > * { position: static !important; }
+  .bk-total-text { flex: 1 1 100%; font-size: 22px; white-space: normal; }
+  .bk-totalbar .bk-next { width: auto; flex: 1 1 auto; }
+  .bk-totalbar .bk-back { width: auto; flex: 0 0 auto; }
+  .bk-pick-msg { flex: 1 1 100%; white-space: normal; font-size: 14px; }
+  .bk-btn { min-height: 50px; height: auto; font-size: 17px; }
+  /* 訂單摘要：卡片改成一般排（不跟著捲動），項目多時在卡片裡捲 */
+  .bk-summary { width: 100%; height: auto; min-height: 0; display: flex; flex-direction: column; gap: 10px; padding: 24px 20px; }
+  .bk-summary > * { position: static; width: auto; }
+  .bk-sum-h { font-size: 21px; }
+  .bk-sum-date { font-size: 15px; }
+  .bk-sum-lines { max-height: 280px; font-size: 15px; line-height: 2; }
+  .bk-sum-total span { font-size: 18px; }
+  .bk-sum-total strong { font-size: 22px; }
+  .bk-sum-note { font-size: 14px; }
+  .bk-summary .bk-next { width: 100%; }
+  /* 第 2–4 步 */
+  .bk-steps { position: static; flex-wrap: wrap; gap: 8px; }
+  .bk-steps li { height: 44px; padding: 0 14px; font-size: 14px; }
+  .bk-fields { grid-template-columns: 1fr; gap: 14px; }
+  .bk-field { font-size: 14px; }
+  .bk-field input, .bk-field textarea { font-size: 16px; }
+  .bk-link, .bk-checks label, .bk-paymsg { font-size: 15px; }
+  .bk-link { min-height: 44px; }
+  .bk-success { font-size: 14px; }
+  .bk-info { grid-template-columns: 1fr; font-size: 14px; }
+}

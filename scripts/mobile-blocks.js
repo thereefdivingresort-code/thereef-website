@@ -9,9 +9,10 @@
 //   footer ＝ 全站頁尾（座標用首頁頁尾那段），每頁頁尾自動照該頁的 dx、dy 位移
 //   pages.<頁>.<段>：
 //     bg     ＝ 這段手機上的底圖：{ crop: [y0, y1] 只用底圖這個高度範圍, x: 水平焦點 0–100, color: 底色, shade: 疊一層漸層 }
-//     pad    ＝ 這段上下留白（CSS padding）
+//     pad    ＝ 這段上下留白（CSS padding）；gap ＝ 這段裡區塊之間的距離（預設 28px）
 //     blocks ＝ 由上往下的區塊：
 //       { band: [x0, y0, x1, y1], img: true/false, fish: true/false, w: 最大寬(px), cls }  ← 插圖窗：底圖＋插圖的一塊，等比縮到手機寬
+//       { pband: [x0, y0, x1, y1], w, cls }  ← 同上但用整頁座標（照片跨兩段底圖時用；不含插圖）
 //       { items: [元素, ...], cls, gap, pad }  ← 文字組：元素＝文字 id 或 "#序號"（這段 items 的第幾個，從 0 起）；
 //                                               也可以寫 { ref, fs(手機字級 px), cls, join(true＝電腦版為了排版手動換的行，手機上接起來) }
 //     hide   ＝ 手機上不顯示的元素
@@ -46,7 +47,18 @@ function bandData(b, s, imgUrl, dx, dy) {
   return out;
 }
 
-module.exports = function mBlocks(s, pageKey, home, mobile, imgDir, prefix) {
+// 跨段的插圖窗（照片剛好跨兩段底圖時）：pband ＝ 整頁座標 [x0, y0, x1, y1]，把重疊到的每一段底圖各放一張
+function pbandData(b, cv, imgDir) {
+  const [x0, y0, x1, y1] = b.pband, w = x1 - x0, h = y1 - y0;
+  const out = { type: "band", cls: b.cls || "", ar: r(w / h), maxW: b.w || null, fish: [], imgs: [] };
+  for (const sec of (cv && cv.sections) || []) {
+    if (sec.top + sec.height <= y0 || sec.top >= y1) continue;
+    out.imgs.push({ src: `/assets/img/${imgDir}/${sec.img}`, style: `left:${r(-x0 / w * 100)}%;top:${r((sec.top - y0) / h * 100)}%;width:${r(1440 / w * 100)}%;height:${r(sec.height / h * 100)}%` });
+  }
+  return out;
+}
+
+module.exports = function mBlocks(s, pageKey, home, mobile, imgDir, prefix, cv) {
   mobile = mobile || {};
   // 圖片網址：<img src> 由 Eleventy 自動加網址前綴；寫在 CSS 變數裡的要自己加（prefix＝"/" | url）
   const pre = (prefix || "/").replace(/\/$/, "");
@@ -86,6 +98,13 @@ module.exports = function mBlocks(s, pageKey, home, mobile, imgDir, prefix) {
   }
   const find = (ref) => entries.find((e) => !used.has(e) && !isHead(e) && e.key === ref);
   for (const b of cfg.blocks || []) {
+    if (b.pband) { blocks.push(pbandData(b, cv, imgDir)); continue; }
+    // 頁尾的山景窗：用整頁座標切（頁尾底圖上面那一截在上一段的底圖裡），才不會在山景上方多出一條空白
+    if (b.band && isFooter && cv && s.top != null && b.fish === false && !(b.texts || []).length) {
+      const [x0, y0, x1, y1] = b.band;
+      blocks.push(pbandData({ ...b, pband: [x0 + shift.dx, s.top + y0 + shift.dy, x1 + shift.dx, s.top + y1 + shift.dy] }, cv, imgDir));
+      continue;
+    }
     if (b.band) {
       const bd = bandData(b, s, imgUrl, shift.dx, shift.dy);
       // 疊在插圖上的文字（例如地圖上的地名）：照比例放在插圖窗裡，字至少 14px
@@ -134,5 +153,6 @@ module.exports = function mBlocks(s, pageKey, home, mobile, imgDir, prefix) {
   if (bg.shade) vars += `--mshade:${bg.shade};`;
   if (bg.none) vars += `--mbgimg:none;`;
   if (cfg.pad) vars += `--mspad:${cfg.pad};`;
+  if (cfg.gap != null) vars += `--msgap:${cfg.gap}px;`;
   return { blocks, vars };
 };

@@ -115,7 +115,7 @@ LINE 官方帳號｜{% if site.company.lineUrl %}<a href="{{ site.company.lineUr
 {%- endmacro -%}
 {#- 手機版（≤768px）：分組、插圖窗、手機頁首。電腦版 .hc-mg 是 display: contents、其他手機元件 display: none，畫面不變。設定在 _data/mobile.json，邏輯在 scripts/mobile-blocks.js #}
 {%- macro mfish(f, dir) -%}
-<div class="hc-fish hc-mfish" style="{{ f.style }}"><img class="hc-fish-img{% if f.it.anim.float %} has-float{% endif %}{% if f.it.anim.sway %} has-sway{% endif %}{% if f.it.anim.bob %} has-bob{% endif %}{% if f.it.anim.wobble %} has-wobble{% endif %}" src="/assets/img/{{ dir }}/{{ f.it.file }}.webp" alt="" loading="lazy" style="--dx:{{ f.it.anim.dx * f.k }}px;--dy:{{ f.it.anim.dy * f.k }}px;--dur:{{ f.it.anim.dur }}s;--delay:{{ f.it.anim.delay }}s;--float:{{ f.it.anim.float or 0 }}s;{% if f.it.anim.sway %}--sway:{{ f.it.anim.sway }}s;transform-origin:{{ f.it.anim.origin }};{% endif %}{% if f.it.anim.bob %}--bob:{{ f.it.anim.bob }}s;--amp:{{ (f.it.anim.amp * f.k) | round(1) }}px;{% endif %}{% if f.it.anim.wobble %}--wob:{{ f.it.anim.wobble }}s;{% endif %}{{ f.cropStyle }}"></div>
+<div class="hc-fish hc-mfish" style="{{ f.style }}"><img class="hc-fish-img{% if f.it.anim.float %} has-float{% endif %}{% if f.it.anim.sway %} has-sway{% endif %}{% if f.it.anim.bob %} has-bob{% endif %}{% if f.it.anim.wobble %} has-wobble{% endif %}" src="/assets/img/{{ dir }}/{{ f.it.file }}.webp" alt="" loading="lazy" style="--dx:{{ f.it.anim.dx * f.k }}px;--dy:{{ f.it.anim.dy * f.k }}px;--dur:{{ f.it.anim.dur }}s;--delay:{{ f.it.anim.delay }}s;--float:{{ f.it.anim.float or 0 }}s;{% if f.it.anim.sway %}--sway:{{ f.it.anim.sway }}s;transform-origin:{{ f.it.anim.origin }};{% endif %}{% if f.it.anim.bob %}--bob:{{ f.it.anim.bob }}s;--amp:{{ (f.it.anim.amp * f.k) | round(1) }}px;{% endif %}{% if f.it.anim.famp %}--famp:{{ f.it.anim.famp }}px;{% endif %}{% if f.it.anim.samp %}--samp:{{ f.it.anim.samp }}deg;{% endif %}{% if f.it.anim.wobble %}--wob:{{ f.it.anim.wobble }}s;{% endif %}{{ f.cropStyle }}"></div>
 {%- endmacro -%}
 {%- macro mblocks(mb, active, dir) -%}
 {%- for b in mb.blocks -%}
@@ -127,7 +127,7 @@ LINE 官方帳號｜{% if site.company.lineUrl %}<a href="{{ site.company.lineUr
         <button type="button" class="hc-mnav-btn" aria-label="選單" aria-expanded="false"><span></span></button>
       </div>
 {%- elif b.type == "band" %}
-      <div class="hc-mband{% if b.cls %} {{ b.cls }}{% endif %}" aria-hidden="true" style="aspect-ratio:{{ b.ar }};{% if b.maxW %}max-width:{{ b.maxW }}px;{% endif %}">{% if b.img %}<img class="hc-mband-bg" src="{{ b.img }}" alt="" loading="lazy" style="{{ b.imgStyle }}">{% endif %}{% for f in b.fish %}{{ mfish(f, dir) }}{% endfor %}{% for e in b.texts %}{{ item(e.it, e.dx, e.dy, active, e.m) }}{% endfor %}</div>
+      <div class="hc-mband{% if b.cls %} {{ b.cls }}{% endif %}" aria-hidden="true" style="aspect-ratio:{{ b.ar }};{% if b.maxW %}max-width:{{ b.maxW }}px;{% endif %}">{% if b.img %}<img class="hc-mband-bg" src="{{ b.img }}" alt="" loading="lazy" style="{{ b.imgStyle }}">{% endif %}{% for im in b.imgs or [] %}<img class="hc-mband-bg" src="{{ im.src }}" alt="" loading="lazy" style="{{ im.style }}">{% endfor %}{% for f in b.fish %}{{ mfish(f, dir) }}{% endfor %}{% for e in b.texts %}{{ item(e.it, e.dx, e.dy, active, e.m) }}{% endfor %}</div>
 {%- else %}
       <div class="hc-mg{% if b.cls %} {{ b.cls }}{% endif %}"{% if b.vars %} style="{{ b.vars }}"{% endif %}>{% for e in b.items %}{{ item(e.it, e.dx, e.dy, active, e.m) }}{% endfor %}</div>
 {%- endif %}
@@ -141,7 +141,7 @@ LINE 官方帳號｜{% if site.company.lineUrl %}<a href="{{ site.company.lineUr
     </div>
     <a class="hc-logo" href="/" aria-label="{{ site.brand }} 首頁"></a>{% for a in cv.anchors or [] %}<div class="hc-anchor" id="{{ a.id }}" style="top:{{ a.y }}px"></div>{% endfor %}
     {% for s in cv.sections %}
-    {%- set mb = s | mBlocks(canvasKey or "home", home, mobile, imgDir, "/" | url) %}
+    {%- set mb = s | mBlocks(canvasKey or "home", home, mobile, imgDir, "/" | url, cv) %}
     <section class="hc-sec hc-sec-{{ s.key }}" data-name="{{ s.name }}" style="top:{{ s.top }}px;height:{{ s.height }}px;--so:{{ loop.index * 10 }};{{ mb.vars }}">
       {% for it in s.items %}{% if it.kind == "fish" %}
 {{ fishItem(it, imgDir) }}
@@ -168,7 +168,7 @@ LINE 官方帳號｜{% if site.company.lineUrl %}<a href="{{ site.company.lineUr
   {% for s in cv.after %}
   <div class="hc hc-after" style="height:{{ s.height }}px">
     <div class="hc-bg" aria-hidden="true"><img src="/assets/img/{{ imgDir }}/{{ s.img }}" alt="" width="1440" height="{{ s.height }}" style="top:0" loading="lazy"></div>
-    {%- set mb = s | mBlocks(canvasKey or "home", home, mobile, imgDir, "/" | url) %}
+    {%- set mb = s | mBlocks(canvasKey or "home", home, mobile, imgDir, "/" | url, cv) %}
     <section class="hc-sec hc-sec-{{ s.key }}" data-name="{{ s.name }}" style="top:0;height:{{ s.height }}px;{{ mb.vars }}">
       {{ mblocks(mb, cv.active, imgDir) }}
     </section>

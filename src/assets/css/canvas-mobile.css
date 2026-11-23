@@ -64,7 +64,7 @@
 .hc-mband.left { margin-left: 0; }
 .hc-mfish { position: absolute; }
 .hc-mband > .hc-mbt { position: absolute !important; left: var(--bx) !important; top: var(--by) !important; width: auto !important; white-space: nowrap; }
-@keyframes hc-float { 0%, 100% { opacity: 1; transform: translate(0, 0); } 50% { opacity: 1; transform: translate(0, -8px); } }
+@keyframes hc-float { 0%, 100% { opacity: 1; transform: translate(0, 0); } 50% { opacity: 1; transform: translate(0, calc(-.55 * var(--famp, 14px))); } } /* 漂浮幅度縮小 */
 
 /* 手機頁首：logo、預訂、選單按鈕；選單點開往下展開 */
 .hc-mhead {
@@ -119,3 +119,54 @@
 
 /* 錨點（例如 /about/#contact）：手機上放在目標那段前面 */
 .hc-anchor { position: relative !important; top: auto !important; order: var(--so, 0); height: 0; scroll-margin-top: 8px; }
+
+/* ── 其他八頁共用的排法（11/23 加） ── */
+/* 半透明卡片（課程頁「其他方案」）：電腦版卡片畫在底圖裡，手機上用 CSS 做一樣的霧面卡 */
+.hc-mg.card.glass { background: rgba(28,52,74,.62); box-shadow: none; -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+/* 照片在上、文字在下的卡片（行程頁三張套裝卡） */
+.hc-mband.ctop { width: calc(100% - 32px); border-radius: 14px 14px 0 0; }
+.hc-mg.card.cbot { border-radius: 0 0 14px 14px; margin-top: calc(-1 * var(--msgap, 28px)); background: #fff; }
+.hc-mband.round + .hc-mg { margin-top: -4px; }
+/* 兩欄小格（行程頁「每個套裝皆含」） */
+.hc-mg.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 16px; }
+.hc-mg.grid2 > .hc-t { width: auto !important; }
+/* 上面一條色線（照電腦版每欄上方的線） */
+.hc-mg.lines > .hc-t:first-child, .hc-mg.grid2.lines > .hc-t { border-top: 4px solid #2a8a9a; padding-top: 12px; }
+/* 一天一列（行程頁「3 天怎麼過」） */
+.hc-mg.day { margin: 0 22px; padding: 14px 0 0; border-top: 2px solid rgba(18,53,91,.12); gap: 4px; }
+/* 表格（退款頁取消時間／退款比例）：左右兩欄保留並排 */
+.hc-mg.tbl { display: grid; grid-template-columns: 1fr auto; column-gap: 14px; row-gap: 6px; }
+.hc-mg.tbl > .hc-t { width: auto !important; }
+/* 圖片窗靠左 */
+.hc-mband.left { margin-left: 22px; }
+/* 留言表單：欄位改滿版直排、勾選框和說明並排 */
+.hc-mg.form { display: grid; grid-template-columns: 26px 1fr; column-gap: 10px; align-items: start; }
+.hc-mg.form > * { grid-column: 1 / -1; }
+.hc-mg.form > .hc-check { grid-column: 1; margin-top: 3px; }
+.hc-mg.form > .hc-check + .hc-t { grid-column: 2; }
+.hc-mg.form > .hc-field, .hc-mg.form > .hc-dd { width: 100% !important; font-size: 16px !important; }
+.hc-mg.form > .hc-field:not(textarea) { height: 50px !important; }
+.hc-mg.form > textarea.hc-field { height: 150px !important; }
+.hc-mg.form > .hc-dd { height: 50px !important; }
+.hc-mg.form > .hc-dd .hc-dd-btn { width: 100% !important; height: 50px !important; font-size: 16px !important; }
+.hc-mg.form > .hc-dd .hc-select-arrow { left: auto !important; right: 16px; }
+.hc-mg.form > .hc-t + .hc-field, .hc-mg.form > .hc-t + .hc-dd { margin-top: -2px; }
+.hc-mg.form > .hc-submit { justify-self: start; margin-top: 10px; }
+.hc-mg.form > .hc-form { display: none; }
+
+/* 條款頁的右側目錄：手機上改成開場下面一張目錄卡（不跟著捲動、不擋內容） */
+.hc-stickywrap { position: relative !important; left: auto !important; top: auto !important; width: auto !important; height: auto !important; order: 15; margin: 0 16px 8px; }
+.hc-sticky { position: relative !important; top: auto !important; width: auto !important; height: auto !important; display: flex; flex-direction: column; gap: 10px; padding: 22px 20px 18px; border-radius: 16px; background: rgba(255,255,255,.94); box-shadow: 0 6px 20px rgba(18,53,91,.1); }
+.hc-sticky-card, .hc-sticky-line { display: none !important; }
+.hc-sticky-img { left: auto !important; right: 8px; top: -18px !important; width: 64px !important; height: auto !important; }
+.hc-sticky > .hc-t { position: relative !important; left: auto !important; top: auto !important; width: auto !important; }
+.hc-sticky > .hc-t:has(a[href^="#"]) { display: grid; grid-template-columns: 1fr 1fr; column-gap: 10px; line-height: 1.3 !important; }
+.hc-sticky > .hc-t:has(a[href^="#"]) > span { display: none; }
+.hc-sticky > .hc-t a[href^="#"] { display: flex; align-items: center; min-height: 44px; border-bottom: 1px solid rgba(18,53,91,.1); }
+.hc-sticky > .hc-t:last-child { padding-top: 6px; }
+/* 電腦版的欄位框畫在底圖裡；手機直排後底圖對不上，用 CSS 畫一樣的框（米色底、淺褐框） */
+.hc-mg.form > .hc-field, .hc-mg.form > .hc-dd .hc-dd-btn { background: #f5f3ef; border: 2px solid #d9d3c8; border-radius: 10px !important; }
+.hc-mg.form > .hc-check { width: 24px !important; height: 24px !important; border: 2px solid var(--bc, #12355b); border-radius: 4px !important; }
+.hc-page-privacy .hc-stickywrap, .hc-page-terms .hc-stickywrap { margin: 0; padding: 4px 16px 12px; }
+.hc-page-privacy .hc-stickywrap { background: #f5f3ef; }
+.hc-page-terms .hc-stickywrap { background: #2196cf; }
