@@ -35,7 +35,7 @@ function bandData(b, s, imgUrl, dx, dy, page) {
         const top = n.top - me.top;
         if (top < y1 && top + n.height > y0) one(`/assets/img/${page.imgDir}/${n.img}`, top, n.height);
       }
-    } else one(imgUrl, 0, s.height);
+    } else one(b.src ? imgUrl.replace(/[^/]+$/, b.src) : imgUrl, 0, s.height); // src：手機用的修圖版（例如首頁開場拿掉「向下捲動」的線）
   }
   if (b.fish !== false) {
     const pick = Array.isArray(b.fish) ? b.fish : null;

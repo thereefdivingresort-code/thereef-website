@@ -207,3 +207,8 @@
 @media (prefers-reduced-motion: reduce) { .hc-mband.beside.roam { animation: none; } }
 /* 隱私權珊瑚：靠右一點，底部貼齊下面的卡片 */
 .hc-mband.nudge { margin-left: 30px; margin-right: auto; }
+
+/* ===== 11/24 Ambre 第三輪 ===== */
+.hc-mg > .m-pre { white-space: pre !important; } /* 照電腦版的兩行，不再自動換行（課程開場標題） */
+/* 底色加深 10% 的頁（住宿、預訂）：插圖窗裡底圖的米色紙也一起加深，才不會有色塊 */
+.hc-mband.dim .hc-mband-bg { filter: brightness(.9); }

@@ -21,8 +21,9 @@
         "blocks": [
           {"items": ["LBxcQQNkdzxc7bNm", {"ref": "LBlhcdxSs8Lpp8x4", "fs": 44}, {"ref": "LB8LnWGDWS7Q2MzD", "join": true}], "pad": "40px 22px 0", "gap": 12},
           {"items": ["#0", "LBQhnfR94X68vL9m"], "cls": "btns mid"},
-          {"band": [60, 300, 1280, 1000], "img": true, "fish": false, "cls": "fade", "texts": ["LB7hm0Jq4jlkn6rZ", "LBRHh5L24jPhK9dS"]}
-        ]
+          {"band": [60, 300, 1280, 1000], "img": true, "fish": false, "cls": "fade", "texts": ["LB7hm0Jq4jlkn6rZ"], "src": "home_s_open_m.webp"}
+        ],
+        "hide": ["LBRHh5L24jPhK9dS"]
       },
       "d12": {
         "bg": {"x": 30},
@@ -83,15 +84,16 @@
     },
     "courses": {
       "open": {
-        "bg": {"crop": [140, 1560], "x": 50, "shade": "linear-gradient(rgba(4,20,40,.55), rgba(4,20,40,.1) 45%, rgba(0,0,0,0) 70%)"},
-        "pad": "0 0 360px",
+        "bg": {"none": true, "color": "#0263bf"},
+        "pad": "0",
+        "scls": "narrow",
         "blocks": [
-          {"items": [{"ref": "LBZjyZl4PQ14S7Vg", "fs": 28}, "LBPKJzP4xyCf35gT"], "pad": "48px 22px 0", "gap": 14}
-        ],
-        "scls": "narrow"
+          {"items": [{"ref": "LBZjyZl4PQ14S7Vg", "fs": 25.5, "cls": "m-pre"}, "LBPKJzP4xyCf35gT"], "pad": "40px 22px 8px", "gap": 14},
+          {"band": [0, 700, 1440, 1560], "img": true, "fish": false, "cls": "fade"}
+        ]
       },
       "ow": {
-        "bg": {"x": 20},
+        "bg": {"size": "100% auto", "x": 50, "y": 0, "color": "#01111e", "shade": "linear-gradient(rgba(1,17,30,0), rgba(1,17,30,.78) 70px)"},
         "blocks": [
           {"items": ["LBqMLJjtT9xrSGbL"]},
           {"items": ["LB2tB6sLbqQbC45c", {"ref": "LBzV9DgV1JDjrfN4", "fs": 28}, "LByjSBHGQnvRDkNy", "LBFvdLGKf7gHwBnv", {"ref": "LBN9YVvqBxNhtfDy", "join": true}], "gap": 12},
@@ -132,26 +134,26 @@
     },
     "stay": {
       "open": {
-        "bg": {"none": true, "color": "#f3f0e8"},
+        "bg": {"none": true, "color": "#dbd8d1"},
         "pad": "0",
         "blocks": [
-          {"band": [240, 140, 1200, 1000], "img": true}
+          {"band": [240, 140, 1200, 1000], "img": true, "cls": "dim"}
         ]
       },
       "double": {
         "pad": "40px 0 32px",
         "blocks": [
-          {"band": [0, 79, 799, 996], "w": 320},
+          {"band": [0, 79, 799, 996], "w": 256},
           {"items": ["LBLTK0qVl43kvNlw", {"ref": "LBF0tFJyd2lLhB47", "fs": 28}, {"ref": "LBLv7pw1gzvXfYsn", "join": true}, "LBRlCXK0D5gQdCLT"], "gap": 12},
           {"items": ["LB8MwmV4jhh8FlN8", "#0"], "cls": "row"},
           {"band": [844, 91, 1289, 628], "fish": false, "cls": "inset s90"}
         ],
-        "bg": {"none": true, "color": "#f3f0e8"}
+        "bg": {"none": true, "color": "#dbd8d1"}
       },
       "quad": {
         "pad": "40px 0 40px",
         "blocks": [
-          {"band": [823, 52, 1330, 633], "w": 300},
+          {"band": [823, 52, 1330, 633], "w": 240},
           {"items": ["LBRqrVhXGVSx541R", {"ref": "LBpzGHHpqh61Z7Qg", "fs": 28}, {"ref": "LBQ1BPgDZK8BnqGT", "join": true}, "LBW3SnNFJRdt4wtH"], "gap": 12},
           {"items": ["LBYtZvF3TchTmCJj", "#5"], "cls": "row"},
           {"band": [142, 78, 668, 390], "fish": false, "cls": "inset"}
@@ -161,25 +163,25 @@
       "backpacker": {
         "pad": "32px 0 32px",
         "blocks": [
-          {"band": [74, 23, 749, 545], "w": 300},
+          {"band": [74, 23, 749, 545], "w": 240},
           {"items": ["LBPD8qF529k5FLhF", {"ref": "LBtSZbM9rjQMlmnm", "fs": 28}, {"ref": "LBVyQMFdSpRXcQxG", "join": true}, "LBd7zl8tfhM3HTqy"], "gap": 12},
           {"items": ["LBDdnnNRPRPqnXr0", "#0"], "cls": "row"},
           {"band": [791, -159, 1385, 168], "fish": false, "cls": "inset", "span": true}
         ],
-        "bg": {"none": true, "color": "#f3f0e8"}
+        "bg": {"none": true, "color": "#dbd8d1"}
       },
       "notice": {
         "pad": "32px 0 0",
         "blocks": [
           {"items": [{"ref": "LB1T0y6psMNX0bqV", "fs": 28}, "LBkjkHYNjWMlR0jg"], "gap": 14},
-          {"band": [330, 20, 1440, 990], "img": true, "span": true}
+          {"band": [330, 20, 1440, 990], "img": true, "span": true, "cls": "dim"}
         ],
-        "bg": {"none": true, "color": "#f3f0e8"}
+        "bg": {"none": true, "color": "#dbd8d1"}
       },
       "footer": {
         "band": false,
         "pad": "0 0 40px",
-        "bg": {"none": true, "color": "#092f52"}
+        "bg": {"none": true, "color": "#082a4a"}
       }
     },
     "trips": {
@@ -396,8 +398,12 @@
     },
     "booking": {
       "open": {
-        "bg": {"none": true, "color": "#f5f3ee"},
+        "bg": {"none": true, "color": "#dddbd6"},
         "pad": "0"
+      },
+      "footer": {
+        "bandCls": "dim",
+        "bg": {"none": true, "color": "#082a4a"}
       }
     }
   }

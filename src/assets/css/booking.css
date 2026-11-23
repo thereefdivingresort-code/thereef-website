@@ -143,6 +143,7 @@ body:has(.bk) .hc-scale { overflow-x: clip; }
 
 /* ---------- 手機（≤768px）：同樣的卡片、框線、橘色按鈕，改成一欄由上往下；訂單摘要接在表單下面 ---------- */
 @media (max-width: 768px) {
+  body:has(.bk), .hc-flow { background: #dddbd6; } /* 11/24 Ambre：手機底色加深 10%，白色卡片更明顯 */
   .hc-flow, .bk { width: 100%; }
   .bk { padding-bottom: 40px; font-size: 15px; }
   .bk-head { height: auto; padding: 28px 18px 20px; display: flex; flex-direction: column; gap: 10px; }

@@ -23,7 +23,7 @@
     <form class="bk-main" id="booking-form" novalidate>
       {# ---------- 第 1 步：選購（Canva UI v4） ---------- #}
       <div class="bk-stepview" data-step="1">
-        <div id="bk-blocks"><div class="bk-card"><p class="bk-intro">預訂表載入中……如果一直沒出現，請打 <a href="{{ site.company.phoneHref }}">{{ site.company.phone }}</a> 預訂。</p></div></div>
+        <div id="bk-blocks"><div class="bk-card"><p class="bk-intro">預訂表載入中……如果一直沒出現，請加 <a href="{{ site.company.lineUrl }}" target="_blank" rel="noopener">LINE 官方帳號</a>預訂。</p></div></div>
         <div class="bk-card bk-totalbar">
           <p class="bk-total-text">合計　<strong id="cart-total">NT$ 0</strong></p>
           <button type="button" class="bk-btn bk-next" data-go="2">下一步：填資料</button>
@@ -85,7 +85,7 @@
         <section class="bk-card bk-stepcard" aria-labelledby="bk-s4-h">
           <h2 class="bk-title" id="bk-s4-h">④　付款</h2>
           <p class="bk-intro">付款在 PAYUNi 統一金流的加密付款頁完成（信用卡、ATM 轉帳，實際可用的方式以付款頁為準），綠芙不會看到你的卡號。</p>
-          <p class="bk-paymsg" id="form-msg" role="status" aria-live="polite">線上付款開通中，請先打 <a href="{{ site.company.phoneHref }}">{{ site.company.phone }}</a>{% if site.company.lineUrl %} 或加 <a class="bk-hl" href="{{ site.company.lineUrl }}" target="_blank" rel="noopener">LINE 官方帳號</a> <strong class="bk-hl">預訂</strong>{% else %} <strong class="bk-hl">預訂</strong>{% endif %}，我們會幫你保留名額。</p>
+          <p class="bk-paymsg" id="form-msg" role="status" aria-live="polite">線上付款開通中，請先{% if site.company.lineUrl %}加 <a class="bk-hl" href="{{ site.company.lineUrl }}" target="_blank" rel="noopener">LINE 官方帳號</a> <strong class="bk-hl">預訂</strong>{% else %} <strong class="bk-hl">預訂</strong>{% endif %}，我們會幫你保留名額。</p>
         </section>
         <section class="bk-card bk-stepcard" aria-labelledby="bk-s4b-h">
           <h2 class="bk-title" id="bk-s4b-h">④　付款完成之後</h2>
@@ -100,7 +100,7 @@
           <div class="bk-info">
             <div><h3>付款方式</h3><p>信用卡、ATM 轉帳（PAYUNi 統一金流）。實際可用的方式以付款頁為準。</p></div>
             <div><h3>改期或取消</h3><p>天候或停航造成的取消，可以改期或退款。其他情況請看<a href="/refund/">〈退款與停航政策〉</a>。</p></div>
-            <div><h3>查詢訂單</h3><p>用確認信上的訂單編號，打電話或傳 LINE 給我們（<a href="/about/#contact">聯絡我們</a>）。</p></div>
+            <div><h3>查詢訂單</h3><p>用確認信上的訂單編號，傳 LINE 給我們（<a href="/about/#contact">聯絡我們</a>）。</p></div>
           </div>
         </section>
         <div class="bk-card bk-totalbar">
