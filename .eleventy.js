@@ -4,6 +4,8 @@ const { HtmlBasePlugin } = require("@11ty/eleventy");
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(HtmlBasePlugin);
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
+  // 手機版排法（≤ 768px）：見 scripts/mobile-plan.js、src/_data/mobile.js
+  eleventyConfig.addFilter("mplan", require("./scripts/mobile-plan.js"));
 
   // rich：把多行文字轉成段落；「・」開頭的行變成條列
   eleventyConfig.addFilter("rich", function (text) {

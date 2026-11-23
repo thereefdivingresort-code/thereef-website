@@ -122,3 +122,70 @@ label.hc-t { cursor: pointer; }
 .hc-sticky-card, .hc-sticky-line, .hc-sticky-img { position: absolute; display: block; }
 .hc-sticky .hc-t a { text-decoration: none; }
 .hc-sticky .hc-t a:hover, .hc-sticky .hc-t a:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
+
+/* ===== 手機版（≤ 768px）：11/19 Ambre 定案「看起來一樣，只是排法變直」=====
+   同一份 HTML：電腦版照 Canva 座標；手機版每段改成由上往下排（排法見 scripts/mobile-plan.js、每頁設定 src/_data/mobile.js）。
+   電腦版：下面這些外框都是 display: contents（不產生方框），元素位置完全不變。 */
+.hc-mhdr, .hc-mrow, .hc-mpic, .hc-mbox, .hc-mhidden, .hc-mfa { display: contents; }
+.hc-mlogo { display: none; }
+
+@media (max-width: 768px) {
+  .hc-scale { overflow-x: clip; }
+  .hc { width: 100%; height: auto !important; display: flex; flex-direction: column; }
+  .hc-bg { display: none; }
+  .hc-mhidden { display: none; }
+  .hc-sec { position: relative; top: auto !important; height: auto !important; width: 100%; min-height: var(--smh, 0);
+    display: flex; flex-direction: column; padding: var(--spt, 56px) 0 var(--spb, 64px); overflow: hidden; container-type: inline-size;
+    background: var(--sbg) var(--sbp) / var(--sbs) no-repeat, var(--sbc); }
+  .hc-sec:first-of-type { order: 0; }
+  .hc-sec { order: 2; }
+
+  /* 文字：照順序往下排；字級＝14 起跳、大字等比縮小 */
+  .hc-t { position: relative; left: auto !important; top: auto !important; width: auto !important; margin: var(--mt, 0) 20px 0;
+    font-size: var(--mfs, max(14px, calc(14px + (var(--fs, 16px) - 14px) * .55))) !important; text-align: var(--ta, left) !important; }
+  .hc-btn { position: relative; left: auto !important; top: auto !important; margin: var(--mt, 0) 20px 0; align-self: flex-start;
+    width: max(132px, calc(var(--w, 160px) * .8)) !important; height: 48px !important; min-height: 44px; font-size: max(15px, calc(var(--fs, 16px) * .92)) !important; }
+  .hc-mrow { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; margin: var(--mt, 0) 20px 0; position: relative; z-index: 1; }
+  .hc-mrow > .hc-t, .hc-mrow > .hc-btn { margin: 0; flex: 0 1 auto; }
+  .hc-mrow > .hc-btn { width: max(120px, calc(var(--w, 160px) * .72)) !important; }
+
+  /* 插圖：按比例縮小、放在所屬外框的相對位置；進場與漂浮動畫照舊 */
+  .hc-fish { left: var(--fl) !important; top: var(--ft) !important; width: calc(var(--fw) * 1cqw) !important; height: calc(var(--fh) * 1cqw) !important; display: var(--fd, block); }
+  .hc-fish > .hc-fish-img[style*="position:absolute"] { left: calc(var(--cx) * 1cqw) !important; top: calc(var(--cy) * 1cqw) !important; width: calc(var(--cw) * 1cqw) !important; height: calc(var(--ch) * 1cqw) !important; }
+  .hc-mfa { display: block; position: relative; height: 0; z-index: 0; }
+  /* 回到頂部：手機上改成右下角小圓鈕，不蓋選單 */
+  .back-to-top { top: auto !important; bottom: 16px; right: 12px; width: 48px; height: 48px; padding: 0; border-radius: 50%; opacity: .92; }
+  .back-to-top .bt-label { display: none; }
+
+  /* pic：把底圖的一塊原樣切出來放滿手機寬；裡面的字跟著等比縮放 */
+  .hc-mpic { display: block; position: relative; width: var(--pw, 100%); align-self: center; aspect-ratio: var(--ar); margin-top: var(--mt, 0); flex: none;
+    background: var(--img) var(--bpos) / var(--bsz) no-repeat; container-type: inline-size; border-radius: var(--rad, 0); }
+  .hc-mpic.is-fade { -webkit-mask-image: linear-gradient(transparent, #000 var(--fade), #000 calc(100% - var(--fade)), transparent); mask-image: linear-gradient(transparent, #000 var(--fade), #000 calc(100% - var(--fade)), transparent); }
+  .hc-mpic > .hc-t { position: absolute; margin: 0; left: var(--pl) !important; top: var(--pt) !important; width: var(--pw) !important; font-size: max(13px, calc(var(--pf) * 1cqw)) !important; white-space: nowrap; }
+  .hc-mpic > .hc-btn { position: absolute; margin: 0; left: var(--pl) !important; top: var(--pt) !important; }
+
+  /* box：卡片（電腦版畫在底圖上，手機版用 CSS 畫） */
+  .hc-mbox { display: flex; flex-direction: column; position: relative; margin: var(--mt, 0) 16px 0; padding: var(--pad, 22px 0 24px); border-radius: var(--rad, 16px);
+    background: var(--bg); border: var(--bd, 0); box-shadow: var(--sh, none); container-type: inline-size; }
+  .hc-mbox > .hc-t, .hc-mbox > .hc-btn, .hc-mbox > .hc-mrow { margin-left: 18px; margin-right: 18px; }
+  .hc-mbox > .hc-mpic:first-child { border-radius: var(--rad, 16px) var(--rad, 16px) 0 0; margin-top: calc(-1 * 22px); }
+  .hc-mbox.has-lines > .hc-mrow { padding-bottom: 10px; border-bottom: 1px solid rgba(18, 53, 91, .12); }
+
+  /* 頁首：logo＋預訂鈕一列，選單一列 */
+  .hc-mhdr { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 8px 16px 6px; margin-top: calc(-1 * var(--spt, 56px)); background: #fff; position: relative; z-index: 3; }
+  .hc-mlogo { display: block; width: 150px; aspect-ratio: var(--ar); background: var(--img) var(--bpos) / var(--bsz) no-repeat; }
+  .hc-mhdr > .hc-btn { order: 1; margin: 0; width: 88px !important; height: 44px !important; font-size: 15px !important; }
+  .hc-mhdr > .hc-t { order: 2; flex: 1 0 100%; margin: 4px 0 0; font-size: 15px !important; text-align: center !important; }
+  .hc-mhdr > .hc-t a { display: inline-block; padding: 10px 2px; }
+  .hc-logo { left: 16px; top: 8px; width: 150px; height: 56px; z-index: 4; }
+
+  /* FAQ */
+  .hc-faq { position: relative; left: auto !important; top: auto !important; width: auto !important; margin: var(--mt, 0) 20px 0; }
+  .hc-faq details, .hc-faq details[open] { margin-bottom: 4px; }
+  .hc-faq summary { height: auto; min-height: 48px; padding: 12px 28px 12px 0; }
+  .hc-faq .q { font-size: max(15px, calc(var(--qfs) * .85)); margin: 0; line-height: 1.5; }
+  .hc-faq .sign { left: auto; right: 2px; top: 50%; margin-top: -6px; }
+  .hc-faq .a { width: auto; font-size: max(14px, calc(var(--afs) * .9)); margin: 0 0 4px; }
+
+  .hc-anchor { position: relative; top: auto !important; }
+}

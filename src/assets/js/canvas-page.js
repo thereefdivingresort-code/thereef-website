@@ -4,7 +4,8 @@
   var pages = document.querySelectorAll(".hc, .hc-flow"); // 預訂頁：上面頁首、中間表單、下面頁尾分成三塊，一起縮放
   function fit() {
     var w = document.documentElement.clientWidth;
-    pages.forEach(function (page) { page.style.zoom = w < 1440 ? String(w / 1440) : ""; });
+    // 手機（≤ 768）改用直排版面（canvas-page.css 最後一段），不縮放
+    pages.forEach(function (page) { page.style.zoom = w <= 768 || w >= 1440 ? "" : String(w / 1440); });
   }
   fit();
   window.addEventListener("resize", fit);
