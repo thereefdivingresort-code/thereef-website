@@ -122,3 +122,7 @@ label.hc-t { cursor: pointer; }
 .hc-sticky-card, .hc-sticky-line, .hc-sticky-img { position: absolute; display: block; }
 .hc-sticky .hc-t a { text-decoration: none; }
 .hc-sticky .hc-t a:hover, .hc-sticky .hc-t a:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
+
+/* 手機版（≤768px，canvas-mobile.css）用的分組外框與元件：電腦版不產生方框、不顯示，畫面跟原本一樣 */
+.hc-mg { display: contents; }
+.hc-mband, .hc-mlogo, .hc-msun, .hc-mnav-btn { display: none; }

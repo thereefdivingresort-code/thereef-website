@@ -21,6 +21,8 @@ module.exports = function (eleventyConfig) {
     flush();
     return out.join("");
   });
+  // 手機版排法（分組、插圖窗）：見 scripts/mobile-blocks.js、src/_data/mobile.json
+  eleventyConfig.addFilter("mBlocks", require("./scripts/mobile-blocks.js"));
   eleventyConfig.addFilter("money", (n) => Number(n).toLocaleString("en-US"));
   // priceItem：用代號從 prices.json 找一個品項（{{ "dsd" | priceItem(prices) }}），價格只讀不手打
   eleventyConfig.addFilter("priceItem", function (id, prices) {
