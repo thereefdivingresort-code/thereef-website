@@ -34,9 +34,9 @@ body { margin: 0; background: #010414; font-family: "Noto Sans TC", "Noto Sans C
              hc-sway var(--sway) ease-in-out calc(var(--delay) + var(--dur)) infinite;
 }
 /* 漂浮：上下約 14px（11/17 Ambre 要更生動，原本 7px 幾乎看不出來） */
-@keyframes hc-float { 0%, 100% { opacity: 1; transform: translate(0, 0); } 50% { opacity: 1; transform: translate(0, -14px); } }
+@keyframes hc-float { 0%, 100% { opacity: 1; transform: translate(0, 0); } 50% { opacity: 1; transform: translate(0, calc(-1 * var(--famp, 14px))); } }
 /* 珊瑚、海扇：從根部輕輕左右擺 */
-@keyframes hc-sway { 0%, 100% { opacity: 1; transform: rotate(0deg); } 25% { opacity: 1; transform: rotate(1.6deg); } 75% { opacity: 1; transform: rotate(-1.6deg); } }
+@keyframes hc-sway { 0%, 100% { opacity: 1; transform: rotate(0deg); } 25% { opacity: 1; transform: rotate(var(--samp, 1.6deg)); } 75% { opacity: 1; transform: rotate(calc(-1 * var(--samp, 1.6deg))); } }
 @media (prefers-reduced-motion: reduce) {
   .hc-anim .hc-fish-img, .hc-anim .hc-fish.is-in .hc-fish-img { opacity: 1 !important; transform: none !important; animation: none !important; }
 }
