@@ -191,3 +191,19 @@
 /* 課程頁：字再小 15%（內文最小 14px 不變） */
 .hc-page-courses { --mk: .85; }
 .hc-page-courses .hc-t { font-size: max(14px, calc(var(--mfs, calc(var(--fs) * .62px + 4px)) * var(--mk))) !important; }
+
+/* ===== 11/24 Ambre 第二輪 ===== */
+/* 課程開場、OW、AOW：文字框右邊留 30% 白（以 OW「最深 18 m」那行的右緣為準）；按鈕位置不變 */
+.hc-sec.narrow .hc-mg:not(.row) > .hc-t { max-width: min(max(274px, 70%), 100%) !important; } /* 274px＝「岸潛（較深）SHORE DIVE · 最深 18 m」一行的寬（14px 字） */
+/* 關於頁水母：大一點，在右邊留白處四處飄 */
+.hc-mband.beside.roam { width: 84px; margin: calc(-1 * var(--msgap, 28px) - 120px) 0 0 220px; animation: hc-roam 16s ease-in-out infinite; }
+@keyframes hc-roam {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  20% { transform: translate(40px, -70px) rotate(6deg); }
+  45% { transform: translate(-30px, -110px) rotate(-5deg); }
+  70% { transform: translate(-60px, -30px) rotate(4deg); }
+  85% { transform: translate(20px, 10px) rotate(-3deg); }
+}
+@media (prefers-reduced-motion: reduce) { .hc-mband.beside.roam { animation: none; } }
+/* 隱私權珊瑚：靠右一點，底部貼齊下面的卡片 */
+.hc-mband.nudge { margin-left: 30px; margin-right: auto; }

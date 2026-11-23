@@ -16,12 +16,12 @@
   "pages": {
     "home": {
       "open": {
-        "bg": {"crop": [140, 1000], "x": 25, "shade": "linear-gradient(rgba(10,24,40,.55), rgba(10,24,40,.15) 55%, rgba(0,0,0,0) 75%)"},
-        "pad": "0 0 28px",
+        "bg": {"none": true, "shade": "linear-gradient(#2c4a63, #3f5d78)"},
+        "pad": "0 0 0",
         "blocks": [
-          {"items": ["LBxcQQNkdzxc7bNm", {"ref": "LBlhcdxSs8Lpp8x4", "fs": 44}, {"ref": "LB8LnWGDWS7Q2MzD", "join": true}], "pad": "64px 22px 0", "gap": 12},
+          {"items": ["LBxcQQNkdzxc7bNm", {"ref": "LBlhcdxSs8Lpp8x4", "fs": 44}, {"ref": "LB8LnWGDWS7Q2MzD", "join": true}], "pad": "40px 22px 0", "gap": 12},
           {"items": ["#0", "LBQhnfR94X68vL9m"], "cls": "btns mid"},
-          {"items": ["LB7hm0Jq4jlkn6rZ", "LBRHh5L24jPhK9dS"], "cls": "row", "pad": "250px 22px 0"}
+          {"band": [60, 300, 1280, 1000], "img": true, "fish": false, "cls": "fade", "texts": ["LB7hm0Jq4jlkn6rZ", "LBRHh5L24jPhK9dS"]}
         ]
       },
       "d12": {
@@ -31,6 +31,7 @@
           {"items": ["LBtkyDY5mxzc6Mjv", {"ref": "LBKSnzt85RzxJHcs", "fs": 28}, {"ref": "LBMqwSYvKlBbFCXN", "join": true}, "LBhLwmjm64Y6Qhlq"], "gap": 12},
           {"items": ["LBJHtvt9c3B7mRTr", "#0"], "cls": "row"},
           {"items": [{"ref": "LB84RQPt6CJkrLtH", "fs": 64}], "pad": "12px 22px 0"},
+          {"scroll": true},
           {"band": [330, 1180, 1200, 1720]},
           {"items": [{"ref": "LBZkD6D2yxJ572zw", "fs": 26}, {"ref": "LB5TmS6b8GyXwhH7", "join": true}], "gap": 12},
           {"band": [774, 344, 1322, 1072], "fish": false, "cls": "inset", "w": 380}
@@ -56,7 +57,9 @@
           {"items": ["LBFhk7r4lXCHd7BC", {"ref": "LBGcxXy9P84KsyXj", "fs": 28}, "LBBPH7DGWwVWsZw7", "LBMWb6CwHFM8R1vT"], "gap": 12},
           {"items": ["LBjptnkxrdP7Ypq3", "#0"], "cls": "row"},
           {"items": ["LBBLbGLQH84xRYwP", "LBKVNx8MqxDmXDhs"], "gap": 12},
-          {"band": [690, 230, 1440, 1000]},
+          {"band": [690, 230, 1300, 720], "fish": ["#2"]},
+          {"scroll": true},
+          {"band": [1040, 680, 1440, 1000], "fish": ["#3"], "w": 250, "cls": "right"},
           {"band": [650, 1180, 1350, 1480], "fish": ["#5", "#6", "#8"]}
         ]
       },
@@ -84,7 +87,8 @@
         "pad": "0 0 360px",
         "blocks": [
           {"items": [{"ref": "LBZjyZl4PQ14S7Vg", "fs": 28}, "LBPKJzP4xyCf35gT"], "pad": "48px 22px 0", "gap": 14}
-        ]
+        ],
+        "scls": "narrow"
       },
       "ow": {
         "bg": {"x": 20},
@@ -92,7 +96,8 @@
           {"items": ["LBqMLJjtT9xrSGbL"]},
           {"items": ["LB2tB6sLbqQbC45c", {"ref": "LBzV9DgV1JDjrfN4", "fs": 28}, "LByjSBHGQnvRDkNy", "LBFvdLGKf7gHwBnv", {"ref": "LBN9YVvqBxNhtfDy", "join": true}], "gap": 12},
           {"items": ["LB7wpznLPFr6yGkv", "#7"], "cls": "row"}
-        ]
+        ],
+        "scls": "narrow"
       },
       "aow": {
         "bg": {"x": 20},
@@ -100,7 +105,8 @@
           {"items": ["LBlZznXkkhRFwZwq"]},
           {"items": ["LBTdZW10hJfmLY8V", {"ref": "LBYZ3KqrDHls72KV", "fs": 28}, "LBdVRhkfppf511qs", "LBWGZjnCnG4pBy8Z", {"ref": "LBljR0j6Hvqt5Ltv", "join": true}], "gap": 12},
           {"items": ["LBsJdgwf1NsKMFsl", "#7"], "cls": "row"}
-        ]
+        ],
+        "scls": "narrow"
       },
       "plans": {
         "bg": {"x": 90, "shade": "linear-gradient(rgba(0,15,25,.62), rgba(0,15,25,.38))"},
@@ -143,14 +149,14 @@
         "bg": {"none": true, "color": "#f3f0e8"}
       },
       "quad": {
-        "pad": "24px 0 32px",
+        "pad": "40px 0 40px",
         "blocks": [
           {"band": [823, 52, 1330, 633], "w": 300},
           {"items": ["LBRqrVhXGVSx541R", {"ref": "LBpzGHHpqh61Z7Qg", "fs": 28}, {"ref": "LBQ1BPgDZK8BnqGT", "join": true}, "LBW3SnNFJRdt4wtH"], "gap": 12},
           {"items": ["LBYtZvF3TchTmCJj", "#5"], "cls": "row"},
           {"band": [142, 78, 668, 390], "fish": false, "cls": "inset"}
         ],
-        "bg": {"none": true, "color": "#f3f0e8"}
+        "bg": {"none": true, "color": "#ffffff"}
       },
       "backpacker": {
         "pad": "32px 0 32px",
@@ -258,7 +264,7 @@
         "blocks": [
           {"items": [{"ref": "LBHBXl39dz7j7ybG", "fs": 28}, "#7"], "cls": "btns"},
           {"items": ["LB6r9cQ56ntDPXSm", "LBXjh9yXXsn4Fdx6", "LBDK8z1bkGh8wgjf", "LB4xcClTbYPkMk0Y"], "gap": 14},
-          {"band": [862, 88, 984, 220], "fish": ["#6"], "cls": "beside"}
+          {"band": [862, 88, 984, 220], "fish": ["#6"], "cls": "beside roam"}
         ]
       },
       "form": {
@@ -331,7 +337,7 @@
         "pad": "24px 0 0",
         "blocks": [
           {"items": ["LBwrQ0WsTV2c3dG8", "LBG7tjV0dcKVRjbD", "LBrT5knTmhpklT6g", "LBT1ZnLZYHjpjqz1", "LBxYq9c3whFpXCVT", "LB3hbN5DxjD14Fz3", "LBQvC5JZGYj4r86L", "LBpCc0hcJVzbyM8P"], "gap": 12},
-          {"band": [737, 359, 1317, 760], "img": true, "w": 300, "cls": "bleedl"}
+          {"band": [737, 359, 1317, 760], "img": true, "w": 300, "cls": "nudge"}
         ]
       },
       "closing": {
@@ -339,8 +345,7 @@
         "pad": "0 0 48px",
         "blocks": [
           {"items": [{"ref": "LBBtzG74MryvvFnr", "fs": 20}, "LBSFxG3Vlfk7cd7j", "LBCvT42HV427v1X1"], "cls": "card", "gap": 10}
-        ],
-        "scls": "overlap-up"
+        ]
       }
     },
     "refund": {
