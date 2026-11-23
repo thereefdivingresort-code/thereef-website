@@ -22,7 +22,9 @@
   function updateVisible() {
     // 只有頁面比一個螢幕高度長才需要「回到頂部」（11/17 Ambre：超過一卷的頁面才加）
     var scrollable = document.documentElement.scrollHeight > window.innerHeight + 80;
-    btn.classList.toggle("is-visible", scrollable);
+    // 手機直排版（≤768px）：捲過大半個螢幕才出現，不擋開場內容
+    var narrow = window.matchMedia && window.matchMedia("(max-width: 768px)").matches;
+    btn.classList.toggle("is-visible", scrollable && (!narrow || window.scrollY > window.innerHeight * 0.8));
   }
 
   // 一進頁面就顯示並跟著滑鼠（11/17 Ambre：不用等捲動），先放在畫面中央
@@ -31,5 +33,6 @@
 
   document.addEventListener("mousemove", function (e) { place(e.clientY); }, { passive: true });
   window.addEventListener("resize", updateVisible, { passive: true });
+  window.addEventListener("scroll", updateVisible, { passive: true });
   window.addEventListener("load", updateVisible);
 })();

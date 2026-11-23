@@ -13,7 +13,7 @@
 //     blocks ＝ 由上往下的區塊：
 //       { band: [x0, y0, x1, y1], img: true/false, fish: true/false, w: 最大寬(px), cls }  ← 插圖窗：底圖＋插圖的一塊，等比縮到手機寬
 //       { items: [元素, ...], cls, gap, pad }  ← 文字組：元素＝文字 id 或 "#序號"（這段 items 的第幾個，從 0 起）；
-//                                               也可以寫 { ref, fs(手機字級 px), cls }
+//                                               也可以寫 { ref, fs(手機字級 px), cls, join(true＝電腦版為了排版手動換的行，手機上接起來) }
 //     hide   ＝ 手機上不顯示的元素
 // 沒有寫到的元素會自動排在這段最後（不會不見）。
 
@@ -24,7 +24,7 @@ function bandData(b, s, imgUrl, dx, dy) {
   const x0 = x0r + dx, x1 = x1r + dx, y0 = y0r + dy, y1 = y1r + dy;
   const w = x1 - x0, h = y1 - y0;
   const out = { type: "band", cls: b.cls || "", ar: r(w / h), maxW: b.w || null, fish: [] };
-  if (b.img !== false) {
+  if (b.img !== false && !(b.img == null && b.fish !== false)) { // 有魚的插圖窗預設不帶底圖（魚直接疊在這段的底圖上，才不會有接縫）
     out.img = imgUrl;
     out.imgStyle = `left:${r(-x0 / w * 100)}%;top:${r(-y0 / h * 100)}%;width:${r(1440 / w * 100)}%;height:${r(s.height / h * 100)}%`;
   }
@@ -71,6 +71,7 @@ module.exports = function mBlocks(s, pageKey, home, mobile, imgDir, prefix) {
   const shift = footerShift || { dx: 0, dy: 0 };
 
   const used = new Set();
+  const bandHide = new Set();
   const blocks = [];
   const head = entries.filter(isHead);
   if (head.length) {
@@ -85,7 +86,21 @@ module.exports = function mBlocks(s, pageKey, home, mobile, imgDir, prefix) {
   }
   const find = (ref) => entries.find((e) => !used.has(e) && !isHead(e) && e.key === ref);
   for (const b of cfg.blocks || []) {
-    if (b.band) { blocks.push(bandData(b, s, imgUrl, shift.dx, shift.dy)); continue; }
+    if (b.band) {
+      const bd = bandData(b, s, imgUrl, shift.dx, shift.dy);
+      // 疊在插圖上的文字（例如地圖上的地名）：照比例放在插圖窗裡，字至少 14px
+      const [x0, y0, x1, y1] = b.band, w = x1 - x0, h = y1 - y0;
+      bd.texts = [];
+      for (const ref of b.texts || []) {
+        // 電腦版那份照原位置留著（手機隱藏），插圖窗裡放一份複本
+        const e = entries.find((x) => x.key === ref && !isHead(x));
+        if (!e) continue;
+        bandHide.add(ref);
+        bd.texts.push({ ...e, m: { cls: "hc-mbt", vars: `--bx:${r((e.it.x + e.dx - x0 - shift.dx) / w * 100)}%;--by:${r((e.it.y + e.dy - y0 - shift.dy) / h * 100)}%;--mfs:max(14px, ${r(e.it.fs * 100 / w)}vw);` } });
+      }
+      blocks.push(bd);
+      continue;
+    }
     const items = [];
     for (const ref of b.items || []) {
       const o = typeof ref === "string" ? { ref } : ref;
@@ -93,11 +108,11 @@ module.exports = function mBlocks(s, pageKey, home, mobile, imgDir, prefix) {
       if (!e) continue;
       used.add(e);
       const vars = (o.fs ? `--mfs:${o.fs}px;` : "") + (o.vars || "");
-      items.push({ ...e, m: { cls: o.cls || "", vars } });
+      items.push({ ...e, m: { cls: o.cls || "", vars, join: !!o.join } });
     }
     if (items.length) blocks.push({ type: "group", cls: b.cls || "", vars: (b.gap != null ? `--mgap:${b.gap}px;` : "") + (b.pad ? `--mpad:${b.pad};` : "") + (b.vars || ""), items });
   }
-  const hide = new Set(cfg.hide || []);
+  const hide = new Set([...(cfg.hide || []), ...bandHide]);
   const rest = entries.filter((e) => !used.has(e) && !hide.has(e.key));
   if (rest.length) blocks.push({ type: "group", cls: "hc-mrest", vars: "", items: rest });
   const hidden = entries.filter((e) => !used.has(e) && hide.has(e.key));

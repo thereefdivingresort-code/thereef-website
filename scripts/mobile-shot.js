@@ -26,7 +26,11 @@ async function shoot(browser, opts, route, out) {
   for (let y = 0; y < H; y += step) { await page.evaluate((y) => window.scrollTo({ top: y, behavior: "instant" }), y); await page.waitForTimeout(60); }
   await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
   await page.waitForTimeout(400);
-  const info = await page.evaluate(() => ({ sw: document.documentElement.scrollWidth, cw: document.documentElement.clientWidth, h: document.documentElement.scrollHeight }));
+  const info = await page.evaluate(() => ({ sw: document.documentElement.scrollWidth, cw: document.documentElement.clientWidth, h: document.documentElement.scrollHeight,
+    // 每一段的位置（給 scripts/mobile-compare.py 做電腦版／手機版同一段並排比對圖）
+    secs: [...document.querySelectorAll(".hc-sec")].map((e) => { const r = e.getBoundingClientRect(); return { key: e.className.replace(/.*hc-sec-/, ""), name: e.dataset.name, y: r.top + scrollY, h: r.height }; }),
+    flow: (() => { const f = document.querySelector(".hc-flow"); if (!f) return null; const r = f.getBoundingClientRect(); return { y: r.top + scrollY, h: r.height }; })() }));
+  fs.writeFileSync(out.replace(/\.png$/, ".json"), JSON.stringify(info));
   await page.screenshot({ path: out, fullPage: true });
   await ctx.close();
   return info;

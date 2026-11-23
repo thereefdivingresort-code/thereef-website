@@ -1,0 +1,121 @@
+/* 手機版（螢幕寬 ≤ 768px；canvas-page.njk 用 media 屬性載入，電腦版不會讀到這份）
+   11/19 Ambre 定案：「看起來一樣，只是排法變直」——底圖、插圖、顏色、字型、動畫、留白氛圍都保留，
+   原本左右並排的文字改成上下排。九頁共用這一份規則；每頁每段的分組順序在 src/_data/mobile.json。
+   元素的電腦版座標寫在行內 style（left、top、width…），手機上用 !important 蓋掉。 */
+
+.hc-scale { overflow-x: hidden; }
+.hc { width: 100%; height: auto !important; display: flex; flex-direction: column; zoom: normal !important; }
+.hc-bg, .hc-logo, .hc-sec > .hc-fish, .hc-mhide { display: none !important; }
+
+/* 每一段：照順序往下排；底圖用這段自己的圖（裁切與焦點在 mobile.json 的 bg） */
+.hc-sec {
+  position: relative; top: auto !important; left: auto; width: 100%; height: auto !important;
+  order: var(--so, 0); isolation: isolate;
+  display: flex; flex-direction: column; gap: var(--msgap, 28px);
+  padding: var(--mspad, 56px 0);
+  background-color: var(--mbgc, transparent);
+}
+.hc-sec::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: var(--mshade, linear-gradient(transparent, transparent)), var(--mbgimg) var(--mbgpos, 50% 50%) / var(--mbgsize, cover) no-repeat;
+}
+
+/* 文字組：元素改成由上往下排（不再用座標） */
+.hc-mg { display: flex; flex-direction: column; align-items: flex-start; gap: var(--mgap, 14px); padding: var(--mpad, 0 22px); }
+.hc-mg > .hc-t, .hc-mg > .hc-btn, .hc-mg > .hc-faq, .hc-mg > .hc-field, .hc-mg > .hc-dd, .hc-mg > .hc-check, .hc-mg > .hc-formmsg {
+  position: relative !important; left: auto !important; top: auto !important;
+}
+.hc-mg > .hc-t { width: 100% !important; max-width: 100%; }
+/* 字級：電腦版字級換算成手機（內文至少 14px、標題等比縮）；個別可在 mobile.json 用 fs 指定 */
+.hc-t { font-size: var(--mfs, max(14px, calc(var(--fs) * .56px + 5px))) !important; }
+.hc-t[style*="text-align:justify"] { text-align: left !important; }
+
+/* 按鈕：保留顏色、圓角，手機上至少 44px 高 */
+.hc-mg > .hc-btn {
+  width: auto !important; min-width: var(--mbw, 132px); height: auto !important; min-height: 46px;
+  padding: 10px 28px; font-size: var(--mfs, 16px) !important; flex: none;
+}
+
+/* 常用排法 */
+.hc-mg.row { flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: space-between; column-gap: 16px; }
+.hc-mg.row > .hc-t { width: auto !important; flex: 1 1 auto; }
+.hc-mg.btns { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
+.hc-mg.row.top { align-items: flex-start; }
+.hc-mg.rule { border-top: 2px solid rgba(143,163,184,.45); margin: 8px 22px 0; padding: 26px 0 0; }
+.hc-mg.center { align-items: center; text-align: center; }
+.hc-mg.center > .hc-t { text-align: center !important; }
+.hc-mg > .m-center { text-align: center !important; }
+.hc-mg > .m-self-center { align-self: center; }
+.hc-mg > .m-self-end { align-self: flex-end; }
+.hc-mg > .m-gap { margin-top: 10px; }
+.hc-t .nl { display: none; } /* join：電腦版手動換行，手機接起來 */
+.hc-mg.card {
+  margin: 0 16px; padding: var(--mpad, 24px 20px); border-radius: var(--mrad, 14px);
+  background: var(--mcard, rgba(255,255,255,.92)); box-shadow: var(--mshadow, 0 6px 20px rgba(18,53,91,.08));
+}
+
+/* 插圖窗：底圖＋插圖的一塊，等比縮到手機寬；魚一樣有進場、漂浮 */
+.hc-mband { display: block; position: relative; width: 100%; overflow: hidden; margin: 0 auto; flex: none; }
+.hc-mband.wide { overflow: visible; }
+.hc-mband.round { border-radius: 14px; width: calc(100% - 32px); }
+.hc-mband.inset { width: calc(100% - 44px); }
+.hc-mband-bg { position: absolute; display: block; max-width: none; }
+.hc-mband.right { margin-right: 12px; }
+.hc-mband.left { margin-left: 0; }
+.hc-mfish { position: absolute; }
+.hc-mband > .hc-mbt { position: absolute !important; left: var(--bx) !important; top: var(--by) !important; width: auto !important; white-space: nowrap; }
+@keyframes hc-float { 0%, 100% { opacity: 1; transform: translate(0, 0); } 50% { opacity: 1; transform: translate(0, -8px); } }
+
+/* 手機頁首：logo、預訂、選單按鈕；選單點開往下展開 */
+.hc-mhead {
+  position: relative; z-index: 30; flex-direction: row; align-items: center; gap: 8px;
+  height: 64px; padding: 0 10px 0 14px; margin-bottom: var(--mhead-gap, 0px);
+  background: #fff; border-bottom: 2px solid #3e4e60;
+}
+.hc-sec:has(> .hc-mhead) { padding-top: 0; }
+.hc-sec:has(> .hc-mhead)::before { top: 64px; }
+.hc-mlogo { display: block; width: 128px; flex: none; }
+.hc-mcrop { position: relative; display: block; width: 100%; overflow: hidden; }
+.hc-mcrop img { position: absolute; max-width: none; }
+.hc-msun { position: absolute; right: -6px; top: -4px; width: 64px; pointer-events: none; }
+.hc-mhead > .hc-mnav-btn { position: relative; z-index: 1; }
+.hc-mhead > .hc-mbook {
+  margin-left: auto; min-width: 0; min-height: 44px; padding: 0 22px; font-size: 15px !important;
+  width: auto !important; height: 44px !important; border-radius: 22px !important;
+}
+.hc-mnav-btn {
+  display: flex; align-items: center; justify-content: center; flex: none;
+  width: 44px; height: 44px; padding: 0; border: 0; border-radius: 10px; background: transparent; cursor: pointer;
+}
+.hc-mnav-btn span, .hc-mnav-btn span::before, .hc-mnav-btn span::after {
+  display: block; width: 22px; height: 2px; border-radius: 2px; background: #12355b; position: relative; transition: transform .2s, background .2s;
+}
+.hc-mnav-btn span::before, .hc-mnav-btn span::after { content: ""; position: absolute; left: 0; }
+.hc-mnav-btn span::before { top: -7px; }
+.hc-mnav-btn span::after { top: 7px; }
+.hc-mhead.is-open .hc-mnav-btn span { background: transparent; }
+.hc-mhead.is-open .hc-mnav-btn span::before { transform: translateY(7px) rotate(45deg); }
+.hc-mhead.is-open .hc-mnav-btn span::after { transform: translateY(-7px) rotate(-45deg); }
+.hc-mhead > .hc-mmenu {
+  display: none; position: absolute !important; left: 0 !important; top: 100% !important; width: 100% !important;
+  padding: 8px 0 14px; background: #fff; border-bottom: 2px solid #3e4e60; box-shadow: 0 14px 24px rgba(18,53,91,.12);
+  white-space: normal !important; font-size: 17px !important; color: #7a8aa0 !important; text-align: left !important;
+}
+.hc-mhead.is-open > .hc-mmenu { display: block; }
+.hc-mmenu a { display: block; padding: 13px 24px; color: #12355b; font-size: 18px; }
+.hc-mmenu a.is-active { color: #2a8a9a; }
+.hc-mmenu::after { content: ""; display: block; height: 1px; }
+.hc-mmenu { padding-left: 24px !important; }
+.hc-mmenu a { margin-left: -24px; }
+
+/* FAQ 手風琴 */
+.hc-mg > .hc-faq { width: 100% !important; --qfs: 16px !important; --afs: 14.5px !important; }
+.hc-faq details { margin-bottom: 12px !important; padding-bottom: 0; border-bottom-width: 2px !important; }
+.hc-faq details[open] { padding-bottom: 14px; }
+.hc-faq summary { height: auto; min-height: 44px; padding: 10px 30px 12px 0; }
+.hc-faq .q { font-size: 16px; margin-top: 0; line-height: 1.5; }
+.hc-faq .sign { left: auto; right: 4px; top: 15px; }
+.hc-faq .a { width: auto; font-size: 14.5px; margin-top: 0; line-height: 1.75; }
+
+/* 錨點（例如 /about/#contact）：手機上放在目標那段前面 */
+.hc-anchor { position: relative !important; top: auto !important; order: var(--so, 0); height: 0; scroll-margin-top: 8px; }

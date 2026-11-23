@@ -36,3 +36,10 @@
   .bt-chevrons { width: 20px; height: 20px; }
   .bt-label { font-size: 10px; }
 }
+
+/* 手機（≤768px，直排版）：改放右下角、捲動一段之後才出現，不擋內容 */
+@media (max-width: 768px) {
+  .back-to-top { top: auto !important; bottom: 16px; right: 12px; width: 52px; padding: 8px 4px 7px; border-radius: 12px; gap: 3px; background: rgba(13,27,46,.88); }
+  .bt-chevrons { width: 18px; height: 18px; }
+  .bt-label { font-size: 10px; letter-spacing: 0; }
+}

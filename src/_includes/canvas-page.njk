@@ -69,7 +69,7 @@ LINE 官方帳號｜{% if site.company.lineUrl %}<a href="{{ site.company.lineUr
 {%- macro item(it, dx, dy, active, m) -%}
       {%- set mm = m or {} -%}
       {% if it.kind == "text" %}
-      <{{ 'label' if it.labelFor else 'div' }}{% if it.labelFor %} for="{{ it.labelFor }}"{% endif %} class="hc-t{% if it.ul %} ul{% endif %}{% if mm.cls %} {{ mm.cls }}{% endif %}" style="left:{{ it.x + dx }}px;top:{{ it.y + dy }}px;width:{{ it.w }}px;font-size:{{ it.fs }}px;--fs:{{ it.fs }};{{ mm.vars }}font-weight:{{ it.fw }};color:{{ it.color }};line-height:{{ it.lh }};text-align:{{ 'justify' if it.align == 'left' else it.align }};{% if it.ls %}letter-spacing:{{ it.ls }}em;{% endif %}{% if it.op %}opacity:{{ it.op }};{% endif %}">{{ textBody(it, active) | safe }}</{{ 'label' if it.labelFor else 'div' }}>
+      <{{ 'label' if it.labelFor else 'div' }}{% if it.labelFor %} for="{{ it.labelFor }}"{% endif %} class="hc-t{% if it.ul %} ul{% endif %}{% if mm.cls %} {{ mm.cls }}{% endif %}" style="left:{{ it.x + dx }}px;top:{{ it.y + dy }}px;width:{{ it.w }}px;font-size:{{ it.fs }}px;--fs:{{ it.fs }};{{ mm.vars }}font-weight:{{ it.fw }};color:{{ it.color }};line-height:{{ it.lh }};text-align:{{ 'justify' if it.align == 'left' else it.align }};{% if it.ls %}letter-spacing:{{ it.ls }}em;{% endif %}{% if it.op %}opacity:{{ it.op }};{% endif %}">{% if mm.join %}{{ textBody(it, active) | replace("\n", '<span class="nl">\n</span>') | safe }}{% else %}{{ textBody(it, active) | safe }}{% endif %}</{{ 'label' if it.labelFor else 'div' }}>
       {% elif it.kind == "button" %}
       <a class="hc-btn{% if mm.cls %} {{ mm.cls }}{% endif %}" href="{{ site.company.lineUrl if it.href == 'site:lineUrl' else it.href }}"{% if it.newTab %} target="_blank" rel="noopener"{% endif %} style="{{ mm.vars }}left:{{ it.x + dx }}px;top:{{ it.y + dy }}px;width:{{ it.w }}px;height:{{ it.h }}px;border-radius:{{ it.radius }}px;background:{{ it.bg }};color:{{ it.color }};font-size:{{ it.fs }}px;{% if it.bw %}border:{{ it.bw }}px solid {{ it.bc }};{% endif %}">{{ it.label }}</a>
       {% elif it.kind == "faq" %}
@@ -125,7 +125,7 @@ LINE 官方帳號｜{% if site.company.lineUrl %}<a href="{{ site.company.lineUr
         <button type="button" class="hc-mnav-btn" aria-label="選單" aria-expanded="false"><span></span></button>
       </div>
 {%- elif b.type == "band" %}
-      <div class="hc-mband{% if b.cls %} {{ b.cls }}{% endif %}" aria-hidden="true" style="aspect-ratio:{{ b.ar }};{% if b.maxW %}max-width:{{ b.maxW }}px;{% endif %}">{% if b.img %}<img class="hc-mband-bg" src="{{ b.img }}" alt="" loading="lazy" style="{{ b.imgStyle }}">{% endif %}{% for f in b.fish %}{{ mfish(f, dir) }}{% endfor %}</div>
+      <div class="hc-mband{% if b.cls %} {{ b.cls }}{% endif %}" aria-hidden="true" style="aspect-ratio:{{ b.ar }};{% if b.maxW %}max-width:{{ b.maxW }}px;{% endif %}">{% if b.img %}<img class="hc-mband-bg" src="{{ b.img }}" alt="" loading="lazy" style="{{ b.imgStyle }}">{% endif %}{% for f in b.fish %}{{ mfish(f, dir) }}{% endfor %}{% for e in b.texts %}{{ item(e.it, e.dx, e.dy, active, e.m) }}{% endfor %}</div>
 {%- else %}
       <div class="hc-mg{% if b.cls %} {{ b.cls }}{% endif %}"{% if b.vars %} style="{{ b.vars }}"{% endif %}>{% for e in b.items %}{{ item(e.it, e.dx, e.dy, active, e.m) }}{% endfor %}</div>
 {%- endif %}

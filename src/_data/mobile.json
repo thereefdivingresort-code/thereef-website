@@ -1,1 +1,80 @@
-{"_說明":"手機版（≤768px）排法設定，見 scripts/mobile-blocks.js 開頭說明","header":{},"footer":{},"pages":{}}
+{
+  "_說明": "手機版（≤768px）排法設定，格式見 scripts/mobile-blocks.js 開頭說明。座標＝電腦版 1440 寬、每段自己的 y（段內座標）",
+  "header": { "logo": [52, 26, 328, 120], "sun": [1268, 0, 1418, 128] },
+  "footer": {
+    "bg": { "none": true, "color": "#092f52" },
+    "pad": "0 0 40px",
+    "blocks": [
+      { "band": [330, 0, 1440, 600], "fish": false },
+      { "items": [{ "ref": "LBQhQVYDKWr8dSx4", "fs": 28 }], "pad": "4px 22px 0" },
+      { "items": ["#1", "#2"], "cls": "btns" },
+      { "items": [{ "ref": "LBTjNBStlnK0Vl1V", "fs": 19 }, "LBqjhw2RR6KfkFcs"], "cls": "rule", "gap": 10 },
+      { "items": ["LBT88PzHtvnC23Wg", "LB5W7cmFGytM2mHB"], "cls": "row top" },
+      { "items": [{ "ref": "LBsQF7Hmp5BJfYXF", "fs": 14 }] }
+    ]
+  },
+  "pages": {
+    "home": {
+      "open": {
+        "bg": { "crop": [140, 1000], "x": 25, "shade": "linear-gradient(rgba(10,24,40,.55), rgba(10,24,40,.15) 55%, rgba(0,0,0,0) 75%)" },
+        "pad": "0 0 28px",
+        "blocks": [
+          { "items": ["LBxcQQNkdzxc7bNm", { "ref": "LBlhcdxSs8Lpp8x4", "fs": 44 }, { "ref": "LB8LnWGDWS7Q2MzD", "join": true }], "pad": "64px 22px 0", "gap": 12 },
+          { "items": ["#0", "LBQhnfR94X68vL9m"], "cls": "btns mid" },
+          { "items": ["LB7hm0Jq4jlkn6rZ", "LBRHh5L24jPhK9dS"], "cls": "row", "pad": "250px 22px 0" }
+        ]
+      },
+      "d12": {
+        "bg": { "x": 30 },
+        "blocks": [
+          { "items": [{ "ref": "LBRLgwVYrwH4LK0D", "fs": 25, "join": true }] },
+          { "items": ["LBtkyDY5mxzc6Mjv", { "ref": "LBKSnzt85RzxJHcs", "fs": 28 }, { "ref": "LBMqwSYvKlBbFCXN", "join": true }, "LBhLwmjm64Y6Qhlq"], "gap": 12 },
+          { "items": ["LBJHtvt9c3B7mRTr", "#0"], "cls": "row" },
+          { "band": [774, 344, 1322, 1072], "fish": false, "cls": "inset", "w": 380 },
+          { "items": [{ "ref": "LB84RQPt6CJkrLtH", "fs": 64 }], "pad": "12px 22px 0" },
+          { "band": [330, 1180, 1200, 1720] },
+          { "items": [{ "ref": "LBZkD6D2yxJ572zw", "fs": 26 }, { "ref": "LB5TmS6b8GyXwhH7", "join": true }], "gap": 12 }
+        ]
+      },
+      "d18": {
+        "bg": { "x": 20 },
+        "pad": "24px 0 48px",
+        "blocks": [
+          { "items": [{ "ref": "LB5Tgvgkc8jlZc6Z", "fs": 64 }] },
+          { "band": [1060, 110, 1340, 280], "w": 190, "cls": "right" },
+          { "items": ["LBxj61vyjH71XzkG", { "ref": "LBpPF5kHQPRPm5M6", "fs": 28 }, { "ref": "LBkCjNgrJndf49BW", "join": true }, "LBhgNx4WTt4n2VpK"], "gap": 12 },
+          { "items": ["LB8MKSMzDVhtSfqZ", "#0"], "cls": "row" },
+          { "band": [0, 170, 800, 840] }
+        ]
+      },
+      "d30": {
+        "bg": { "x": 25 },
+        "pad": "24px 0 32px",
+        "blocks": [
+          { "items": [{ "ref": "LBDn3zYXvKyFXgQM", "fs": 64 }] },
+          { "band": [690, 230, 1440, 1000] },
+          { "items": ["LBFhk7r4lXCHd7BC", { "ref": "LBGcxXy9P84KsyXj", "fs": 28 }, "LBBPH7DGWwVWsZw7", "LBMWb6CwHFM8R1vT"], "gap": 12 },
+          { "items": ["LBjptnkxrdP7Ypq3", "#0"], "cls": "row" },
+          { "items": ["LBBLbGLQH84xRYwP", "LBKVNx8MqxDmXDhs"], "gap": 12 },
+          { "band": [110, 1100, 1350, 1500] }
+        ]
+      },
+      "faq": {
+        "bg": { "x": 30 },
+        "blocks": [
+          { "items": [{ "ref": "LBkps7HGbgsb4qcl", "fs": 25 }, "#1"], "gap": 20 }
+        ],
+        "hide": ["LB9C7Z9WwShYPGL5"]
+      },
+      "map": {
+        "bg": { "none": true, "color": "#f5f3ef" },
+        "pad": "0 0 40px",
+        "blocks": [
+          { "band": [0, 0, 940, 540], "fish": false },
+          { "items": [{ "ref": "LB15HdH7HhwwlF8V", "fs": 28 }, "LBBlqVj6vVzPV0WG", "LB1S3NLTSKh9VSyp", "LB5mV0xCTjDldmlbz"], "gap": 14 },
+          { "band": [560, 470, 1420, 1080], "fish": false, "texts": ["LBy294n52lx4mJtd", "LB50dqfFdmvrBbhl"] }
+        ]
+      }
+    }
+  }
+}
