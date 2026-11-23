@@ -71,7 +71,7 @@
         "pad": "0 0 40px",
         "blocks": [
           {"band": [0, 0, 940, 540], "fish": false},
-          {"items": [{"ref": "LB15HdH7HhwwlF8V", "fs": 28}, "LBBlqVj6vVzPV0WG", "LB1S3NLTSKh9VSyp", "LB5mV0xCTjDldmlbz"], "gap": 14},
+          {"items": [{"ref": "LB15HdH7HhwwlF8V", "fs": 28}, "LBBlqVj6vVzPV0WG", "LB1S3NLTSKh9VSyp", "LBmV0xCTjDldmlbz"], "gap": 14},
           {"band": [560, 470, 1420, 1080], "fish": false, "texts": ["LBy294n52lx4mJtd", "LB50dqfFdmvrBbhl"]}
         ]
       }
