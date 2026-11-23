@@ -42,6 +42,8 @@ LINE 官方帳號｜{% if site.company.lineUrl %}<a href="{{ site.company.lineUr
 電話：<a href="{{ site.company.phoneHref }}">{{ site.company.phone }}</a>　信箱：{% if site.company.email %}<a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>{% else %}（待填）{% endif %}
   {%- elif it.site == "askPhone" -%}{{ it.pre }}
 <a href="{{ site.company.phoneHref }}">{{ site.company.phone }}</a>
+  {%- elif it.site == "askLineBtn" -%}{{ it.pre }}
+<a href="{{ site.company.lineUrl }}" target="_blank" rel="noopener" style="color:#ec6c0c;font-weight:700">＋LINE</a>
   {%- elif it.site == "askLine" -%}{{ it.pre }}請打 <a href="{{ site.company.phoneHref }}">{{ site.company.phone }}</a>，或寄信到{% if site.company.email %} <a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>{% else %}（待填）{% endif %}{{ it.post }}{{ "。" if it.end is not defined else it.end }}
   {%- elif it.site == "refundApply" -%}{{ it.pre }}{% if site.company.lineUrl %}<a href="{{ site.company.lineUrl }}" target="_blank" rel="noopener" style="color:#ec6c0c;font-weight:700">加入LINE</a>{% else %}<span style="color:#ec6c0c;font-weight:700">加入LINE</span>{% endif %}，或寄信到{% if site.company.email %}<a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>{% else %}（待填）{% endif %}，告訴我們訂單編號和原因。
   {%- elif it.site == "contactWindow" -%}{{ site.company.name or "（待填）" }}
@@ -61,8 +63,8 @@ LINE 官方帳號｜{% if site.company.lineUrl %}<a href="{{ site.company.lineUr
 {%- endmacro -%}
 {%- macro fishItem(it, dir) -%}
       <div class="hc-fish" style="left:{{ it.x }}px;top:{{ it.y }}px;width:{{ it.w }}px;height:{{ it.h }}px;{% if it.rot %}transform:rotate({{ it.rot }}deg);{% endif %}{% if it.crop %}overflow:hidden;{% endif %}">
-        <img class="hc-fish-img{% if it.anim.float %} has-float{% endif %}{% if it.anim.sway %} has-sway{% endif %}{% if it.anim.bob %} has-bob{% endif %}{% if it.anim.wobble %} has-wobble{% endif %}" src="/assets/img/{{ dir }}/{{ it.file }}.webp" alt="{{ it.name }}插圖" loading="lazy"
-          style="--dx:{{ it.anim.dx }}px;--dy:{{ it.anim.dy }}px;--dur:{{ it.anim.dur }}s;--delay:{{ it.anim.delay }}s;--float:{{ it.anim.float or 0 }}s;{% if it.anim.sway %}--sway:{{ it.anim.sway }}s;transform-origin:{{ it.anim.origin }};{% endif %}{% if it.anim.bob %}--bob:{{ it.anim.bob }}s;--amp:{{ it.anim.amp }}px;{% endif %}{% if it.anim.wobble %}--wob:{{ it.anim.wobble }}s;{% endif %}{% if it.crop %}position:absolute;left:{{ it.crop.x }}px;top:{{ it.crop.y }}px;width:{{ it.crop.w }}px;height:{{ it.crop.h }}px;{% endif %}">
+        <img class="hc-fish-img{% if it.anim.float %} has-float{% endif %}{% if it.anim.sway %} has-sway{% endif %}{% if it.anim.famp %}--famp:{{ it.anim.famp }}px;{% endif %}{% if it.anim.samp %}--samp:{{ it.anim.samp }}deg;{% endif %}{% if it.anim.bob %} has-bob{% endif %}{% if it.anim.wobble %} has-wobble{% endif %}" src="/assets/img/{{ dir }}/{{ it.file }}.webp" alt="{{ it.name }}插圖" loading="lazy"
+          style="--dx:{{ it.anim.dx }}px;--dy:{{ it.anim.dy }}px;--dur:{{ it.anim.dur }}s;--delay:{{ it.anim.delay }}s;--float:{{ it.anim.float or 0 }}s;{% if it.anim.sway %}--sway:{{ it.anim.sway }}s;transform-origin:{{ it.anim.origin }};{% endif %}{% if it.anim.famp %}--famp:{{ it.anim.famp }}px;{% endif %}{% if it.anim.samp %}--samp:{{ it.anim.samp }}deg;{% endif %}{% if it.anim.bob %}--bob:{{ it.anim.bob }}s;--amp:{{ it.anim.amp }}px;{% endif %}{% if it.anim.wobble %}--wob:{{ it.anim.wobble }}s;{% endif %}{% if it.crop %}position:absolute;left:{{ it.crop.x }}px;top:{{ it.crop.y }}px;width:{{ it.crop.w }}px;height:{{ it.crop.h }}px;{% endif %}">
       </div>
 {%- endmacro -%}
 {%- macro item(it, dx, dy, active) -%}

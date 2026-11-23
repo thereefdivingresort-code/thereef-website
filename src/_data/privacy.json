@@ -649,8 +649,8 @@
      "color": "#12355b",
      "lh": 1.7,
      "align": "left",
-     "text": "有疑問？\n0936-871-525",
-     "site": "askPhone",
+     "text": "有疑問？\n＋LINE",
+     "site": "askLineBtn",
      "pre": "有疑問？"
     }
    ]
