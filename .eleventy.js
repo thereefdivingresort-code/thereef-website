@@ -24,6 +24,11 @@ module.exports = function (eleventyConfig) {
   // 手機版排法（分組、插圖窗）：見 scripts/mobile-blocks.js、src/_data/mobile.json
   eleventyConfig.addFilter("mBlocks", require("./scripts/mobile-blocks.js"));
   eleventyConfig.addFilter("mAnchorOrder", require("./scripts/mobile-blocks.js").anchorOrder);
+  // 英文版：toEn＝頁面資料換成英文（scripts/i18n.js）；zhUrl／enUrlOf＝同一頁的中文／英文網址（給頁首「中｜EN」切換）
+  const i18n = require("./scripts/i18n.js");
+  eleventyConfig.addFilter("toEn", i18n.toEn);
+  eleventyConfig.addFilter("zhUrl", (u) => (String(u).startsWith("/en/") ? String(u).slice(3) : u));
+  eleventyConfig.addFilter("enUrlOf", (u) => (String(u).startsWith("/en/") ? u : "/en" + u));
   eleventyConfig.addFilter("money", (n) => Number(n).toLocaleString("en-US"));
   // priceItem：用代號從 prices.json 找一個品項（{{ "dsd" | priceItem(prices) }}），價格只讀不手打
   eleventyConfig.addFilter("priceItem", function (id, prices) {

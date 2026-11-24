@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-Hant-TW">
+<html lang="{{ 'en' if lang == 'en' else 'zh-Hant-TW' }}">
 {#
   照 Canva 座標排版的頁面（電腦版 1440 寬）：首頁、課程…共用這一份版型。
   - 頁面在 front matter 用 canvasKey 指定讀哪一份資料：home → _data/home.json、courses → _data/courses.json
@@ -10,11 +10,17 @@
 #}
 {%- set cvMap = { "home": home, "courses": courses, "stay": stay, "trips": trips, "about": about, "booking": booking, "terms": terms, "privacy": privacy, "refund": refund } -%}
 {%- set cv = cvMap[canvasKey or "home"] -%}
+{%- set homeD = home -%}
+{#- 英文版（front matter lang: en）：文字照 _data/en/<頁>.json 換成英文、站內連結改 /en/…（scripts/i18n.js） #}
+{%- if lang == "en" -%}{%- set cv = cv | toEn(en[canvasKey or "home"]) -%}{%- set homeD = home | toEn(en.home) -%}{%- endif -%}
+{%- set zhUrl = page.url | zhUrl -%}{%- set enUrl = page.url | enUrlOf -%}
 {%- set imgDir = cv.imgDir or "home" -%}
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ title }}｜{{ site.brand }}</title>
+  <title>{% if lang == "en" %}{{ title }} | {{ site.en.brand }}{% else %}{{ title }}｜{{ site.brand }}{% endif %}</title>
+  <link rel="alternate" hreflang="zh-Hant" href="{{ zhUrl }}">
+  <link rel="alternate" hreflang="en" href="{{ enUrl }}">
   {% if description %}<meta name="description" content="{{ description }}">{% endif %}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,8 +31,40 @@
   <link rel="stylesheet" href="{{ cv.css }}">{% endif %}
   <script>if (!(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) && "IntersectionObserver" in window) document.documentElement.classList.add("hc-anim");</script>
 </head>
+{#- 英文版：讀 site.json 的公司資訊、連結，組成英文句子（中文版見下面 textBody） #}
+{%- macro siteEn(it) -%}
+  {%- if it.site == "companyLines" -%}{{ site.company.name }}　Tax ID {{ site.company.taxId }}
+{{ site.en.address }}
+Phone <a href="{{ site.company.phoneHref }}">{{ site.company.phone }}</a>　Email <a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>
+  {%- elif it.site == "contactLines" -%}Phone | <a href="{{ site.company.phoneHref }}">{{ site.company.phone }}</a>
+Email | <a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>
+LINE Official Account | <a href="{{ site.company.lineUrl }}" target="_blank" rel="noopener">{{ site.company.lineId }}</a>
+Service hours | {{ site.company.serviceHours }} {{ site.en.timeZone }}
+Address | {{ site.en.address }}
+  {%- elif it.site == "companyInfo" -%}Company | {{ site.company.name }}
+Tax ID | {{ site.company.taxId }}
+  {%- elif it.site == "operator" -%}{{ site.company.name }} ("The Reef")
+Tax ID: {{ site.company.taxId }}
+Address: {{ site.en.address }}
+Phone: <a href="{{ site.company.phoneHref }}">{{ site.company.phone }}</a>　Email: <a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>
+  {%- elif it.site == "askLineBtn" -%}{{ it.pre }}
+<a href="{{ site.company.lineUrl }}" target="_blank" rel="noopener" style="color:#ec6c0c;font-weight:700">+LINE</a>
+  {%- elif it.site == "lineShort" -%}{{ it.pre }}<a href="{{ site.company.lineUrl }}" target="_blank" rel="noopener" style="color:#ec6c0c;font-weight:700">add us on LINE</a>{{ it.post }}
+  {%- elif it.site == "askLineOrange" -%}{{ it.pre }}<a href="{{ site.company.lineUrl }}" target="_blank" rel="noopener" style="color:#ec6c0c;font-weight:700">Add us on LINE</a> or email <a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>{{ it.post }}.
+  {%- elif it.site == "refundApply" -%}{{ it.pre }}<a href="{{ site.company.lineUrl }}" target="_blank" rel="noopener" style="color:#ec6c0c;font-weight:700">Add us on LINE</a> or email <a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a> with your booking number and reason.
+  {%- elif it.site == "contactWindow" -%}{{ site.company.name }}
+Phone: <a href="{{ site.company.phoneHref }}">{{ site.company.phone }}</a>
+Email: <a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>
+Address: {{ site.en.address }}
+  {%- elif it.site == "legalLinks" -%}{% for l in site.en.legalLinks %}<a href="{{ l.href }}">{{ l.label }}</a>{% if not loop.last %}
+{% endif %}{% endfor %}
+  {%- elif it.site == "social" -%}<a href="{{ site.company.instagramUrl }}">Instagram</a>
+<a href="{{ site.company.lineUrl }}">LINE Official Account</a>
+  {%- else -%}{{ it.text }}{%- endif -%}
+{%- endmacro -%}
 {%- macro textBody(it, active) -%}
-  {%- if it.priceId -%}{% set p = it.priceId | priceItem(prices) %}{{ it.text | replace("{price}", p.price | money) }}
+  {%- if lang == "en" and it.site -%}{{ siteEn(it) }}
+  {%- elif it.priceId -%}{% set p = it.priceId | priceItem(prices) %}{{ it.text | replace("{price}", p.price | money) }}
   {%- elif it.site == "companyLines" -%}{{ site.company.name or "公司名稱（待填）" }}　統一編號 {{ site.company.taxId or "（待填）" }}
 {{ site.company.address }}
 電話 <a href="{{ site.company.phoneHref }}">{{ site.company.phone }}</a>　信箱 {% if site.company.email %}<a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>{% else %}（待填）{% endif %}
@@ -57,7 +95,7 @@ LINE 官方帳號｜{% if site.company.lineUrl %}<a href="{{ site.company.lineUr
 {% endif %}{% endfor %}
   {%- elif it.site == "social" -%}{% if site.company.instagramUrl %}<a href="{{ site.company.instagramUrl }}">Instagram</a>{% else %}Instagram{% endif %}
 {% if site.company.lineUrl %}<a href="{{ site.company.lineUrl }}">LINE 官方帳號</a>{% else %}LINE 官方帳號{% endif %}
-  {%- elif it.links -%}{% for l in it.links %}{% if l[1] %}<a href="{{ site.company.googleMapUrl if l[1] == 'site:googleMapUrl' else l[1] }}"{% if l[1] == 'site:googleMapUrl' %} target="_blank" rel="noopener"{% endif %}{% if active and l[1] == active %} class="is-active" aria-current="page"{% endif %}>{{ l[0] }}</a>{% else %}{{ l[0] }}{% endif %}{% endfor %}
+  {%- elif it.links -%}{% for l in it.links %}{% if "中｜EN" in l[0] %}{{ l[0] | replace("中｜EN", "") }}<a class="hc-lang{% if lang != 'en' %} is-on{% endif %}" href="{{ page.url | zhUrl }}" lang="zh-Hant" hreflang="zh-Hant">中</a>｜<a class="hc-lang{% if lang == 'en' %} is-on{% endif %}" href="{{ page.url | enUrlOf }}" lang="en" hreflang="en">EN</a>{% elif l[1] %}<a href="{{ site.company.googleMapUrl if l[1] == 'site:googleMapUrl' else l[1] }}"{% if l[1] == 'site:googleMapUrl' %} target="_blank" rel="noopener"{% endif %}{% if active and l[1] == active %} class="is-active" aria-current="page"{% endif %}>{{ l[0] }}</a>{% else %}{{ l[0] }}{% endif %}{% endfor %}
   {%- elif it.runs -%}{% for run in it.runs %}<span style="color:{{ run.c }}">{{ run.t }}</span>{% if not loop.last %}
 {% endif %}{% endfor %}
   {%- elif it.spans -%}{% for sp in it.spans %}{% if sp.href %}<a href="{{ sp.href }}"{% if sp.newTab %} target="_blank" rel="noopener"{% endif %} style="color:{{ sp.c }}{% if sp.fs %};font-size:{{ sp.fs }}px{% endif %}{% if sp.fw %};font-weight:{{ sp.fw }}{% endif %}{% if sp.ul %};text-decoration:underline;text-underline-offset:4px{% endif %}">{{ sp.t | fillPrices(prices) }}</a>{% else %}<span style="color:{{ sp.c }}{% if sp.fs %};font-size:{{ sp.fs }}px{% endif %}{% if sp.fw %};font-weight:{{ sp.fw }}{% endif %}">{{ sp.t | fillPrices(prices) }}</span>{% endif %}{% endfor %}
@@ -67,16 +105,16 @@ LINE 官方帳號｜{% if site.company.lineUrl %}<a href="{{ site.company.lineUr
 {%- endmacro -%}
 {%- macro fishItem(it, dir) -%}
       <div class="hc-fish hc-fish-{{ it.file }}" style="left:{{ it.x }}px;top:{{ it.y }}px;width:{{ it.w }}px;height:{{ it.h }}px;{% if it.rot %}transform:rotate({{ it.rot }}deg);{% endif %}{% if it.crop %}overflow:hidden;{% endif %}">
-        <img class="hc-fish-img{% if it.anim.float %} has-float{% endif %}{% if it.anim.sway %} has-sway{% endif %}{% if it.anim.famp %}--famp:{{ it.anim.famp }}px;{% endif %}{% if it.anim.samp %}--samp:{{ it.anim.samp }}deg;{% endif %}{% if it.anim.bob %} has-bob{% endif %}{% if it.anim.wobble %} has-wobble{% endif %}" src="/assets/img/{{ dir }}/{{ it.file }}.webp" alt="{{ it.name }}插圖" loading="lazy"
+        <img class="hc-fish-img{% if it.anim.float %} has-float{% endif %}{% if it.anim.sway %} has-sway{% endif %}{% if it.anim.famp %}--famp:{{ it.anim.famp }}px;{% endif %}{% if it.anim.samp %}--samp:{{ it.anim.samp }}deg;{% endif %}{% if it.anim.bob %} has-bob{% endif %}{% if it.anim.wobble %} has-wobble{% endif %}" src="/assets/img/{{ dir }}/{{ it.file }}.webp" alt="{{ '' if lang == 'en' else it.name + '插圖' }}" loading="lazy"
           style="--dx:{{ it.anim.dx }}px;--dy:{{ it.anim.dy }}px;--dur:{{ it.anim.dur }}s;--delay:{{ it.anim.delay }}s;--float:{{ it.anim.float or 0 }}s;{% if it.anim.sway %}--sway:{{ it.anim.sway }}s;transform-origin:{{ it.anim.origin }};{% endif %}{% if it.anim.famp %}--famp:{{ it.anim.famp }}px;{% endif %}{% if it.anim.samp %}--samp:{{ it.anim.samp }}deg;{% endif %}{% if it.anim.bob %}--bob:{{ it.anim.bob }}s;--amp:{{ it.anim.amp }}px;{% endif %}{% if it.anim.wobble %}--wob:{{ it.anim.wobble }}s;{% endif %}{% if it.crop %}position:absolute;left:{{ it.crop.x }}px;top:{{ it.crop.y }}px;width:{{ it.crop.w }}px;height:{{ it.crop.h }}px;{% endif %}">
       </div>
 {%- endmacro -%}
 {%- macro item(it, dx, dy, active, m) -%}
       {%- set mm = m or {} -%}
       {% if it.kind == "text" %}
-      <{{ 'label' if it.labelFor else 'div' }}{% if it.labelFor %} for="{{ it.labelFor }}"{% endif %} class="hc-t{% if it.ul %} ul{% endif %}{% if mm.cls %} {{ mm.cls }}{% endif %}" style="left:{{ it.x + dx }}px;top:{{ it.y + dy }}px;width:{{ it.w }}px;font-size:{{ it.fs }}px;--fs:{{ it.fs }};{{ mm.vars }}font-weight:{{ it.fw }};color:{{ it.color }};line-height:{{ it.lh }};text-align:{{ 'justify' if it.align == 'left' else it.align }};{% if it.ls %}letter-spacing:{{ it.ls }}em;{% endif %}{% if it.op %}opacity:{{ it.op }};{% endif %}">{% if mm.join %}{{ textBody(it, active) | replace("\n", '<span class="nl">\n</span>') | safe }}{% else %}{{ textBody(it, active) | safe }}{% endif %}</{{ 'label' if it.labelFor else 'div' }}>
+      <{{ 'label' if it.labelFor else 'div' }}{% if it.labelFor %} for="{{ it.labelFor }}"{% endif %} class="hc-t{% if it.ul %} ul{% endif %}{% if mm.cls %} {{ mm.cls }}{% endif %}"{% if it.id %} data-id="{{ it.id }}"{% endif %} style="left:{{ it.x + dx }}px;top:{{ it.y + dy }}px;width:{{ it.w }}px;font-size:{{ it.fs }}px;--fs:{{ it.fs }};{{ mm.vars }}font-weight:{{ it.fw }};color:{{ it.color }};line-height:{{ it.lh }};text-align:{{ ('left' if lang == 'en' else 'justify') if it.align == 'left' else it.align }};{% if it.ls %}letter-spacing:{{ it.ls }}em;{% endif %}{% if it.op %}opacity:{{ it.op }};{% endif %}">{% if mm.join %}{{ textBody(it, active) | replace("\n", '<span class="nl">\n</span>') | safe }}{% else %}{{ textBody(it, active) | safe }}{% endif %}</{{ 'label' if it.labelFor else 'div' }}>
       {% elif it.kind == "button" %}
-      <a class="hc-btn{% if mm.cls %} {{ mm.cls }}{% endif %}" href="{{ site.company.lineUrl if it.href == 'site:lineUrl' else it.href }}"{% if it.newTab %} target="_blank" rel="noopener"{% endif %} style="{{ mm.vars }}left:{{ it.x + dx }}px;top:{{ it.y + dy }}px;width:{{ it.w }}px;height:{{ it.h }}px;border-radius:{{ it.radius }}px;background:{{ it.bg }};color:{{ it.color }};font-size:{{ it.fs }}px;{% if it.bw %}border:{{ it.bw }}px solid {{ it.bc }};{% endif %}">{{ it.label }}</a>
+      <a class="hc-btn{% if mm.cls %} {{ mm.cls }}{% endif %}"{% if it.id %} data-id="{{ it.id }}"{% endif %} href="{{ site.company.lineUrl if it.href == 'site:lineUrl' else it.href }}"{% if it.newTab %} target="_blank" rel="noopener"{% endif %} style="{{ mm.vars }}left:{{ it.x + dx }}px;top:{{ it.y + dy }}px;width:{{ it.w }}px;height:{{ it.h }}px;border-radius:{{ it.radius }}px;background:{{ it.bg }};color:{{ it.color }};font-size:{{ it.fs }}px;{% if it.bw %}border:{{ it.bw }}px solid {{ it.bc }};{% endif %}">{{ it.label }}</a>
       {% elif it.kind == "faq" %}
       <div class="hc-faq" style="left:{{ it.x + dx }}px;top:{{ it.y + dy }}px;width:{{ it.w }}px;--row:{{ it.rowH }}px;--line:{{ it.lineH }}px;--line-op:{{ it.lineOp }};--qfs:{{ it.q.fs }}px;--qc:{{ it.q.color }};--qlh:{{ it.q.lh }};--afs:{{ it.a.fs }}px;--ac:{{ it.a.color }};--alh:{{ it.a.lh }};--aw:{{ it.a.w }}px;--sfs:{{ it.sign.fs }}px;--sc:{{ it.sign.color }}">
         {% for f in it.items %}
@@ -87,7 +125,7 @@ LINE 官方帳號｜{% if site.company.lineUrl %}<a href="{{ site.company.lineUr
         {% endfor %}
       </div>
       {% elif it.kind == "form" %}
-      <form id="{{ it.id }}" class="hc-form" action="#" method="post" aria-label="留言表單"></form>
+      <form id="{{ it.id }}" class="hc-form" action="#" method="post" aria-label="{{ 'Message form' if lang == 'en' else '留言表單' }}"></form>
       {% elif it.kind == "field" %}
       {%- set fst = "left:" ~ (it.x + dx) ~ "px;top:" ~ (it.y + dy) ~ "px;width:" ~ it.w ~ "px;height:" ~ it.h ~ "px;border-radius:" ~ it.radius ~ "px;padding:" ~ it.padT ~ "px " ~ it.padL ~ "px " ~ (it.padB or 0) ~ "px " ~ it.padL ~ "px;font-size:" ~ it.fs ~ "px;line-height:" ~ it.lh ~ ";--ph:" ~ it.phColor %}
       {% if it.tag == "select" %}
@@ -113,7 +151,7 @@ LINE 官方帳號｜{% if site.company.lineUrl %}<a href="{{ site.company.lineUr
       {% elif it.kind == "submit" %}
       <button class="hc-btn hc-submit" type="submit" form="{{ it.form }}" style="left:{{ it.x + dx }}px;top:{{ it.y + dy }}px;width:{{ it.w }}px;height:{{ it.h }}px;border-radius:{{ it.radius }}px;background:{{ it.bg }};color:{{ it.color }};font-size:{{ it.fs }}px;">{{ it.label }}</button>
       {% elif it.kind == "formmsg" %}
-      <p class="hc-t hc-formmsg" data-form="{{ it.form }}" role="status" aria-live="polite" hidden style="left:{{ it.x + dx }}px;top:{{ it.y + dy }}px;width:{{ it.w }}px;font-size:{{ it.fs }}px;line-height:1.4;color:{{ it.color }};">線上留言開通中，請先加 <a href="{{ site.company.lineUrl }}" target="_blank" rel="noopener">LINE 官方帳號</a>留言，我們會盡快回覆你。</p>
+      <p class="hc-t hc-formmsg" data-form="{{ it.form }}" role="status" aria-live="polite" hidden style="left:{{ it.x + dx }}px;top:{{ it.y + dy }}px;width:{{ it.w }}px;font-size:{{ it.fs }}px;line-height:1.4;color:{{ it.color }};">{% if lang == "en" %}Online messages are coming soon. For now, please message our <a href="{{ site.company.lineUrl }}" target="_blank" rel="noopener">LINE Official Account</a> and we'll reply as soon as we can.{% else %}線上留言開通中，請先加 <a href="{{ site.company.lineUrl }}" target="_blank" rel="noopener">LINE 官方帳號</a>留言，我們會盡快回覆你。{% endif %}</p>
       {% endif %}
 {%- endmacro -%}
 {#- 手機版（≤768px）：分組、插圖窗、手機頁首。電腦版 .hc-mg 是 display: contents、其他手機元件 display: none，畫面不變。設定在 _data/mobile.json，邏輯在 scripts/mobile-blocks.js #}
@@ -124,13 +162,13 @@ LINE 官方帳號｜{% if site.company.lineUrl %}<a href="{{ site.company.lineUr
 {%- for b in mb.blocks -%}
 {%- if b.type == "head" %}
       <div class="hc-mg hc-mhead">
-        {% if b.logo %}<a class="hc-mlogo" href="/" aria-label="{{ site.brand }} 首頁"><span class="hc-mcrop" style="aspect-ratio:{{ b.logo.ar }}"><img src="{{ b.logo.imgs[0].src }}" alt="" loading="lazy" style="{{ b.logo.imgs[0].style }}"></span></a>{% endif %}
+        {% if b.logo %}<a class="hc-mlogo" href="{{ '/en/' if lang == 'en' else '/' }}" aria-label="{{ site.en.brand + ' home' if lang == 'en' else site.brand + ' 首頁' }}"><span class="hc-mcrop" style="aspect-ratio:{{ b.logo.ar }}"><img src="{{ b.logo.imgs[0].src }}" alt="" loading="lazy" style="{{ b.logo.imgs[0].style }}"></span></a>{% endif %}
         {% if b.sun %}<span class="hc-msun hc-mcrop" aria-hidden="true" style="aspect-ratio:{{ b.sun.ar }}"><img src="{{ b.sun.imgs[0].src }}" alt="" loading="lazy" style="{{ b.sun.imgs[0].style }}"></span>{% endif %}
         {% for e in b.items %}{{ item(e.it, e.dx, e.dy, active, e.m) }}{% endfor %}
-        <button type="button" class="hc-mnav-btn" aria-label="選單" aria-expanded="false"><span></span></button>
+        <button type="button" class="hc-mnav-btn" aria-label="{{ 'Menu' if lang == 'en' else '選單' }}" aria-expanded="false"><span></span></button>
       </div>
 {%- elif b.type == "scroll" %}
-      <div class="hc-mscroll{% if b.cls %} {{ b.cls }}{% endif %}" aria-hidden="true"><span>向下捲動</span></div>
+      <div class="hc-mscroll{% if b.cls %} {{ b.cls }}{% endif %}" aria-hidden="true"><span>{{ 'Scroll down' if lang == 'en' else '向下捲動' }}</span></div>
 {%- elif b.type == "band" %}
       <div class="hc-mband{% if b.cls %} {{ b.cls }}{% endif %}" aria-hidden="true" style="aspect-ratio:{{ b.ar }};{% if b.maxW %}max-width:{{ b.maxW }}px;{% endif %}">{% for im in b.imgs %}<img class="hc-mband-bg" src="{{ im.src }}" alt="" loading="lazy" style="{{ im.style }}">{% endfor %}{% for f in b.fish %}{{ mfish(f, dir) }}{% endfor %}{% for e in b.texts %}{{ item(e.it, e.dx, e.dy, active, e.m) }}{% endfor %}</div>
 {%- else %}
@@ -144,9 +182,9 @@ LINE 官方帳號｜{% if site.company.lineUrl %}<a href="{{ site.company.lineUr
     <div class="hc-bg" aria-hidden="true">
       {% for s in cv.sections %}<img src="/assets/img/{{ imgDir }}/{{ s.img }}" alt="" width="1440" height="{{ s.height }}" style="top:{{ s.top }}px"{% if not loop.first %} loading="lazy"{% endif %}>{% endfor %}
     </div>
-    <a class="hc-logo" href="/" aria-label="{{ site.brand }} 首頁"></a>{% for a in cv.anchors or [] %}<div class="hc-anchor" id="{{ a.id }}" style="top:{{ a.y }}px;--so:{{ a | mAnchorOrder(cv.sections) }}"></div>{% endfor %}
+    <a class="hc-logo" href="{{ '/en/' if lang == 'en' else '/' }}" aria-label="{{ site.en.brand + ' home' if lang == 'en' else site.brand + ' 首頁' }}"></a>{% for a in cv.anchors or [] %}<div class="hc-anchor" id="{{ a.id }}" style="top:{{ a.y }}px;--so:{{ a | mAnchorOrder(cv.sections) }}"></div>{% endfor %}
     {% for s in cv.sections %}
-    {%- set mb = s | mBlocks(canvasKey or "home", home, mobile, imgDir, "/" | url, cv.sections) %}
+    {%- set mb = s | mBlocks(canvasKey or "home", homeD, mobile, imgDir, "/" | url, cv.sections) %}
     <section class="hc-sec hc-sec-{{ s.key }}{% if mb.cls %} {{ mb.cls }}{% endif %}" data-name="{{ s.name }}" style="top:{{ s.top }}px;height:{{ s.height }}px;--so:{{ loop.index * 10 }};{{ mb.vars }}">
       {% for it in s.items %}{% if it.kind == "fish" %}
 {{ fishItem(it, imgDir) }}
@@ -169,11 +207,11 @@ LINE 官方帳號｜{% if site.company.lineUrl %}<a href="{{ site.company.lineUr
   </div>
   {#- 互動頁（預訂）：中間是一般排版的表單（cv.flow），下面再接一段照 Canva 座標的頁尾（cv.after）。其他頁沒有這兩個設定，輸出不變 #}
   {% if cv.flow %}
-  <div class="hc-flow">{% include cv.flow %}</div>
+  <div class="hc-flow">{% include (cv.flow | replace(".njk", "-en.njk") if lang == "en" else cv.flow) %}</div>
   {% for s in cv.after %}
   <div class="hc hc-after" style="height:{{ s.height }}px">
     <div class="hc-bg" aria-hidden="true"><img src="/assets/img/{{ imgDir }}/{{ s.img }}" alt="" width="1440" height="{{ s.height }}" style="top:0" loading="lazy"></div>
-    {%- set mb = s | mBlocks(canvasKey or "home", home, mobile, imgDir, "/" | url, cv.sections) %}
+    {%- set mb = s | mBlocks(canvasKey or "home", homeD, mobile, imgDir, "/" | url, cv.sections) %}
     <section class="hc-sec hc-sec-{{ s.key }}" data-name="{{ s.name }}" style="top:0;height:{{ s.height }}px;{{ mb.vars }}">
       {{ mblocks(mb, cv.active, imgDir) }}
     </section>

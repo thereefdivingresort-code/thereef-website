@@ -1,0 +1,343 @@
+{
+ "_說明": "英文版：每一條＝這頁資料檔（src/_data/terms.json）裡的路徑 → [中文原文, 英文]。中文原文改了而這裡沒跟著改，npm test 會提醒。style＝英文版個別元素的字級／寬度微調。",
+ "t": {
+  "sections.0.items.0.text": [
+   "TERMS　·　服務條款",
+   "TERMS  ·  Terms of Service"
+  ],
+  "sections.0.items.1.text": [
+   "服務條款",
+   "Terms of Service"
+  ],
+  "sections.0.items.2.text": [
+   "最後更新：2026 年 11 月",
+   "Last updated: November 2026"
+  ],
+  "sections.0.items.3.text": [
+   "預訂前請先讀這一頁，這裡說明你和綠芙雙方的權利與責任。",
+   "Please read this page before booking. It explains the rights and responsibilities of both you and The Reef."
+  ],
+  "sections.1.items.0.text": [
+   "1　適用範圍",
+   "1  Scope"
+  ],
+  "sections.1.items.1.spans.0.t": [
+   "本條款適用於你在綠芙 The Reef 網站預訂的潛水課程、住宿、3 天 2 夜套裝和島上行程。\n完成預訂，代表你已閱讀並同意本條款、",
+   "These terms apply to diving courses, accommodation, 3-day, 2-night packages and island activities booked on The Reef website.\nBy completing a booking, you confirm that you have read and agree to these terms, the"
+  ],
+  "sections.1.items.1.spans.1.t": [
+   "〈隱私權政策〉",
+   " Privacy Policy"
+  ],
+  "sections.1.items.1.spans.2.t": [
+   "和",
+   " and the"
+  ],
+  "sections.1.items.1.spans.3.t": [
+   "〈退款與停航政策〉",
+   " Refund & Cancellation Policy"
+  ],
+  "sections.1.items.2.text": [
+   "2　經營者資訊",
+   "2  Operator"
+  ],
+  "sections.1.items.3.text": [
+   "潛伴有限公司（以下稱「綠芙」）\n統一編號：83201186\n地址：台東縣綠島鄉公館村柴口 172 號之 2\n電話：0936-871-525　信箱：（待填）",
+   "(operator)"
+  ],
+  "sections.1.items.4.text": [
+   "3　預訂與訂單成立",
+   "3  Bookings and confirmation"
+  ],
+  "sections.1.items.5.text": [
+   "送出預訂並在 PAYUNi 統一金流完成付款後，我們會寄確認信給你，訂單才算成立。\n如果遇到客滿、價格標示錯誤或其他無法提供服務的情況，我們會主動通知你，並全額退款。",
+   "Your booking is confirmed once you submit it, complete payment through PAYUNi and receive our confirmation email.\nIf we're fully booked, a price is wrong, or we otherwise can't provide the service, we'll contact you and refund you in full."
+  ],
+  "sections.1.items.6.text": [
+   "4　價格與付款",
+   "4  Prices and payment"
+  ],
+  "sections.1.items.7.text": [
+   "網站價格以新台幣計算。付款由 PAYUNi 統一金流處理，可用的付款方式以付款頁為準。套裝內容、加購項目和額外費用（例如單人加價、升等房型），以預訂時頁面顯示的內容為準，綠島為免稅區域，不另開發票。",
+   "All prices on this website are in New Taiwan Dollars (NT$). Payments are processed by PAYUNi; the payment methods available are those shown on the payment page. Package contents, add-ons and extra charges (such as single supplements and room upgrades) are as shown on the page at the time of booking. Green Island is a tax-free area, so no uniform invoice is issued."
+  ],
+  "sections.2.items.0.text": [
+   "5　參加資格與健康",
+   "5  Eligibility and health"
+  ],
+  "sections.2.items.1.text": [
+   "參加潛水課程或體驗前，請誠實填寫 PADI 健康問卷；問卷中有需要醫師評估的項目時，請先取得醫師同意。未滿 18 歲的參加者需要法定代理人同意；各課程的最低年齡依 PADI 規定，例如：體驗潛水為 10 歲。懷孕、近期動過手術或有心肺疾病的人，請先和我們聯絡。",
+   "Before joining any diving course or experience, please fill in the PADI medical questionnaire honestly; if any item calls for a doctor's evaluation, please get your doctor's approval first. Participants under 18 need the consent of a legal guardian; minimum ages follow PADI rules (for example, 10 for Discover Scuba). If you are pregnant, have recently had surgery or have a heart or lung condition, please contact us first."
+  ],
+  "sections.2.items.2.text": [
+   "6　安全規定",
+   "6  Safety"
+  ],
+  "sections.2.items.3.spans.0.t": [
+   "下水前請聽從教練的說明和指示。教練可以因為海況、你的身體狀況、飲酒或其他安全考量，暫停或取消你的下水行程。未進行的部分，依",
+   "Before entering the water, please follow your instructor's briefing and instructions. Instructors may pause or cancel your dive because of sea conditions, your physical condition, alcohol or other safety concerns. Anything not carried out will be handled under the"
+  ],
+  "sections.2.items.3.spans.1.t": [
+   "〈退款與停航政策〉",
+   " Refund & Cancellation Policy"
+  ],
+  "sections.2.items.3.spans.2.t": [
+   "處理。",
+   "."
+  ],
+  "sections.2.items.4.text": [
+   "7　天候與停航",
+   "7  Weather and ferry cancellations"
+  ],
+  "sections.2.items.5.spans.0.t": [
+   "綠島的船班和海上活動都受天候影響。颱風、東北季風、船班停航或主管機關公告，都可能讓行程改期或取消，處理方式請看",
+   "Ferries and sea activities on Green Island depend on the weather. Typhoons, the northeast monsoon, ferry cancellations or official announcements may cause your trip to be rescheduled or cancelled. For how this is handled, see the"
+  ],
+  "sections.2.items.5.spans.1.t": [
+   "〈退款與停航政策〉",
+   " Refund & Cancellation Policy"
+  ],
+  "sections.2.items.6.text": [
+   "8　住宿規範",
+   "8  Accommodation rules"
+  ],
+  "sections.2.items.7.text": [
+   "入住和退房時間：下午3點後入住，隔天中午12點前退房。請愛惜房間和公共設備；因故意或過失造成損壞，需依實際修復費用負責。",
+   "Check-in after 3 pm; check-out before 12 noon the next day. Please take care of the rooms and shared facilities; damage caused on purpose or through negligence must be paid for at the actual repair cost."
+  ],
+  "sections.2.items.8.text": [
+   "9　裝備使用",
+   "9  Use of equipment"
+  ],
+  "sections.2.items.9.text": [
+   "課程提供或租借的潛水裝備，請依教練指示使用。遺失或因使用不當造成損壞，需依實際費用賠償。",
+   "Please use the diving equipment provided for courses or rented from us as your instructor directs. Loss, or damage caused by improper use, must be paid for at actual cost."
+  ],
+  "sections.3.items.0.text": [
+   "10　保險與責任",
+   "10  Insurance and liability"
+  ],
+  "sections.3.items.1.text": [
+   "潛水是一項有風險的活動，綠芙為全數水上活動投保責任保險，你也可以依自己的需要另外投保旅遊平安險。因綠芙的過失造成你的損害，我們依法負責；因參加者未遵守安全規定或隱瞞健康狀況造成的損害，依法減輕或免除綠芙的責任。",
+   "Diving carries risk. The Reef holds liability insurance for all water activities, and you may also buy your own travel insurance as you see fit. We are legally responsible for damage caused by our negligence; where damage results from a participant not following safety rules or hiding health conditions, The Reef's liability is reduced or excluded as provided by law."
+  ],
+  "sections.3.items.2.text": [
+   "11　照片與影像",
+   "11  Photos and video"
+  ],
+  "sections.3.items.3.text": [
+   "教練可能在活動中拍攝照片或影片，讓你留念。如果要把能認出你的照片用在官網或社群，請在下水前與教練溝通，也可以事先購買明信片寫好至海底信箱投遞。",
+   "Instructors may take photos or videos during activities as souvenirs for you. If photos in which you can be recognized are to be used on our website or social media, please talk with your instructor before diving. You can also buy a postcard in advance, write it, and post it in the underwater mailbox."
+  ],
+  "sections.3.items.4.text": [
+   "12　條款修改",
+   "12  Changes to these terms"
+  ],
+  "sections.3.items.5.text": [
+   "綠芙保有更新本條款的權益，更新後將公布在本頁並標示日期。已成立之訂單，適用下單當時的條款。",
+   "The Reef may update these terms. Updates will be posted on this page with the date. Bookings already confirmed follow the terms in effect when they were made."
+  ],
+  "sections.3.items.6.text": [
+   "13　準據法與管轄",
+   "13  Governing law and jurisdiction"
+  ],
+  "sections.3.items.7.text": [
+   "本條款依中華民國法律解釋。如有爭議，雙方先誠意協商；協商不成，以臺灣臺東地方法院為第一審管轄法院，但法律另有規定的，依其規定。",
+   "These terms are governed by the laws of the Republic of China (Taiwan). Any dispute will first be settled by good-faith negotiation; if that fails, the Taiwan Taitung District Court will be the court of first instance, unless the law provides otherwise."
+  ],
+  "sections.4.items.0.text": [
+   "還有其他問題？",
+   "Any other questions?"
+  ],
+  "sections.4.items.1.text": [
+   "對條款有疑問，請打 0936-871-525，或寄信到（待填）。",
+   "Questions about these terms? Add us on LINE or email us."
+  ],
+  "sections.4.items.1.pre": [
+   "對條款有疑問，",
+   "Questions about these terms? "
+  ],
+  "sections.4.items.2.spans.0.t": [
+   "隱私權政策 →",
+   "Privacy Policy →"
+  ],
+  "sections.4.items.2.spans.2.t": [
+   "退款與停航政策 →",
+   "Refund & Cancellation Policy →"
+  ],
+  "stickies.0.label": [
+   "本頁目錄",
+   "On this page"
+  ],
+  "stickies.0.items.0.text": [
+   "本頁目錄",
+   "On this page"
+  ],
+  "stickies.0.items.1.spans.0.t": [
+   "1 適用範圍",
+   "1 Scope"
+  ],
+  "stickies.0.items.1.spans.2.t": [
+   "2 經營者資訊",
+   "2 Operator"
+  ],
+  "stickies.0.items.1.spans.4.t": [
+   "3 預訂與訂單成立",
+   "3 Bookings"
+  ],
+  "stickies.0.items.1.spans.6.t": [
+   "4 價格與付款",
+   "4 Prices & payment"
+  ],
+  "stickies.0.items.1.spans.8.t": [
+   "5 參加資格與健康",
+   "5 Eligibility & health"
+  ],
+  "stickies.0.items.1.spans.10.t": [
+   "6 安全規定",
+   "6 Safety"
+  ],
+  "stickies.0.items.1.spans.12.t": [
+   "7 天候與停航",
+   "7 Weather & ferries"
+  ],
+  "stickies.0.items.1.spans.14.t": [
+   "8 住宿規範",
+   "8 Accommodation"
+  ],
+  "stickies.0.items.1.spans.16.t": [
+   "9 裝備使用",
+   "9 Equipment"
+  ],
+  "stickies.0.items.1.spans.18.t": [
+   "10 保險與責任",
+   "10 Insurance & liability"
+  ],
+  "stickies.0.items.1.spans.20.t": [
+   "11 照片與影像",
+   "11 Photos & video"
+  ],
+  "stickies.0.items.1.spans.22.t": [
+   "12 條款修改",
+   "12 Changes"
+  ],
+  "stickies.0.items.1.spans.24.t": [
+   "13 準據法與管轄",
+   "13 Governing law"
+  ],
+  "stickies.0.items.2.text": [
+   "有疑問？\n＋LINE",
+   "Questions?\n+LINE"
+  ],
+  "stickies.0.items.2.pre": [
+   "有疑問？",
+   "Questions?"
+  ],
+  "sections.1.items.1.spans.4.t": [
+   "。",
+   "."
+  ],
+  "sections.2.items.5.spans.2.t": [
+   "。",
+   "."
+  ]
+ },
+ "style": {
+  "LBk3Yn14GsLGg9Gy": {
+   "w": 915
+  },
+  "LBpbkLrMbXwgMV7v": {
+   "w": 915,
+   "fs": 0.98
+  },
+  "LBpGs92Shc9vhFQM": {
+   "w": 915
+  },
+  "LBqx79KDNQ71VLcv": {
+   "w": 915,
+   "fs": 0.86
+  },
+  "LBrKJZbWl99nVvwl": {
+   "w": 915
+  },
+  "LB20qVqxDNk9Bry9": {
+   "w": 915
+  },
+  "LBp0P0WP4hZtTlPN": {
+   "w": 915
+  },
+  "LB7CpwCjV5n2sTQp": {
+   "w": 915,
+   "fs": 0.86
+  },
+  "LBc83DywxdnR8gmd": {
+   "w": 915
+  },
+  "LBR7HBpb5zk4wVqG": {
+   "w": 915,
+   "fs": 0.86
+  },
+  "LBS8tNWXZflCPj3q": {
+   "w": 915
+  },
+  "LBC8tLD02Jx4hTnt": {
+   "w": 915,
+   "fs": 0.86
+  },
+  "LB1P01MQPFv65ny0": {
+   "w": 915
+  },
+  "LBrSgKpL1jyMyJRP": {
+   "w": 915,
+   "fs": 0.86
+  },
+  "LBVvC3fp3hPP1HZZ": {
+   "w": 915
+  },
+  "LBXDCjfBlx8LyLmJ": {
+   "w": 915,
+   "fs": 0.9
+  },
+  "LBcgPfJ8Wf2PjztL": {
+   "w": 915
+  },
+  "LBY179B2jHKSxcJB": {
+   "w": 915
+  },
+  "LBwxS5FrwgTLwd6p": {
+   "w": 915
+  },
+  "LBdWYKrXFLjQGQVF": {
+   "w": 915,
+   "fs": 0.86
+  },
+  "LBK8DbYKFQRg5fcF": {
+   "w": 915
+  },
+  "LBSf4JrFKXDHqCl7": {
+   "w": 915,
+   "fs": 0.96
+  },
+  "LBbnSt9DcMdzlFWr": {
+   "w": 915
+  },
+  "LBBnmsGwvwtbZtWS": {
+   "w": 915,
+   "fs": 0.86
+  },
+  "LBGnKL24BLmRffFj": {
+   "w": 915
+  },
+  "LBvBM3XsJTPBlvY0": {
+   "w": 915,
+   "fs": 0.86
+  },
+  "LBDPzfJgbNStyLMd": {
+   "w": 915
+  },
+  "LBdXWnr7cvTTKfnZ": {
+   "w": 915,
+   "fs": 0.94
+  }
+ }
+}

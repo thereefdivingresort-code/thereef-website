@@ -15,20 +15,92 @@
     "googleMapUrl": "https://www.google.com/maps/search/?api=1&query=台東縣綠島鄉公館村柴口172號之2"
   },
   "nav": [
-    { "key": "courses", "label": "課程", "href": "/courses/" },
-    { "key": "stay", "label": "住宿", "href": "/stay/" },
-    { "key": "trips", "label": "行程", "href": "/trips/" },
-    { "key": "about", "label": "關於", "href": "/about/" }
+    {
+      "key": "courses",
+      "label": "課程",
+      "href": "/courses/"
+    },
+    {
+      "key": "stay",
+      "label": "住宿",
+      "href": "/stay/"
+    },
+    {
+      "key": "trips",
+      "label": "行程",
+      "href": "/trips/"
+    },
+    {
+      "key": "about",
+      "label": "關於",
+      "href": "/about/"
+    }
   ],
   "bookHref": "/booking/",
   "legalLinks": [
-    { "label": "服務條款", "href": "/terms/" },
-    { "label": "隱私權政策", "href": "/privacy/" },
-    { "label": "退款與停航政策", "href": "/refund/" }
+    {
+      "label": "服務條款",
+      "href": "/terms/"
+    },
+    {
+      "label": "隱私權政策",
+      "href": "/privacy/"
+    },
+    {
+      "label": "退款與停航政策",
+      "href": "/refund/"
+    }
   ],
   "cta": {
     "title": "準備好下水了嗎？",
-    "primary": { "label": "預訂課程", "href": "/booking/" },
-    "secondary": { "label": "聯絡我們", "href": "/about/#contact" }
+    "primary": {
+      "label": "預訂課程",
+      "href": "/booking/"
+    },
+    "secondary": {
+      "label": "聯絡我們",
+      "href": "/about/#contact"
+    }
+  },
+  "en": {
+    "_說明": "英文版（/en/）用的公司地址、頁尾連結；公司名稱、電話、信箱、LINE 跟中文版共用上面 company",
+    "brand": "The Reef Diving",
+    "address": "No. 172-2, Chaikou, Gongguan Village, Green Island, Taitung County 951, Taiwan",
+    "timeZone": "(Taiwan time, GMT+8)",
+    "legalLinks": [
+      {
+        "label": "Terms of Service",
+        "href": "/en/terms/"
+      },
+      {
+        "label": "Privacy Policy",
+        "href": "/en/privacy/"
+      },
+      {
+        "label": "Refund & Cancellation Policy",
+        "href": "/en/refund/"
+      }
+    ]
+  },
+  "payment": {
+    "_說明": "匯款資訊（11/24 Ambre 提供，結帳頁第 4 步顯示）。改帳號只改這裡。",
+    "domestic": {
+      "bank": "中國信託銀行（銀行代碼 822）松山分行",
+      "bankCode": "822",
+      "account": "6915 3003 2423",
+      "name": "侯又愷"
+    },
+    "intl": {
+      "bank": "CTBC Bank, Sungshan Branch",
+      "address": "2F, No.550, Section 5, Zhongxiao E. Rd., Sungshan District, Taipei, Taiwan",
+      "account": "00002551 3104 2067 (USD)",
+      "swift": "CTBCTWTP255",
+      "name": "Hou Yu Kai"
+    },
+    "paypal": {
+      "account": "pioneerken886@gmail.com",
+      "noteZh": "付款時被 PayPal 扣除之差額，請到現場以現金補齊。",
+      "noteEn": "Any amount deducted by PayPal: please pay the balance in cash on arrival."
+    }
   }
 }

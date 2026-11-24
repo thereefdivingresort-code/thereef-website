@@ -1,0 +1,169 @@
+{
+ "_說明": "英文版預訂頁的品項名稱與單位（價格數字仍只讀 prices.json）。prices.json 新增品項時這裡也要加，npm test 會檢查。",
+ "items": {
+  "dsd": {
+   "name": "Discover Scuba",
+   "unit": "person"
+  },
+  "fun-shore": {
+   "name": "Fun Dive (shore)",
+   "unit": "person / dive"
+  },
+  "fun-boat": {
+   "name": "Fun Dive (boat trip, usually 2 dives)",
+   "unit": "person / trip"
+  },
+  "ow": {
+   "name": "Open Water course (3 days, 2 nights)",
+   "unit": "person"
+  },
+  "aow": {
+   "name": "Advanced Open Water course (3 days, 2 nights)",
+   "unit": "person"
+  },
+  "ow-aow": {
+   "name": "OW + AOW combo",
+   "unit": "person"
+  },
+  "reactive": {
+   "name": "ReActivate refresher",
+   "unit": "person"
+  },
+  "ean": {
+   "name": "Enriched Air (EAN)",
+   "unit": "person"
+  },
+  "efr": {
+   "name": "Emergency First Response (EFR)",
+   "unit": "person"
+  },
+  "rescue": {
+   "name": "Rescue Diver",
+   "unit": "person"
+  },
+  "dm": {
+   "name": "Divemaster (DM)",
+   "unit": "person"
+  },
+  "pkg-snorkel": {
+   "name": "Summer Snorkeling Package",
+   "unit": "person"
+  },
+  "pkg-dsd": {
+   "name": "Summer Discover Scuba Package",
+   "unit": "person"
+  },
+  "pkg-fun": {
+   "name": "Summer Fun Dive Package",
+   "unit": "person"
+  },
+  "up-snorkel": {
+   "name": "Snorkeling Package: double room upgrade",
+   "unit": "person"
+  },
+  "up-dsd": {
+   "name": "Discover Scuba Package: double room upgrade",
+   "unit": "person"
+  },
+  "up-fun": {
+   "name": "Fun Dive Package: double room upgrade",
+   "unit": "person"
+  },
+  "tidal": {
+   "name": "Tide pool tour",
+   "unit": "person"
+  },
+  "snorkel": {
+   "name": "Snorkeling trip",
+   "unit": "person"
+  },
+  "glassboat": {
+   "name": "Glass-bottom boat",
+   "unit": "person"
+  },
+  "fishing": {
+   "name": "Night fishing",
+   "unit": "person"
+  },
+  "bluecave": {
+   "name": "Blue Cave adventure",
+   "unit": "person"
+  },
+  "sup1": {
+   "name": "SUP (single board)",
+   "unit": "person"
+  },
+  "sup2": {
+   "name": "SUP (double board)",
+   "unit": "person"
+  },
+  "room-double": {
+   "name": "Deluxe Double Room",
+   "unit": "night"
+  },
+  "room-quad": {
+   "name": "Deluxe Quad Room",
+   "unit": "night"
+  },
+  "room-quad-extra": {
+   "name": "Quad room extra bed (5th/6th guest)",
+   "unit": "person"
+  },
+  "bed-backpacker": {
+   "name": "Backpacker Room (per bed)",
+   "unit": "bed"
+  },
+  "scooter": {
+   "name": "Scooter",
+   "unit": "day"
+  },
+  "ebike": {
+   "name": "E-bike",
+   "unit": "day"
+  },
+  "car5": {
+   "name": "5-seat car",
+   "unit": "day"
+  },
+  "car8": {
+   "name": "8-seat van",
+   "unit": "day"
+  },
+  "ferry-rt": {
+   "name": "Ferry ticket (round trip)",
+   "unit": "person"
+  },
+  "ferry-ow": {
+   "name": "Ferry ticket (one way)",
+   "unit": "person"
+  },
+  "gear-light": {
+   "name": "Basic gear (mask, snorkel, wetsuit, boots, fins)",
+   "unit": "day"
+  },
+  "gear-heavy-half": {
+   "name": "Scuba gear (BCD, regulator, weights), half day",
+   "unit": "half day"
+  },
+  "gear-heavy-full": {
+   "name": "Scuba gear (BCD, regulator, weights), full day",
+   "unit": "day"
+  },
+  "gear-full-half": {
+   "name": "Full gear set, half day",
+   "unit": "half day"
+  },
+  "gear-full-full": {
+   "name": "Full gear set, full day",
+   "unit": "day"
+  },
+  "gear-computer-half": {
+   "name": "Dive computer, half day",
+   "unit": "half day"
+  },
+  "gear-computer-full": {
+   "name": "Dive computer, full day",
+   "unit": "day"
+  }
+ }
+}

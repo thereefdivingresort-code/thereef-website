@@ -229,3 +229,6 @@ body:has(.bk) .hc-scale { overflow-x: clip; }
   .bk-num { font-size: 14px; width: 24px; height: 24px; }
   .bk-card[id] { scroll-margin-top: 12px; }
 }
+/* 第 4 步匯款資訊（11/24 Ambre）：沿用 .bk-info 三欄，字放大一點、帳號粗體、長網址可斷行 */
+.bk-pay { font-size: 14px; color: #12355b; overflow-wrap: anywhere; }
+.bk-pay b { font-weight: 700; letter-spacing: 0.02em; }

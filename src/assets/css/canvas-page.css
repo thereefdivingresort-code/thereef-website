@@ -162,3 +162,4 @@ label.hc-t { cursor: pointer; }
   .hc-anim .hc-page-home .hc-fish { animation: none !important; }
   .hc-fish-about_ken::before, .hc-fish-about_ken::after { animation: none; }
 }
+.hc-t a.hc-lang.is-on { font-weight: 700; } /* 頁首「中｜EN」：目前的語言粗體 */

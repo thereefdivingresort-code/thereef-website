@@ -1,0 +1,143 @@
+{
+ "_說明": "英文版：每一條＝這頁資料檔（src/_data/refund.json）裡的路徑 → [中文原文, 英文]。中文原文改了而這裡沒跟著改，npm test 會提醒。style＝英文版個別元素的字級／寬度微調。",
+ "t": {
+  "sections.0.items.0.text": [
+   "REFUND　·　退款與停航政策",
+   "REFUND  ·  Refunds & Cancellations"
+  ],
+  "sections.0.items.1.text": [
+   "退款與停航政策",
+   "Refund & Cancellation Policy"
+  ],
+  "sections.0.items.2.text": [
+   "最後更新：2026 年 11 月（草稿）",
+   "Last updated: November 2026 (draft)"
+  ],
+  "sections.0.items.3.text": [
+   "綠島的船班和海上活動常受天候影響。這一頁說明取消、改期和退款怎麼處理。",
+   "Ferries and sea activities on Green Island are often affected by the weather. This page explains how cancellations, date changes and refunds work."
+  ],
+  "sections.1.items.0.text": [
+   "1　天候、停航與不可抗力",
+   "1  Weather, ferry cancellations and force majeure"
+  ],
+  "sections.1.items.1.text": [
+   "・出發前遇到颱風、海象不佳、船班停航，或主管機關公告停止活動，我們會主動聯絡你。你可以選擇免費改期，或退款。\n・行程中因天候停航或無法下水，未進行的部分可以改期或退款。\n・已代購且無法退回的費用（例如已出票的船票），會先扣除。\n・回程船班停航、需要延長住宿時，每天的住宿有半價優惠。",
+   "・If a typhoon, rough seas, a ferry cancellation or an official suspension affects your trip before departure, we will contact you. You can choose a free date change or a refund.\n・If weather stops the ferry or diving during your trip, the parts not carried out can be rescheduled or refunded.\n・Non-refundable costs already paid on your behalf (such as issued ferry tickets) will be deducted first.\n・If your return ferry is cancelled and you need to stay longer, extra nights are half price."
+  ],
+  "sections.2.items.0.text": [
+   "2　只訂住宿",
+   "2  Accommodation only"
+  ],
+  "sections.2.items.1.text": [
+   "依交通部觀光署〈個別旅客訂房定型化契約應記載及不得記載事項〉，全額預付的訂單：",
+   "Under the Tourism Administration's standard terms for individual room bookings, for bookings paid in full:"
+  ],
+  "sections.2.items.2.text": [
+   "取消時間",
+   "Cancellation"
+  ],
+  "sections.2.items.3.text": [
+   "退款比例",
+   "Refund"
+  ],
+  "sections.2.items.4.text": [
+   "入住日 3 天前（含）以前取消\n入住日前 1～2 天取消\n入住當天取消或未到",
+   "3 or more days before check-in\n1–2 days before check-in\nOn the day or no-show"
+  ],
+  "sections.2.items.5.text": [
+   "退還 100%\n退還 50%\n不退款",
+   "100% refund\n50% refund\nNo refund"
+  ],
+  "sections.3.items.0.text": [
+   "3　課程、潛水活動與 3 天 2 夜套裝",
+   "3  Courses, dive activities and 3-day, 2-night packages"
+  ],
+  "sections.3.items.1.text": [
+   "旅客自己取消時，依出發日往前算（參考〈國內個別旅遊定型化契約〉）：",
+   "If you cancel, refunds are counted back from the departure date (based on Taiwan's standard domestic individual travel contract):"
+  ],
+  "sections.3.items.2.text": [
+   "取消時間",
+   "Cancellation"
+  ],
+  "sections.3.items.3.text": [
+   "退款比例",
+   "Refund"
+  ],
+  "sections.3.items.4.text": [
+   "出發日 31 天前（含）以前\n出發日前 21～30 天\n出發日前 11～20 天\n出發日前 4～10 天\n出發日前 1～3 天\n出發當天取消或未到",
+   "31 or more days before departure\n21–30 days before\n11–20 days before\n4–10 days before\n1–3 days before\nOn the day or no-show"
+  ],
+  "sections.3.items.5.text": [
+   "退還 100%\n退還 90%\n退還 80%\n退還 70%\n退還 30%\n不退款",
+   "100% refund\n90% refund\n80% refund\n70% refund\n30% refund\nNo refund"
+  ],
+  "sections.3.items.6.text": [
+   "改期：出發前請盡早聯絡我們，依船班和名額安排。",
+   "Date changes: please contact us as early as possible before departure; we'll arrange it based on ferries and availability."
+  ],
+  "sections.4.items.0.text": [
+   "4　因個人因素無法下水",
+   "4  Unable to dive for personal reasons"
+  ],
+  "sections.4.items.1.text": [
+   "因身體狀況、健康問卷未通過或未遵守安全規定而無法下水，屬於旅客自身因素，依第 3 項處理；已使用的住宿和交通費用不退。",
+   "If you can't dive because of your physical condition, not passing the medical questionnaire or not following safety rules, this is a personal reason and is handled under item 3; accommodation and transport already used are non-refundable."
+  ],
+  "sections.4.items.2.text": [
+   "5　退款方式與時間",
+   "5  Refund method and timing"
+  ],
+  "sections.4.items.3.spans.0.t": [
+   "・信用卡付款：退回原信用卡，入帳時間依發卡銀行作業。\n・ATM 轉帳：退到你提供的帳戶。\n・作業時間：確認退款後七個工作天內處理。\n・申請方式：",
+   "・Credit card: refunded to the original card; timing depends on your card issuer.\n・ATM transfer: refunded to the account you provide.\n・Processing: within 7 working days after the refund is confirmed.\n・How to apply: "
+  ],
+  "sections.4.items.3.spans.1.t": [
+   "加入LINE",
+   "Add us on LINE"
+  ],
+  "sections.4.items.3.spans.2.t": [
+   "，或寄信到thereef.divingresort@gmail.com，告訴我們訂單編號和原因。",
+   " or email thereef.divingresort@gmail.com with your booking number and reason."
+  ],
+  "sections.4.items.3.pre": [
+   "・信用卡付款：退回原信用卡，入帳時間依發卡銀行作業。\n・ATM 轉帳：退到你提供的帳戶。\n・作業時間：確認退款後七個工作天內處理。\n・申請方式：",
+   "・Credit card: refunded to the original card; timing depends on your card issuer.\n・ATM transfer: refunded to the account you provide.\n・Processing: within 7 working days after the refund is confirmed.\n・How to apply: "
+  ],
+  "sections.5.items.0.text": [
+   "需要改期或退款？",
+   "Need to change dates or get a refund?"
+  ],
+  "sections.5.items.1.text": [
+   "請打 0936-871-525，或寄信到（待填），告訴我們訂單編號。",
+   "Add us on LINE or email us with your booking number."
+  ],
+  "sections.5.items.1.post": [
+   "，告訴我們訂單編號",
+   ", and tell us your booking number"
+  ],
+  "sections.5.items.2.spans.0.t": [
+   "服務條款 →",
+   "Terms of Service →"
+  ],
+  "sections.5.items.2.spans.2.t": [
+   "隱私權政策 →",
+   "Privacy Policy →"
+  ]
+ },
+ "style": {
+  "LBWyXLG81RTVq9LW": {
+   "fs": 0.86
+  },
+  "LB2GnCz9ZZzDVn2t": {
+   "fs": 0.86
+  },
+  "LBqlZ2gbMGwH5SY0": {
+   "fs": 0.86
+  },
+  "LBm9fRRCyRzpp3rn": {
+   "fs": 0.98
+  }
+ }
+}

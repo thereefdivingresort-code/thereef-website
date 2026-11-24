@@ -1,0 +1,193 @@
+{
+ "_說明": "英文版：每一條＝這頁資料檔（src/_data/trips.json）裡的路徑 → [中文原文, 英文]。中文原文改了而這裡沒跟著改，npm test 會提醒。style＝英文版個別元素的字級／寬度微調。",
+ "t": {
+  "sections.0.items.0.text": [
+   "TRIPS　·　3 天 2 夜套裝",
+   "TRIPS  ·  3 days, 2 nights"
+  ],
+  "sections.0.items.1.text": [
+   "船票、機車、住宿都包好",
+   "Ferry, scooter and room, all sorted"
+  ],
+  "sections.0.items.2.text": [
+   "從台東搭船到綠島，碼頭有人接，機車和背包客房都準備好。\n你只要選想怎麼玩：浮潛、體驗潛水，或已經有證照的 Fun Dive 都可以！",
+   "Take the ferry from Taitung to Green Island; we'll meet you at the harbor with your scooter and backpacker room ready.\nAll you choose is how to play: snorkeling, Discover Scuba, or Fun Dive if you're certified!"
+  ],
+  "sections.1.items.0.text": [
+   "每個套裝皆含",
+   "Every package includes"
+  ],
+  "sections.1.items.1.text": [
+   "台東⇄綠島\n來回船票",
+   "Taitung ⇄ Green Island\nround-trip ferry"
+  ],
+  "sections.1.items.2.text": [
+   "機車 2 天\n2 人 1 台，48 小時",
+   "Scooter for 2 days\n1 per 2 people, 48 hours"
+  ],
+  "sections.1.items.3.text": [
+   "碼頭接送\n南寮漁港⇄綠芙",
+   "Harbor pickup\nNanliao Harbor ⇄ The Reef"
+  ],
+  "sections.1.items.4.text": [
+   "背包客房\n住 2 晚",
+   "Backpacker room\n2 nights"
+  ],
+  "sections.2.items.0.label": [
+   "預訂",
+   "Book"
+  ],
+  "sections.2.items.1.label": [
+   "預訂",
+   "Book"
+  ],
+  "sections.2.items.2.label": [
+   "預訂",
+   "Book"
+  ],
+  "sections.2.items.3.text": [
+   "夏日浮潛套裝",
+   "Summer Snorkeling"
+  ],
+  "sections.2.items.4.text": [
+   "夏日體驗潛水套裝",
+   "Summer Discover Scuba"
+  ],
+  "sections.2.items.5.text": [
+   "夏日 Fun Dive 套裝",
+   "Summer Fun Dive"
+  ],
+  "sections.2.items.6.text": [
+   "NT$ {price} ／人",
+   "NT$ {price} / person"
+  ],
+  "sections.2.items.7.text": [
+   "NT$ {price} ／人",
+   "NT$ {price} / person"
+  ],
+  "sections.2.items.8.text": [
+   "NT$ {price} ／人",
+   "NT$ {price} / person"
+  ],
+  "sections.2.items.9.text": [
+   "2 人以上同行的每人價格",
+   "Per person, 2 or more travelers"
+  ],
+  "sections.2.items.10.text": [
+   "2 人以上同行的每人價格",
+   "Per person, 2 or more travelers"
+  ],
+  "sections.2.items.11.text": [
+   "2 人以上同行｜需持潛水證照",
+   "2 or more travelers | Certification required"
+  ],
+  "sections.2.items.12.text": [
+   "基本套裝＋浮潛行程 1 次。不用會潛水，戴面鏡就能看珊瑚和魚。",
+   "Basic package + 1 snorkeling trip. No diving needed: just put on a mask to see the coral and fish."
+  ],
+  "sections.2.items.13.text": [
+   "基本套裝＋體驗水肺潛水 1 次。沒有證照、沒潛過也可以。",
+   "Basic package + 1 Discover Scuba dive. No certification or experience needed."
+  ],
+  "sections.2.items.14.text": [
+   "基本套裝＋船潛 2 支、岸潛 2 支，含裝備租用。",
+   "Basic package + 2 boat dives and 2 shore dives, gear rental included."
+  ],
+  "sections.2.items.15.text": [
+   "升等雙人套房每人＋NT$ {item:up-snorkel}\n單人報名＋NT$ {extra:pkg-snorkel}",
+   "Double room upgrade: + NT$ {item:up-snorkel} per person\nSolo booking: + NT$ {extra:pkg-snorkel}"
+  ],
+  "sections.2.items.16.text": [
+   "升等雙人套房每人＋NT$ {item:up-dsd}\n單人報名＋NT$ {extra:pkg-dsd}",
+   "Double room upgrade: + NT$ {item:up-dsd} per person\nSolo booking: + NT$ {extra:pkg-dsd}"
+  ],
+  "sections.2.items.17.text": [
+   "升等雙人套房每人＋NT$ {item:up-fun}\n單人報名＋NT$ {extra:pkg-fun}（機車和導潛費）",
+   "Double room upgrade: + NT$ {item:up-fun} per person\nSolo booking: + NT$ {extra:pkg-fun} (scooter and guide fee)"
+  ],
+  "sections.3.items.0.text": [
+   "3 天怎麼過",
+   "How the 3 days go"
+  ],
+  "sections.3.items.1.text": [
+   "建議行程。下水時間依海況和潮汐安排，出發前我們會盡快跟你確認。",
+   "Suggested itinerary. Dive times depend on sea conditions and tides; we'll confirm with you before you leave."
+  ],
+  "sections.3.items.2.text": [
+   "第 1 天",
+   "Day 1"
+  ],
+  "sections.3.items.3.text": [
+   "台東富岡漁港搭船約 50 分鐘到綠島，碼頭接送到綠芙。放好行李後騎機車環島。",
+   "Ferry from Fugang Harbor, Taitung to Green Island (about 50 min); we'll pick you up at the harbor. Drop your bags, then ride around the island."
+  ],
+  "sections.3.items.4.text": [
+   "第 2 天",
+   "Day 2"
+  ],
+  "sections.3.items.5.text": [
+   "依你選的套裝下水：浮潛、體驗潛水或 Fun Dive。其他時間自由活動。",
+   "Get in the water with your package: snorkeling, Discover Scuba or Fun Dive. The rest of the day is yours."
+  ],
+  "sections.3.items.6.text": [
+   "第 3 天",
+   "Day 3"
+  ],
+  "sections.3.items.7.text": [
+   "早上自由活動，還機車後碼頭接送，搭船回台東。",
+   "Free morning. Return the scooter, we'll take you to the harbor, and you ferry back to Taitung."
+  ],
+  "sections.4.items.0.text": [
+   "島上加購",
+   "Island add-ons"
+  ],
+  "sections.4.items.1.text": [
+   "訂套裝時可以一起加，金額是新台幣、每人價格。",
+   "Add them when you book a package. Prices in NT$, per person."
+  ],
+  "sections.4.items.2.text": [
+   "潮間帶導覽　{item:tidal}\n夜釣　{item:fishing}\n藍洞秘境探險　{item:bluecave}",
+   "Tide pool tour  {item:tidal}\nNight fishing  {item:fishing}\nBlue Cave adventure  {item:bluecave}"
+  ],
+  "sections.4.items.3.text": [
+   "SUP 立槳（單人板）　{item:sup1}\nSUP 立槳（雙人板）　{item:sup2}\n玻璃船　{item:glassboat}",
+   "SUP (single board)  {item:sup1}\nSUP (double board)  {item:sup2}\nGlass-bottom boat  {item:glassboat}"
+  ],
+  "sections.4.items.4.text": [
+   "電動自行車　{item:ebike}／天",
+   "E-bike  {item:ebike} / day"
+  ]
+ },
+ "style": {
+  "LBZwHWRgxX45RNy5": {
+   "fs": 0.86
+  },
+  "LBffzL7tqnpx17vX": {
+   "fs": 0.92
+  },
+  "LBzSVlpmsyKY969S": {
+   "fs": 0.86
+  },
+  "LBmLjYGqVlSNZXFh": {
+   "fs": 0.96
+  },
+  "LBQr37YKdPNPd5LD": {
+   "fs": 0.92
+  },
+  "LBC99NYrzPNRb5V3": {
+   "fs": 0.94
+  },
+  "LBvvnr4lVHHvtqYy": {
+   "fs": 0.96
+  },
+  "LBfLVYjGwnhBhDv0": {
+   "fs": 0.92
+  },
+  "LBt6pcV4Zs1ZdM5H": {
+   "fs": 0.86
+  },
+  "LBgsC5f44qhtdnrd": {
+   "fs": 0.86
+  }
+ }
+}

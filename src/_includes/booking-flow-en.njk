@@ -1,0 +1,131 @@
+{#
+  英文版預訂頁中間（/en/booking/）：結構、class、id 跟中文版 booking-flow.njk 完全一樣，只換文字。
+  中文版改結構時，這份也要一起改。畫面上由 JS 產生的文字（七區塊、摘要、提示）在 booking.js 的 t(中文, 英文)；
+  品項英文名在 _data/en/prices.json（內嵌成 #price-names），價格數字仍只讀 prices.json。
+#}
+<div class="bk" id="bk" data-step="1">
+  <div class="bk-head">
+    <p class="bk-eyebrow" id="bk-eyebrow">BOOKING  ·  Step 1: Choose</p>
+    <h1 class="bk-h1">Stay. Dive. Play on land and sea!</h1>
+    <label class="bk-date-label" for="bk-date">Departure date</label>
+    <input class="bk-date" type="date" name="date" id="bk-date" form="booking-form" required>
+    <a class="bk-start" href="#bk-blocks"><img src="/assets/img/booking/booking_chevron.webp" alt="" width="57" height="61"><span>Start building</span></a>
+    <ol class="bk-steps" aria-label="Booking steps">
+      <li data-s="1"><span class="bk-num">1</span>Choose</li><li data-s="2"><span class="bk-num">2</span>Your details</li><li data-s="3"><span class="bk-num">3</span>Terms</li><li data-s="4"><span class="bk-num">4</span>Payment</li>
+    </ol>
+  </div>
+
+  <nav class="bk-toc" aria-label="Jump to"><p class="bk-toc-h">Jump to</p><ol id="bk-toc-list"></ol></nav>
+  <div class="bk-grid">
+    <form class="bk-main" id="booking-form" novalidate>
+      {# ---------- Step 1: choose ---------- #}
+      <div class="bk-stepview" data-step="1">
+        <div id="bk-blocks"><div class="bk-card"><p class="bk-intro">Loading the booking form… If it doesn't appear, please book through our <a href="{{ site.company.lineUrl }}" target="_blank" rel="noopener">LINE Official Account</a>.</p></div></div>
+        <div class="bk-card bk-totalbar">
+          <p class="bk-total-text">Total  <strong id="cart-total">NT$ 0</strong></p>
+          <button type="button" class="bk-btn bk-next" data-go="2">Next: your details</button>
+          <p class="bk-pick-msg" data-msg="1" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+
+      {# ---------- Step 2: details ---------- #}
+      <div class="bk-stepview" data-step="2" hidden>
+        <section class="bk-card bk-stepcard" aria-labelledby="bk-s2-h">
+          <h2 class="bk-title" id="bk-s2-h"><span class="bk-num">2</span>Contact person</h2>
+          <p class="bk-intro">Before your trip we'll confirm the ferry and meeting time with you by LINE or email. Your date of birth is needed for insurance.</p>
+          <div class="bk-fields">
+            <label class="bk-field"><span>Full name</span><input name="name" required placeholder="Your name" autocomplete="name"></label>
+            <label class="bk-field"><span>Mobile (with country code)</span><input name="phone" required placeholder="+1 555 123 4567" inputmode="tel" autocomplete="tel"></label>
+            <label class="bk-field"><span>Email</span><input name="email" type="email" required placeholder="name@example.com" autocomplete="email"></label>
+            <label class="bk-field"><span>Date of birth (for insurance)</span><input name="birthday" type="date" required></label>
+            <label class="bk-field"><span>Emergency contact</span><input name="emergencyName" required placeholder="Name / relationship"></label>
+            <label class="bk-field"><span>Emergency contact phone</span><input name="emergencyPhone" required placeholder="+1 555 123 4567" inputmode="tel"></label>
+          </div>
+          <label class="bk-field bk-field-wide"><span>Notes (health, eyesight prescription, dietary needs)</span><textarea name="note" rows="3" placeholder="e.g. Short-sighted -4.00, no beef."></textarea></label>
+        </section>
+        <section class="bk-card bk-stepcard" aria-labelledby="bk-s2b-h">
+          <h2 class="bk-title" id="bk-s2b-h"><span class="bk-num">2</span>Other participants</h2>
+          <p class="bk-intro">Every participant needs a name and date of birth (for insurance). Skip this if it's just you.</p>
+          <div id="participants"></div>
+          <button type="button" class="bk-link" id="add-person">+ Add participant</button>
+        </section>
+        <div class="bk-card bk-totalbar">
+          <p class="bk-total-text">Total  <strong class="js-total">NT$ 0</strong></p>
+          <button type="button" class="bk-btn bk-back" data-go="1">Back</button>
+          <button type="button" class="bk-btn bk-next" data-go="3">Next: terms</button>
+          <p class="bk-pick-msg" data-msg="2" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+
+      {# ---------- Step 3: terms ---------- #}
+      <div class="bk-stepview" data-step="3" hidden>
+        <section class="bk-card bk-stepcard" aria-labelledby="bk-s3-h">
+          <h2 class="bk-title" id="bk-s3-h"><span class="bk-num">3</span>Terms</h2>
+          <p class="bk-intro">Please read the terms first; tick all four boxes to continue to payment. The terms open in a new tab, so you won't lose what you've filled in.</p>
+          <div class="bk-checks">
+            <label><input type="checkbox" class="bk-check" required> I have read and agree to the <a href="/en/terms/" target="_blank" rel="noopener">Terms of Service</a></label>
+            <label><input type="checkbox" class="bk-check" required> I have read and agree to the <a href="/en/privacy/" target="_blank" rel="noopener">Privacy Policy</a></label>
+            <label><input type="checkbox" class="bk-check" required> I have read and agree to the <a href="/en/refund/" target="_blank" rel="noopener">Refund &amp; Cancellation Policy</a></label>
+            <label><input type="checkbox" class="bk-check" required> For dive activities: I will complete the PADI medical questionnaire before the trip</label>
+          </div>
+        </section>
+        <div class="bk-card bk-totalbar">
+          <p class="bk-total-text">Total  <strong class="js-total">NT$ 0</strong></p>
+          <button type="button" class="bk-btn bk-back" data-go="2">Back</button>
+          <button type="button" class="bk-btn bk-next" data-go="4">Go to payment</button>
+          <p class="bk-pick-msg" data-msg="3" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+
+      {# ---------- Step 4: payment ---------- #}
+      <div class="bk-stepview" data-step="4" hidden>
+        <section class="bk-card bk-stepcard" aria-labelledby="bk-s4-h">
+          <h2 class="bk-title" id="bk-s4-h"><span class="bk-num">4</span>Payment</h2>
+          <p class="bk-intro">Online card payment is coming soon. For now, please pay by <strong>bank transfer</strong> or <strong>PayPal</strong>. Prices are in New Taiwan Dollars (NT$).</p>
+          <p class="bk-paymsg" id="form-msg" role="status" aria-live="polite">First, {% if site.company.lineUrl %}message our <a class="bk-hl" href="{{ site.company.lineUrl }}" target="_blank" rel="noopener">LINE Official Account</a>{% else %}message our LINE Official Account{% endif %} with your departure date and the order summary on the right. <strong class="bk-hl">Please pay once we've confirmed availability.</strong> After paying, send us the last 5 digits of the account you paid from (or your PayPal receipt).</p>
+          {%- set pay = site.payment %}
+          <div class="bk-info bk-pay">
+            <div><h3>International wire transfer</h3><p>{{ pay.intl.bank }}<br>Bank address: {{ pay.intl.address }}<br>A/C no. <b>{{ pay.intl.account }}</b><br>SWIFT code: <b>{{ pay.intl.swift }}</b><br>A/C name: {{ pay.intl.name }}</p></div>
+            <div><h3>PayPal</h3><p>Account: <b>{{ pay.paypal.account }}</b><br>{{ pay.paypal.noteEn }}</p></div>
+            <div><h3>Bank transfer within Taiwan</h3><p>CTBC Bank (bank code {{ pay.domestic.bankCode }}), Sungshan Branch<br>A/C no. <b>{{ pay.domestic.account }}</b><br>A/C name: {{ pay.intl.name }} ({{ pay.domestic.name }})</p></div>
+          </div>
+        </section>
+        <section class="bk-card bk-stepcard" aria-labelledby="bk-s4b-h">
+          <h2 class="bk-title" id="bk-s4b-h"><span class="bk-num">4</span>After payment</h2>
+          <div class="bk-success">
+            <span class="bk-success-check" aria-hidden="true">✓</span>
+            <div>
+              <p class="bk-success-h">Booking complete!</p>
+              <p class="bk-muted">Booking number  shown here and in your confirmation email after payment</p>
+              <p>A confirmation email with your booking details and payment record will be sent to the email you entered.<br>Before your trip, we'll confirm the ferry and meeting time with you by LINE or email.<br>No confirmation email? Check your spam folder, or <a href="{{ site.company.lineUrl }}" target="_blank" rel="noopener">message us on LINE</a>.</p>
+            </div>
+          </div>
+          <div class="bk-info">
+            <div><h3>Payment methods</h3><p>Bank transfer or PayPal; online card payment (PAYUNi) coming soon.</p></div>
+            <div><h3>Changes or cancellations</h3><p>Cancellations caused by weather or ferry suspensions can be rescheduled or refunded. For other cases, see the <a href="/en/refund/">Refund &amp; Cancellation Policy</a>.</p></div>
+            <div><h3>Your booking</h3><p>Send us your booking number from the confirmation email on LINE (<a href="/en/about/#contact">contact us</a>).</p></div>
+          </div>
+        </section>
+        <div class="bk-card bk-totalbar">
+          <p class="bk-total-text">Total  <strong class="js-total">NT$ 0</strong></p>
+          <button type="button" class="bk-btn bk-back" data-go="3">Back</button>
+        </div>
+      </div>
+    </form>
+
+    <aside class="bk-side">
+      <div class="bk-summary" aria-live="polite">
+        <h2 class="bk-sum-h">Order summary</h2>
+        <p class="bk-sum-date" id="sum-date">No date selected</p>
+        <hr class="bk-bar">
+        <ul class="bk-sum-lines" id="sum-lines"></ul>
+        <hr class="bk-bar">
+        <p class="bk-sum-total"><span>Total</span><strong id="sum-total">NT$ 0</strong></p>
+        <button type="button" class="bk-btn bk-next" id="sum-next" data-go="2">Next: your details</button>
+        <p class="bk-sum-note">Your booking is confirmed once payment is received and we've sent you a confirmation.</p>
+      </div>
+    </aside>
+  </div>
+  <script type="application/json" id="price-data">{{ prices | dump | safe }}</script>
+  <script type="application/json" id="price-names">{{ en.prices | dump | safe }}</script>
+</div>

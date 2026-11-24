@@ -8,14 +8,22 @@
   const P = window.ReefPricing;
   const data = JSON.parse(document.getElementById("price-data").textContent);
   const I = P.index(data);
+  // 英文版（/en/booking/）：畫面文字用 t(中文, 英文)；品項英文名與單位讀頁面內嵌的 #price-names（_data/en/prices.json），價格數字不變
+  const EN = document.documentElement.lang === "en";
+  const t = (zh, en) => (EN ? en : zh);
+  if (EN) {
+    const el = document.getElementById("price-names");
+    const names = el ? JSON.parse(el.textContent).items || {} : {};
+    Object.keys(names).forEach((id) => { if (I[id]) Object.assign(I[id], names[id]); });
+  }
   const n = (v) => Number(v).toLocaleString("en-US");
   const fmt = (v) => "NT$ " + n(v);
   const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;");
-  const SP = "　"; // 全形空白（Canva 用來隔開文字）
+  const SP = t("　", " "); // 全形空白（Canva 用來隔開文字）
 
   // 計數器：k＝代號、unit＝單位、def＝預設、min/max、pre＝前面的字（例：雙人）
   const C = (k, unit, def, min, max, pre) => ({ k, unit, def, min: min || 0, max: max || 30, pre });
-  const per = (id, u) => n(I[id].price) + "／" + (u || I[id].unit);
+  const per = (id, u) => n(I[id].price) + t("／", " / ") + (u || I[id].unit);
 
   // 每一列：
   //   label（固定文字）或 variants＝[[代號, 下拉選項文字, 畫面顯示文字]]
@@ -23,43 +31,43 @@
   //   counters、lines(v, c)＝要算的品項與份數（a、b 照 pricing.js 的定義）
   const BLOCKS = [
     {
-      key: "dive", title: "①" + SP + "潛水", sum: "潛水",
-      intro: "體驗潛水不用證照；Fun Dive 需有證照，系統依人數自動套用 1 對 1～1 對 4 價。",
-      note: () => "Fun Dive 下拉：岸潛（每人每支，要選支數）／船潛（一趟約 2 支，不用選支數）。已含輕重裝備。",
+      key: "dive", title: "①" + SP + t("潛水", "Diving"), sum: t("潛水", "Diving"),
+      intro: t("體驗潛水不用證照；Fun Dive 需有證照，系統依人數自動套用 1 對 1～1 對 4 價。", "Discover Scuba needs no certification. Fun Dive is for certified divers; the 1:1 to 1:4 price is applied automatically by group size."),
+      note: () => t("Fun Dive 下拉：岸潛（每人每支，要選支數）／船潛（一趟約 2 支，不用選支數）。已含輕重裝備。", "Fun Dive options: shore (per person per dive, choose the number of dives) / boat (one trip is about 2 dives). Full gear included."),
       rows: [
-        { key: "dsd", label: "體驗潛水（不用證照）", price: () => per("dsd"),
-          counters: [C("p", "人", 0)],
+        { key: "dsd", label: t("體驗潛水（不用證照）", "Discover Scuba (beginners)"), price: () => per("dsd"),
+          counters: [C("p", t("人", "ppl"), 0)],
           lines: (v, c) => [{ id: "dsd", a: 0, b: c.p }] },
         { key: "fun",
-          variants: [["fun-shore", "Fun Dive 岸潛（有證照）", "Fun Dive 岸潛（有證照）" + SP + "▾"], ["fun-boat", "Fun Dive 船潛（有證照）", "Fun Dive 船潛（有證照）" + SP + "▾"]],
-          counters: [C("t", "支", 1, 1, 20), C("p", "人", 0)],
-          unitOf: (v, k) => (k === "t" ? (v === "fun-boat" ? "趟" : "支") : null),
+          variants: [["fun-shore", t("Fun Dive 岸潛（有證照）", "Fun Dive, shore (certified)"), t("Fun Dive 岸潛（有證照）", "Fun Dive, shore (certified)") + SP + "▾"], ["fun-boat", t("Fun Dive 船潛（有證照）", "Fun Dive, boat (certified)"), t("Fun Dive 船潛（有證照）", "Fun Dive, boat (certified)") + SP + "▾"]],
+          counters: [C("t", t("支", "dives"), 1, 1, 20), C("p", t("人", "ppl"), 0)],
+          unitOf: (v, k) => (k === "t" ? (v === "fun-boat" ? t("趟", "trips") : t("支", "dives")) : null),
           lines: (v, c) => [{ id: v, a: c.p, b: c.t }] },
       ],
     },
     {
-      key: "course", title: "②" + SP + "考證照與進階課程", sum: "考證照與進階課程",
-      intro: "下拉：OW 初級／AOW 進階／OW＋AOW 一次考／複習／高氧 EAN／EFR／救援／潛水長 DM",
+      key: "course", title: "②" + SP + t("考證照與進階課程", "Certification & courses"), sum: t("考證照與進階課程", "Certification & courses"),
+      intro: t("下拉：OW 初級／AOW 進階／OW＋AOW 一次考／複習／高氧 EAN／EFR／救援／潛水長 DM", "Options: Open Water / Advanced / OW + AOW combo / ReActivate / Enriched Air / EFR / Rescue / Divemaster"),
       rows: [
         { key: "course",
-          variants: [["", "請選擇課程", "請選擇課程" + SP + "▾"]].concat(["ow", "aow", "ow-aow", "reactive", "ean", "efr", "rescue", "dm"].map((id) => [id, I[id].name, I[id].name + SP + "▾"])),
+          variants: [["", t("請選擇課程", "Choose a course"), t("請選擇課程", "Choose a course") + SP + "▾"]].concat(["ow", "aow", "ow-aow", "reactive", "ean", "efr", "rescue", "dm"].map((id) => [id, I[id].name, I[id].name + SP + "▾"])),
           price: (v) => (v ? per(v) : "—"),
-          counters: [C("p", "人", 1, 1)],
+          counters: [C("p", t("人", "ppl"), 1, 1)],
           lines: (v, c) => (v ? [{ id: v, a: 0, b: c.p }] : []) },
       ],
     },
     {
-      key: "pkg", title: "③" + SP + "3 天 2 夜套裝", sum: "3 天 2 夜套裝＋升等",
-      intro: "船票、機車、住宿都包好。下拉：夏日浮潛／夏日體驗潛水／夏日 Fun Dive。",
+      key: "pkg", title: "③" + SP + t("3 天 2 夜套裝", "3-day, 2-night packages"), sum: t("3 天 2 夜套裝＋升等", "3-day packages + upgrade"),
+      intro: t("船票、機車、住宿都包好。下拉：夏日浮潛／夏日體驗潛水／夏日 Fun Dive。", "Ferry, scooter and room included. Options: Summer Snorkeling / Summer Discover Scuba / Summer Fun Dive."),
       note: (v) => {
         const ids = v ? [v] : ["pkg-snorkel", "pkg-dsd", "pkg-fun"];
-        const p = ids.map((id) => (v ? "" : I[id].name.replace("夏日", "").replace("套裝", "") + " ") + "雙人每人 " + n(I[id].price) + "、單人 " + n(I[id].single)).join("；");
-        return p + "（已含單人加價）；3 人＝1 組雙人＋1 位單人。升等每人加價。";
+        const p = ids.map((id) => (v ? "" : I[id].name.replace(t("夏日", "Summer "), "").replace(t("套裝", " Package"), "") + " ") + t("雙人每人 ", "per person (pairs) ") + n(I[id].price) + t("、單人 ", ", solo ") + n(I[id].single)).join(t("；", "; "));
+        return p + t("（已含單人加價）；3 人＝1 組雙人＋1 位單人。升等每人加價。", " (solo supplement included). 3 people = 1 pair + 1 solo. Room upgrade is charged per person.");
       },
       rows: [
         { key: "pkg",
-          variants: [["", "請選擇套裝", "請選擇套裝" + SP + "▾"], ["pkg-snorkel", "夏日浮潛套裝", "夏日浮潛套裝" + SP + "▾"], ["pkg-dsd", "夏日體驗潛水套裝", "夏日體驗潛水套裝" + SP + "▾"], ["pkg-fun", "夏日 Fun Dive 套裝", "夏日 Fun Dive 套裝" + SP + "▾"]],
-          counters: [C("pair", "組", 0, 0, 15, "雙人"), C("single", "位", 0, 0, 15, "單人")],
+          variants: [["", t("請選擇套裝", "Choose a package"), t("請選擇套裝", "Choose a package") + SP + "▾"], ["pkg-snorkel", t("夏日浮潛套裝", "Summer Snorkeling Package"), t("夏日浮潛套裝", "Summer Snorkeling Package") + SP + "▾"], ["pkg-dsd", t("夏日體驗潛水套裝", "Summer Discover Scuba Package"), t("夏日體驗潛水套裝", "Summer Discover Scuba Package") + SP + "▾"], ["pkg-fun", t("夏日 Fun Dive 套裝", "Summer Fun Dive Package"), t("夏日 Fun Dive 套裝", "Summer Fun Dive Package") + SP + "▾"]],
+          counters: [C("pair", t("組", ""), 0, 0, 15, t("雙人", "Pairs")), C("single", t("位", "ppl"), 0, 0, 15, t("單人", "Solo"))],
           upgrade: true,
           lines: (v, c) => {
             if (!v) return [];
@@ -71,66 +79,66 @@
       ],
     },
     {
-      key: "act", title: "④" + SP + "活動（可複選）", sum: "活動", multi: true,
-      intro: "打開下拉勾選想參加的活動，每勾一項就多一列填人數；取消勾選就移除。",
-      note: () => "可選（每人）：" + ["tidal", "snorkel", "glassboat", "fishing", "bluecave", "sup1", "sup2"].map((id) => shortName(id) + " " + n(I[id].price)).join("、"),
+      key: "act", title: "④" + SP + t("活動（可複選）", "Activities (choose any)"), sum: t("活動", "Activities"), multi: true,
+      intro: t("打開下拉勾選想參加的活動，每勾一項就多一列填人數；取消勾選就移除。", "Open the list and tick the activities you want; each one adds a row for the number of people. Untick to remove it."),
+      note: () => t("可選（每人）：", "Available (per person): ") + ["tidal", "snorkel", "glassboat", "fishing", "bluecave", "sup1", "sup2"].map((id) => shortName(id) + " " + n(I[id].price)).join(t("、", ", ")),
       rows: ["tidal", "snorkel", "glassboat", "fishing", "bluecave", "sup1", "sup2"].map((id) => ({
         key: id, label: I[id].name, short: shortName(id), price: () => per(id),
-        counters: [C("p", "人", 1, 1)],
+        counters: [C("p", t("人", "ppl"), 1, 1)],
         lines: (v, c) => [{ id, a: 0, b: c.p }] })),
     },
     {
-      key: "stay", title: "⑤" + SP + "住宿・每晚（可複選）", sum: "住宿", multi: true,
-      intro: "勾選房型後填間數（床數）和晚數。",
-      note: () => "可選（每晚）：豪華雙人房 " + n(I["room-double"].price) + "、豪華四人房 " + n(I["room-quad"].price) + "、背包客房 " + n(I["bed-backpacker"].price) + "／床。\n" +
-        "豪華四人房可加床位，" + n(I["room-quad-extra"].price) + "／人，最多住 6 人。",
+      key: "stay", title: "⑤" + SP + t("住宿・每晚（可複選）", "Rooms, per night (choose any)"), sum: t("住宿", "Rooms"), multi: true,
+      intro: t("勾選房型後填間數（床數）和晚數。", "Tick a room type, then enter the number of rooms (or beds) and nights."),
+      note: () => t("可選（每晚）：豪華雙人房 ", "Available (per night): Deluxe Double ") + n(I["room-double"].price) + t("、豪華四人房 ", ", Deluxe Quad ") + n(I["room-quad"].price) + t("、背包客房 ", ", Backpacker ") + n(I["bed-backpacker"].price) + t("／床。\n", " / bed.\n") +
+        t("豪華四人房可加床位，", "The Deluxe Quad can add extra beds, ") + n(I["room-quad-extra"].price) + t("／人，最多住 6 人。", " / person, up to 6 guests."),
       rows: [
-        { key: "room-double", short: "豪華雙人房", label: "豪華雙人房" + SP + n(I["room-double"].price) + "／晚",
-          counters: [C("r", "間", 1, 1), C("d", "晚", 1, 1)],
+        { key: "room-double", short: t("豪華雙人房", "Deluxe Double Room"), label: t("豪華雙人房", "Deluxe Double Room") + SP + n(I["room-double"].price) + t("／晚", " / night"),
+          counters: [C("r", t("間", "rooms"), 1, 1), C("d", t("晚", "nights"), 1, 1)],
           lines: (v, c) => [{ id: "room-double", a: 0, b: c.r * c.d }] },
-        { key: "room-quad", short: "豪華四人房", label: "豪華四人房" + SP + n(I["room-quad"].price) + "／晚",
-          counters: [C("r", "間", 1, 1), C("d", "晚", 1, 1)],
+        { key: "room-quad", short: t("豪華四人房", "Deluxe Quad Room"), label: t("豪華四人房", "Deluxe Quad Room") + SP + n(I["room-quad"].price) + t("／晚", " / night"),
+          counters: [C("r", t("間", "rooms"), 1, 1), C("d", t("晚", "nights"), 1, 1)],
           // 加床（第 5、6 位）：另一列，晚數跟四人房同一個；每間最多加 2 位
-          extra: { key: "room-quad-extra", label: "四人房加床（第 5、6 位）", price: () => n(I["room-quad-extra"].price) + "／人・晚", counter: C("x", "位", 0, 0, 2) },
+          extra: { key: "room-quad-extra", label: t("四人房加床（第 5、6 位）", "Quad room extra bed (5th/6th guest)"), price: () => n(I["room-quad-extra"].price) + t("／人・晚", " / person / night"), counter: C("x", t("位", "ppl"), 0, 0, 2) },
           maxOf: (k, c) => (k === "x" ? c.r * 2 : null),
           lines: (v, c) => [{ id: "room-quad", a: 0, b: c.r * c.d }, { id: "room-quad-extra", a: 0, b: c.x * c.d, extra: true }] },
-        { key: "bed-backpacker", short: "背包客房", label: "背包客房" + SP + n(I["bed-backpacker"].price) + "／床",
-          counters: [C("r", "床", 1, 1), C("d", "晚", 1, 1)],
+        { key: "bed-backpacker", short: t("背包客房", "Backpacker Room"), label: t("背包客房", "Backpacker Room") + SP + n(I["bed-backpacker"].price) + t("／床", " / bed"),
+          counters: [C("r", t("床", "beds"), 1, 1), C("d", t("晚", "nights"), 1, 1)],
           lines: (v, c) => [{ id: "bed-backpacker", a: 0, b: c.r * c.d }] },
       ],
     },
     {
-      key: "trans", title: "⑥" + SP + "交通・船票（可複選）", sum: "交通・船票", multi: true,
-      intro: "船票選來回或單程；車輛填台數和天數。",
-      note: () => "可選：船票（來回 " + n(I["ferry-rt"].price) + "／單程 " + n(I["ferry-ow"].price) + "）、摩托車、電動自行車、五人座汽車、八人座汽車",
+      key: "trans", title: "⑥" + SP + t("交通・船票（可複選）", "Transport & ferry (choose any)"), sum: t("交通・船票", "Transport & ferry"), multi: true,
+      intro: t("船票選來回或單程；車輛填台數和天數。", "Choose a round-trip or one-way ferry; for vehicles, enter how many and for how many days."),
+      note: () => t("可選：船票（來回 ", "Available: ferry (round trip ") + n(I["ferry-rt"].price) + t("／單程 ", " / one way ") + n(I["ferry-ow"].price) + t("）、摩托車、電動自行車、五人座汽車、八人座汽車", "), scooter, e-bike, 5-seat car, 8-seat van"),
       rows: [
-        { key: "ferry", short: "船票",
-          variants: [["ferry-rt", "船票（來回）", "船票（來回" + SP + "▾）"], ["ferry-ow", "船票（單程）", "船票（單程" + SP + "▾）"]],
-          price: (v) => per(v), counters: [C("p", "人", 1, 1)],
+        { key: "ferry", short: t("船票", "Ferry ticket"),
+          variants: [["ferry-rt", t("船票（來回）", "Ferry ticket (round trip)"), t("船票（來回", "Ferry ticket (round trip") + SP + t("▾）", "▾)")], ["ferry-ow", t("船票（單程）", "Ferry ticket (one way)"), t("船票（單程", "Ferry ticket (one way") + SP + t("▾）", "▾)")]],
+          price: (v) => per(v), counters: [C("p", t("人", "ppl"), 1, 1)],
           lines: (v, c) => [{ id: v, a: 0, b: c.p }] },
       ].concat(["scooter", "ebike", "car5", "car8"].map((id) => ({
-        key: id, short: I[id].name, label: I[id].name + SP + n(I[id].price) + "／天",
-        counters: [C("q", "台", 1, 1), C("d", "天", 1, 1)],
+        key: id, short: I[id].name, label: I[id].name + SP + n(I[id].price) + t("／天", " / day"),
+        counters: [C("q", t("台", "units"), 1, 1), C("d", t("天", "days"), 1, 1)],
         lines: (v, c) => [{ id, a: 0, b: c.q * c.d }] }))),
     },
     {
-      key: "gear", title: "⑦" + SP + "裝備租借（可複選）", sum: "裝備租借", multi: true,
-      intro: "Fun Dive 已含輕重裝備，不用另租。",
-      note: () => "可選：輕裝 " + n(I["gear-light"].price) + "／日、重裝 " + n(I["gear-heavy-half"].price) + " 半日／" + n(I["gear-heavy-full"].price) + " 全日\n" +
-        "全套輕重裝 " + n(I["gear-full-half"].price) + " 半日／" + n(I["gear-full-full"].price) + " 全日、潛水電腦錶 " + n(I["gear-computer-half"].price) + " 半日／" + n(I["gear-computer-full"].price) + " 全日",
+      key: "gear", title: "⑦" + SP + t("裝備租借（可複選）", "Gear rental (choose any)"), sum: t("裝備租借", "Gear rental"), multi: true,
+      intro: t("Fun Dive 已含輕重裝備，不用另租。", "Fun Dive already includes full gear, no need to rent."),
+      note: () => t("可選：輕裝 ", "Available: basic gear ") + n(I["gear-light"].price) + t("／日、重裝 ", " / day, scuba gear ") + n(I["gear-heavy-half"].price) + t(" 半日／", " half day / ") + n(I["gear-heavy-full"].price) + t(" 全日\n", " full day\n") +
+        t("全套輕重裝 ", "Full gear set ") + n(I["gear-full-half"].price) + t(" 半日／", " half day / ") + n(I["gear-full-full"].price) + t(" 全日、潛水電腦錶 ", " full day, dive computer ") + n(I["gear-computer-half"].price) + t(" 半日／", " half day / ") + n(I["gear-computer-full"].price) + t(" 全日", " full day"),
       rows: [
-        { key: "gear-light", short: "輕裝", label: "輕裝" + SP + n(I["gear-light"].price) + "／天",
-          counters: [C("q", "套", 1, 1), C("d", "天", 1, 1)],
+        { key: "gear-light", short: t("輕裝", "Basic gear"), label: t("輕裝", "Basic gear") + SP + n(I["gear-light"].price) + t("／天", " / day"),
+          counters: [C("q", t("套", "sets"), 1, 1), C("d", t("天", "days"), 1, 1)],
           lines: (v, c) => [{ id: "gear-light", a: 0, b: c.q * c.d }] },
-      ].concat([["heavy", "重裝"], ["full", "全套輕重裝"], ["computer", "潛水電腦錶"]].map(([k, name]) => ({
+      ].concat([["heavy", t("重裝", "Scuba gear")], ["full", t("全套輕重裝", "Full gear set")], ["computer", t("潛水電腦錶", "Dive computer")]].map(([k, name]) => ({
         key: "gear-" + k, short: name,
-        variants: [["gear-" + k + "-full", name + "（全天）", name + "（全天" + SP + "▾）"], ["gear-" + k + "-half", name + "（半天）", name + "（半天" + SP + "▾）"]],
-        counters: [C("q", k === "computer" ? "支" : "套", 1, 1), C("d", "天", 1, 1)],
-        unitOf: (v, kk) => (kk === "d" ? (v.endsWith("half") ? "次" : "天") : null),
+        variants: [["gear-" + k + "-full", name + t("（全天）", " (full day)"), name + t("（全天", " (full day") + SP + t("▾）", "▾)")], ["gear-" + k + "-half", name + t("（半天）", " (half day)"), name + t("（半天", " (half day") + SP + t("▾）", "▾)")]],
+        counters: [C("q", k === "computer" ? t("支", "dives") : t("套", "sets"), 1, 1), C("d", t("天", "days"), 1, 1)],
+        unitOf: (v, kk) => (kk === "d" ? (v.endsWith("half") ? t("次", "sessions") : t("天", "days")) : null),
         lines: (v, c) => [{ id: v, a: 0, b: c.q * c.d }] }))),
     },
   ];
-  function shortName(id) { return { sup1: "SUP 單人板", sup2: "SUP 雙人板" }[id] || I[id].name; }
+  function shortName(id) { return { sup1: t("SUP 單人板", "SUP single"), sup2: t("SUP 雙人板", "SUP double") }[id] || I[id].name; }
 
   // ①–⑦ 換成深色圓底＋反白數字（11/24 Ambre）
   const numBadge = (t) => t.replace(/^([①②③④⑤⑥⑦⑧⑨])　?/, (m, c) => '<span class="bk-num">' + ("①②③④⑤⑥⑦⑧⑨".indexOf(c) + 1) + "</span>");
@@ -138,14 +146,14 @@
   const root = document.getElementById("bk-blocks");
   const ctrHtml = (c) =>
     '<span class="ctr" data-k="' + c.k + '" data-min="' + c.min + '" data-max="' + c.max + '">' +
-    '<button type="button" class="c-btn" data-d="-1" aria-label="減少">−</button>' +
+    '<button type="button" class="c-btn" data-d="-1" aria-label="' + t("減少", "Less") + '">−</button>' +
     (c.pre ? "<b>" + c.pre + "</b>" : "") +
-    '<input type="number" inputmode="numeric" value="' + c.def + '" min="' + c.min + '" max="' + c.max + '" aria-label="' + (c.pre || "") + c.unit + '數">' +
+    '<input type="number" inputmode="numeric" value="' + c.def + '" min="' + c.min + '" max="' + c.max + '" aria-label="' + (c.pre || "") + c.unit + t("數", " count") + '">' +
     "<em>" + c.unit + "</em>" +
-    '<button type="button" class="c-btn" data-d="1" aria-label="增加">＋</button></span>';
+    '<button type="button" class="c-btn" data-d="1" aria-label="' + t("增加", "More") + '">＋</button></span>';
 
   // 11/24 Ambre：每人價格放在欄位裡（品項粗體、價格細體）；每一列都有 × 可以刪除
-  const DEL = '<button type="button" class="bk-del" aria-label="刪除這一項">×</button>';
+  const DEL = '<button type="button" class="bk-del" aria-label="' + t("刪除這一項", "Remove this item") + '">×</button>';
   function itemHtml(r, price) {
     const tail = (price ? '<span class="bk-price"></span>' : "") + DEL;
     if (!r.variants) return '<span class="bk-item"><span class="bk-name">' + esc(r.label) + "</span>" + tail + "</span>";
@@ -163,7 +171,7 @@
         ctrHtml(r.extra.counter) + '<span class="bk-sub">0</span></div>';
     }
     if (r.upgrade) {
-      h += '<div class="bk-upline" data-block="' + b.key + '"><label class="is-off"><input type="checkbox" class="bk-check" data-k="up" disabled><span>升等雙人套房（先選套裝）</span></label><span class="bk-sub">0</span></div>';
+      h += '<div class="bk-upline" data-block="' + b.key + '"><label class="is-off"><input type="checkbox" class="bk-check" data-k="up" disabled><span>' + t("升等雙人套房（先選套裝）", "Upgrade to double room (choose a package first)") + '</span></label><span class="bk-sub">0</span></div>';
     }
     return h;
   }
@@ -172,7 +180,7 @@
     let h = '<section class="bk-card' + (b.multi ? " bk-multi" : "") + (b.note ? "" : " no-note") + '" id="bk-b-' + b.key + '" data-block="' + b.key + '">' +
       '<h2 class="bk-title">' + numBadge(esc(b.title)) + '</h2><p class="bk-intro">' + esc(b.intro) + '</p><div class="bk-rows">';
     if (b.multi) {
-      h += '<details class="bk-ms"><summary>請選擇（可複選）' + SP + "▾</summary><div class=\"bk-ms-list\">" +
+      h += '<details class="bk-ms"><summary>' + t("請選擇（可複選）", "Choose (any)") + SP + "▾</summary><div class=\"bk-ms-list\">" +
         b.rows.map((r) => '<label><input type="checkbox" class="bk-check" value="' + r.key + '">' + esc(r.short || r.label) + "</label>").join("") + "</div></details>";
     }
     h += b.rows.map((r) => rowHtml(b, r)).join("") + "</div>";
@@ -181,7 +189,7 @@
   }).join("");
   // 手機版「目錄區塊」（11/24 Ambre）：列出七個區塊，點了跳過去；電腦版 CSS 不顯示
   const toc = document.getElementById("bk-toc-list");
-  if (toc) toc.innerHTML = BLOCKS.map((b) => '<li><a href="#bk-b-' + b.key + '">' + numBadge(esc(b.title.replace(/（可複選）/, ""))) + "</a></li>").join("");
+  if (toc) toc.innerHTML = BLOCKS.map((b) => '<li><a href="#bk-b-' + b.key + '">' + numBadge(esc(b.title.replace(/（可複選）| \(choose any\)/, ""))) + "</a></li>").join("");
 
   const rowEl = (b, r) => root.querySelector('.bk-row[data-block="' + b.key + '"][data-row="' + r.key + '"]:not([data-extra])');
   const extraEl = (b, r) => root.querySelector('.bk-row[data-block="' + b.key + '"][data-row="' + r.key + '"][data-extra]');
@@ -229,8 +237,8 @@
           c.up = cb.checked;
           up.querySelector("label").classList.toggle("is-off", !v);
           up.querySelector("label span").textContent = v
-            ? "升等雙人套房" + SP + "每人 +" + n(I[v.replace("pkg-", "up-")].price) + " × " + (c.pair * 2 + c.single) + " 人"
-            : "升等雙人套房（先選套裝）";
+            ? t("升等雙人套房", "Upgrade to double room") + SP + t("每人 +", "+") + n(I[v.replace("pkg-", "up-")].price) + " × " + (c.pair * 2 + c.single) + t(" 人", " ppl")
+            : t("升等雙人套房（先選套裝）", "Upgrade to double room (choose a package first)");
           noteV = v;
         }
         if (r.price) el.querySelector(".bk-price").textContent = r.price(v, c);
@@ -245,7 +253,7 @@
         if (r.upgrade) sec.querySelector(".bk-upline .bk-sub").textContent = n(upSum);
         bsum += main + extra + upSum;
       });
-      if (b.multi) sec.querySelector(".bk-ms summary").textContent = (chosen.length ? "已選 " + chosen.length + " 項：" + chosen.join("、") : "請選擇（可複選）") + SP + SP + SP + "▾";
+      if (b.multi) sec.querySelector(".bk-ms summary").textContent = (chosen.length ? t("已選 ", "") + chosen.length + t(" 項：", " selected: ") + chosen.join(t("、", ", ")) : t("請選擇（可複選）", "Choose (any)")) + SP + SP + SP + "▾";
       if (b.note) sec.querySelector(".bk-note").textContent = b.note(noteV);
       sums.push([b.sum, bsum, b.key]);
       total += bsum;
@@ -257,8 +265,9 @@
       '<li data-sum="' + k + '"><span>' + esc(t) + "</span><b>" + (s ? fmt(s) : "—") + "</b></li>").join("");
     const d = document.getElementById("bk-date").value;
     document.getElementById("sum-date").textContent = d
-      ? d.replace(/-/g, " / ") + "（" + "日一二三四五六"[new Date(d + "T00:00").getDay()] + "）出發"
-      : "尚未選日期";
+      ? (EN ? "Departing " + ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][new Date(d + "T00:00").getDay()] + ", " + d.replace(/-/g, " / ")
+        : d.replace(/-/g, " / ") + "（" + "日一二三四五六"[new Date(d + "T00:00").getDay()] + "）出發")
+      : t("尚未選日期", "No date selected");
     window.__reefOrder = { total, lines }; // 金流上線後送到伺服器重新驗算（伺服器要用 pricing.js 再算一次）
     return { total, count: lines.length };
   }
@@ -337,29 +346,29 @@
   form.addEventListener("submit", (e) => e.preventDefault());
   const bk = document.getElementById("bk");
   const views = document.querySelectorAll(".bk-stepview");
-  const STEP_NAMES = { 1: "選購", 2: "填資料", 3: "確認條款", 4: "付款" };
-  const SUM_NEXT = { 1: ["下一步：填資料", 2], 2: ["下一步：確認條款", 3], 3: ["前往付款", 4] };
+  const STEP_NAMES = { 1: t("選購", "Choose"), 2: t("填資料", "Your details"), 3: t("確認條款", "Terms"), 4: t("付款", "Payment") };
+  const SUM_NEXT = { 1: [t("下一步：填資料", "Next: your details"), 2], 2: [t("下一步：確認條款", "Next: terms"), 3], 3: [t("前往付款", "Go to payment"), 4] };
   const msg = (n, t) => { const el = form.querySelector('.bk-pick-msg[data-msg="' + n + '"]'); if (el) el.textContent = t || ""; };
   const dateEl = document.getElementById("bk-date");
 
   function check(step) { // 這一步可以往下走嗎？不行就回傳提示文字
     if (step === 1) {
-      if (!update().count) return "請至少選一個項目，人數或數量要大於 0。";
-      if (!dateEl.value) return "請先選出發日期（最上面）。";
+      if (!update().count) return t("請至少選一個項目，人數或數量要大於 0。", "Please choose at least one item, with a quantity above 0.");
+      if (!dateEl.value) return t("請先選出發日期（最上面）。", "Please choose a departure date first (at the top).");
     }
     if (step === 2) {
       const bad = [...views[1].querySelectorAll("input, textarea")].find((el) => !el.checkValidity());
-      if (bad) { bad.reportValidity(); return "還有欄位沒填好。"; }
+      if (bad) { bad.reportValidity(); return t("還有欄位沒填好。", "Some fields still need filling in."); }
     }
     if (step === 3) {
-      if ([...views[2].querySelectorAll("input[type=checkbox]")].some((el) => !el.checked)) return "四個都要勾選才能前往付款。";
+      if ([...views[2].querySelectorAll("input[type=checkbox]")].some((el) => !el.checked)) return t("四個都要勾選才能前往付款。", "Please tick all four boxes to continue to payment.");
     }
     return "";
   }
   function show(step) {
     bk.dataset.step = step;
     views.forEach((v) => { v.hidden = Number(v.dataset.step) !== step; });
-    document.getElementById("bk-eyebrow").textContent = "BOOKING　·　線上預訂（第 " + step + " 步：" + STEP_NAMES[step] + "）";
+    document.getElementById("bk-eyebrow").textContent = (EN ? "BOOKING  ·  Step " + step + ": " + STEP_NAMES[step] : "BOOKING　·　線上預訂（第 " + step + " 步：" + STEP_NAMES[step] + "）");
     document.querySelectorAll(".bk-steps li").forEach((li) => li.classList.toggle("is-on", Number(li.dataset.s) === step));
     const sn = document.getElementById("sum-next");
     sn.hidden = !SUM_NEXT[step];
@@ -392,8 +401,8 @@
     const box = document.createElement("div");
     box.className = "bk-fields";
     box.innerHTML =
-      '<label class="bk-field"><span>參加者 ' + people + ' 姓名</span><input name="p' + people + '_name" required></label>' +
-      '<label class="bk-field"><span>出生年月日</span><input name="p' + people + '_birthday" type="date" required></label>';
+      '<label class="bk-field"><span>' + t("參加者 " + people + " 姓名", "Participant " + people + ": name") + '</span><input name="p' + people + '_name" required></label>' +
+      '<label class="bk-field"><span>' + t("出生年月日", "Date of birth") + '</span><input name="p' + people + '_birthday" type="date" required></label>';
     document.getElementById("participants").appendChild(box);
   });
   // 第 4 步「前往付款」：PAYMENT_LIVE = false（送審版）只顯示開通中訊息（寫在頁面上）；PAYUNi 過審後在這裡接伺服器端付款程式（伺服器要用 pricing.js 再算一次總價）

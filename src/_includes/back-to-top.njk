@@ -1,10 +1,10 @@
 {# ===== 積木：全站共用「回到頂部」=====
    跟著滑鼠高度移動、固定在右側；只有頁面長度超過一個螢幕高度才顯示（見 back-to-top.js）。
    外觀照 Ambre 提供的圖：雙箭頭（^^）圖示＋下面常駐顯示「回到頂部」文字，深色圓角卡片。 #}
-<a class="back-to-top" href="#top" id="back-to-top" aria-label="回到頂部">
+<a class="back-to-top" href="#top" id="back-to-top" aria-label="{{ 'Back to top' if lang == 'en' else '回到頂部' }}">
   <svg class="bt-chevrons" viewBox="0 0 24 24" width="26" height="26" fill="none" aria-hidden="true">
     <path d="M4 15l8-7 8 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M4 21l8-7 8 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
-  <span class="bt-label">回到頂部</span>
+  <span class="bt-label">{{ 'Back to top' if lang == 'en' else '回到頂部' }}</span>
 </a>

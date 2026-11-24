@@ -1,0 +1,200 @@
+{
+ "_說明": "英文版：每一條＝這頁資料檔（src/_data/about.json）裡的路徑 → [中文原文, 英文]。中文原文改了而這裡沒跟著改，npm test 會提醒。style＝英文版個別元素的字級／寬度微調。",
+ "t": {
+  "sections.0.items.0.text": [
+   "ABOUT　·　關於綠芙",
+   "ABOUT  ·  The Reef"
+  ],
+  "sections.0.items.1.text": [
+   "台灣第一批潛水店",
+   "One of Taiwan's first dive shops"
+  ],
+  "sections.0.items.2.spans.0.t": [
+   "綠芙The Reef 是由一位叫做KEN的元老級潛水教練所創立 \n",
+   "The Reef was founded by KEN, a veteran dive instructor.\n"
+  ],
+  "sections.0.items.2.spans.1.t": [
+   "他是一個60+老屁孩，關於大海的故事，絕對是你能遇過最豐富最多的人，畢竟有點年紀了，還想趁潛不動以前，再去一次世界各地探望以前那些厲害的潛點，所以他不一定會在島上（想他要預約）但一定在某個地方吐泡泡。",
+   "He's a 60-something big kid with more ocean stories than anyone you'll ever meet. While he still can, he wants to revisit the great dive sites around the world, so he isn't always on the island (book ahead if you want to dive with him), but he's surely blowing bubbles somewhere."
+  ],
+  "sections.0.items.3.text": [
+   "從小在關島長大\n在菲律賓及澳洲長期教學\n\n中英台語多聲道\n30年以上的潛水教學資歷\n水下兇巴巴只是怕你會危險\n水上不正經基本是他的常態\n想去世界各地的潛點問他沒錯\n他是活字典。",
+   "Grew up in Guam\nTaught for years in the Philippines and Australia\n\nSpeaks Chinese, English and Taiwanese\n30+ years of teaching diving\nStrict underwater, only because he wants you safe\nNever serious above water, that's just him\nWant to dive anywhere in the world? Ask him.\nHe's a walking encyclopedia."
+  ],
+  "sections.1.items.0.text": [
+   "Stay　住宿",
+   "Stay"
+  ],
+  "sections.1.items.1.text": [
+   "Scuba　潛水",
+   "Scuba"
+  ],
+  "sections.1.items.2.text": [
+   "Tour　島上行程",
+   "Tour"
+  ],
+  "sections.1.items.3.text": [
+   "豪華雙人房、四人房和背包客房，就在潛水中心旁。",
+   "Deluxe double, quad and backpacker rooms, right next to the dive center."
+  ],
+  "sections.1.items.4.text": [
+   "PADI 體驗潛水、OW、AOW 到進修課程，岸潛和船潛都有。",
+   "PADI Discover Scuba, Open Water, Advanced and continuing education, shore and boat dives."
+  ],
+  "sections.1.items.5.text": [
+   "3 天 2 夜套裝含船票和機車，也能加購浮潛、潮間帶和夜釣。",
+   "3-day, 2-night packages with ferry and scooter; add snorkeling, tide pools or night fishing."
+  ],
+  "sections.1.items.6.text": [
+   "看住宿 →",
+   "See rooms →"
+  ],
+  "sections.1.items.7.text": [
+   "看課程 →",
+   "See courses →"
+  ],
+  "sections.1.items.8.text": [
+   "看行程 →",
+   "See trips →"
+  ],
+  "sections.2.items.0.text": [
+   "聯絡我們",
+   "Contact us"
+  ],
+  "sections.2.items.1.text": [
+   "電話｜0936-871-525\n信箱｜（待填）\nLINE 官方帳號｜（待填）\n客服時間｜（待填）\n地址｜台東縣綠島鄉公館村柴口 172 號之 2",
+   "(contact lines)"
+  ],
+  "sections.2.items.2.text": [
+   "交通｜台東富岡漁港搭船約 50 分鐘到綠島南寮漁港。課程和套裝有碼頭接送。",
+   "Getting here | About 50 minutes by ferry from Fugang Harbor, Taitung to Nanliao Harbor, Green Island. Courses and packages include harbor pickup."
+  ],
+  "sections.2.items.3.text": [
+   "公司名稱｜潛伴有限公司\n統一編號｜83201186",
+   "(company info)"
+  ],
+  "sections.2.items.4.text": [
+   "在 Google 地圖開啟 →",
+   "Open in Google Maps →"
+  ],
+  "sections.2.items.4.links.0.0": [
+   "在 Google 地圖開啟 →",
+   "Open in Google Maps →"
+  ],
+  "sections.2.items.7.label": [
+   "加 LINE 好友",
+   "Add us on LINE"
+  ],
+  "sections.3.items.0.text": [
+   "留言給我們 or KEN",
+   "Message us (or KEN)"
+  ],
+  "sections.3.items.1.text": [
+   "我們會在客服時間內盡快回覆。急事請直接＋LINE。",
+   "We'll reply as soon as we can during service hours. Urgent? Just add us on LINE."
+  ],
+  "sections.3.items.1.pre": [
+   "我們會在客服時間內盡快回覆。急事請直接",
+   "We'll reply as soon as we can during service hours. Urgent? Just "
+  ],
+  "sections.3.items.2.text": [
+   "姓名",
+   "Name"
+  ],
+  "sections.3.items.3.text": [
+   "手機",
+   "Phone"
+  ],
+  "sections.3.items.5.text": [
+   "想問的方案",
+   "Interested in"
+  ],
+  "sections.3.items.6.text": [
+   "想問的事",
+   "Your question"
+  ],
+  "sections.3.items.7.spans.0.t": [
+   "我已閱讀並同意",
+   "I have read and agree to the"
+  ],
+  "sections.3.items.7.spans.1.t": [
+   "〈隱私權政策〉",
+   " Privacy Policy"
+  ],
+  "sections.3.items.7.spans.2.t": [
+   "，同意綠芙用這些資料回覆我。",
+   ", and allow The Reef to use this information to reply to me."
+  ],
+  "sections.3.items.9.ph": [
+   "你的名字",
+   "Your name"
+  ],
+  "sections.3.items.12.ph": [
+   "請選擇（課程／住宿／套裝／其他）",
+   "Please choose (course / room / package / other)"
+  ],
+  "sections.3.items.12.options.0": [
+   "體驗潛水",
+   "Discover Scuba"
+  ],
+  "sections.3.items.12.options.5": [
+   "3 天 2 夜套裝",
+   "3-day, 2-night package"
+  ],
+  "sections.3.items.12.options.6": [
+   "住宿",
+   "Room"
+  ],
+  "sections.3.items.12.options.7": [
+   "其他",
+   "Other"
+  ],
+  "sections.3.items.13.ph": [
+   "例如：想預約 12 月的 OW 考照，兩個人，想問哪幾天還有位子。",
+   "e.g. We'd like to do the Open Water course in December, 2 people. Which dates are available?"
+  ],
+  "sections.3.items.15.label": [
+   "送出",
+   "Send"
+  ],
+  "sections.3.items.1.post": [
+   "。",
+   "."
+  ],
+  "sections.3.items.12.options.3": [
+   "OW＋AOW",
+   "OW + AOW"
+  ],
+  "sections.3.items.10.ph": [
+   "09xx-xxx-xxx",
+   "+886 9xx xxx xxx"
+  ]
+ },
+ "style": {
+  "LBRLhcmrkBNFdxB6": {
+   "fs": 0.86
+  },
+  "LBHYTVnZQPcWzF46": {
+   "fs": 0.86
+  },
+  "LBRs96Rzy11tlyxz": {
+   "fs": 0.86,
+   "w": 360
+  },
+  "LB9ZvPPqd0DmJd5t": {
+   "fs": 0.86
+  },
+  "LBCJ51y8Gq0YCqKH": {
+   "fs": 0.88
+  },
+  "LB6r9cQ56ntDPXSm": {
+   "fs": 0.86
+  },
+  "LBXjh9yXXsn4Fdx6": {
+   "fs": 0.94
+  },
+  "sections.2.items.7": {
+   "dx": 72
+  }
+ }
+}

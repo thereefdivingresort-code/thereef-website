@@ -5,7 +5,7 @@
   "scripts": {
     "build": "eleventy",
     "start": "eleventy --serve",
-    "test": "node scripts/verify-prices.js"
+    "test": "node scripts/verify-prices.js && node scripts/verify-en.js"
   },
   "repository": {
     "type": "git",

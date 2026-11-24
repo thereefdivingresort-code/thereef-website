@@ -1,0 +1,252 @@
+{
+ "_說明": "英文版：每一條＝這頁資料檔（src/_data/privacy.json）裡的路徑 → [中文原文, 英文]。中文原文改了而這裡沒跟著改，npm test 會提醒。style＝英文版個別元素的字級／寬度微調。",
+ "t": {
+  "sections.0.items.0.text": [
+   "PRIVACY　·　隱私權政策",
+   "PRIVACY  ·  Privacy Policy"
+  ],
+  "sections.0.items.1.text": [
+   "隱私權政策",
+   "Privacy Policy"
+  ],
+  "sections.0.items.2.text": [
+   "最後更新：2026 年 11 月",
+   "Last updated: November 2026"
+  ],
+  "sections.0.items.3.text": [
+   "綠芙只蒐集「提供服務所需」的資料，並妥善保管，這一頁將說明細節。",
+   "The Reef only collects the information needed to provide our services and keeps it safe. This page explains the details."
+  ],
+  "sections.1.items.0.text": [
+   "1　適用範圍",
+   "1  Scope"
+  ],
+  "sections.1.items.1.text": [
+   "本政策說明潛伴有限公司（綠芙 The Reef，以下稱「綠芙」）如何蒐集、使用和保護你的個人資料。適用於本網站、線上預訂、留言表單，以及你透過電話、Email 或 LINE 官方帳號和我們聯絡時提供的資料。",
+   "This policy explains how 潛伴有限公司 (The Reef, \"we\") collects, uses and protects your personal data. It applies to this website, online bookings, the message form, and information you give us by phone, email or our LINE Official Account."
+  ],
+  "sections.1.items.2.text": [
+   "2　我們蒐集的資料",
+   "2  Information we collect"
+  ],
+  "sections.1.items.3.text": [
+   "・預訂與聯絡：姓名、手機、Email、出生年月日、緊急聯絡人姓名與電話。\n・活動安全：PADI 健康問卷內容、潛水證照與經驗、近視度數、飲食需求。健康資料屬於個人資料保護法規定的特種資料，我們只在你勾選同意後，為了活動安全使用。\n・付款：付款由 PAYUNi 統一金流處理，我們只收到付款結果和交易編號，不會取得你的完整卡號。\n・瀏覽紀錄：Cookie、IP 位址、瀏覽器類型和瀏覽的頁面。",
+   "・Booking and contact: name, mobile number, email, date of birth, emergency contact's name and phone.\n・Activity safety: PADI medical questionnaire answers, dive certification and experience, eyesight prescription, dietary needs. Health data is special-category data under Taiwan's Personal Data Protection Act; we use it only for activity safety, after you tick to agree.\n・Payment: payments are processed by PAYUNi; we only receive the payment result and transaction number, never your full card number.\n・Browsing: cookies, IP address, browser type and pages visited."
+  ],
+  "sections.1.items.4.text": [
+   "3　使用目的",
+   "3  Purposes"
+  ],
+  "sections.1.items.5.text": [
+   "提供和管理你預訂的課程、住宿與行程；辦理保險；申請 PADI 潛水證照；聯絡與客服；記帳；分析網站使用狀況、改善服務。",
+   "To provide and manage the courses, rooms and trips you book; arrange insurance; apply for PADI certification; contact you and provide customer service; keep accounts; and analyze website use to improve our services."
+  ],
+  "sections.2.items.0.text": [
+   "4　利用期間、地區、對象與方式",
+   "4  Period, region, recipients and method"
+  ],
+  "sections.2.items.1.text": [
+   "・期間：服務提供期間，以及法律或會計規定需要保存的期間。\n・地區：中華民國境內，以及下列合作單位提供服務的地區（例如 PADI 證照系統位於國外）。\n・對象：綠芙，以及為了提供服務需要的合作單位：保險公司、PADI（證照申請）、PAYUNi 統一金流（付款）、船運公司（代訂船票時）。\n・方式：以電子或紙本方式，在上述目的範圍內使用。",
+   "・Period: while we provide our services, and for as long as laws or accounting rules require.\n・Region: within Taiwan, and wherever the partners below provide their services (for example, the PADI certification system is overseas).\n・Recipients: The Reef and the partners needed to provide the service: insurance companies, PADI (certification), PAYUNi (payment), ferry companies (when we book ferry tickets for you).\n・Method: electronically or on paper, within the purposes above."
+  ],
+  "sections.2.items.2.text": [
+   "5　你的權利",
+   "5  Your rights"
+  ],
+  "sections.2.items.3.text": [
+   "依個人資料保護法第 3 條，你可以向我們：查詢或請求閱覽、請求製給複製本、請求補充或更正、請求停止蒐集處理或利用、請求刪除。請用本頁的聯絡方式提出。法律規定必須保存的資料（例如交易與會計紀錄），可能無法立即刪除。",
+   "Under Article 3 of Taiwan's Personal Data Protection Act, you may ask us to: let you check or view your data, give you a copy, add to or correct it, stop collecting, processing or using it, or delete it. Please use the contact details on this page. Data we must keep by law (such as transaction and accounting records) may not be deleted right away."
+  ],
+  "sections.2.items.4.text": [
+   "6　不提供資料的影響",
+   "6  If you don't provide data"
+  ],
+  "sections.2.items.5.text": [
+   "你可以自由選擇是否提供資料。但缺少必要資料（例如姓名、聯絡方式、出生年月日、健康問卷）時，我們可能無法完成預訂、辦理保險或安排下水。",
+   "Providing data is up to you. But without the essential details (such as your name, contact details, date of birth and medical questionnaire), we may be unable to complete your booking, arrange insurance or let you dive."
+  ],
+  "sections.3.items.1.text": [
+   "網站使用 Cookie 記住你的設定、分析流量。你可以在瀏覽器設定拒絕 Cookie，但部分功能（例如預訂流程）可能無法正常使用。",
+   "This website uses cookies to remember your settings and analyze traffic. You can refuse cookies in your browser settings, but some features (such as booking) may not work properly."
+  ],
+  "sections.3.items.2.text": [
+   "8　資料安全",
+   "8  Data security"
+  ],
+  "sections.3.items.3.text": [
+   "我們以合理的技術和管理方式保護你的資料，只有處理訂單的人員可以查看。付款資料由 PAYUNi 統一金流加密處理。",
+   "We protect your data with reasonable technical and management measures, and only staff handling orders can see it. Payment data is encrypted and processed by PAYUNi."
+  ],
+  "sections.3.items.4.text": [
+   "9　政策修改",
+   "9  Changes to this policy"
+  ],
+  "sections.3.items.5.text": [
+   "本政策更新時，會公布在本頁並標示更新日期。",
+   "When this policy is updated, we will post it on this page with the date."
+  ],
+  "sections.3.items.6.text": [
+   "10　聯絡窗口",
+   "10  Contact"
+  ],
+  "sections.3.items.7.text": [
+   "潛伴有限公司\n電話：0936-871-525　信箱：（待填）\n地址：台東縣綠島鄉公館村柴口 172 號之 2",
+   "(contact window)"
+  ],
+  "sections.4.items.0.text": [
+   "想查詢或刪除你的資料？",
+   "Want to check or delete your data?"
+  ],
+  "sections.4.items.1.text": [
+   "請打 0936-871-525，或寄信到（待填），告訴我們你的姓名和訂單編號。",
+   "Add us on LINE or email us with your name and booking number."
+  ],
+  "sections.4.items.1.post": [
+   "，告訴我們你的姓名和訂單編號",
+   ", and tell us your name and booking number"
+  ],
+  "sections.4.items.2.spans.0.t": [
+   "服務條款 →",
+   "Terms of Service →"
+  ],
+  "sections.4.items.2.spans.2.t": [
+   "退款與停航政策 →",
+   "Refund & Cancellation Policy →"
+  ],
+  "stickies.0.label": [
+   "本頁目錄",
+   "On this page"
+  ],
+  "stickies.0.items.0.text": [
+   "本頁目錄",
+   "On this page"
+  ],
+  "stickies.0.items.1.spans.0.t": [
+   "1 適用範圍",
+   "1 Scope"
+  ],
+  "stickies.0.items.1.spans.2.t": [
+   "2 我們蒐集的資料",
+   "2 Information we collect"
+  ],
+  "stickies.0.items.1.spans.4.t": [
+   "3 使用目的",
+   "3 Purposes"
+  ],
+  "stickies.0.items.1.spans.6.t": [
+   "4 利用期間與對象",
+   "4 Period & recipients"
+  ],
+  "stickies.0.items.1.spans.8.t": [
+   "5 你的權利",
+   "5 Your rights"
+  ],
+  "stickies.0.items.1.spans.10.t": [
+   "6 不提供的影響",
+   "6 If you don't provide data"
+  ],
+  "stickies.0.items.1.spans.14.t": [
+   "8 資料安全",
+   "8 Data security"
+  ],
+  "stickies.0.items.1.spans.16.t": [
+   "9 政策修改",
+   "9 Changes"
+  ],
+  "stickies.0.items.1.spans.18.t": [
+   "10 聯絡窗口",
+   "10 Contact"
+  ],
+  "stickies.0.items.2.text": [
+   "有疑問？\n＋LINE",
+   "Questions?\n+LINE"
+  ],
+  "stickies.0.items.2.pre": [
+   "有疑問？",
+   "Questions?"
+  ],
+  "sections.3.items.0.text": [
+   "7　Cookie",
+   "7  Cookies"
+  ]
+ },
+ "style": {
+  "LBBj6Pt2KdhyNpJ7": {
+   "w": 910
+  },
+  "LBnlPyllz6CpH6lw": {
+   "w": 910,
+   "fs": 0.86
+  },
+  "LBPvVggzPwR8kn2S": {
+   "w": 910
+  },
+  "LBT4slKb5RtZh2Tb": {
+   "w": 910,
+   "fs": 0.96
+  },
+  "LBKdVRQVT472nDwP": {
+   "w": 910
+  },
+  "LBRYxZ7d4Z30ZHNx": {
+   "w": 910,
+   "fs": 0.86
+  },
+  "LBgBcMmc674SzQs1": {
+   "w": 910
+  },
+  "LB5v7M095jYbj3BM": {
+   "w": 910
+  },
+  "LB0ZNWzp1xXtQ91R": {
+   "w": 910
+  },
+  "LBC594mh09KHrwLx": {
+   "w": 910,
+   "fs": 0.86
+  },
+  "LBkRSLQ99CBw1RB8": {
+   "w": 910
+  },
+  "LBFqY9ZrJNMm2xY1": {
+   "w": 910,
+   "fs": 0.98
+  },
+  "LB7vy565FcPs65tG": {
+   "w": 910
+  },
+  "LBQjhgNVXzq4VgR8": {
+   "w": 910
+  },
+  "LBwrQ0WsTV2c3dG8": {
+   "w": 910
+  },
+  "LBG7tjV0dcKVRjbD": {
+   "w": 910
+  },
+  "LBrT5knTmhpklT6g": {
+   "w": 910
+  },
+  "LBT1ZnLZYHjpjqz1": {
+   "w": 910
+  },
+  "LBxYq9c3whFpXCVT": {
+   "w": 910
+  },
+  "LB3hbN5DxjD14Fz3": {
+   "w": 910
+  },
+  "LBQvC5JZGYj4r86L": {
+   "w": 910
+  },
+  "LBpCc0hcJVzbyM8P": {
+   "w": 910
+  },
+  "LBSFxG3Vlfk7cd7j": {
+   "fs": 0.88
+  },
+  "LBkYfHfxw1PqN0vR": {
+   "fs": 0.98
+  }
+ }
+}

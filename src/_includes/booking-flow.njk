@@ -84,8 +84,14 @@
       <div class="bk-stepview" data-step="4" hidden>
         <section class="bk-card bk-stepcard" aria-labelledby="bk-s4-h">
           <h2 class="bk-title" id="bk-s4-h"><span class="bk-num">4</span>付款</h2>
-          <p class="bk-intro">付款在 PAYUNi 統一金流的加密付款頁完成（信用卡、ATM 轉帳，實際可用的方式以付款頁為準），綠芙不會看到你的卡號。</p>
-          <p class="bk-paymsg" id="form-msg" role="status" aria-live="polite">線上付款開通中，請先{% if site.company.lineUrl %}加 <a class="bk-hl" href="{{ site.company.lineUrl }}" target="_blank" rel="noopener">LINE 官方帳號</a> <strong class="bk-hl">預訂</strong>{% else %} <strong class="bk-hl">預訂</strong>{% endif %}，我們會幫你保留名額。</p>
+          <p class="bk-intro">線上刷卡開通中，目前請用<strong>銀行匯款</strong>或 <strong>PayPal</strong> 付款。</p>
+          <p class="bk-paymsg" id="form-msg" role="status" aria-live="polite">請先{% if site.company.lineUrl %}加 <a class="bk-hl" href="{{ site.company.lineUrl }}" target="_blank" rel="noopener">LINE 官方帳號</a>{% else %}加 LINE 官方帳號{% endif %}，告訴我們出發日期和右邊的訂單內容，<strong class="bk-hl">確認名額後再付款</strong>。付款後請傳匯款帳號後五碼（或 PayPal 付款紀錄）給我們。</p>
+          {%- set pay = site.payment %}
+          <div class="bk-info bk-pay">
+            <div><h3>國內匯款</h3><p>{{ pay.domestic.bank }}<br>帳號　<b>{{ pay.domestic.account }}</b><br>戶名　{{ pay.domestic.name }}</p></div>
+            <div><h3>國外匯款</h3><p lang="en">{{ pay.intl.bank }}<br>Bank address: {{ pay.intl.address }}<br>A/C no. <b>{{ pay.intl.account }}</b><br>SWIFT code: <b>{{ pay.intl.swift }}</b><br>A/C name: {{ pay.intl.name }}</p></div>
+            <div><h3>PayPal</h3><p>帳號　<b>{{ pay.paypal.account }}</b><br>{{ pay.paypal.noteZh }}</p></div>
+          </div>
         </section>
         <section class="bk-card bk-stepcard" aria-labelledby="bk-s4b-h">
           <h2 class="bk-title" id="bk-s4b-h"><span class="bk-num">4</span>付款完成之後</h2>
@@ -94,11 +100,11 @@
             <div>
               <p class="bk-success-h">預訂成功！</p>
               <p class="bk-muted">訂單編號　付款完成後會顯示在這裡和確認信上</p>
-              <p>確認信會寄到你填的 Email，裡面有訂單明細和付款紀錄。<br>出發前，我們會用電話或 LINE 跟你確認船班和集合時間。<br>沒收到確認信？先看垃圾信件匣，或打 <a href="{{ site.company.phoneHref }}">{{ site.company.phone }}</a> 找我們。</p>
+              <p>確認信會寄到你填的 Email，裡面有訂單明細和付款紀錄。<br>出發前，我們會用電話或 LINE 跟你確認船班和集合時間。<br>沒收到確認信？先看垃圾信件匣，或<a href="{{ site.company.lineUrl }}" target="_blank" rel="noopener">加 LINE</a> 找我們。</p>
             </div>
           </div>
           <div class="bk-info">
-            <div><h3>付款方式</h3><p>信用卡、ATM 轉帳（PAYUNi 統一金流）。實際可用的方式以付款頁為準。</p></div>
+            <div><h3>付款方式</h3><p>銀行匯款、PayPal；線上刷卡（PAYUNi 統一金流）開通中。</p></div>
             <div><h3>改期或取消</h3><p>天候或停航造成的取消，可以改期或退款。其他情況請看<a href="/refund/">〈退款與停航政策〉</a>。</p></div>
             <div><h3>查詢訂單</h3><p>用確認信上的訂單編號，傳 LINE 給我們（<a href="/about/#contact">聯絡我們</a>）。</p></div>
           </div>

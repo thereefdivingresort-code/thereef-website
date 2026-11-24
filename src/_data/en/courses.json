@@ -1,0 +1,149 @@
+{
+ "_說明": "英文版：每一條＝這頁資料檔（src/_data/courses.json）裡的路徑 → [中文原文, 英文]。中文原文改了而這裡沒跟著改，npm test 會提醒。style＝英文版個別元素的字級／寬度微調。",
+ "t": {
+  "sections.0.items.0.text": [
+   "在海裡待了短短幾十分鐘，\n卻經歷了完全不同的世界。",
+   "Just minutes in the sea,\nand a whole new world."
+  ],
+  "sections.0.items.1.text": [
+   "綠芙是一家老字號 PADI 認證的潛水中心。沒潛過的人從體驗潛水開始；\n想考照的人，3 天 2 夜就能拿到 OW 初級證照，安心又方便。",
+   "The Reef is a long-established PADI dive center. Never dived? Start with Discover Scuba.\nWant to get certified? Earn your Open Water card in 3 days, 2 nights, easy and worry-free."
+  ],
+  "sections.1.items.1.text": [
+   "岸潛（較深）SHORE DIVE　·　最深 18 m",
+   "SHORE DIVE (deeper)  ·  Max 18 m"
+  ],
+  "sections.1.items.2.text": [
+   "PADI OW 初級證照",
+   "PADI Open Water Diver"
+  ],
+  "sections.1.items.3.text": [
+   "3 天 2 夜，給自己一個認識新世界的機會。",
+   "3 days, 2 nights: your chance to meet a whole new world."
+  ],
+  "sections.1.items.4.text": [
+   "第 1 天 8:00–17:00｜平靜水域 2 支＋開放水域 1 支\n第 2 天 8:00–17:00｜開放水域 3 支，結業",
+   "Day 1  8:00–17:00 | 2 confined water + 1 open water dive\nDay 2  8:00–17:00 | 3 open water dives, course complete"
+  ],
+  "sections.1.items.5.text": [
+   "含｜線上學科、PADI 證照申請費、5 支術科、全套裝備和電腦錶、背包房 2 晚、碼頭接送、機車 2 人 1 台、保險",
+   "Includes | eLearning, PADI certification fee, 5 training dives, full gear and dive computer, 2 nights in the backpacker room, harbor pickup, 1 scooter per 2 people, insurance"
+  ],
+  "sections.1.items.6.text": [
+   "NT$ {price} ／人",
+   "NT$ {price} / person"
+  ],
+  "sections.1.items.7.label": [
+   "預訂",
+   "Book"
+  ],
+  "sections.2.items.1.text": [
+   "船潛 BOAT DIVE　·　最深 30 m",
+   "BOAT DIVE  ·  Max 30 m"
+  ],
+  "sections.2.items.2.text": [
+   "AOW 進階證照",
+   "PADI Advanced Open Water"
+  ],
+  "sections.2.items.3.text": [
+   "給已有初級證照的海洋『初癮』者（不限協會）。\n讓自己成為頂尖中性浮力、水中導航、夜潛和電腦錶使用、方位辨別的好手。",
+   "For certified divers who are already hooked (any agency).\nBecome great at neutral buoyancy, underwater navigation, night diving, dive computers and orientation."
+  ],
+  "sections.2.items.4.text": [
+   "第 1 天 8:00–20:00｜2 支日潛＋1 支夜潛\n第 2 天 8:00–11:30｜2 支日潛，結業",
+   "Day 1  8:00–20:00 | 2 day dives + 1 night dive\nDay 2  8:00–11:30 | 2 day dives, course complete"
+  ],
+  "sections.2.items.5.text": [
+   "含｜線上學科、PADI 證照申請費、5 支術科、全套裝備和電腦錶、背包房 2 晚、碼頭接送、機車 2 人 1 台、保險",
+   "Includes | eLearning, PADI certification fee, 5 training dives, full gear and dive computer, 2 nights in the backpacker room, harbor pickup, 1 scooter per 2 people, insurance"
+  ],
+  "sections.2.items.6.text": [
+   "NT$ {price} ／人",
+   "NT$ {price} / person"
+  ],
+  "sections.2.items.7.label": [
+   "預訂",
+   "Book"
+  ],
+  "sections.3.items.0.label": [
+   "預訂",
+   "Book"
+  ],
+  "sections.3.items.1.text": [
+   "其他方案",
+   "More options"
+  ],
+  "sections.3.items.2.text": [
+   "OW＋AOW 一次考完",
+   "OW + AOW in one go"
+  ],
+  "sections.3.items.3.text": [
+   "10 支潛水、背包房 4 晚、全套裝備和電腦錶、機車 2 人 1 台。\n適合想出國挑戰不同潛點的你。",
+   "10 dives, 4 nights in the backpacker room, full gear and dive computer, 1 scooter per 2 people.\nPerfect if you want to take on dive sites around the world."
+  ],
+  "sections.3.items.4.text": [
+   "NT$ {price} ／人",
+   "NT$ {price} / person"
+  ],
+  "sections.3.items.5.text": [
+   "Fun Dive 歡樂潛水",
+   "Fun Dive"
+  ],
+  "sections.3.items.6.text": [
+   "已有證照，岸潛和船潛都能約。\n岸潛 1 支\n1 對 1 NT${tier:fun-shore:1}／人\n1 對 2 NT${tier:fun-shore:2}／人\n1 對 3 NT${tier:fun-shore:3}／人\n1 對 4（含以上）NT${tier:fun-shore:4}／人\n\n船潛 1 趟（2 支）\n1 對 1 NT${tier:fun-boat:1}／人\n1 對 2 NT${tier:fun-boat:2}／人\n1 對 3 NT${tier:fun-boat:3}／人\n1 對 4（含以上）NT${tier:fun-boat:4}／人",
+   "For certified divers; shore and boat dives available.\nShore dive (1 dive)\n1:1  NT${tier:fun-shore:1} / person\n1:2  NT${tier:fun-shore:2} / person\n1:3  NT${tier:fun-shore:3} / person\n1:4 or more  NT${tier:fun-shore:4} / person\n\nBoat dive (1 trip, 2 dives)\n1:1  NT${tier:fun-boat:1} / person\n1:2  NT${tier:fun-boat:2} / person\n1:3  NT${tier:fun-boat:3} / person\n1:4 or more  NT${tier:fun-boat:4} / person"
+  ],
+  "sections.3.items.7.text": [
+   "進修課程",
+   "Continuing education"
+  ],
+  "sections.3.items.8.text": [
+   "複習 Re-active　NT${item:reactive}／人\n高氧 EAN　NT${item:ean}／人\n緊急反應 EFR　NT${item:efr}／人\n救援 Rescue　NT${item:rescue}／人\n潛水長 DM　NT${item:dm}／人\n\n\n進階課程請私訊我們獲取進一步資訊",
+   "ReActivate  NT${item:reactive} / person\nEnriched Air (EAN)  NT${item:ean} / person\nFirst aid (EFR)  NT${item:efr} / person\nRescue Diver  NT${item:rescue} / person\nDivemaster (DM)  NT${item:dm} / person\n\n\nMessage us for details on advanced courses"
+  ],
+  "sections.4.items.0.text": [
+   "下水前請先看",
+   "Before you dive"
+  ],
+  "sections.4.items.1.spans.0.t": [
+   "・有心臟病、高血壓、糖尿病、癲癇、氣喘、肺部疾病、耳鼻喉問題、\n    近期動過手術或懷孕，不建議潛水，或需先經醫師評估。\n ",
+   "・Heart or lung disease, high blood pressure, diabetes, epilepsy, asthma, ear/nose/throat problems,\n    recent surgery or pregnancy: diving isn't advised, or get a doctor's clearance first.\n "
+  ],
+  "sections.4.items.1.spans.1.t": [
+   "   報名時會請你填 PADI 健康問卷。",
+   "   You'll be asked to fill in the PADI medical questionnaire when you book."
+  ],
+  "sections.4.items.1.spans.2.t": [
+   "\n・潛水後至少間隔 12–18 小時再搭飛機。\n・潛水前 8–12 小時不喝酒；前一晚睡飽，感冒鼻塞請改期。\n・天候或海況不佳時，教練會以安全為優先調整或取消，\n    退款方式請見",
+   "\n・Wait at least 12–18 hours after diving before flying.\n・No alcohol 8–12 hours before diving; sleep well, and reschedule if you have a cold.\n・If the weather or sea is rough, instructors will adjust or cancel for safety.\n    For refunds, see"
+  ],
+  "sections.4.items.1.spans.3.t": [
+   "〈退款與停航政策〉",
+   " the Refund & Cancellation Policy"
+  ],
+  "sections.4.items.1.spans.4.t": [
+   "。",
+   "."
+  ]
+ },
+ "style": {
+  "LBPKJzP4xyCf35gT": {
+   "fs": 0.94
+  },
+  "LBdVRhkfppf511qs": {
+   "fs": 0.9
+  },
+  "LBThsYBdMByRBzyx": {
+   "fs": 0.86
+  },
+  "LBVPTq767chDn6td": {
+   "fs": 0.92
+  },
+  "LB8p0P2RKSVGfw4g": {
+   "fs": 0.9
+  },
+  "LBFBq2R4zJq6nNBb": {
+   "fs": 0.86
+  }
+ }
+}

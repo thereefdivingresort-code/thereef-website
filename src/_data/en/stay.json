@@ -1,0 +1,107 @@
+{
+ "_說明": "英文版：每一條＝這頁資料檔（src/_data/stay.json）裡的路徑 → [中文原文, 英文]。中文原文改了而這裡沒跟著改，npm test 會提醒。style＝英文版個別元素的字級／寬度微調。",
+ "t": {
+  "sections.1.items.0.label": [
+   "預訂",
+   "Book"
+  ],
+  "sections.1.items.1.text": [
+   "DELUXE DOUBLE　·　4.5 坪",
+   "DELUXE DOUBLE  ·  15 m²"
+  ],
+  "sections.1.items.2.text": [
+   "豪華雙人房",
+   "Deluxe Double Room"
+  ],
+  "sections.1.items.3.text": [
+   "私人衛浴、落地窗，還有可以看海的私人陽台。\n兩人世界剛剛好。",
+   "Private bathroom, floor-to-ceiling windows and a private sea-view balcony.\nJust right for two."
+  ],
+  "sections.1.items.4.text": [
+   "可住 2 人｜私人衛浴｜海景陽台\n房內有冷氣、小冰箱、熱水壺、茶包和咖啡",
+   "Sleeps 2 | Private bathroom | Sea-view balcony\nAir conditioning, mini fridge, kettle, tea and coffee"
+  ],
+  "sections.1.items.5.text": [
+   "NT$ {price} ／房／晚",
+   "NT$ {price} / night"
+  ],
+  "sections.2.items.0.text": [
+   "DELUXE FOR 4　·　8 坪",
+   "DELUXE FOR 4  ·  26 m²"
+  ],
+  "sections.2.items.1.text": [
+   "豪華四人房",
+   "Deluxe Quad Room"
+  ],
+  "sections.2.items.2.text": [
+   "有獨立前院。一張雙人床加一組上下舖，加沙發床最多可住 6 人。乾濕分離的私人衛浴，一家四口或朋友同行都方便。",
+   "With its own front yard. One double bed and a bunk bed, plus a sofa bed for up to 6 guests. Private bathroom with separate wet and dry areas, great for families or friends."
+  ],
+  "sections.2.items.3.text": [
+   "可住 4 人（最多 6 人）｜獨立前院｜私人衛浴\n第 5、6 位房客每人加 NT$ {item:room-quad-extra}",
+   "Sleeps 4 (up to 6) | Private front yard | Private bathroom\n5th and 6th guests: + NT$ {item:room-quad-extra} per person"
+  ],
+  "sections.2.items.4.text": [
+   "NT$ {price} ／房／晚",
+   "NT$ {price} / night"
+  ],
+  "sections.2.items.5.label": [
+   "預訂",
+   "Book"
+  ],
+  "sections.3.items.0.label": [
+   "預訂",
+   "Book"
+  ],
+  "sections.3.items.1.text": [
+   "BACKPACKER　·　8 床位",
+   "BACKPACKER  ·  8 beds"
+  ],
+  "sections.3.items.2.text": [
+   "背包客房",
+   "Backpacker Room"
+  ],
+  "sections.3.items.3.text": [
+   "每張床都備有遮光拉簾、密碼保險箱和床頭燈。\n共用空間衛浴、大冰箱、飲水機，還有戶外露台座位區。考照套裝和 3 天 2 夜套裝都住這，自在又舒適。",
+   "Every bed has a blackout curtain, a code safe and a reading light.\nShared bathrooms, a big fridge, a water dispenser and an outdoor terrace. Course and 3-day packages all stay here, relaxed and comfortable."
+  ],
+  "sections.3.items.4.text": [
+   "1 床 1 人｜共用衛浴｜戶外座位區",
+   "1 bed per person | Shared bathroom | Outdoor seating"
+  ],
+  "sections.3.items.5.text": [
+   "NT$ {price} ／床／晚",
+   "NT$ {price} / bed / night"
+  ],
+  "sections.4.items.0.text": [
+   "入住前請先看",
+   "Before you check in"
+  ],
+  "sections.4.items.1.spans.0.t": [
+   "・入住時間下午3點以後，退房時間中午12點以前。\n・房價是每晚價格。\n・訂房可以取消或改期，退款比例請見",
+   "・Check-in after 3 pm; check-out before 12 noon.\n・Room rates are per night.\n・Bookings can be cancelled or changed; for refunds, see"
+  ],
+  "sections.4.items.1.spans.1.t": [
+   "〈退款與停航政策〉",
+   " the Refund & Cancellation Policy"
+  ],
+  "sections.4.items.1.spans.2.t": [
+   "。\n・考照套裝和 3 天 2 夜套裝已經含背包客房，不用另外訂。",
+   ".\n・Certification courses and 3-day, 2-night packages already include the backpacker room, no need to book it separately."
+  ]
+ },
+ "style": {
+  "LBLv7pw1gzvXfYsn": {
+   "fs": 0.86
+  },
+  "LBQ1BPgDZK8BnqGT": {
+   "fs": 0.86
+  },
+  "LBVyQMFdSpRXcQxG": {
+   "fs": 0.86
+  },
+  "LBkjkHYNjWMlR0jg": {
+   "fs": 0.88
+  }
+ }
+}

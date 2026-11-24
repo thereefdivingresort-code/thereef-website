@@ -15,7 +15,7 @@
   document.querySelectorAll(".hc-mhead").forEach(function (head) {
     var btn = head.querySelector(".hc-mnav-btn");
     if (!btn) return;
-    function set(open) { head.classList.toggle("is-open", open); btn.setAttribute("aria-expanded", open ? "true" : "false"); btn.setAttribute("aria-label", open ? "關閉選單" : "選單"); }
+    function set(open) { head.classList.toggle("is-open", open); btn.setAttribute("aria-expanded", open ? "true" : "false"); var en = document.documentElement.lang === "en"; btn.setAttribute("aria-label", open ? (en ? "Close menu" : "關閉選單") : (en ? "Menu" : "選單")); }
     btn.addEventListener("click", function (e) { e.stopPropagation(); set(!head.classList.contains("is-open")); });
     document.addEventListener("click", function (e) { if (!head.contains(e.target)) set(false); });
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") set(false); });

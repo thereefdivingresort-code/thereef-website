@@ -1,0 +1,331 @@
+{
+ "_說明": "英文版：每一條＝這頁資料檔（src/_data/home.json）裡的路徑 → [中文原文, 英文]。中文原文改了而這裡沒跟著改，npm test 會提醒。style＝英文版個別元素的字級／寬度微調。",
+ "t": {
+  "sections.0.items.0.label": [
+   "預訂課程",
+   "Book Now"
+  ],
+  "sections.0.items.1.label": [
+   "預訂",
+   "Book"
+  ],
+  "sections.0.items.2.text": [
+   "課程    住宿    行程    關於        中｜EN",
+   "Courses    Stay    Trips    About        中｜EN"
+  ],
+  "sections.0.items.2.links.0.0": [
+   "課程",
+   "Courses"
+  ],
+  "sections.0.items.2.links.2.0": [
+   "住宿",
+   "Stay"
+  ],
+  "sections.0.items.2.links.4.0": [
+   "行程",
+   "Trips"
+  ],
+  "sections.0.items.2.links.6.0": [
+   "關於",
+   "About"
+  ],
+  "sections.0.items.2.links.7.0": [
+   "        中｜EN",
+   "        中｜EN"
+  ],
+  "sections.0.items.3.text": [
+   "向下捲動",
+   "Scroll down"
+  ],
+  "sections.0.items.4.text": [
+   "GREEN ISLAND · TAIWAN　一間在綠島柴口的老字號潛店",
+   "GREEN ISLAND · TAIWAN  A veteran dive shop in Chaikou"
+  ],
+  "sections.0.items.5.text": [
+   "潛入島嶼深處",
+   "Dive Deep\ninto the Island"
+  ],
+  "sections.0.items.6.text": [
+   "綠島最迷人的莫過於路上、海上的風景都能一覽無遺，跟著綠芙的腳步\n給自己一個洗滌靈魂、難忘的海島假期。",
+   "On Green Island, the views on land and at sea are all yours to take in. Follow The Reef\nand give yourself an unforgettable island escape that refreshes the soul."
+  ],
+  "sections.0.items.7.text": [
+   "看全部方案 →",
+   "See all plans →"
+  ],
+  "sections.0.items.8.text": [
+   "0 m　海平面",
+   "0 m  Sea level"
+  ],
+  "sections.1.items.0.label": [
+   "預訂",
+   "Book"
+  ],
+  "sections.1.items.3.text": [
+   "體驗潛水",
+   "Discover Scuba"
+  ],
+  "sections.1.items.4.text": [
+   "綠島水下世界｜12 米、18 米、30 米\n究竟能看見什麼？",
+   "What will you see at\n12 m, 18 m and 30 m?"
+  ],
+  "sections.1.items.5.text": [
+   "即使不會游泳也能安心體驗與陸地上完全不同的海底世界！\n由專業合格的PADI 教練帶領，讓你用最安心舒適的方式，\n感受海洋的魔幻魅力。",
+   "Even if you can't swim, you can safely explore a world unlike anything on land!\nLed by certified PADI instructors, you'll feel the magic of the ocean\nin the safest, most comfortable way."
+  ],
+  "sections.1.items.6.text": [
+   "魅力點｜這一次，你能親自參與而非旁觀！\n這個深度的海水清澈，陽光照進來時，水面波光粼粼，宛如夢境。",
+   "Highlight | This time you're part of it, not just watching!\nAt this depth the water is crystal clear, and when the sun shines in, the surface sparkles like a dream."
+  ],
+  "sections.1.items.7.text": [
+   "NT$ {price} ／人",
+   "NT$ {price} / person"
+  ],
+  "sections.1.items.8.text": [
+   "短暫成為海洋世界的一部分",
+   "Be part of the ocean for a while"
+  ],
+  "sections.1.items.9.text": [
+   "在水下聽不見平常的喧囂，呼吸器、氣泡和海水裡的聲變得格外明顯，注意力從日常生活轉移到自己的呼吸與眼前的景色，絕對是最好的解憂特效藥。",
+   "Underwater, the everyday noise fades away. Your breathing, the bubbles and the sounds of the sea take over, and your mind shifts from daily life to your own breath and the view in front of you. The best cure for stress there is."
+  ],
+  "sections.1.items.11.text": [
+   "岸潛 SHORE DIVE　·　最深 12 m",
+   "SHORE DIVE  ·  Max 12 m"
+  ],
+  "sections.2.items.0.label": [
+   "預訂",
+   "Book"
+  ],
+  "sections.2.items.5.text": [
+   "取得可以帶往世界各地的潛水資格",
+   "A dive certification you can take anywhere in the world"
+  ],
+  "sections.2.items.6.text": [
+   "PADI OW 初級證照",
+   "PADI Open Water Diver"
+  ],
+  "sections.2.items.7.text": [
+   "3 天 2 夜。含線上學科、5 支潛水、PADI 證照申請費、全套裝備和電腦錶、背包房 2 晚、機車和保險。考到之後就能下到 18 公尺看大香菇。",
+   "3 days, 2 nights. Includes eLearning, 5 dives, PADI certification fee, full gear and dive computer, 2 nights in the backpacker room, scooter and insurance. Once certified, you can dive to 18 m to see the Big Mushroom coral."
+  ],
+  "sections.2.items.8.text": [
+   "魅力點｜\n發現自己血液中含有海洋DNA 的族群，讓探索海洋成為長期興趣吧！ ",
+   "Highlight |\nFor those who find the ocean is in their blood: make exploring it a lifelong passion!"
+  ],
+  "sections.2.items.9.text": [
+   "NT$ {price}／人",
+   "NT$ {price} / person"
+  ],
+  "sections.3.items.0.label": [
+   "預訂",
+   "Book"
+  ],
+  "sections.3.items.9.text": [
+   "探索更多不同類型的潛點，看到更多精彩風景",
+   "Explore more kinds of dive sites and see even more"
+  ],
+  "sections.3.items.10.text": [
+   "AOW 進階證照",
+   "PADI Advanced Open Water"
+  ],
+  "sections.3.items.11.text": [
+   "搭船到離岸潛點，在沈船間漫步，一窺夜間海地世界的魔力。\n也可以 OW＋AOW 一次考完：內含10 支潛水、背包房 4 晚。",
+   "Boat out to offshore sites, glide past shipwrecks and dive at night.\nOr do OW + AOW together: 10 dives, 4 nights' stay."
+  ],
+  "sections.3.items.12.text": [
+   "魅力點｜當你發現自己頻繁想往海裡跑，岸潛已滿足不了你對海洋的探索慾望，AOW絕對是一張必拿的證書！",
+   "Highlight | When you keep wanting to get back in the water and shore dives are no longer enough, AOW is a must-have!"
+  ],
+  "sections.3.items.13.text": [
+   "NT$ {price} ／人",
+   "NT$ {price} / person"
+  ],
+  "sections.3.items.14.text": [
+   "也有住宿房型，和含船票、機車的 3 天 2 夜套裝（浮潛、體驗潛水、Fun Dive）。",
+   "We also have rooms, plus 3-day, 2-night packages with ferry tickets and a scooter (snorkeling, Discover Scuba or Fun Dive)."
+  ],
+  "sections.3.items.15.text": [
+   "看全部方案 →",
+   "See all plans →"
+  ],
+  "sections.4.items.0.text": [
+   "第一次來，你可能會好奇的事",
+   "First time? Questions you might have"
+  ],
+  "sections.4.items.1.items.0.q": [
+   "我完全沒潛過，可以直接考潛水證照嗎？",
+   "I've never dived before. Can I go straight for a certification?"
+  ],
+  "sections.4.items.1.items.0.a": [
+   "可以，PADI OW 初級開放水域課程就是為零經驗的人設計的。先上線上學科，在家就能預習；到現場先在平靜水域練習，再進到開放水域，教練全程帶領。",
+   "Yes. The PADI Open Water Diver course is designed for complete beginners. You start with eLearning at home, then practice in calm water before moving to open water, with your instructor beside you the whole time."
+  ],
+  "sections.4.items.1.items.1.q": [
+   "先體驗潛水再考照，還是直接考證照比較划算？",
+   "Should I try Discover Scuba first, or go straight for certification?"
+  ],
+  "sections.4.items.1.items.1.a": [
+   "如果你已經確定喜歡海，直接考照比較划算。以綠芙為例：體驗潛水一次 {price:dsd} 元，只有 1 支（水下約 35–40 分鐘）；OW 考照套裝 {price:ow} 元，含 5 支潛水、PADI 證照申請費、全套裝備和電腦錶、背包房 2 晚、機車和保險。體驗 5 次就要 {price:dsd*5} 元，再多 {price:ow-dsd*5} 元就能拿到一張終身有效的證照。",
+   "If you already know you love the sea, certification is better value. At The Reef, Discover Scuba is NT${price:dsd} for 1 dive (about 35–40 minutes underwater); the Open Water course is NT${price:ow}, including 5 dives, PADI certification fee, full gear and dive computer, 2 nights in the backpacker room, scooter and insurance. Five Discover Scuba dives would cost NT${price:dsd*5}; just NT${price:ow-dsd*5} more gets you a certification for life."
+  ],
+  "sections.4.items.1.items.2.q": [
+   "為什麼大家說綠島很適合第一次潛水？",
+   "Why is Green Island said to be great for first-time divers?"
+  ],
+  "sections.4.items.1.items.2.a": [
+   "綠島海水清澈，交通部觀光署形容能見度「動輒四、五十公尺」，被稱為「玻璃水」，第一次下水就能清楚看到珊瑚和魚群，比較不會緊張。夏季水溫約 26–29°C，岸潛點柴口地形平緩，綠芙就在柴口海灘旁。住在島上、騎機車環島，考照也像一趟出國度假。",
+   "Green Island's water is famously clear. Taiwan's Tourism Administration describes visibility of \"often 40 to 50 meters\", and it's known as \"glass water\", so you can see the coral and fish clearly on your very first dive and feel less nervous. Summer water is about 26–29°C, the Chaikou shore dive site slopes gently, and The Reef is right next to Chaikou Beach. Stay on the island, ride a scooter around it, and your course feels like a holiday abroad."
+  ],
+  "sections.4.items.1.items.3.q": [
+   "從台北去綠島要多久？行程怎麼安排？",
+   "How long does it take to get to Green Island from Taipei?"
+  ],
+  "sections.4.items.1.items.3.a": [
+   "從台北搭火車到台東約 3.5–4.5 小時（或搭飛機約 1 小時），再從台東富岡漁港搭船到綠島約 50 分鐘。建議前一晚住台東，隔天搭早班船（例如 9:30），中午前就到綠島開始行程。綠芙套裝行程含台東–綠島來回船票和碼頭接送。",
+   "From Taipei, take the train to Taitung (about 3.5–4.5 hours) or fly (about 1 hour), then the ferry from Fugang Harbor in Taitung to Green Island (about 50 minutes). We suggest staying in Taitung the night before and taking an early ferry (e.g. 9:30), so you arrive before noon. Our packages include the round-trip Taitung–Green Island ferry and harbor pickup."
+  ],
+  "sections.4.items.1.items.4.q": [
+   "在綠島潛水看得到海龜和大香菇嗎？",
+   "Can I see sea turtles and the Big Mushroom coral?"
+  ],
+  "sections.4.items.1.items.4.a": [
+   "綠島常有機會遇到海龜，但野生動物無法保證每次都看到。「大香菇」是綠島著名的巨型微孔珊瑚，公視報導稱為世界最大的微孔珊瑚礁，位在水深約 18 公尺處。體驗潛水最深約 12 公尺，考到 OW 證照後可以下潛到 18 公尺，就有機會親眼看到。",
+   "Sea turtles are often seen around Green Island, but wild animals can never be guaranteed. The \"Big Mushroom\" is Green Island's famous giant Porites coral, described by Taiwan's Public Television as the largest Porites coral reef in the world, at a depth of about 18 m. Discover Scuba goes to about 12 m; once you're Open Water certified you can dive to 18 m and see it for yourself."
+  ],
+  "sections.4.items.2.text": [
+   "回到頂部",
+   "Back to top"
+  ],
+  "sections.5.items.0.text": [
+   "綠芙 The Reef｜柴口",
+   "The Reef | Chaikou"
+  ],
+  "sections.5.items.1.text": [
+   "南寮漁港",
+   "Nanliao Harbor"
+  ],
+  "sections.5.items.2.text": [
+   "我們在哪裡",
+   "Where to find us"
+  ],
+  "sections.5.items.3.runs.0.t": [
+   "綠芙就在綠島柴口海灘旁，走幾步路就能下水。\n夏天水溫約 26–29°C，岸潛點地形平緩，很適合第一次潛水。",
+   "The Reef is right next to Chaikou Beach on Green Island, just a few steps from the water.\nSummer water is about 26–29°C, and the gentle shore dive site is perfect for first-timers."
+  ],
+  "sections.5.items.3.runs.1.t": [
+   "在島上騎機車吹海風，考照就像一趟出國度假。",
+   "Ride a scooter in the sea breeze; getting certified feels like a holiday abroad."
+  ],
+  "sections.5.items.4.text": [
+   "地址｜台東縣綠島鄉公館村柴口 172 號之 2\n交通｜台東富岡漁港搭船約 50 分鐘到綠島",
+   "Address | No. 172-2, Chaikou, Gongguan Village, Green Island, Taitung\nGetting here | About 50 minutes by ferry from Fugang Harbor, Taitung"
+  ],
+  "sections.5.items.5.text": [
+   "在 Google 地圖開啟 →　　　認識我們 →",
+   "Open in Google Maps →      About us →"
+  ],
+  "sections.5.items.5.links.0.0": [
+   "在 Google 地圖開啟 →",
+   "Open in Google Maps →"
+  ],
+  "sections.5.items.5.links.2.0": [
+   "認識我們 →",
+   "About us →"
+  ],
+  "sections.6.items.0.text": [
+   "準備好下水了嗎？",
+   "Ready to dive in?"
+  ],
+  "sections.6.items.1.label": [
+   "預訂課程",
+   "Book Now"
+  ],
+  "sections.6.items.2.label": [
+   "聯絡我們",
+   "Contact Us"
+  ],
+  "sections.6.items.3.text": [
+   "The Reef 綠芙潛水",
+   "The Reef Diving"
+  ],
+  "sections.6.items.4.text": [
+   "公司名稱（待填）　統一編號（待填）\n台東縣綠島鄉公館村柴口 172 號之 2\n電話 0936-871-525　信箱（待填）",
+   "(company info)"
+  ],
+  "sections.6.items.5.text": [
+   "服務條款\n隱私權政策\n退款與停航政策",
+   "Terms of Service\nPrivacy Policy\nRefund & Cancellation Policy"
+  ],
+  "sections.6.items.6.text": [
+   "Instagram\nLINE 官方帳號",
+   "Instagram\nLINE Official Account"
+  ],
+  "sections.5.items.5.links.1.0": [
+   "　　　",
+   "      "
+  ]
+ },
+ "style": {
+  "LBlhcdxSs8Lpp8x4": {
+   "fs": 0.85
+  },
+  "LBxcQQNkdzxc7bNm": {
+   "dy": -14
+  },
+  "LB8LnWGDWS7Q2MzD": {
+   "dy": 56,
+   "fs": 0.92
+  },
+  "LBQhnfR94X68vL9m": {
+   "dy": 56
+  },
+  "sections.0.items.0": {
+   "dy": 56
+  },
+  "LBRHh5L24jPhK9dS": {
+   "x": 672,
+   "w": 152
+  },
+  "LBMqwSYvKlBbFCXN": {
+   "fs": 0.86
+  },
+  "LBhLwmjm64Y6Qhlq": {
+   "fs": 0.86
+  },
+  "LBZkD6D2yxJ572zw": {
+   "fs": 0.86
+  },
+  "LB5TmS6b8GyXwhH7": {
+   "fs": 0.86
+  },
+  "LBkCjNgrJndf49BW": {
+   "fs": 0.86
+  },
+  "LBhgNx4WTt4n2VpK": {
+   "fs": 0.9
+  },
+  "LBBPH7DGWwVWsZw7": {
+   "fs": 0.86
+  },
+  "LBBLbGLQH84xRYwP": {
+   "fs": 0.94
+  },
+  "LBkps7HGbgsb4qcl": {
+   "fs": 0.86
+  },
+  "LB9C7Z9WwShYPGL5": {
+   "fs": 0.88
+  },
+  "LBBlqVj6vVzPV0WG": {
+   "fs": 0.86
+  },
+  "LB1S3NLTSKh9VSyp": {
+   "fs": 0.94
+  },
+  "LBMWb6CwHFM8R1vT": {
+   "fs": 0.9,
+   "dy": 8
+  }
+ }
+}
