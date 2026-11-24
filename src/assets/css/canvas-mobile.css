@@ -230,3 +230,6 @@
 .hc-mg.card.onimg { border: 1px solid rgba(255,255,255,.6); }
 .hc-mband.cardtop + .hc-mg.card { --mshadow: 0 16px 24px -16px rgba(18,53,91,.32); }
 .hc-sticky { box-shadow: 0 16px 24px -16px rgba(18,53,91,.3); }
+/* 首頁 12 m 段（11/24 Ambre）：魚維持原大小，雀鯛（右）、向下捲動（中）、蝶魚（左）錯開疊在一起，整塊高度剩約 60% */
+.hc-mscroll.ov1 { margin-top: -90px; }
+.hc-mband.ov2 { margin-top: -95px; }
