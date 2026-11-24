@@ -233,3 +233,6 @@
 /* 首頁 12 m 段（11/24 Ambre）：魚維持原大小，雀鯛（右）、向下捲動（中）、蝶魚（左）錯開疊在一起，整塊高度剩約 60% */
 .hc-mscroll.ov1 { margin-top: -90px; }
 .hc-mband.ov2 { margin-top: -95px; }
+/* 頁尾公司資訊（11/24 Ambre）：手機上「信箱／Email」換到下一行，後面直接接信箱 */
+.hc-mail-sep { display: none; }
+.hc-mail { display: block; }

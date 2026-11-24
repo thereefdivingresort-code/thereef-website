@@ -35,7 +35,7 @@
 {%- macro siteEn(it) -%}
   {%- if it.site == "companyLines" -%}{{ site.company.name }}　Tax ID {{ site.company.taxId }}
 {{ site.en.address }}
-Phone <a href="{{ site.company.phoneHref }}">{{ site.company.phone }}</a>　Email <a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>
+Phone <a href="{{ site.company.phoneHref }}">{{ site.company.phone }}</a><span class="hc-mail-sep">　</span><span class="hc-mail">Email <a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a></span>
   {%- elif it.site == "contactLines" -%}Phone | <a href="{{ site.company.phoneHref }}">{{ site.company.phone }}</a>
 Email | <a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>
 LINE Official Account | <a href="{{ site.company.lineUrl }}" target="_blank" rel="noopener">{{ site.company.lineId }}</a>
@@ -67,7 +67,7 @@ Address: {{ site.en.address }}
   {%- elif it.priceId -%}{% set p = it.priceId | priceItem(prices) %}{{ it.text | replace("{price}", p.price | money) }}
   {%- elif it.site == "companyLines" -%}{{ site.company.name or "公司名稱（待填）" }}　統一編號 {{ site.company.taxId or "（待填）" }}
 {{ site.company.address }}
-電話 <a href="{{ site.company.phoneHref }}">{{ site.company.phone }}</a>　信箱 {% if site.company.email %}<a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>{% else %}（待填）{% endif %}
+電話 <a href="{{ site.company.phoneHref }}">{{ site.company.phone }}</a><span class="hc-mail-sep">　</span><span class="hc-mail">信箱 {% if site.company.email %}<a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>{% else %}（待填）{% endif %}</span>
   {%- elif it.site == "contactLines" -%}電話｜<a href="{{ site.company.phoneHref }}">{{ site.company.phone }}</a>
 信箱｜{% if site.company.email %}<a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>{% else %}（待填）{% endif %}
 LINE 官方帳號｜{% if site.company.lineUrl %}<a href="{{ site.company.lineUrl }}" target="_blank" rel="noopener">{{ site.company.lineId or "加入好友" }}</a>{% else %}（待填）{% endif %}
