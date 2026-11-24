@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <link rel="stylesheet" href="/assets/css/back-to-top.css">
+  <link rel="stylesheet" href="/assets/css/style.css?v={{ build.v }}">
+  <link rel="stylesheet" href="/assets/css/back-to-top.css?v={{ build.v }}">
 </head>
 <body id="top" class="theme-{{ theme or 'paper' }}">
   {# ===== 積木：共用頁首（內容在 _data/site.json） ===== #}
@@ -61,7 +61,7 @@
   </footer>
 
   {% include "back-to-top.njk" %}
-  <script src="/assets/js/back-to-top.js" defer></script>
+  <script src="/assets/js/back-to-top.js?v={{ build.v }}" defer></script>
   {% if scripts %}{% for s in scripts %}<script src="{{ s }}" defer></script>{% endfor %}{% endif %}
 </body>
 </html>
