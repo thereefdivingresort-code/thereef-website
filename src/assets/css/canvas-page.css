@@ -163,3 +163,6 @@ label.hc-t { cursor: pointer; }
   .hc-fish-about_ken::before, .hc-fish-about_ken::after { animation: none; }
 }
 .hc-t a.hc-lang.is-on { font-weight: 700; } /* 頁首「中｜EN」：目前的語言粗體 */
+/* 頁尾（11/24 Ambre）：電話、信箱加底線；Instagram、LINE 官方帳號改橘色 */
+.hc-t a.hc-ul { text-decoration: underline; text-underline-offset: 4px; }
+.hc-t a.hc-orange { color: #ec6c0c; }
