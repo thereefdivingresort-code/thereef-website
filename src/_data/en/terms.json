@@ -50,16 +50,16 @@
    "3  Bookings and confirmation"
   ],
   "sections.1.items.5.text": [
-   "送出預訂並在 PAYUNi 統一金流完成付款後，我們會寄確認信給你，訂單才算成立。\n如果遇到客滿、價格標示錯誤或其他無法提供服務的情況，我們會主動通知你，並全額退款。",
-   "Your booking is confirmed once you submit it, complete payment through PAYUNi and receive our confirmation email.\nIf we're fully booked, a price is wrong, or we otherwise can't provide the service, we'll contact you and refund you in full."
+   "送出預訂並完成付款（PAYUNi 統一金流、銀行匯款或 PayPal）後，我們會寄確認信給你，訂單才算成立。\n如果遇到客滿、價格標示錯誤或其他無法提供服務的情況，我們會主動通知你，並全額退款。",
+   "Your booking is confirmed once you submit it, complete payment (through PAYUNi, bank transfer or PayPal) and receive our confirmation email.\nIf we're fully booked, a price is wrong, or we otherwise can't provide the service, we'll contact you and refund you in full."
   ],
   "sections.1.items.6.text": [
    "4　價格與付款",
    "4  Prices and payment"
   ],
   "sections.1.items.7.text": [
-   "網站價格以新台幣計算。付款由 PAYUNi 統一金流處理，可用的付款方式以付款頁為準。套裝內容、加購項目和額外費用（例如單人加價、升等房型），以預訂時頁面顯示的內容為準，綠島為免稅區域，不另開發票。",
-   "All prices on this website are in New Taiwan Dollars (NT$). Payments are processed by PAYUNi; the payment methods available are those shown on the payment page. Package contents, add-ons and extra charges (such as single supplements and room upgrades) are as shown on the page at the time of booking. Green Island is a tax-free area, so no uniform invoice is issued."
+   "網站價格以新台幣計算。付款可用 PAYUNi 統一金流、銀行匯款或 PayPal，可用的方式以付款頁為準；PayPal 扣除的手續費差額，請到現場以現金補齊。套裝內容、加購項目和額外費用（例如單人加價、升等房型），以預訂時頁面顯示的內容為準，綠島為免稅區域，不另開發票。",
+   "All prices on this website are in New Taiwan Dollars (NT$). You can pay through PAYUNi, by bank transfer or by PayPal; the methods available are those shown on the payment page. Any amount deducted by PayPal must be paid in cash on arrival. Package contents, add-ons and extra charges (such as single supplements and room upgrades) are as shown on the page at the time of booking. Green Island is a tax-free area, so no uniform invoice is issued."
   ],
   "sections.2.items.0.text": [
    "5　參加資格與健康",
