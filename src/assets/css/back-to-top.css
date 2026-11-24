@@ -40,7 +40,7 @@
 /* 手機（≤768px，直排版）：11/24 Ambre：每頁一直看得到，簡化成深色底＋反白「向上」箭頭、沒有外框線，固定在右下角跟著畫面 */
 @media (max-width: 768px) {
   .back-to-top { top: auto !important; bottom: 18px; right: 14px; width: 48px; height: 48px; padding: 0; border-radius: 50%; gap: 0;
-    background: #12355b; color: #fff; border: 0; box-shadow: 0 6px 16px rgba(13,27,46,.3); }
+    background: #12355b; color: #fff; border: 0; box-shadow: none; } /* 11/24 Ambre：不要陰影 */
   .bt-chevrons { width: 22px; height: 22px; color: #fff; transform: translateY(-2.5px); } /* 雙箭頭在圖裡偏下，往上移到圓的正中央 */
   .bt-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 }
