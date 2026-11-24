@@ -34,9 +34,9 @@ body { margin: 0; background: #010414; font-family: "Noto Sans TC", "Noto Sans C
              hc-sway var(--sway) ease-in-out calc(var(--delay) + var(--dur)) infinite;
 }
 /* 漂浮：上下約 14px（11/17 Ambre 要更生動，原本 7px 幾乎看不出來） */
-@keyframes hc-float { 0%, 100% { opacity: 1; transform: translate(0, 0); } 50% { opacity: 1; transform: translate(0, calc(-1 * var(--famp, 14px))); } }
+@keyframes hc-float { 0%, 100% { opacity: 1; transform: translate(0, 0); } 50% { opacity: 1; transform: translate(0, calc(-1 * var(--famp, 14px) * var(--fk, 1))); } }
 /* 珊瑚、海扇：從根部輕輕左右擺 */
-@keyframes hc-sway { 0%, 100% { opacity: 1; transform: rotate(0deg); } 25% { opacity: 1; transform: rotate(var(--samp, 1.6deg)); } 75% { opacity: 1; transform: rotate(calc(-1 * var(--samp, 1.6deg))); } }
+@keyframes hc-sway { 0%, 100% { opacity: 1; transform: rotate(0deg); } 25% { opacity: 1; transform: rotate(calc(var(--samp, 1.6deg) * var(--sk, 1))); } 75% { opacity: 1; transform: rotate(calc(-1 * var(--samp, 1.6deg) * var(--sk, 1))); } }
 @media (prefers-reduced-motion: reduce) {
   .hc-anim .hc-fish-img, .hc-anim .hc-fish.is-in .hc-fish-img { opacity: 1 !important; transform: none !important; animation: none !important; }
 }
@@ -126,3 +126,39 @@ label.hc-t { cursor: pointer; }
 /* 手機版（≤768px，canvas-mobile.css）用的分組外框與元件：電腦版不產生方框、不顯示，畫面跟原本一樣 */
 .hc-mg { display: contents; }
 .hc-mband, .hc-mlogo, .hc-msun, .hc-mnav-btn, .hc-mscroll { display: none; }
+
+/* ===== 11/24 Ambre（上線後第四輪；電腦、手機一起） ===== */
+/* 首頁魚：上下擺動加大 40%、珊瑚擺動加大；魚會往前游、淡出，再從後面游回原位（--sd＝魚頭方向：-1 往左、1 往右） */
+.hc-page-home { --fk: 1.4; --sk: 1.8; --sdist: 180px; }
+.hc-fish-home_fish_A01, .hc-fish-home_fish_A02, .hc-fish-home_fish_B01, .hc-fish-home_fish_C02, .hc-fish-home_fish_C07, .hc-fish-home_fish_C07b { --sd: -1; }
+.hc-fish-home_fish_B02, .hc-fish-home_fish_C01, .hc-fish-home_fish_C05 { --sd: 1; }
+.hc-fish-home_fish_A01 { --swd: 3s; } .hc-fish-home_fish_A02 { --swd: 9s; } .hc-fish-home_fish_B01 { --swd: 5s; } .hc-fish-home_fish_B02 { --swd: 12s; }
+.hc-fish-home_fish_C01 { --swd: 7s; --swim: 30s; } .hc-fish-home_fish_C02 { --swd: 14s; --swim: 30s; } .hc-fish-home_fish_C07 { --swd: 4s; } .hc-fish-home_fish_C07b { --swd: 10s; } .hc-fish-home_fish_C05 { --swd: 16s; }
+.hc-anim .hc-page-home .hc-fish.is-in[class*="hc-fish-home_fish_"]:not(.hc-fish-home_fish_B03):not(.hc-fish-home_fish_C06):not(.hc-fish-home_fish_C04) {
+  animation: hc-swim var(--swim, 24s) ease-in-out var(--swd, 4s) infinite;
+}
+@keyframes hc-swim {
+  0%, 10% { translate: 0 0; opacity: 1; }
+  44% { translate: calc(var(--sd, 1) * var(--sdist)) -12px; opacity: 0; }
+  46% { translate: calc(-1 * var(--sd, 1) * var(--sdist)) 12px; opacity: 0; }
+  82%, 100% { translate: 0 0; opacity: 1; }
+}
+/* 關於頁 KEN 旁邊：泡泡不斷往上冒 */
+.hc-fish-about_ken::before, .hc-fish-about_ken::after {
+  content: ""; position: absolute; bottom: 30%; width: 18%; height: 62%; pointer-events: none;
+  background-image:
+    radial-gradient(circle at 30% 85%, transparent 5px, rgba(70,140,185,.75) 6px, transparent 7.5px),
+    radial-gradient(circle at 70% 55%, transparent 3px, rgba(70,140,185,.7) 4px, transparent 5.5px),
+    radial-gradient(circle at 45% 30%, transparent 7px, rgba(70,140,185,.7) 8px, transparent 9.5px),
+    radial-gradient(circle at 20% 10%, transparent 2.5px, rgba(70,140,185,.75) 3.5px, transparent 5px);
+  background-size: 100% 260px; background-repeat: repeat-y;
+  -webkit-mask-image: linear-gradient(transparent, #000 25%, #000 75%, transparent); mask-image: linear-gradient(transparent, #000 25%, #000 75%, transparent);
+  animation: hc-bubbles 6s linear infinite;
+}
+.hc-fish-about_ken::before { left: -6%; }
+.hc-fish-about_ken::after { right: -6%; animation-duration: 7.5s; animation-delay: -3s; transform: scaleX(-1); }
+@keyframes hc-bubbles { from { background-position: 0 0; } to { background-position: 0 -260px; } }
+@media (prefers-reduced-motion: reduce) {
+  .hc-anim .hc-page-home .hc-fish { animation: none !important; }
+  .hc-fish-about_ken::before, .hc-fish-about_ken::after { animation: none; }
+}

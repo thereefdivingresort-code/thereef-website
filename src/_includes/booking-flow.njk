@@ -14,7 +14,7 @@
     <input class="bk-date" type="date" name="date" id="bk-date" form="booking-form" required>
     <a class="bk-start" href="#bk-blocks"><img src="/assets/img/booking/booking_chevron.webp" alt="" width="57" height="61"><span>開始訂製</span></a>
     <ol class="bk-steps" aria-label="預訂步驟">
-      <li data-s="1">1 選購</li><li data-s="2">2 填資料</li><li data-s="3">3 確認條款</li><li data-s="4">4 付款</li>
+      <li data-s="1"><span class="bk-num">1</span>選購</li><li data-s="2"><span class="bk-num">2</span>填資料</li><li data-s="3"><span class="bk-num">3</span>確認條款</li><li data-s="4"><span class="bk-num">4</span>付款</li>
     </ol>
   </div>
 
@@ -34,7 +34,7 @@
       {# ---------- 第 2 步：填資料 ---------- #}
       <div class="bk-stepview" data-step="2" hidden>
         <section class="bk-card bk-stepcard" aria-labelledby="bk-s2-h">
-          <h2 class="bk-title" id="bk-s2-h">②　聯絡人資料</h2>
+          <h2 class="bk-title" id="bk-s2-h"><span class="bk-num">2</span>聯絡人資料</h2>
           <p class="bk-intro">出發前我們會用電話或 LINE 跟你確認船班和集合時間；出生年月日是保險要用的。</p>
           <div class="bk-fields">
             <label class="bk-field"><span>聯絡人姓名</span><input name="name" required placeholder="你的名字" autocomplete="name"></label>
@@ -47,7 +47,7 @@
           <label class="bk-field bk-field-wide"><span>備註（健康狀況、近視度數、飲食需求）</span><textarea name="note" rows="3" placeholder="例如：近視 400 度、不吃牛肉。"></textarea></label>
         </section>
         <section class="bk-card bk-stepcard" aria-labelledby="bk-s2b-h">
-          <h2 class="bk-title" id="bk-s2b-h">②　其他參加者</h2>
+          <h2 class="bk-title" id="bk-s2b-h"><span class="bk-num">2</span>其他參加者</h2>
           <p class="bk-intro">每位參加者都要填姓名和出生年月日（保險用）。只有你一個人就不用填。</p>
           <div id="participants"></div>
           <button type="button" class="bk-link" id="add-person">＋ 新增參加者</button>
@@ -63,7 +63,7 @@
       {# ---------- 第 3 步：確認條款 ---------- #}
       <div class="bk-stepview" data-step="3" hidden>
         <section class="bk-card bk-stepcard" aria-labelledby="bk-s3-h">
-          <h2 class="bk-title" id="bk-s3-h">③　確認條款</h2>
+          <h2 class="bk-title" id="bk-s3-h"><span class="bk-num">3</span>確認條款</h2>
           <p class="bk-intro">請先看過條款，四個都勾選才能前往付款。條款會開在新分頁，填的資料不會不見。</p>
           <div class="bk-checks">
             <label><input type="checkbox" class="bk-check" required> 我已閱讀並同意〈<a href="/terms/" target="_blank" rel="noopener">服務條款</a>〉</label>
@@ -83,12 +83,12 @@
       {# ---------- 第 4 步：付款 ---------- #}
       <div class="bk-stepview" data-step="4" hidden>
         <section class="bk-card bk-stepcard" aria-labelledby="bk-s4-h">
-          <h2 class="bk-title" id="bk-s4-h">④　付款</h2>
+          <h2 class="bk-title" id="bk-s4-h"><span class="bk-num">4</span>付款</h2>
           <p class="bk-intro">付款在 PAYUNi 統一金流的加密付款頁完成（信用卡、ATM 轉帳，實際可用的方式以付款頁為準），綠芙不會看到你的卡號。</p>
           <p class="bk-paymsg" id="form-msg" role="status" aria-live="polite">線上付款開通中，請先{% if site.company.lineUrl %}加 <a class="bk-hl" href="{{ site.company.lineUrl }}" target="_blank" rel="noopener">LINE 官方帳號</a> <strong class="bk-hl">預訂</strong>{% else %} <strong class="bk-hl">預訂</strong>{% endif %}，我們會幫你保留名額。</p>
         </section>
         <section class="bk-card bk-stepcard" aria-labelledby="bk-s4b-h">
-          <h2 class="bk-title" id="bk-s4b-h">④　付款完成之後</h2>
+          <h2 class="bk-title" id="bk-s4b-h"><span class="bk-num">4</span>付款完成之後</h2>
           <div class="bk-success">
             <span class="bk-success-check" aria-hidden="true">✓</span>
             <div>

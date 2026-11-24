@@ -308,7 +308,7 @@
         "bg": {"none": true, "shade": "linear-gradient(#197dc6, #3f9fc8 60%, #7fb9c3)"},
         "pad": "24px 0 24px",
         "blocks": [
-          {"items": [{"ref": "LBFrgx1sB4HchhF1", "fs": 20}, "LBL14qQxcl13Bx1v", "LBncY3BCBfMbsdFq"], "cls": "card", "gap": 10, "vars": "--mcard:rgba(243,250,252,.95);"}
+          {"items": [{"ref": "LBFrgx1sB4HchhF1", "fs": 20}, "LBL14qQxcl13Bx1v", "LBncY3BCBfMbsdFq"], "cls": "card onimg", "gap": 10, "vars": "--mcard:rgba(243,250,252,.95);"}
         ]
       },
       "footer": {

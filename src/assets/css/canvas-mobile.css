@@ -64,7 +64,7 @@
 .hc-mband.left { margin-left: 0; }
 .hc-mfish { position: absolute; }
 .hc-mband > .hc-mbt { position: absolute !important; left: var(--bx) !important; top: var(--by) !important; width: auto !important; white-space: nowrap; }
-@keyframes hc-float { 0%, 100% { opacity: 1; transform: translate(0, 0); } 50% { opacity: 1; transform: translate(0, calc(-.6 * var(--famp, 14px))); } } /* 手機上漂浮幅度縮小 */
+@keyframes hc-float { 0%, 100% { opacity: 1; transform: translate(0, 0); } 50% { opacity: 1; transform: translate(0, calc(-.6 * var(--famp, 14px) * var(--fk, 1))); } } /* 手機上漂浮幅度縮小 */
 
 /* 手機頁首：logo、預訂、選單按鈕；選單點開往下展開 */
 .hc-mhead {
@@ -196,13 +196,14 @@
 /* 課程開場、OW、AOW：文字框右邊留 30% 白（以 OW「最深 18 m」那行的右緣為準）；按鈕位置不變 */
 .hc-sec.narrow .hc-mg:not(.row) > .hc-t { max-width: min(max(274px, 70%), 100%) !important; } /* 274px＝「岸潛（較深）SHORE DIVE · 最深 18 m」一行的寬（14px 字） */
 /* 關於頁水母：大一點，在右邊留白處四處飄 */
-.hc-mband.beside.roam { width: 84px; margin: calc(-1 * var(--msgap, 28px) - 120px) 0 0 220px; animation: hc-roam 16s ease-in-out infinite; }
+/* 11/24 第四輪：水母只在「交通～在 Google 地圖開啟」右邊那塊留白裡游（右 52px、到段落底，約 140×160） */
+.hc-mband.beside.roam { position: absolute; right: 52px; bottom: 4px; width: 70px; margin: 0; animation: hc-roam 16s ease-in-out infinite; }
 @keyframes hc-roam {
   0%, 100% { transform: translate(0, 0) rotate(0deg); }
-  20% { transform: translate(40px, -70px) rotate(6deg); }
-  45% { transform: translate(-30px, -110px) rotate(-5deg); }
-  70% { transform: translate(-60px, -30px) rotate(4deg); }
-  85% { transform: translate(20px, 10px) rotate(-3deg); }
+  20% { transform: translate(-55px, -38px) rotate(6deg); }
+  40% { transform: translate(-15px, -48px) rotate(-5deg); }
+  60% { transform: translate(-70px, -18px) rotate(4deg); }
+  80% { transform: translate(-30px, -4px) rotate(-3deg); }
 }
 @media (prefers-reduced-motion: reduce) { .hc-mband.beside.roam { animation: none; } }
 /* 隱私權珊瑚：靠右一點，底部貼齊下面的卡片 */
@@ -212,3 +213,20 @@
 .hc-mg > .m-pre { white-space: pre !important; } /* 照電腦版的兩行，不再自動換行（課程開場標題） */
 /* 底色加深 10% 的頁（住宿、預訂）：插圖窗裡底圖的米色紙也一起加深，才不會有色塊 */
 .hc-mband.dim .hc-mband-bg { filter: brightness(.9); }
+
+/* ===== 11/24 Ambre 第四輪（上線後） ===== */
+/* 頁首所在那段疊在後面所有段落之上：選單展開時不會被下面的內容（例如預訂頁表單）蓋住 */
+.hc-sec:has(> .hc-mhead) { z-index: 40; }
+/* 首頁「向下捲動」的線加長兩倍 */
+.hc-page-home .hc-mscroll::after { height: 80px; }
+/* 首頁魚游出的距離（手機插圖窗比較小） */
+.hc-page-home { --sdist: 70px; }
+/* 全站：淺色底上的白卡片下方柔和陰影；照片／底圖上的卡片加半透明白框（玻璃感） */
+.hc-mg.card { --mshadow: 0 16px 24px -16px rgba(18,53,91,.32); }
+.hc-mg.card.ctop, .hc-mg.card.cmid { --mshadow: none; }
+.hc-mg.card.flat.cbot { --mshadow: 0 16px 24px -16px rgba(18,53,91,.32); }
+.hc-mg.card.glass { border: 1px solid rgba(255,255,255,.5); --mshadow: 0 16px 24px -18px rgba(0,0,0,.35); }
+.hc-mg.card.glass.ctop { border-bottom: 0; } .hc-mg.card.glass.cbot { border-top: 0; }
+.hc-mg.card.onimg { border: 1px solid rgba(255,255,255,.6); }
+.hc-mband.cardtop + .hc-mg.card { --mshadow: 0 16px 24px -16px rgba(18,53,91,.32); }
+.hc-sticky { box-shadow: 0 16px 24px -16px rgba(18,53,91,.3); }

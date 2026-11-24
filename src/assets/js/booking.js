@@ -132,6 +132,8 @@
   ];
   function shortName(id) { return { sup1: "SUP 單人板", sup2: "SUP 雙人板" }[id] || I[id].name; }
 
+  // ①–⑦ 換成深色圓底＋反白數字（11/24 Ambre）
+  const numBadge = (t) => t.replace(/^([①②③④⑤⑥⑦⑧⑨])　?/, (m, c) => '<span class="bk-num">' + ("①②③④⑤⑥⑦⑧⑨".indexOf(c) + 1) + "</span>");
   // ---------- 畫面 ----------
   const root = document.getElementById("bk-blocks");
   const ctrHtml = (c) =>
@@ -142,19 +144,22 @@
     "<em>" + c.unit + "</em>" +
     '<button type="button" class="c-btn" data-d="1" aria-label="增加">＋</button></span>';
 
-  function itemHtml(r) {
-    if (!r.variants) return '<span class="bk-item">' + esc(r.label) + "</span>";
+  // 11/24 Ambre：每人價格放在欄位裡（品項粗體、價格細體）；每一列都有 × 可以刪除
+  const DEL = '<button type="button" class="bk-del" aria-label="刪除這一項">×</button>';
+  function itemHtml(r, price) {
+    const tail = (price ? '<span class="bk-price"></span>' : "") + DEL;
+    if (!r.variants) return '<span class="bk-item"><span class="bk-name">' + esc(r.label) + "</span>" + tail + "</span>";
     return '<span class="bk-item"><span class="bk-shown">' + esc(r.variants[0][2]) + "</span>" +
       '<select id="sel-' + r.key + '" aria-label="' + esc(r.short || r.variants[0][1]) + '">' +
-      r.variants.map(([v, t]) => '<option value="' + v + '">' + esc(t) + "</option>").join("") + "</select></span>";
+      r.variants.map(([v, t]) => '<option value="' + v + '">' + esc(t) + "</option>").join("") + "</select>" + tail + "</span>";
   }
   function rowHtml(b, r) {
-    let h = '<div class="bk-row" data-block="' + b.key + '" data-row="' + r.key + '"' + (b.multi ? " hidden" : "") + ">" + itemHtml(r);
-    if (r.counters.length === 1) h += '<span class="bk-price"></span>';
+    const one = r.counters.length === 1;
+    let h = '<div class="bk-row' + (one ? " bk-row-1" : "") + '" data-block="' + b.key + '" data-row="' + r.key + '"' + (b.multi ? " hidden" : "") + ">" + itemHtml(r, one);
     h += r.counters.map(ctrHtml).join("") + '<span class="bk-sub">0</span></div>';
     if (r.extra) {
-      h += '<div class="bk-row bk-extra" data-block="' + b.key + '" data-row="' + r.key + '" data-extra hidden>' +
-        '<span class="bk-item">' + esc(r.extra.label) + '</span><span class="bk-price">' + esc(r.extra.price()) + "</span>" +
+      h += '<div class="bk-row bk-row-1 bk-extra" data-block="' + b.key + '" data-row="' + r.key + '" data-extra hidden>' +
+        '<span class="bk-item"><span class="bk-name">' + esc(r.extra.label) + '</span><span class="bk-price">' + esc(r.extra.price()) + "</span>" + DEL + "</span>" +
         ctrHtml(r.extra.counter) + '<span class="bk-sub">0</span></div>';
     }
     if (r.upgrade) {
@@ -165,7 +170,7 @@
 
   root.innerHTML = BLOCKS.map((b) => {
     let h = '<section class="bk-card' + (b.multi ? " bk-multi" : "") + (b.note ? "" : " no-note") + '" id="bk-b-' + b.key + '" data-block="' + b.key + '">' +
-      '<h2 class="bk-title">' + esc(b.title) + '</h2><p class="bk-intro">' + esc(b.intro) + '</p><div class="bk-rows">';
+      '<h2 class="bk-title">' + numBadge(esc(b.title)) + '</h2><p class="bk-intro">' + esc(b.intro) + '</p><div class="bk-rows">';
     if (b.multi) {
       h += '<details class="bk-ms"><summary>請選擇（可複選）' + SP + "▾</summary><div class=\"bk-ms-list\">" +
         b.rows.map((r) => '<label><input type="checkbox" class="bk-check" value="' + r.key + '">' + esc(r.short || r.label) + "</label>").join("") + "</div></details>";
@@ -176,7 +181,7 @@
   }).join("");
   // 手機版「目錄區塊」（11/24 Ambre）：列出七個區塊，點了跳過去；電腦版 CSS 不顯示
   const toc = document.getElementById("bk-toc-list");
-  if (toc) toc.innerHTML = BLOCKS.map((b) => '<li><a href="#bk-b-' + b.key + '">' + esc(b.title.replace(/（可複選）/, "")) + "</a></li>").join("");
+  if (toc) toc.innerHTML = BLOCKS.map((b) => '<li><a href="#bk-b-' + b.key + '">' + numBadge(esc(b.title.replace(/（可複選）/, ""))) + "</a></li>").join("");
 
   const rowEl = (b, r) => root.querySelector('.bk-row[data-block="' + b.key + '"][data-row="' + r.key + '"]:not([data-extra])');
   const extraEl = (b, r) => root.querySelector('.bk-row[data-block="' + b.key + '"][data-row="' + r.key + '"][data-extra]');
@@ -258,6 +263,23 @@
     return { total, count: lines.length };
   }
 
+  // × 刪除：可複選的取消勾選（整列移除）；其他列數量、下拉、升等回到預設＝不算錢
+  root.addEventListener("click", (e) => {
+    const del = e.target.closest(".bk-del");
+    if (!del) return;
+    e.preventDefault();
+    const row = del.closest(".bk-row"), key = row.dataset.row, sec = row.closest(".bk-card");
+    const cb = sec.querySelector('.bk-ms-list input[value="' + key + '"]');
+    if (cb && !row.hasAttribute("data-extra")) { cb.checked = false; cb.dispatchEvent(new Event("change", { bubbles: true })); return; }
+    const els = row.hasAttribute("data-extra") ? [row] : root.querySelectorAll('.bk-row[data-row="' + key + '"]');
+    els.forEach((el) => {
+      el.querySelectorAll(".ctr input").forEach((inp) => { inp.value = el.hasAttribute("data-extra") ? 0 : inp.defaultValue; });
+      const sel = el.querySelector("select");
+      if (sel) sel.selectedIndex = 0;
+    });
+    if (!row.hasAttribute("data-extra")) { const up = sec.querySelector('.bk-upline input[data-k="up"]'); if (up) up.checked = false; }
+    update();
+  });
   root.addEventListener("click", (e) => {
     const btn = e.target.closest(".c-btn");
     if (!btn) return;
